@@ -2,25 +2,42 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1E293B;
+  --dark-bg: #1A1A1A;
+  --gold: #D4A843;
+  --gold-dark: #B8860B;
+  --gold-light: #E8C872;
+  --muted-light: #9CA3AF;
+  --muted-dark: #A1A1AA;
+  --warm-grey: #F9FAFB;
+  --charcoal: #1E293B;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-dark-bg: var(--dark-bg);
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-light: var(--gold-light);
+  --color-muted-light: var(--muted-light);
+  --color-muted-dark: var(--muted-dark);
+  --color-warm-grey: var(--warm-grey);
+  --color-charcoal: var(--charcoal);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+/* Scroll offset for sticky nav */
+section[id] {
+  scroll-margin-top: 5rem;
 }
