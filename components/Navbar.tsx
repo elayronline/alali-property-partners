@@ -58,7 +58,7 @@ export function Navbar() {
             onClick={() => handleNavClick("whatsapp-cta")}
             className="cursor-pointer rounded-lg bg-gold px-5 py-2 text-sm font-semibold text-dark-bg transition-colors hover:bg-gold-light"
           >
-            Join Deal Broadcast
+            Get Deals First
           </button>
         </div>
 
@@ -88,7 +88,7 @@ export function Navbar() {
             onClick={() => handleNavClick("whatsapp-cta")}
             className="mt-2 w-full cursor-pointer rounded-lg bg-gold px-5 py-2.5 text-sm font-semibold text-dark-bg transition-colors hover:bg-gold-light"
           >
-            Join Deal Broadcast
+            Get Deals First
           </button>
         </div>
       )}

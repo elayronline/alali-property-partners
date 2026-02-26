@@ -9,16 +9,16 @@ const steps = [
   {
     icon: ClipboardList,
     step: "1",
-    title: "Share your investment criteria",
+    title: "Tell us what you're looking for",
     description:
-      "Strategy, budget, target areas, and preferred yield — we source to your brief.",
+      "Strategy, budget, target areas, and preferred yield — we source to your brief. Not sure yet? We'll help you figure it out.",
   },
   {
     icon: Search,
     step: "2",
     title: "We find and verify the deal",
     description:
-      "Every opportunity is checked against sold prices, rental values, and area data before it reaches you.",
+      "Every opportunity is checked against Land Registry sold prices, rental values, and area demand. If the numbers don't work, you don't see it.",
   },
   {
     icon: Package,
@@ -111,8 +111,9 @@ export function HowItWorks() {
           className="mt-8 text-center"
         >
           <Button variant="secondary" onClick={() => scrollToSection("contact")}>
-            Book a Free Consultation →
+            Start a Conversation &rarr;
           </Button>
+          <p className="mt-3 text-xs text-muted-light">No commitment. No pressure. Just a chat.</p>
         </motion.div>
       </div>
     </section>

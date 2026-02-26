@@ -4,7 +4,11 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/Button"
 import { scrollToSection } from "@/lib/smoothScroll"
 
-const trustStrip = ["48hr Deal Assessment", "Full Deal Pack Included", "England & Wales Coverage"]
+const trustStrip = [
+  "Deals assessed in 48 hours",
+  "Complete deal pack included",
+  "England & Wales coverage",
+]
 
 export function Hero() {
   const handleInvestorClick = () => {
@@ -13,7 +17,7 @@ export function Hero() {
   }
 
   const handleSellerClick = () => {
-    window.dispatchEvent(new CustomEvent("preselect-role", { detail: "Motivated Seller" }))
+    window.dispatchEvent(new CustomEvent("preselect-role", { detail: "Property Owner" }))
     scrollToSection("contact")
   }
 
@@ -47,9 +51,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl"
         >
-          Off-Market Deals. Verified Numbers.{" "}
+          Real Deals. Real Numbers.{" "}
           <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
-            Ready to Act.
+            No Guesswork.
           </span>
         </motion.h1>
 
@@ -57,20 +61,20 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mx-auto mt-6 max-w-2xl text-lg text-white/70"
+          className="mx-auto mt-6 max-w-2xl text-lg text-white/80"
         >
-          BMV and off-market property deals, fully researched with comparables, yields, and exit
-          strategies — delivered to your WhatsApp.
+          We source below-market-value and off-market properties, verify every number, and connect
+          the right deals with the right people.
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.65 }}
-          className="mx-auto mt-4 max-w-xl text-sm text-muted-dark"
+          className="mx-auto mt-4 max-w-xl text-sm text-white/50"
         >
-          Every deal backed by Land Registry comparables, verified rental yields, and area demand
-          analysis.
+          Whether you&apos;re looking for your next investment or need to move a property — start
+          here.
         </motion.p>
 
         <motion.div
@@ -83,7 +87,7 @@ export function Hero() {
             I&apos;m Looking for Deals
           </Button>
           <Button variant="secondary" size="large" onClick={handleSellerClick}>
-            I Have a Deal to Submit
+            I Have a Property to Move
           </Button>
         </motion.div>
 
@@ -108,7 +112,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.1 }}
-          className="mt-6 text-xs text-muted-dark/60"
+          className="mt-6 text-xs text-white/40"
         >
           Currently sourcing across England and Wales
         </motion.p>

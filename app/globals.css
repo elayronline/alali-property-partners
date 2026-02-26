@@ -5,9 +5,9 @@
   --foreground: #1E293B;
   --dark-bg: #16171a;
   --dark-bg-light: #1e2024;
-  --gold: #D4A843;
-  --gold-dark: #B8860B;
-  --gold-light: #E8C872;
+  --gold: #C9A03D;
+  --gold-dark: #A87D1A;
+  --gold-light: #DEBB5C;
   --muted-light: #9CA3AF;
   --muted-dark: #A1A1AA;
   --warm-grey: #F9FAFB;
@@ -42,4 +42,26 @@ body {
 /* Scroll offset for sticky nav */
 section[id] {
   scroll-margin-top: 5rem;
+}
+
+/* Gold selection highlight */
+::selection {
+  background: rgba(201, 160, 61, 0.2);
+  color: var(--charcoal);
+}
+
+/* Accessible focus states */
+*:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

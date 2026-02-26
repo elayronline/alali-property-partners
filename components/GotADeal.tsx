@@ -6,7 +6,7 @@ import { scrollToSection } from "@/lib/smoothScroll"
 
 export function GotADeal() {
   const handleClick = () => {
-    window.dispatchEvent(new CustomEvent("preselect-role", { detail: "Motivated Seller" }))
+    window.dispatchEvent(new CustomEvent("preselect-role", { detail: "Property Owner" }))
     scrollToSection("contact")
   }
 
@@ -22,7 +22,7 @@ export function GotADeal() {
           viewport={{ once: true }}
           className="text-xs font-semibold uppercase tracking-widest text-gold"
         >
-          Submit a Deal
+          For Property Owners &amp; Agents
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -40,11 +40,28 @@ export function GotADeal() {
           transition={{ delay: 0.1 }}
           className="mt-6 text-base leading-relaxed text-muted-light"
         >
-          Whether you&apos;re a motivated seller, an agent with a stuck listing, or a sourcer who
-          needs an investor — send it our way. We assess every deal within 48 hours and connect it
-          to funded, ready-to-move buyers. We pay referral fees from £500 for every deal that
-          completes.
+          Whether you&apos;re a landlord with a tricky situation, an agent with a listing that
+          won&apos;t shift, or anyone who needs a serious buyer fast — send it our way. We assess
+          every property within 48 hours and connect it to funded, ready-to-move investors.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.15 }}
+          className="mt-6 flex flex-wrap gap-3"
+        >
+          <span className="rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 text-xs font-medium text-gold">
+            We pay referral fees from &pound;500
+          </span>
+          <span className="rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 text-xs font-medium text-gold">
+            No exclusive arrangements
+          </span>
+          <span className="rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 text-xs font-medium text-gold">
+            48-hour assessment
+          </span>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +70,7 @@ export function GotADeal() {
           transition={{ delay: 0.2 }}
           className="mt-8"
         >
-          <Button onClick={handleClick}>Submit a Deal →</Button>
+          <Button onClick={handleClick}>Submit a Property &rarr;</Button>
         </motion.div>
       </div>
     </section>

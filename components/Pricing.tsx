@@ -5,23 +5,23 @@ import { ExpandableSection } from "@/components/ui/ExpandableSection"
 
 const pricingCards = [
   {
-    title: "Investment Purchase",
-    subtitle: "BTL, BRR, Flip",
+    title: "Standard Purchase",
+    subtitle: "Buy-to-Let, Refurb & Refinance, Flip",
     fee: "From £3,500",
     terms: "50% on reservation, 50% on completion",
     popular: true,
   },
   {
     title: "Rent-to-Rent",
-    subtitle: "",
+    subtitle: "Ready-to-go rental agreements",
     fee: "From £2,750",
-    terms: "On heads of terms agreement",
+    terms: "Due on heads of terms agreement",
     popular: false,
   },
   {
     title: "Bespoke Sourcing",
-    subtitle: "",
-    fee: "£1,000 upfront + sourcing fee on completion",
+    subtitle: "We source to your exact brief",
+    fee: "£1,000 upfront + fee on completion",
     terms: "Upfront fee due on brief agreement",
     expandable: true,
     popular: false,

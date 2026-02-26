@@ -15,7 +15,7 @@ export function WhatsAppCTA() {
           viewport={{ once: true }}
           className="text-3xl font-bold text-dark-bg sm:text-4xl lg:text-5xl"
         >
-          Get deals first. Join our free WhatsApp Broadcast.
+          Fresh deals on your phone before Rightmove sees them.
         </motion.h2>
 
         <motion.p
@@ -25,8 +25,8 @@ export function WhatsAppCTA() {
           transition={{ delay: 0.1 }}
           className="mx-auto mt-6 max-w-xl text-lg text-dark-bg/80"
         >
-          New opportunities sent directly to your phone before they go anywhere else. No spam, just
-          deals.
+          Join our free WhatsApp Broadcast — new opportunities sent directly to you. No spam. No
+          commitment. Unsubscribe anytime.
         </motion.p>
 
         <motion.div
@@ -42,10 +42,10 @@ export function WhatsAppCTA() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-dark-bg px-10 py-4 text-base font-bold text-white transition-colors hover:bg-charcoal sm:text-lg"
           >
-            Join Free →
+            Join Free &rarr;
           </a>
           <p className="mt-4 text-sm text-dark-bg/60">
-            Free. No commitment. Unsubscribe anytime.
+            Free forever. Leave anytime with one tap.
           </p>
         </motion.div>
       </div>

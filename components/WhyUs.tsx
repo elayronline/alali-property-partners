@@ -7,15 +7,15 @@ import { Card } from "@/components/ui/Card"
 const cards = [
   {
     icon: CheckCircle,
-    title: "Every deal verified before it reaches you",
+    title: "We do the maths, so you don't have to",
     description:
-      "We check the comparables, run the yields, and verify the numbers. If a deal doesn't stack up, we don't send it.",
+      "We run the comparables, yields, and numbers. If a deal doesn't genuinely stack up, we don't send it. Simple.",
   },
   {
     icon: Users,
-    title: "Off-market access through direct relationships",
+    title: "Fresh deals from real relationships",
     description:
-      "Our deals come from agents, landlords, and sellers we know directly — not recycled portal listings.",
+      "We source directly from agents, landlords, and other investors. Nothing recycled from Rightmove. Nothing that's been shopped around.",
   },
   {
     icon: Phone,

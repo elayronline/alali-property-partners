@@ -2,16 +2,16 @@ import { z } from "zod"
 
 export const roleOptions = [
   "Investor",
-  "Motivated Seller",
+  "Property Owner",
   "Estate Agent",
   "Sourcer",
   "Other",
 ] as const
 
 export const strategyOptions = [
-  "BTL",
-  "BRR",
-  "R2R",
+  "Buy-to-Let",
+  "Refurb & Refinance",
+  "Rent-to-Rent",
   "Serviced Accommodation",
   "HMO",
   "Flip",
