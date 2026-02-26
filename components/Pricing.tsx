@@ -5,27 +5,35 @@ import { ExpandableSection } from "@/components/ui/ExpandableSection"
 
 const pricingCards = [
   {
-    title: "Standard Purchase",
-    subtitle: "Buy-to-Let, Refurb & Refinance, Flip",
-    fee: "From £3,500",
-    terms: "50% on reservation, 50% on completion",
+    title: "Investment Purchase",
+    subtitle: "BTL, BRR, HMO, SA, Flip — all strategies",
+    fee: "2%",
+    feeDetail: "of purchase price (min £3,000)",
+    payment: "50% on reservation, 50% on completion",
+    includes: "Full deal pack, comparables, yield analysis, exit strategy",
+    reassurance: "No completion, no fee",
     popular: true,
   },
   {
     title: "Rent-to-Rent",
     subtitle: "Ready-to-go rental agreements",
-    fee: "From £2,750",
-    terms: "Due on heads of terms agreement",
+    fee: "£2,750",
+    feeDetail: "from",
+    payment: "Due on heads of terms agreement",
+    includes: "Deal identification, negotiation, heads of terms",
+    reassurance: null,
     popular: false,
   },
   {
     title: "Bespoke Sourcing",
-    subtitle: "We source to your exact brief",
-    fee: "£1,000 upfront + fee on completion",
-    terms: "Upfront fee due on brief agreement",
-    expandable: true,
+    subtitle: "Sourced to your exact brief",
+    fee: "£1,000",
+    feeDetail: "retainer + agreed fee on completion",
+    payment: "Retainer on brief, balance on completion",
+    includes: "Everything in Investment + sourced to your exact criteria",
+    reassurance: "14-day money-back guarantee on retainer",
     popular: false,
-    guarantee: true,
+    expandable: true,
   },
 ]
 
@@ -76,25 +84,45 @@ export function Pricing() {
 
               <div className="pt-2">
                 <h3 className="text-lg font-bold text-charcoal">{card.title}</h3>
-                {card.subtitle && (
-                  <p className="mt-0.5 text-xs text-muted-light">{card.subtitle}</p>
-                )}
-                <p className="mt-4 text-2xl font-bold text-gold">{card.fee}</p>
-                <p className="mt-2 text-sm text-muted-light">{card.terms}</p>
+                <p className="mt-0.5 text-xs text-muted-light">{card.subtitle}</p>
 
-                {card.guarantee && (
+                {/* Fee */}
+                <p className="mt-4 text-2xl font-bold text-gold">{card.fee}</p>
+                <p className="mt-0.5 text-xs text-muted-light">{card.feeDetail}</p>
+
+                {/* When you pay */}
+                <div className="mt-4 space-y-2.5">
+                  <div>
+                    <p className="text-[0.65rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                      When you pay
+                    </p>
+                    <p className="mt-0.5 text-sm text-muted-light">{card.payment}</p>
+                  </div>
+
+                  {/* What's included */}
+                  <div>
+                    <p className="text-[0.65rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                      What&apos;s included
+                    </p>
+                    <p className="mt-0.5 text-sm text-muted-light">{card.includes}</p>
+                  </div>
+                </div>
+
+                {/* Reassurance badge */}
+                {card.reassurance && (
                   <div className="mt-4 rounded-lg border border-gold/20 bg-gold/5 px-3 py-2">
-                    <p className="text-xs font-semibold text-gold">14-day money-back guarantee</p>
+                    <p className="text-xs font-semibold text-gold">{card.reassurance}</p>
                   </div>
                 )}
 
+                {/* Expandable for bespoke */}
                 {card.expandable && (
                   <div className="mt-4">
                     <ExpandableSection trigger="How does bespoke sourcing work?">
                       <p className="text-sm leading-relaxed text-muted-light">
-                        You pay £1,000 upfront and we have 14 days to source a deal that meets your
-                        criteria. If we don&apos;t find it, you get your money back — no questions
-                        asked. If you proceed with a deal, the £1,000 is deducted from the standard
+                        You pay a £1,000 retainer and we have 14 days to source a deal that meets
+                        your criteria. If we don&apos;t find it, you get your money back — no
+                        questions asked. If you proceed, the retainer is deducted from the agreed
                         sourcing fee on completion.
                       </p>
                     </ExpandableSection>
@@ -111,8 +139,8 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mx-auto mt-8 max-w-2xl text-center text-xs text-muted-light"
         >
-          All fees exclusive of VAT. Reservation fee held until completion — fully refundable if
-          the deal falls through for reasons outside your control. No hidden costs.
+          All fees exclusive of VAT. No hidden costs. If a deal falls through, you don&apos;t pay the
+          completion balance.
         </motion.p>
       </div>
     </section>
