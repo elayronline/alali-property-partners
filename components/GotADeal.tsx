@@ -12,12 +12,23 @@ export function GotADeal() {
 
   return (
     <section id="got-a-deal" className="bg-warm-grey px-4 py-20 sm:px-6 sm:py-28">
+      {/* Gold divider */}
+      <div className="mx-auto mb-16 h-px max-w-6xl bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+
       <div className="mx-auto max-w-3xl">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-xs font-semibold uppercase tracking-widest text-gold"
+        >
+          Submit a Deal
+        </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-charcoal sm:text-4xl"
+          className="mt-3 text-3xl font-bold text-charcoal sm:text-4xl"
         >
           Got a Property That Needs a Buyer?
         </motion.h2>

@@ -7,6 +7,9 @@ const trustBadges = ["NAPSA Member", "TPO Registered", "ICO Registered", "HMRC A
 export function Footer() {
   return (
     <footer className="bg-dark-bg px-4 pt-16 pb-8 sm:px-6">
+      {/* Gold divider */}
+      <div className="mx-auto mb-12 h-px max-w-6xl bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+
       <div className="mx-auto max-w-5xl">
         {/* Logo */}
         <div className="flex justify-center">
@@ -69,15 +72,18 @@ export function Footer() {
           {trustBadges.map((badge) => (
             <span
               key={badge}
-              className="rounded-md border border-gold/30 px-3 py-1.5 text-xs font-medium text-gold/70"
+              className="rounded-md border border-gold/30 bg-gold/5 px-4 py-2 text-xs font-medium text-gold/80"
             >
               {badge}
             </span>
           ))}
         </div>
 
+        {/* Gold divider before compliance */}
+        <div className="mx-auto mt-10 h-px max-w-md bg-gradient-to-r from-transparent via-gold/15 to-transparent" />
+
         {/* Compliance text */}
-        <p className="mx-auto mt-8 max-w-2xl text-center text-xs leading-relaxed text-muted-dark/60">
+        <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-muted-dark/60">
           Alali Property Partners is registered with TPO/PRS, supervised by HMRC for Anti-Money
           Laundering, and registered with the ICO for Data Protection. Professional Indemnity
           Insurance held.

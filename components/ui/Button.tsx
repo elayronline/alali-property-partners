@@ -18,7 +18,8 @@ export function Button({
     "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2"
 
   const variants = {
-    primary: "bg-gold text-dark-bg hover:bg-gold-light",
+    primary:
+      "bg-gradient-to-r from-gold-dark via-gold to-gold text-dark-bg hover:from-gold hover:via-gold-light hover:to-gold-light",
     secondary: "border-2 border-gold text-gold hover:bg-gold hover:text-dark-bg",
   }
 

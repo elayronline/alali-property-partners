@@ -6,7 +6,7 @@ export function WhatsAppCTA() {
   return (
     <section
       id="whatsapp-cta"
-      className="bg-gradient-to-r from-gold-dark via-gold to-gold-light px-4 py-20 sm:px-6 sm:py-28"
+      className="bg-gradient-to-r from-gold-dark via-gold to-gold-light px-4 py-20 sm:px-6 sm:py-28 md:py-32"
     >
       <div className="mx-auto max-w-3xl text-center">
         <motion.h2
@@ -40,10 +40,13 @@ export function WhatsAppCTA() {
             href="https://wa.me/44XXXXXXXXXX"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-dark-bg px-8 py-4 text-base font-bold text-white transition-colors hover:bg-charcoal"
+            className="inline-flex items-center gap-2 rounded-lg bg-dark-bg px-10 py-4 text-base font-bold text-white transition-colors hover:bg-charcoal sm:text-lg"
           >
-            Join the Deal Broadcast →
+            Join Free →
           </a>
+          <p className="mt-4 text-sm text-dark-bg/60">
+            Free. No commitment. Unsubscribe anytime.
+          </p>
         </motion.div>
       </div>
     </section>

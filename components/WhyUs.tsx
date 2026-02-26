@@ -7,26 +7,27 @@ import { Card } from "@/components/ui/Card"
 const cards = [
   {
     icon: CheckCircle,
-    title: "Every deal researched properly",
+    title: "Every deal verified before it reaches you",
     description:
-      "We check the comparables, run the yields, and verify the numbers before you ever see it.",
+      "We check the comparables, run the yields, and verify the numbers. If a deal doesn't stack up, we don't send it.",
   },
   {
     icon: Users,
-    title: "Direct relationships, not recycled listings",
-    description: "Our deals come from agents, landlords, and sellers we know — not portals.",
+    title: "Off-market access through direct relationships",
+    description:
+      "Our deals come from agents, landlords, and sellers we know directly — not recycled portal listings.",
   },
   {
     icon: Phone,
     title: "You deal with us directly",
     description:
-      "No call centres. No bots. You'll know who we are and we'll know what you're looking for.",
+      "No call centres. No bots. You'll know who we are and we'll know exactly what you're looking for.",
   },
   {
     icon: Wallet,
-    title: "Transparent fees, no lock-in",
+    title: "Clear fees. No retainers. Pay on results.",
     description:
-      "You see our pricing upfront. If a deal doesn't stack up, we'll say so — not sell it to you.",
+      "You see our pricing upfront. No lock-in contracts. If a deal doesn't complete, you don't pay.",
   },
 ]
 
@@ -34,18 +35,29 @@ const fullWidthCard = {
   icon: Link,
   title: "Connected to a trusted power team",
   description:
-    "Need a mortgage broker, solicitor, or contractor? We'll connect you with professionals we work with.",
+    "Mortgage brokers, solicitors, contractors, and lettings agents — vetted professionals we work with directly.",
 }
 
 export function WhyUs() {
   return (
     <section id="why-us" className="bg-white px-4 py-20 sm:px-6 sm:py-28">
+      {/* Gold divider */}
+      <div className="mx-auto mb-16 h-px max-w-6xl bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+
       <div className="mx-auto max-w-5xl">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center text-xs font-semibold uppercase tracking-widest text-gold"
+        >
+          The Advantage
+        </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center text-3xl font-bold text-charcoal sm:text-4xl"
+          className="mt-3 text-center text-3xl font-bold text-charcoal sm:text-4xl"
         >
           Why Work With Us
         </motion.h2>
