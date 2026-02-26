@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto max-w-5xl">
         {/* Logo */}
         <div className="flex justify-center">
-          <Image src="/logo.webp" alt="Alali Property Partners" width={160} height={50} />
+          <Image src="/logo.png" alt="Alali Property Partners" width={160} height={50} />
         </div>
 
         {/* Contact info */}

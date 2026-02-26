@@ -40,7 +40,7 @@ export function Navbar() {
           className="cursor-pointer"
           aria-label="Back to top"
         >
-          <Image src="/logo.webp" alt="Alali Property Partners" width={140} height={44} priority />
+          <Image src="/logo.png" alt="Alali Property Partners" width={140} height={44} priority />
         </button>
 
         {/* Desktop nav */}
