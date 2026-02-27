@@ -7,8 +7,8 @@ export default function Privacy() {
       <p className="mt-4 text-muted-light">
         Our privacy policy is being finalised and will be published here shortly. If you have any
         questions about how we handle your data, please contact us at{" "}
-        <a href="mailto:deals@alaliproperty.co.uk" className="text-gold hover:underline">
-          deals@alaliproperty.co.uk
+        <a href="mailto:contact@alalipropertypartners.com" className="text-gold hover:underline">
+          contact@alalipropertypartners.com
         </a>
         .
       </p>

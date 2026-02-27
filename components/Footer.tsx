@@ -17,18 +17,18 @@ export function Footer() {
         {/* Contact info */}
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-8">
           <a
-            href="mailto:deals@alaliproperty.co.uk"
+            href="mailto:contact@alalipropertypartners.com"
             className="flex items-center gap-2 text-sm text-muted-dark transition-colors hover:text-gold"
           >
             <Mail className="h-4 w-4" />
-            deals@alaliproperty.co.uk
+            contact@alalipropertypartners.com
           </a>
           <a
-            href="tel:+44XXXXXXXXXX"
+            href="tel:+447802816863"
             className="flex items-center gap-2 text-sm text-muted-dark transition-colors hover:text-gold"
           >
             <Phone className="h-4 w-4" />
-            +44 (0) XXX XXXX XXX
+            +44 7802 816863
           </a>
         </div>
 
@@ -53,7 +53,7 @@ export function Footer() {
             <Linkedin className="h-4 w-4" />
           </a>
           <a
-            href="https://wa.me/44XXXXXXXXXX"
+            href="https://wa.me/447802816863"
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-muted-dark transition-colors hover:border-gold/40 hover:text-gold"
@@ -68,7 +68,7 @@ export function Footer() {
         {/* Honest trust signals */}
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <span className="rounded-md border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-muted-dark">
-            Registered in England &amp; Wales
+            Company No. 17057401
           </span>
           <span className="rounded-md border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-muted-dark">
             Professional Indemnity Insured
@@ -92,7 +92,7 @@ export function Footer() {
             </Link>
           </div>
           <p className="text-xs text-muted-dark/60">
-            &copy; 2026 Alali Property Partners. All rights reserved.
+            &copy; 2026 Alali Property Partners Ltd. 86-90 Paul Street, London EC2A 4NE.
           </p>
         </div>
       </div>
