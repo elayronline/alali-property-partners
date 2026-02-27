@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram, Linkedin, Mail, Phone } from "lucide-react"
+import { Instagram, Mail, Phone } from "lucide-react"
 
 export function Footer() {
   return (
@@ -35,22 +35,13 @@ export function Footer() {
         {/* Social icons */}
         <div className="mt-6 flex justify-center gap-4">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/alalipropertypartners"
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-muted-dark transition-colors hover:border-gold/40 hover:text-gold"
             aria-label="Follow us on Instagram"
           >
             <Instagram className="h-4 w-4" />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-muted-dark transition-colors hover:border-gold/40 hover:text-gold"
-            aria-label="Connect on LinkedIn"
-          >
-            <Linkedin className="h-4 w-4" />
           </a>
           <a
             href="https://wa.me/447802816863"
