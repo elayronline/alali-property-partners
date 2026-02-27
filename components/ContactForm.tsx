@@ -49,8 +49,16 @@ export function ContactForm() {
     return () => window.removeEventListener("preselect-role", handler)
   }, [setValue])
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log("Form submission:", data)
+  const onSubmit = async (data: ContactFormData) => {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+
+    if (!response.ok) {
+      throw new Error("Failed to send")
+    }
   }
 
   if (isSubmitSuccessful) {
