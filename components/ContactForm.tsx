@@ -50,13 +50,62 @@ export function ContactForm() {
   }, [setValue])
 
   const onSubmit = async (data: ContactFormData) => {
-    const response = await fetch("/api/contact", {
+    const isInvestorRole = data.role === "Investor"
+    const isSellerRole =
+      data.role === "Property Owner" ||
+      data.role === "Estate Agent" ||
+      data.role === "Sourcer"
+
+    let roleHtml = ""
+    if (isInvestorRole) {
+      roleHtml = `
+        <h3>Investment Preferences</h3>
+        ${data.strategy ? `<p><strong>Strategy:</strong> ${data.strategy}</p>` : ""}
+        ${data.budget ? `<p><strong>Budget:</strong> ${data.budget}</p>` : ""}
+        ${data.preferredAreas ? `<p><strong>Preferred Areas:</strong> ${data.preferredAreas}</p>` : ""}
+      `
+    }
+    if (isSellerRole) {
+      roleHtml = `
+        <h3>Property Details</h3>
+        ${data.propertyAddress ? `<p><strong>Address:</strong> ${data.propertyAddress}</p>` : ""}
+        ${data.askingPrice ? `<p><strong>Asking Price:</strong> £${data.askingPrice}</p>` : ""}
+        ${data.propertyType ? `<p><strong>Property Type:</strong> ${data.propertyType}</p>` : ""}
+        ${data.briefDetails ? `<p><strong>Details:</strong> ${data.briefDetails}</p>` : ""}
+      `
+    }
+
+    const html = `
+      <div style="font-family:Arial,sans-serif;line-height:1.5;color:#333;">
+        <h2>New Enquiry from ${data.fullName}</h2>
+        <p><strong>Name:</strong> ${data.fullName}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Phone:</strong> ${data.phone}</p>
+        <p><strong>Role:</strong> ${data.role}</p>
+        <p><strong>WhatsApp Broadcast:</strong> ${data.whatsappBroadcast ? "Yes" : "No"}</p>
+        ${data.hearAbout ? `<p><strong>Heard About Us:</strong> ${data.hearAbout}</p>` : ""}
+        ${roleHtml}
+      </div>
+    `
+
+    const formData = new FormData()
+    formData.append("access_key", "4e50844e-651a-4107-9928-0fb0edd47d94")
+    formData.append("subject", `New Enquiry: ${data.fullName} (${data.role})`)
+    formData.append("from_name", "Alali Property Partners")
+    formData.append("replyto", data.email)
+    formData.append("formatted_html_submission", html)
+    formData.append("name", data.fullName)
+    formData.append("email", data.email)
+    formData.append("phone", data.phone)
+    formData.append("role", data.role)
+
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: formData,
     })
 
-    if (!response.ok) {
+    const result = await response.json()
+    if (!result.success) {
       throw new Error("Failed to send")
     }
   }
