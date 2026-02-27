@@ -108,6 +108,42 @@ export function ContactForm() {
     if (!result.success) {
       throw new Error("Failed to send")
     }
+
+    // Send auto-reply thank you email
+    const autoReply = new FormData()
+    autoReply.append("access_key", "4e50844e-651a-4107-9928-0fb0edd47d94")
+    autoReply.append("email_to", data.email)
+    autoReply.append("from_name", "Alali Property Partners")
+    autoReply.append("subject", "Thanks for your enquiry — Alali Property Partners")
+    autoReply.append(
+      "message",
+      `
+      <div style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;">
+        <div style="background:#1a1a1a;padding:32px;border-radius:12px;">
+          <h2 style="color:#c9a84c;margin-top:0;">Thanks for getting in touch, ${data.fullName}!</h2>
+          <p style="color:#fff;">We've received your enquiry and will be in touch within a few hours during business hours.</p>
+          <p style="color:#fff;">In the meantime, if you have any urgent questions, feel free to reply to this email.</p>
+          ${
+            data.whatsappBroadcast
+              ? `
+            <div style="margin-top:24px;padding:16px;background:#25D366;border-radius:8px;text-align:center;">
+              <p style="color:#fff;margin:0 0 8px 0;font-weight:bold;">Join our WhatsApp Deal Broadcast</p>
+              <p style="color:#fff;margin:0 0 12px 0;font-size:14px;">Get off-market and below-market-value deals sent straight to your phone.</p>
+              <a href="https://chat.whatsapp.com/JHY65Dz00z44iH175xUcwS?mode=gi_t" style="display:inline-block;background:#fff;color:#25D366;font-weight:bold;padding:10px 24px;border-radius:6px;text-decoration:none;">Join WhatsApp Group</a>
+            </div>
+          `
+              : ""
+          }
+          <p style="color:#999;font-size:12px;margin-top:24px;">Alali Property Partners — Property Deal Sourcing Across England & Wales</p>
+        </div>
+      </div>
+      `,
+    )
+
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: autoReply,
+    }).catch(() => {})
   }
 
   if (isSubmitSuccessful) {
