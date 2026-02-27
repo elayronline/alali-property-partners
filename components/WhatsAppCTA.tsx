@@ -15,7 +15,7 @@ export function WhatsAppCTA() {
           viewport={{ once: true }}
           className="text-3xl font-bold text-dark-bg sm:text-4xl lg:text-5xl"
         >
-          Fresh deals on your phone before Rightmove sees them.
+          Deals that stack up, sent straight to your phone.
         </motion.h2>
 
         <motion.p

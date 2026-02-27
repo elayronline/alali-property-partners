@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CheckCircle, Users, Phone, Wallet, Link } from "lucide-react"
+import { CheckCircle, Users, Phone, Wallet, Link, ShieldCheck } from "lucide-react"
 import { Card } from "@/components/ui/Card"
 
 const cards = [
@@ -15,7 +15,7 @@ const cards = [
     icon: Users,
     title: "Fresh deals from real relationships",
     description:
-      "We source directly from agents, landlords, and other investors. Nothing recycled from Rightmove. Nothing that's been shopped around.",
+      "We do the sourcing legwork so you don't have to. Every deal is checked against sold prices, rental evidence, and area demand before it reaches you.",
   },
   {
     icon: Phone,
@@ -25,18 +25,26 @@ const cards = [
   },
   {
     icon: Wallet,
-    title: "Clear fees. No retainers. Pay on results.",
+    title: "Clear fees. No surprises. Pay on results.",
     description:
       "You see our pricing upfront. No lock-in contracts. If a deal doesn't complete, you don't pay.",
   },
 ]
 
-const fullWidthCard = {
-  icon: Link,
-  title: "Connected to a trusted power team",
-  description:
-    "Mortgage brokers, solicitors, contractors, and lettings agents — vetted professionals we work with directly.",
-}
+const secondaryCards = [
+  {
+    icon: ShieldCheck,
+    title: "Your deals are yours",
+    description:
+      "We don't buy properties from our own pipeline. Every deal we source goes to our clients first — that's the model.",
+  },
+  {
+    icon: Link,
+    title: "Connected to a trusted power team",
+    description:
+      "Mortgage brokers, solicitors, contractors, and lettings agents — vetted professionals we work with directly.",
+  },
+]
 
 export function WhyUs() {
   return (
@@ -76,15 +84,19 @@ export function WhyUs() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-5"
-        >
-          <Card {...fullWidthCard} className="border-gold/20 bg-gold/5" />
-        </motion.div>
+        <div className="mt-5 grid gap-5 sm:grid-cols-2">
+          {secondaryCards.map((card, i) => (
+            <motion.div
+              key={card.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 + i * 0.1 }}
+            >
+              <Card {...card} className="border-gold/20 bg-gold/5" />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -9,6 +9,7 @@ const pricingCards = [
     subtitle: "BTL, BRR, HMO, SA, Flip — all strategies",
     fee: "2%",
     feeDetail: "of purchase price (min £3,000)",
+    valueNote: "Most investors spend 40+ hours finding a single deal. We deliver it ready to go.",
     payment: "50% on reservation, 50% on completion",
     includes: "Full deal pack, comparables, yield analysis, exit strategy",
     reassurance: "No completion, no fee",
@@ -21,7 +22,7 @@ const pricingCards = [
     feeDetail: "from",
     payment: "Due on heads of terms agreement",
     includes: "Deal identification, negotiation, heads of terms",
-    reassurance: null,
+    reassurance: "Full support through to agreement",
     popular: false,
   },
   {
@@ -89,6 +90,9 @@ export function Pricing() {
                 {/* Fee */}
                 <p className="mt-4 text-2xl font-bold text-gold">{card.fee}</p>
                 <p className="mt-0.5 text-xs text-muted-light">{card.feeDetail}</p>
+                {"valueNote" in card && card.valueNote && (
+                  <p className="mt-2 text-xs italic text-muted-light/70">{card.valueNote}</p>
+                )}
 
                 {/* When you pay */}
                 <div className="mt-4 space-y-2.5">
@@ -120,10 +124,11 @@ export function Pricing() {
                   <div className="mt-4">
                     <ExpandableSection trigger="How does bespoke sourcing work?">
                       <p className="text-sm leading-relaxed text-muted-light">
-                        You pay a £1,000 retainer and we have 14 days to source a deal that meets
-                        your criteria. If we don&apos;t find it, you get your money back — no
-                        questions asked. If you proceed, the retainer is deducted from the agreed
-                        sourcing fee on completion.
+                        You pay a £1,000 retainer upfront. We then have 14 days to source a deal
+                        that matches your brief. If we don&apos;t deliver, you get a full refund
+                        — no questions asked. If you go ahead, the £1,000 comes off the final
+                        sourcing fee (typically 2–3% of purchase price), so you only pay the
+                        difference on completion.
                       </p>
                     </ExpandableSection>
                   </div>
@@ -139,8 +144,8 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mx-auto mt-8 max-w-2xl text-center text-xs text-muted-light"
         >
-          All fees exclusive of VAT. No hidden costs. If a deal falls through, you don&apos;t pay the
-          completion balance.
+          All fees are plus VAT where applicable. No hidden costs. If a deal falls through, you
+          don&apos;t pay the completion balance.
         </motion.p>
       </div>
     </section>

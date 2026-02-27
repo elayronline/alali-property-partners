@@ -43,6 +43,7 @@ export function GotADeal() {
           Whether you&apos;re a landlord with a tricky situation, an agent with a listing that
           won&apos;t shift, or anyone who needs a serious buyer fast — send it our way. We assess
           every property within 48 hours and connect it to funded, ready-to-move investors.
+          We pay a referral fee on every deal that completes — and you keep your full agency commission.
         </motion.p>
 
         <motion.div
@@ -53,7 +54,7 @@ export function GotADeal() {
           className="mt-6 flex flex-wrap gap-3"
         >
           <span className="rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 text-xs font-medium text-gold">
-            We pay referral fees from &pound;500
+            Referral fees paid on completion
           </span>
           <span className="rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 text-xs font-medium text-gold">
             No exclusive arrangements
