@@ -1,4 +1,12 @@
+import type { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Alali Property Partners",
+  description:
+    "Terms of service for Alali Property Partners property deal sourcing services.",
+  alternates: { canonical: "/terms" },
+}
 
 export default function Terms() {
   return (

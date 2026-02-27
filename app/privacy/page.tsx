@@ -1,4 +1,12 @@
+import type { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Alali Property Partners",
+  description:
+    "How Alali Property Partners collects, uses, and protects your personal data. GDPR compliant.",
+  alternates: { canonical: "/privacy" },
+}
 
 export default function Privacy() {
   return (
