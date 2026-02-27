@@ -56,49 +56,36 @@ export function ContactForm() {
       data.role === "Estate Agent" ||
       data.role === "Sourcer"
 
-    let roleHtml = ""
-    if (isInvestorRole) {
-      roleHtml = `
-        <h3>Investment Preferences</h3>
-        ${data.strategy ? `<p><strong>Strategy:</strong> ${data.strategy}</p>` : ""}
-        ${data.budget ? `<p><strong>Budget:</strong> ${data.budget}</p>` : ""}
-        ${data.preferredAreas ? `<p><strong>Preferred Areas:</strong> ${data.preferredAreas}</p>` : ""}
-      `
-    }
-    if (isSellerRole) {
-      roleHtml = `
-        <h3>Property Details</h3>
-        ${data.propertyAddress ? `<p><strong>Address:</strong> ${data.propertyAddress}</p>` : ""}
-        ${data.askingPrice ? `<p><strong>Asking Price:</strong> £${data.askingPrice}</p>` : ""}
-        ${data.propertyType ? `<p><strong>Property Type:</strong> ${data.propertyType}</p>` : ""}
-        ${data.briefDetails ? `<p><strong>Details:</strong> ${data.briefDetails}</p>` : ""}
-      `
-    }
-
-    const html = `
-      <div style="font-family:Arial,sans-serif;line-height:1.5;color:#333;">
-        <h2>New Enquiry from ${data.fullName}</h2>
-        <p><strong>Name:</strong> ${data.fullName}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Phone:</strong> ${data.phone}</p>
-        <p><strong>Role:</strong> ${data.role}</p>
-        <p><strong>WhatsApp Broadcast:</strong> ${data.whatsappBroadcast ? "Yes" : "No"}</p>
-        ${data.hearAbout ? `<p><strong>Heard About Us:</strong> ${data.hearAbout}</p>` : ""}
-        ${data.message ? `<p><strong>Message:</strong> ${data.message}</p>` : ""}
-        ${roleHtml}
-      </div>
-    `
-
     const formData = new FormData()
     formData.append("access_key", "4e50844e-651a-4107-9928-0fb0edd47d94")
     formData.append("subject", `New Enquiry: ${data.fullName} (${data.role})`)
     formData.append("from_name", "Alali Property Partners")
     formData.append("replyto", data.email)
-    formData.append("formatted_html_submission", html)
-    formData.append("name", data.fullName)
-    formData.append("email", data.email)
-    formData.append("phone", data.phone)
-    formData.append("role", data.role)
+
+    // Use clean field names that Web3Forms displays nicely
+    formData.append("Name", data.fullName)
+    formData.append("Email", data.email)
+    formData.append("Phone", data.phone)
+    formData.append("Role", data.role)
+    formData.append("WhatsApp Broadcast", data.whatsappBroadcast ? "Yes" : "No")
+
+    if (data.message) formData.append("Message", data.message)
+    if (data.hearAbout) formData.append("Found Via", data.hearAbout)
+
+    // Investor fields
+    if (isInvestorRole) {
+      if (data.strategy) formData.append("Strategy", data.strategy)
+      if (data.budget) formData.append("Budget", data.budget)
+      if (data.preferredAreas) formData.append("Preferred Areas", data.preferredAreas)
+    }
+
+    // Seller fields
+    if (isSellerRole) {
+      if (data.propertyAddress) formData.append("Property Address", data.propertyAddress)
+      if (data.askingPrice) formData.append("Asking Price", `£${data.askingPrice}`)
+      if (data.propertyType) formData.append("Property Type", data.propertyType)
+      if (data.briefDetails) formData.append("Brief Details", data.briefDetails)
+    }
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
