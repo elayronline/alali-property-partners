@@ -32,10 +32,12 @@ const steps = [
 const dealPackItems = [
   "Purchase price and comparable sold prices",
   "Gross and net yield calculations",
-  "Rental income evidence",
+  "Rental income evidence (room-level or nightly rates where applicable)",
   "Refurbishment cost estimate (where applicable)",
-  "Area demand summary",
+  "Target resale value for flip and development deals",
+  "Area demand and occupancy summary",
   "Recommended strategy and exit options",
+  "R2R: guaranteed rent vs market rent, lease terms, and projected profit",
 ]
 
 export function HowItWorks() {
@@ -92,7 +94,7 @@ export function HowItWorks() {
             Deal Pack
           </p>
           <p className="mb-4 text-sm font-bold text-white">
-            What&apos;s included with every deal:
+            What&apos;s in your deal pack:
           </p>
           <ul className="grid gap-2 text-sm text-muted-dark sm:grid-cols-2">
             {dealPackItems.map((item) => (

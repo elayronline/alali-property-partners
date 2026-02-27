@@ -128,7 +128,7 @@ export function ContactForm() {
               ? `
             <div style="margin-top:24px;padding:16px;background:#25D366;border-radius:8px;text-align:center;">
               <p style="color:#fff;margin:0 0 8px 0;font-weight:bold;">Join our WhatsApp Deal Broadcast</p>
-              <p style="color:#fff;margin:0 0 12px 0;font-size:14px;">Get off-market and below-market-value deals sent straight to your phone.</p>
+              <p style="color:#fff;margin:0 0 12px 0;font-size:14px;">Verified property deals sent straight to your phone.</p>
               <a href="https://chat.whatsapp.com/JHY65Dz00z44iH175xUcwS?mode=gi_t" style="display:inline-block;background:#fff;color:#25D366;font-weight:bold;padding:10px 24px;border-radius:6px;text-decoration:none;">Join WhatsApp Group</a>
             </div>
           `
@@ -215,7 +215,7 @@ export function ContactForm() {
               <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
             </svg>
-            No upfront fees
+            No hidden fees
           </span>
           <span className="flex items-center gap-1.5">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-gold/60" aria-hidden="true">

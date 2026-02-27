@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button"
 import { scrollToSection } from "@/lib/smoothScroll"
 
 const trustStrip = [
-  "Deals assessed in 48 hours",
+  "Every deal verified before you see it",
   "Complete deal pack included",
   "England & Wales coverage",
 ]
