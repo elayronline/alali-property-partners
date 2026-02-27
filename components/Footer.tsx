@@ -30,6 +30,13 @@ export function Footer() {
             <Phone className="h-4 w-4" />
             +44 7802 816863
           </a>
+          <a
+            href="tel:+447392637828"
+            className="flex items-center gap-2 text-sm text-muted-dark transition-colors hover:text-gold"
+          >
+            <Phone className="h-4 w-4" />
+            +44 7392 637828
+          </a>
         </div>
 
         {/* Social icons */}
