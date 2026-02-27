@@ -84,6 +84,7 @@ export function ContactForm() {
         <p><strong>Role:</strong> ${data.role}</p>
         <p><strong>WhatsApp Broadcast:</strong> ${data.whatsappBroadcast ? "Yes" : "No"}</p>
         ${data.hearAbout ? `<p><strong>Heard About Us:</strong> ${data.hearAbout}</p>` : ""}
+        ${data.message ? `<p><strong>Message:</strong> ${data.message}</p>` : ""}
         ${roleHtml}
       </div>
     `
@@ -398,6 +399,18 @@ export function ContactForm() {
                 </motion.div>
               )}
             </AnimatePresence>
+
+            {/* Always visible message field */}
+            <div>
+              <label htmlFor="message" className="mb-1.5 block text-xs font-medium text-white/50">
+                Anything else you&apos;d like us to know?
+              </label>
+              <FormTextarea
+                id="message"
+                placeholder="Tell us a bit more about what you're looking for..."
+                {...register("message")}
+              />
+            </div>
 
             {/* Always visible bottom fields */}
             <div className="flex items-start gap-3 pt-2">

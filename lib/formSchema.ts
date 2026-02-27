@@ -51,6 +51,7 @@ const baseSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().min(1, "Phone number is required"),
   role: z.enum(roleOptions, { message: "Please select your role" }),
+  message: z.string().optional(),
   whatsappBroadcast: z.boolean(),
   hearAbout: z.string().optional(),
 })
