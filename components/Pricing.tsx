@@ -13,7 +13,7 @@ const pricingCards = [
     valueNote: "Most investors spend 40+ hours finding a single deal. We deliver it ready to go.",
     payment: "Payable upfront on instruction",
     includes: "Full deal pack, comparables, yield analysis, exit strategy",
-    reassurance: "14-day due diligence period — refund available if the deal isn't right for you, subject to terms",
+    reassurance: "14-day due diligence period — if the deal isn't right, you're covered. Full details in our terms.",
     popular: true,
   },
   {
@@ -23,7 +23,7 @@ const pricingCards = [
     feeDetail: "from",
     payment: "Payable upfront on instruction",
     includes: "Deal identification, negotiation, heads of terms",
-    reassurance: "14-day due diligence period — refund available subject to terms",
+    reassurance: "14-day due diligence period — if it's not right, you're covered. Full details in our terms.",
     popular: false,
   },
   {
@@ -33,7 +33,7 @@ const pricingCards = [
     feeDetail: "retainer + agreed fee on completion",
     payment: "Retainer payable upfront on brief",
     includes: "Everything in Investment + sourced to your exact criteria",
-    reassurance: "14-day due diligence period — full retainer refund if we don't deliver, subject to terms",
+    reassurance: "14-day sourcing window — if we don't deliver, you're covered. Full details in our terms.",
     popular: false,
     expandable: true,
   },
@@ -126,10 +126,10 @@ export function Pricing() {
                     <ExpandableSection trigger="How does bespoke sourcing work?">
                       <p className="text-sm leading-relaxed text-muted-light">
                         You pay a £1,000 retainer upfront. We then have 14 days to source a deal
-                        that matches your brief. If we don&apos;t deliver within that period, you
-                        receive a full refund of the retainer, subject to our terms. If you go
-                        ahead, the £1,000 comes off the final sourcing fee (typically 2–3% of
-                        purchase price), with the balance payable upfront on instruction.
+                        that matches your brief. If we don&apos;t deliver within that period,
+                        you&apos;re covered — full details in our terms. If you go ahead, the
+                        £1,000 comes off the final sourcing fee (typically 2–3% of purchase
+                        price), with the balance payable upfront on instruction.
                       </p>
                     </ExpandableSection>
                     <Link
@@ -152,9 +152,10 @@ export function Pricing() {
           className="mx-auto mt-8 max-w-2xl text-center text-xs text-muted-light"
         >
           All fees are plus VAT where applicable. No hidden costs. All fees are payable upfront.
-          You have a 14-day due diligence period — if the property isn&apos;t right for you, you
-          are entitled to a refund subject to our{" "}
-          <a href="/terms" className="text-gold underline hover:text-gold-light">terms of service</a>.
+          Every deal comes with a 14-day due diligence period — if the deal isn&apos;t right for
+          you, you&apos;re protected. See our{" "}
+          <a href="/terms" className="text-gold underline hover:text-gold-light">terms of service</a>{" "}
+          for full refund details.
         </motion.p>
       </div>
     </section>

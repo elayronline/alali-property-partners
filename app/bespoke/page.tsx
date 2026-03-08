@@ -573,39 +573,31 @@ export default function BespokeSourcing() {
                     <h2 className="text-xl font-bold text-white">Pay the £1,000 Retainer</h2>
                     <p className="mt-2 text-sm text-white/50">
                       Secure your bespoke sourcing slot. If we don&apos;t find a deal matching your
-                      brief within 14 days, you receive a full refund — subject to our{" "}
+                      brief within 14 days, you&apos;re covered. See our{" "}
                       <Link href="/terms" className="text-gold underline hover:text-gold-light">
                         terms
-                      </Link>
-                      .
+                      </Link>{" "}
+                      for full details.
                     </p>
 
                     <a
                       href="https://pay.tide.co/products/bespoke-sou-a00Y2k1H"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => {
+                        setCurrentStep(2)
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                      }}
                       className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-gold-dark via-gold to-gold px-6 py-3 text-sm font-bold text-dark-bg transition-all hover:from-gold hover:via-gold-light hover:to-gold-light"
                     >
-                      Pay £1,000 Retainer
+                      Pay £1,000 Retainer &amp; Continue
                       <ExternalLink className="h-4 w-4" />
                     </a>
 
-                    <div className="mt-8 border-t border-white/10 pt-6">
-                      <p className="mb-3 text-xs text-white/40">
-                        Once you&apos;ve completed the payment, continue to sign the agreement.
-                      </p>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setCurrentStep(2)
-                          window.scrollTo({ top: 0, behavior: "smooth" })
-                        }}
-                        className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-gold/30 px-5 py-2.5 text-sm font-semibold text-gold transition-all hover:border-gold hover:bg-gold/10"
-                      >
-                        I&apos;ve Paid — Continue to Agreement
-                        <ArrowRight className="h-4 w-4" />
-                      </button>
-                    </div>
+                    <p className="mt-4 text-xs text-white/40">
+                      Secure payment opens in a new tab. Your agreement will be
+                      ready when you return.
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -622,6 +614,23 @@ export default function BespokeSourcing() {
                 exit={{ opacity: 0, x: -20 }}
               >
                 <form onSubmit={handleContractSubmit} className="space-y-6">
+                  {/* Payment confirmation banner */}
+                  <div className="rounded-xl border border-gold/30 bg-gold/5 p-5">
+                    <div className="flex items-center gap-3">
+                      <CheckCircle2 className="h-6 w-6 shrink-0 text-gold" />
+                      <div>
+                        <p className="text-sm font-semibold text-gold">
+                          Payment initiated — complete your agreement below
+                        </p>
+                        <p className="mt-1 text-xs text-white/50">
+                          Once we confirm your £1,000 retainer, your 14-day bespoke
+                          search begins. Fill in your details, review the terms, and
+                          sign to get started.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* Client details */}
                   <div className="rounded-xl border border-white/5 bg-dark-bg-light p-6 sm:p-8">
                     <div className="mb-6 flex items-start gap-4">
@@ -735,7 +744,7 @@ export default function BespokeSourcing() {
                             Target Location(s) <span className="text-gold">*</span>
                           </label>
                           <FormInput
-                            placeholder="e.g. Manchester, Birmingham, Leeds"
+                            placeholder="e.g. Surrey, Hampshire, Greater London"
                             {...contractForm.register("targetLocations", { required: true })}
                           />
                           {contractForm.formState.errors.targetLocations && (
@@ -827,6 +836,12 @@ export default function BespokeSourcing() {
                         <p>
                           3.3 The Retainer Deposit shall be deducted from the final Finder&apos;s
                           Fee upon successful completion.
+                        </p>
+                        <p>
+                          3.4 This Agreement shall not become effective, and the Sourcer shall
+                          have no obligation to commence any search activity, until the
+                          Retainer Deposit has been received in full and confirmed by the
+                          Sourcer.
                         </p>
                       </ContractClause>
 
@@ -949,7 +964,7 @@ export default function BespokeSourcing() {
                       </p>
                       <div className="space-y-3">
                         {[
-                          "I have completed the Property Requirements Document in full.",
+                          "I will complete the Property Requirements Document in full as the next step.",
                           "I understand Alali Property Partners Ltd is an INTRODUCER only.",
                           "I am responsible for my own due diligence.",
                           "I understand the 14-day cooling off period.",
@@ -1011,14 +1026,37 @@ export default function BespokeSourcing() {
                         <p className="mb-1 text-[0.65rem] font-semibold uppercase tracking-wider text-white/40">
                           For and on behalf of the Client
                         </p>
-                        <p className="mb-3 text-xs text-white/50">
-                          Please sign in the box below using your mouse or finger:
-                        </p>
-                        <SignaturePad onEnd={handleSignatureEnd} />
-                        {!clientSignature && (
-                          <p className="mt-2 text-xs text-gold/60">
-                            Your signature is required to proceed.
-                          </p>
+                        {clientSignature ? (
+                          <>
+                            <p className="mb-3 text-xs text-white/50">
+                              Your signature:
+                            </p>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <div className="overflow-hidden rounded-lg border border-white/20 bg-white p-2">
+                              <img
+                                src={clientSignature}
+                                alt="Your signature"
+                                className="h-[160px] w-auto"
+                              />
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() => setClientSignature("")}
+                              className="mt-2 cursor-pointer text-xs text-gold hover:text-gold-light"
+                            >
+                              Re-sign
+                            </button>
+                          </>
+                        ) : (
+                          <>
+                            <p className="mb-3 text-xs text-white/50">
+                              Please sign in the box below using your mouse or finger:
+                            </p>
+                            <SignaturePad onEnd={handleSignatureEnd} />
+                            <p className="mt-2 text-xs text-gold/60">
+                              Your signature is required to proceed.
+                            </p>
+                          </>
                         )}
                         <div className="mt-4 grid grid-cols-2 gap-3 text-xs">
                           <div>
@@ -1035,20 +1073,10 @@ export default function BespokeSourcing() {
                       </div>
                     </Section>
 
-                    <div className="mt-6 flex items-center gap-3">
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setCurrentStep(1)
-                          window.scrollTo({ top: 0, behavior: "smooth" })
-                        }}
-                        className="cursor-pointer rounded-lg border border-white/10 px-5 py-3 text-sm font-medium text-white/60 transition-all hover:border-white/20 hover:text-white"
-                      >
-                        &larr; Back
-                      </button>
+                    <div className="mt-6">
                       <button
                         type="submit"
-                        className="flex-1 cursor-pointer rounded-lg bg-gradient-to-r from-gold-dark via-gold to-gold px-8 py-3 text-sm font-bold text-dark-bg transition-all hover:from-gold hover:via-gold-light hover:to-gold-light"
+                        className="w-full cursor-pointer rounded-lg bg-gradient-to-r from-gold-dark via-gold to-gold px-8 py-3 text-sm font-bold text-dark-bg transition-all hover:from-gold hover:via-gold-light hover:to-gold-light"
                       >
                         Sign &amp; Continue to Requirements &rarr;
                       </button>
@@ -1430,7 +1458,7 @@ export default function BespokeSourcing() {
                                 <span className="text-gold">*</span>
                               </label>
                               <FormInput
-                                placeholder="e.g. Manchester, Birmingham, Leeds"
+                                placeholder="e.g. Surrey, Hampshire, Greater London"
                                 {...requirementsForm.register("preferredAreas", {
                                   required: true,
                                 })}
@@ -1472,7 +1500,7 @@ export default function BespokeSourcing() {
                                 Maximum Distance from Location
                               </label>
                               <FormInput
-                                placeholder="e.g. 30 miles from Manchester"
+                                placeholder="e.g. 30 miles from Guildford"
                                 {...requirementsForm.register("maxDistance")}
                               />
                             </div>

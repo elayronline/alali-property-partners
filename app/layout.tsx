@@ -10,9 +10,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Alali Property Partners | Property Deal Sourcing — South East England & Greater London",
   description:
-    "We find and introduce verified, high-yield property deals for investors across South East England, Greater London, Hampshire, Berkshire and Dorset. BTL, BRR, R2R, HMO, flips, and bespoke sourcing. Working alongside regulated professionals. Transparent fees. Complete deal packs delivered to your WhatsApp.",
+    "We find and introduce verified, high-yield property deals for investors across South East England, Greater London, Surrey, Hampshire, Berkshire and Dorset. BTL, BRR, R2R, HMO, flips, and bespoke sourcing. Working alongside regulated professionals. Transparent fees. Complete deal packs delivered to your WhatsApp.",
   keywords:
-    "property deal sourcing, property sourcing agent, below market value property, BTL deals, BRR property, rent to rent, HMO investment, property investment South East England, deal sourcing London, property deals Hampshire Berkshire Dorset, Greater London property deals",
+    "property deal sourcing, property sourcing agent, below market value property, BTL deals, BRR property, rent to rent, HMO investment, property investment South East England, deal sourcing London, property deals Surrey Hampshire Berkshire Dorset, Greater London property deals",
   manifest: "/site.webmanifest",
   metadataBase: new URL("https://www.alalipropertypartners.com"),
   alternates: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alali Property Partners | Property Deal Sourcing",
     description:
-      "Verified property deals for investors across South East England, Greater London, Hampshire, Berkshire & Dorset. BTL, BRR, R2R, HMO, flips — complete deal packs with transparent fees.",
+      "Verified property deals for investors across South East England, Greater London, Surrey, Hampshire, Berkshire & Dorset. BTL, BRR, R2R, HMO, flips — complete deal packs with transparent fees.",
     type: "website",
     locale: "en_GB",
     url: "https://www.alalipropertypartners.com",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alali Property Partners | Property Deal Sourcing",
     description:
-      "Verified property deals for investors across South East England, Greater London, Hampshire, Berkshire & Dorset. Complete deal packs with transparent fees.",
+      "Verified property deals for investors across South East England, Greater London, Surrey, Hampshire, Berkshire & Dorset. Complete deal packs with transparent fees.",
   },
 }
 
@@ -51,7 +51,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "Alali Property Partners",
               description:
-                "Property deal sourcing and introducer service covering South East England, Greater London, Hampshire, Berkshire and Dorset. We find verified, high-yield property deals for investors and connect them with regulated professionals — BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
+                "Property deal sourcing and introducer service covering South East England, Greater London, Surrey, Hampshire, Berkshire and Dorset. We find verified, high-yield property deals for investors and connect them with regulated professionals — BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
               url: "https://www.alalipropertypartners.com",
               telephone: ["+447802816863", "+447392637828"],
               email: "contact@alalipropertypartners.com",

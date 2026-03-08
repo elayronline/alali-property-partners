@@ -15,7 +15,7 @@ const cards = [
     icon: Users,
     title: "Fresh deals from real relationships",
     description:
-      "We do the sourcing legwork so you don't have to. Every deal is checked against sold prices, rental evidence, and area demand before it reaches you.",
+      "We build direct connections with agents, landlords, and vendors — not just portals. That's how we find off-market and pre-market deals before they go public.",
   },
   {
     icon: Phone,
@@ -25,9 +25,9 @@ const cards = [
   },
   {
     icon: Wallet,
-    title: "Clear fees. No surprises. Pay on results.",
+    title: "Clear fees. No surprises. No lock-in.",
     description:
-      "You see our pricing upfront. No lock-in contracts. If a deal doesn't complete, you don't pay.",
+      "You see our pricing upfront. No hidden costs, no ongoing contracts. Plus a 14-day due diligence period on every deal — if it's not right, you're covered.",
   },
 ]
 

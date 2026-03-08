@@ -19,9 +19,9 @@ export default function Home() {
       <WhatWeSource />
       <HowItWorks />
       <WhyUs />
-      <WhatsAppCTA />
-      <GotADeal />
       <Pricing />
+      <GotADeal />
+      <WhatsAppCTA />
       <ContactForm />
       <Footer />
     </main>

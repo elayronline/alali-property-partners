@@ -13,24 +13,18 @@ export function SignaturePad({ onEnd, width = 500, height = 160 }: SignaturePadP
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const padRef = useRef<SignaturePadLib | null>(null)
   const onEndRef = useRef(onEnd)
-  const savedDataRef = useRef<string>("")
+  const pointDataRef = useRef<ReturnType<SignaturePadLib["toData"]> | undefined>(undefined)
 
   // Keep onEnd ref stable to avoid re-creating the pad
   onEndRef.current = onEnd
 
-  const resizeCanvas = useCallback(() => {
+  const setupCanvas = useCallback(() => {
     const canvas = canvasRef.current
-    const pad = padRef.current
-    if (!canvas || !pad) return
+    if (!canvas) return
     const container = canvas.parentElement
     if (!container) return
 
-    // Save current signature data before resize
-    if (!pad.isEmpty()) {
-      savedDataRef.current = pad.toDataURL("image/png")
-    }
-
-    const ratio = Math.min(window.devicePixelRatio || 1, 2) // Cap at 2x to reduce PNG size
+    const ratio = Math.min(window.devicePixelRatio || 1, 2)
     const w = Math.min(container.clientWidth, width)
     canvas.width = w * ratio
     canvas.height = height * ratio
@@ -38,43 +32,41 @@ export function SignaturePad({ onEnd, width = 500, height = 160 }: SignaturePadP
     canvas.style.height = `${height}px`
     const ctx = canvas.getContext("2d")
     if (ctx) ctx.scale(ratio, ratio)
+  }, [width, height])
+
+  const resizeCanvas = useCallback(() => {
+    const pad = padRef.current
+    if (!pad) return
+
+    // Save stroke point data (resolution-independent) before resize
+    if (!pad.isEmpty()) {
+      pointDataRef.current = pad.toData()
+    }
+
+    setupCanvas()
     pad.clear()
 
-    // Restore saved signature after resize
-    if (savedDataRef.current) {
-      pad.fromDataURL(savedDataRef.current, {
-        width: w,
-        height,
-      })
+    // Restore from point data — no async image loading, no dimension issues
+    if (pointDataRef.current && pointDataRef.current.length > 0) {
+      pad.fromData(pointDataRef.current)
     }
-  }, [width, height])
+  }, [setupCanvas])
 
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
+
     const pad = new SignaturePadLib(canvas, {
       penColor: "#1a1a1a",
       backgroundColor: "rgba(255,255,255,0)",
     })
     pad.addEventListener("endStroke", () => {
-      const data = pad.toDataURL("image/png")
-      savedDataRef.current = data
-      onEndRef.current?.(data)
+      pointDataRef.current = pad.toData()
+      onEndRef.current?.(pad.toDataURL("image/png"))
     })
     padRef.current = pad
 
-    // Initial sizing
-    const container = canvas.parentElement
-    if (container) {
-      const ratio = Math.min(window.devicePixelRatio || 1, 2)
-      const w = Math.min(container.clientWidth, width)
-      canvas.width = w * ratio
-      canvas.height = height * ratio
-      canvas.style.width = `${w}px`
-      canvas.style.height = `${height}px`
-      const ctx = canvas.getContext("2d")
-      if (ctx) ctx.scale(ratio, ratio)
-    }
+    setupCanvas()
 
     window.addEventListener("resize", resizeCanvas)
     return () => {
@@ -82,11 +74,11 @@ export function SignaturePad({ onEnd, width = 500, height = 160 }: SignaturePadP
       pad.off()
       window.removeEventListener("resize", resizeCanvas)
     }
-  }, [resizeCanvas, width, height])
+  }, [resizeCanvas, setupCanvas, width, height])
 
   const clear = () => {
     padRef.current?.clear()
-    savedDataRef.current = ""
+    pointDataRef.current = undefined
     onEndRef.current?.("")
   }
 

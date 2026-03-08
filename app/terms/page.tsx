@@ -83,13 +83,13 @@ export default function Terms() {
           <p className="mt-3 font-semibold text-charcoal">14-Day Due Diligence and Refund Policy:</p>
           <p className="mt-1">
             You have 14 days from the date a deal is presented to carry out your own due diligence.
-            If during this period you decide the property is not suitable, you may request a refund
-            of the sourcing fee. Refund requests must be made in writing within the 14-day period.
-            Refunds will not be issued after the 14-day due diligence period has expired, or where
-            you have proceeded with the transaction (for example, by instructing solicitors or
-            applying for a mortgage on the property). We reserve the right to deduct reasonable
-            administrative costs from any refund where significant work has been undertaken on
-            your behalf.
+            If during this period you decide the property is not suitable, you may request a
+            refund of the sourcing fee. Refund requests must be made in writing within the 14-day
+            period. Refunds will not be issued after the 14-day due diligence period has expired,
+            or where you have proceeded with the transaction (for example, by instructing
+            solicitors or applying for a mortgage on the property). We reserve the right to deduct
+            reasonable administrative costs from any refund where significant work has been
+            undertaken on your behalf.
           </p>
           <p className="mt-3 font-semibold text-charcoal">Investment Purchase:</p>
           <p className="mt-1">

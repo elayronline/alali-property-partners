@@ -230,6 +230,10 @@ export function generateContractPdf(data: ContractData): jsPDF {
   body(
     "3.3 The Retainer Deposit shall be deducted from the final Finder's Fee upon successful completion.",
   )
+  y += 2
+  body(
+    "3.4 This Agreement shall not become effective, and the Sourcer shall have no obligation to commence any search activity, until the Retainer Deposit has been received in full and confirmed by the Sourcer.",
+  )
   y += 4
 
   checkPage(60)
@@ -304,7 +308,7 @@ export function generateContractPdf(data: ContractData): jsPDF {
   body("By signing below, the Client confirms:")
   y += 2
   const acks = [
-    "I have completed the Property Requirements Document in full.",
+    "I will complete the Property Requirements Document in full as the next step.",
     "I understand Alali Property Partners Ltd is an INTRODUCER only.",
     "I am responsible for my own due diligence.",
     "I understand the 14-day cooling off period.",

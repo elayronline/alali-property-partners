@@ -7,7 +7,7 @@ import { scrollToSection } from "@/lib/smoothScroll"
 const trustStrip = [
   "Every deal verified before you see it",
   "Complete deal pack included",
-  "South East England, Greater London, Hampshire, Berkshire & Dorset",
+  "South East England, Greater London, Surrey, Berkshire, Hampshire & Dorset",
 ]
 
 export function Hero() {
@@ -115,7 +115,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 1.1 }}
           className="mt-6 text-xs text-white/40"
         >
-          Currently sourcing across England and Wales
+          Currently sourcing across South East England &amp; Greater London
         </motion.p>
       </div>
     </section>

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ClipboardList, Search, Package } from "lucide-react"
+import { ClipboardList, FileCheck, Package, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { scrollToSection } from "@/lib/smoothScroll"
 
@@ -14,22 +14,31 @@ const steps = [
       "Strategy, budget, target areas, and preferred yield — we source to your brief. Not sure yet? We'll help you figure it out.",
   },
   {
-    icon: Search,
+    icon: FileCheck,
     step: "2",
-    title: "We find and verify the deal",
+    title: "Sign up and secure the deal",
     description:
-      "Every opportunity is checked against Land Registry sold prices, rental values, and area demand. If the numbers don't work, you don't see it.",
+      "Once we've found a deal that fits, you sign our agreement and pay the sourcing fee to lock it in. This confirms your serious intent and secures the opportunity for you.",
   },
   {
     icon: Package,
     step: "3",
-    title: "Receive a complete deal pack",
+    title: "Receive your full deal pack",
     description:
-      "Purchase price, comparables, gross and net yields, refurb costs, and recommended exit — everything you need to make a decision.",
+      "Within 24 hours we release everything: property address, photos, comparables, yield analysis, refurb costs, and recommended exit strategy.",
+  },
+  {
+    icon: ShieldCheck,
+    step: "4",
+    title: "14 days to verify everything",
+    description:
+      "We introduce you to the agent or vendor. You have a full 14 days to run your own due diligence. Not satisfied? You're covered — full details in our terms.",
   },
 ]
 
 const dealPackItems = [
+  "Full property address and location details",
+  "Property photos (interior and exterior where available)",
   "Purchase price and comparable sold prices",
   "Gross and net yield calculations",
   "Rental income evidence (room-level or nightly rates where applicable)",
@@ -64,7 +73,7 @@ export function HowItWorks() {
           How It Works
         </motion.h2>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-3">
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
             <motion.div
               key={s.step}
