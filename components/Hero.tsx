@@ -7,7 +7,7 @@ import { scrollToSection } from "@/lib/smoothScroll"
 const trustStrip = [
   "Every deal verified before you see it",
   "Complete deal pack included",
-  "England & Wales coverage",
+  "South East England, Greater London, Hampshire, Berkshire & Dorset",
 ]
 
 export function Hero() {
@@ -63,8 +63,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-white/80"
         >
-          We source below-market-value and off-market properties, verify every number, and connect
-          the right deals with the right people.
+          We find below-market-value and off-market property deals, verify every number, and
+          introduce the right opportunities to the right investors — working alongside regulated
+          professionals to get deals over the line.
         </motion.p>
 
         <motion.p

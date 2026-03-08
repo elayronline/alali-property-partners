@@ -40,9 +40,9 @@ const secondaryCards = [
   },
   {
     icon: Link,
-    title: "Connected to a trusted power team",
+    title: "Backed by a compliant power team",
     description:
-      "Mortgage brokers, solicitors, contractors, and lettings agents — vetted professionals we work with directly.",
+      "We work alongside FCA-regulated mortgage brokers, qualified solicitors, vetted contractors, and lettings agents — so every part of your transaction is handled by the right professionals.",
   },
 ]
 

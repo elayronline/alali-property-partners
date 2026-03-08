@@ -18,10 +18,12 @@ export default function Privacy() {
         <section>
           <h2 className="text-lg font-bold text-charcoal">1. Who We Are</h2>
           <p className="mt-2">
-            Alali Property Partners Ltd (Company No. 17057401) is a property deal sourcing company
-            registered in England and Wales. Our registered address is 86-90 Paul Street, London
-            EC2A 4NE. When we refer to &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;,
-            we mean Alali Property Partners Ltd.
+            Alali Property Partners Ltd (Company No. 17057401) is a property deal sourcing and
+            introducer company registered in England and Wales. We act as a middle introducer,
+            sourcing property deals for investors and connecting clients with regulated
+            professionals to facilitate transactions. Our registered address is 86-90 Paul
+            Street, London EC2A 4NE. When we refer to &ldquo;we&rdquo;, &ldquo;us&rdquo;, or
+            &ldquo;our&rdquo;, we mean Alali Property Partners Ltd.
           </p>
           <p className="mt-2">
             For any data protection queries, contact us at{" "}

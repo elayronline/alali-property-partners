@@ -18,18 +18,23 @@ export default function Terms() {
         <section>
           <h2 className="text-lg font-bold text-charcoal">1. About Us</h2>
           <p className="mt-2">
-            Alali Property Partners Ltd (Company No. 17057401) is a property deal sourcing company
-            registered in England and Wales. Our registered address is 86-90 Paul Street, London
-            EC2A 4NE. These terms govern your use of our website at www.alalipropertypartners.com
-            and the services we provide.
+            Alali Property Partners Ltd (Company No. 17057401) is a property deal sourcing and
+            introducer company registered in England and Wales. We act as a middle introducer —
+            identifying and sourcing property investment opportunities for our clients and
+            connecting them with regulated, compliant professionals to facilitate each transaction.
+            Our registered address is 86-90 Paul Street, London EC2A 4NE. These terms govern your
+            use of our website at www.alalipropertypartners.com and the services we provide.
           </p>
         </section>
 
         <section>
           <h2 className="text-lg font-bold text-charcoal">2. Our Services</h2>
           <p className="mt-2">
-            We source property deals for investors and connect property owners with funded buyers.
-            Our services include:
+            We act as a middle introducer — we source property deals for investors and connect
+            property owners with funded buyers. We do not provide regulated financial services.
+            All regulated activities (such as mortgage advice, legal conveyancing, and financial
+            planning) are carried out by the independent, appropriately qualified professionals
+            we introduce you to. Our services include:
           </p>
           <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
             <li>Sourcing below-market-value, off-market, and high-yield property deals</li>
@@ -43,38 +48,67 @@ export default function Terms() {
         <section>
           <h2 className="text-lg font-bold text-charcoal">3. Not Financial or Legal Advice</h2>
           <p className="mt-2">
-            We are a property deal sourcing company. We are not regulated by the Financial Conduct
-            Authority (FCA) and do not provide financial advice, investment advice, tax advice, or
-            legal advice. The information we provide, including deal packs, yield calculations, and
-            comparable data, is for informational purposes only and should not be relied upon as
-            the sole basis for any investment decision.
+            We are a property deal sourcing and introducer company. As a middle introducer,
+            our role is limited to identifying property opportunities and introducing clients to
+            deals and to the regulated professionals needed to complete a transaction. Property
+            deal sourcing and introduction is not a regulated activity, and we are not regulated
+            by the Financial Conduct Authority (FCA). We do not provide financial advice,
+            investment advice, mortgage advice, tax advice, or legal advice.
           </p>
           <p className="mt-2">
-            We strongly recommend that you seek independent professional advice from a qualified
-            solicitor, mortgage broker, accountant, or financial adviser before proceeding with any
-            property transaction. All investment carries risk, and property values and rental income
-            can go down as well as up.
+            The information we provide, including deal packs, yield calculations, and comparable
+            data, is for informational purposes only and should not be relied upon as the sole
+            basis for any investment decision.
+          </p>
+          <p className="mt-2">
+            Where regulated services are required (such as mortgage advice or legal
+            conveyancing), we introduce you to independent, FCA-regulated brokers, qualified
+            solicitors, and other appropriately authorised professionals. These professionals
+            act independently and are responsible for their own compliance and regulatory
+            obligations. We strongly recommend that you take independent professional advice
+            before proceeding with any property transaction. All investment carries risk, and
+            property values and rental income can go down as well as up.
           </p>
         </section>
 
         <section>
           <h2 className="text-lg font-bold text-charcoal">4. Fees and Payment</h2>
-          <p className="mt-2 font-semibold text-charcoal">Investment Purchase:</p>
+          <p className="mt-2 font-semibold text-charcoal">All fees are payable upfront.</p>
           <p className="mt-1">
-            Our sourcing fee is 2% of the purchase price (minimum £3,000). Payment is split: 50%
-            on reservation and 50% on completion. If the deal does not complete, the completion
-            balance is not payable.
+            All sourcing fees are payable in full upfront upon instruction. You are entitled to
+            a 14-day client due diligence period from the date the deal is presented to you. If,
+            during this period, you determine that the property does not meet your requirements,
+            you may request a refund subject to the conditions set out below.
+          </p>
+          <p className="mt-3 font-semibold text-charcoal">14-Day Due Diligence and Refund Policy:</p>
+          <p className="mt-1">
+            You have 14 days from the date a deal is presented to carry out your own due diligence.
+            If during this period you decide the property is not suitable, you may request a refund
+            of the sourcing fee. Refund requests must be made in writing within the 14-day period.
+            Refunds will not be issued after the 14-day due diligence period has expired, or where
+            you have proceeded with the transaction (for example, by instructing solicitors or
+            applying for a mortgage on the property). We reserve the right to deduct reasonable
+            administrative costs from any refund where significant work has been undertaken on
+            your behalf.
+          </p>
+          <p className="mt-3 font-semibold text-charcoal">Investment Purchase:</p>
+          <p className="mt-1">
+            Our sourcing fee is 2% of the purchase price (minimum £3,000), payable upfront on
+            instruction. The 14-day due diligence and refund policy applies.
           </p>
           <p className="mt-3 font-semibold text-charcoal">Rent-to-Rent:</p>
           <p className="mt-1">
-            Fees start from £2,750, payable on heads of terms agreement.
+            Fees start from £2,750, payable upfront on instruction. The 14-day due diligence
+            and refund policy applies.
           </p>
           <p className="mt-3 font-semibold text-charcoal">Bespoke Sourcing:</p>
           <p className="mt-1">
-            A £1,000 retainer is payable on brief. We then have 14 days to source a deal that
-            matches your criteria. If we do not deliver within 14 days, you receive a full refund.
-            If you proceed, the retainer is deducted from the final sourcing fee (typically 2–3%
-            of purchase price), with the balance payable on completion.
+            A £1,000 retainer is payable upfront on brief. We then have 14 days to source a deal
+            that matches your criteria. If we do not deliver within 14 days, you receive a full
+            refund of the retainer. If you proceed, the retainer is deducted from the final
+            sourcing fee (typically 2–3% of purchase price), with the balance payable upfront
+            on instruction. The 14-day due diligence and refund policy applies to the final
+            sourcing fee.
           </p>
           <p className="mt-3 font-semibold text-charcoal">Referral Fees:</p>
           <p className="mt-1">
@@ -82,8 +116,7 @@ export default function Terms() {
             Referral fee amounts are agreed on a case-by-case basis.
           </p>
           <p className="mt-3">
-            All fees are plus VAT where applicable. Fees are non-refundable once a deal completes
-            unless otherwise agreed in writing.
+            All fees are plus VAT where applicable.
           </p>
         </section>
 

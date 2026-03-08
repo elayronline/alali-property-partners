@@ -69,8 +69,8 @@ export default async function OGImage() {
             lineHeight: 1.5,
           }}
         >
-          Verified property deals for investors across England & Wales. BTL, BRR,
-          R2R, HMO, flips — complete deal packs with transparent fees.
+          We find the right property deals for investors across England & Wales
+          and work with compliant professionals to get them over the line.
         </div>
 
         {/* Bottom strip */}

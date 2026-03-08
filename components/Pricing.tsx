@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
 import { ExpandableSection } from "@/components/ui/ExpandableSection"
 
 const pricingCards = [
@@ -10,9 +11,9 @@ const pricingCards = [
     fee: "2%",
     feeDetail: "of purchase price (min £3,000)",
     valueNote: "Most investors spend 40+ hours finding a single deal. We deliver it ready to go.",
-    payment: "50% on reservation, 50% on completion",
+    payment: "Payable upfront on instruction",
     includes: "Full deal pack, comparables, yield analysis, exit strategy",
-    reassurance: "No completion, no fee",
+    reassurance: "14-day due diligence period — refund available if the deal isn't right for you, subject to terms",
     popular: true,
   },
   {
@@ -20,9 +21,9 @@ const pricingCards = [
     subtitle: "Ready-to-go rental agreements",
     fee: "£2,750",
     feeDetail: "from",
-    payment: "Due on heads of terms agreement",
+    payment: "Payable upfront on instruction",
     includes: "Deal identification, negotiation, heads of terms",
-    reassurance: "Full support through to agreement",
+    reassurance: "14-day due diligence period — refund available subject to terms",
     popular: false,
   },
   {
@@ -30,9 +31,9 @@ const pricingCards = [
     subtitle: "Sourced to your exact brief",
     fee: "£1,000",
     feeDetail: "retainer + agreed fee on completion",
-    payment: "Retainer on brief, balance on completion",
+    payment: "Retainer payable upfront on brief",
     includes: "Everything in Investment + sourced to your exact criteria",
-    reassurance: "14-day money-back guarantee on retainer",
+    reassurance: "14-day due diligence period — full retainer refund if we don't deliver, subject to terms",
     popular: false,
     expandable: true,
   },
@@ -121,16 +122,22 @@ export function Pricing() {
 
                 {/* Expandable for bespoke */}
                 {card.expandable && (
-                  <div className="mt-4">
+                  <div className="mt-4 space-y-3">
                     <ExpandableSection trigger="How does bespoke sourcing work?">
                       <p className="text-sm leading-relaxed text-muted-light">
                         You pay a £1,000 retainer upfront. We then have 14 days to source a deal
-                        that matches your brief. If we don&apos;t deliver, you get a full refund
-                        — no questions asked. If you go ahead, the £1,000 comes off the final
-                        sourcing fee (typically 2–3% of purchase price), so you only pay the
-                        difference on completion.
+                        that matches your brief. If we don&apos;t deliver within that period, you
+                        receive a full refund of the retainer, subject to our terms. If you go
+                        ahead, the £1,000 comes off the final sourcing fee (typically 2–3% of
+                        purchase price), with the balance payable upfront on instruction.
                       </p>
                     </ExpandableSection>
+                    <Link
+                      href="/bespoke"
+                      className="block w-full rounded-lg bg-gradient-to-r from-gold-dark via-gold to-gold px-4 py-2.5 text-center text-sm font-bold text-dark-bg transition-all hover:from-gold hover:via-gold-light hover:to-gold-light"
+                    >
+                      Get Started &rarr;
+                    </Link>
                   </div>
                 )}
               </div>
@@ -144,8 +151,10 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mx-auto mt-8 max-w-2xl text-center text-xs text-muted-light"
         >
-          All fees are plus VAT where applicable. No hidden costs. If a deal falls through, you
-          don&apos;t pay the completion balance.
+          All fees are plus VAT where applicable. No hidden costs. All fees are payable upfront.
+          You have a 14-day due diligence period — if the property isn&apos;t right for you, you
+          are entitled to a refund subject to our{" "}
+          <a href="/terms" className="text-gold underline hover:text-gold-light">terms of service</a>.
         </motion.p>
       </div>
     </section>
