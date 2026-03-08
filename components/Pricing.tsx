@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ExpandableSection } from "@/components/ui/ExpandableSection"
+import { scrollToSection } from "@/lib/smoothScroll"
 
 const pricingCards = [
   {
@@ -118,6 +119,16 @@ export function Pricing() {
                   <div className="mt-4 rounded-lg border border-gold/20 bg-gold/5 px-3 py-2">
                     <p className="text-xs font-semibold text-gold">{card.reassurance}</p>
                   </div>
+                )}
+
+                {/* CTA button for non-expandable cards */}
+                {!card.expandable && (
+                  <button
+                    onClick={() => scrollToSection("contact")}
+                    className="mt-4 block w-full rounded-lg bg-gradient-to-r from-gold-dark via-gold to-gold px-4 py-2.5 text-center text-sm font-bold text-dark-bg transition-all hover:from-gold hover:via-gold-light hover:to-gold-light"
+                  >
+                    Speak to Us &rarr;
+                  </button>
                 )}
 
                 {/* Expandable for bespoke */}
