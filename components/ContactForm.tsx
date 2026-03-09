@@ -195,7 +195,7 @@ export function ContactForm() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.05 }}
-          className="mt-6 flex flex-wrap justify-center gap-4 text-xs text-white/40"
+          className="mt-6 flex flex-wrap justify-center gap-4 text-xs text-white/50"
         >
           <span className="flex items-center gap-1.5">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-gold/60" aria-hidden="true">
@@ -454,7 +454,7 @@ export function ContactForm() {
               )}
             </button>
 
-            <p className="text-center text-xs text-white/30">
+            <p className="text-center text-xs text-white/50">
               Your details are safe. We never share your information with third parties.
             </p>
           </form>

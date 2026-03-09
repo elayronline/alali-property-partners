@@ -71,14 +71,14 @@ export function Footer() {
 
         {/* Links and copyright */}
         <div className="mt-8 flex flex-col items-center gap-3 border-t border-white/10 pt-6 sm:flex-row sm:justify-between">
-          <p className="order-2 text-xs text-muted-dark/60 sm:order-1">
+          <p className="order-2 text-xs text-muted-dark/80 sm:order-1">
             &copy; 2026 Alali Property Partners Ltd. 86-90 Paul Street, London EC2A 4NE.
           </p>
-          <div className="order-1 flex gap-4 text-xs text-muted-dark/60 sm:order-2">
-            <Link href="/privacy" className="transition-colors hover:text-gold">
+          <div className="order-1 flex gap-4 text-xs text-muted-dark/80 sm:order-2">
+            <Link href="/privacy" className="rounded transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="transition-colors hover:text-gold">
+            <Link href="/terms" className="rounded transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold">
               Terms of Service
             </Link>
           </div>

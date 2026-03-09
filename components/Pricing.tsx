@@ -64,7 +64,7 @@ export function Pricing() {
           Our Fees
         </motion.h2>
 
-        <div className="-mx-4 mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:snap-none sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
+        <div className="-mx-4 mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:gap-6 sm:snap-none sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
           {pricingCards.map((card, i) => (
             <motion.div
               key={card.title}
@@ -93,7 +93,7 @@ export function Pricing() {
                 <p className="mt-4 text-2xl font-bold text-gold">{card.fee}</p>
                 <p className="mt-0.5 text-xs text-muted-light">{card.feeDetail}</p>
                 {"valueNote" in card && card.valueNote && (
-                  <p className="mt-2 text-xs italic text-muted-light/70">{card.valueNote}</p>
+                  <p className="mt-2 text-xs italic text-muted-light">{card.valueNote}</p>
                 )}
 
                 {/* When you pay */}

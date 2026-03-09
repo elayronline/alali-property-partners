@@ -70,7 +70,7 @@ export function WhyUs() {
           Why Work With Us
         </motion.h2>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {cards.map((card, i) => (
             <motion.div
               key={card.title}
@@ -84,7 +84,7 @@ export function WhyUs() {
           ))}
         </div>
 
-        <div className="mt-5 grid gap-5 sm:grid-cols-2">
+        <div className="mt-5 grid gap-6 sm:grid-cols-2">
           {secondaryCards.map((card, i) => (
             <motion.div
               key={card.title}

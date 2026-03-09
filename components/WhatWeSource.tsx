@@ -73,7 +73,7 @@ export function WhatWeSource() {
           transition={{ delay: 0.1 }}
           className="mt-12"
         >
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-gold/60">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-gold/80">
             How we find deals
           </p>
           <div className="flex flex-wrap justify-center gap-2.5">
@@ -90,7 +90,7 @@ export function WhatWeSource() {
           transition={{ delay: 0.2 }}
           className="mt-10"
         >
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-gold/60">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-gold/80">
             Investment strategies we cover
           </p>
           <div className="flex flex-wrap justify-center gap-2.5">
@@ -108,7 +108,7 @@ export function WhatWeSource() {
           transition={{ delay: 0.3 }}
           className="mt-10"
         >
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-gold/60">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-gold/80">
             Got a property to move?
           </p>
           <div className="flex flex-wrap justify-center gap-2.5">

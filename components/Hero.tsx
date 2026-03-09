@@ -61,7 +61,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mx-auto mt-6 max-w-2xl text-lg text-white/80"
+          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70"
         >
           We find below-market-value and off-market property deals, verify every number, and
           introduce the right opportunities to the right investors — working alongside regulated
@@ -72,7 +72,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.65 }}
-          className="mx-auto mt-4 max-w-xl text-sm text-white/50"
+          className="mx-auto mt-4 max-w-xl text-sm text-white/60"
         >
           Whether you&apos;re looking for your next investment or need to move a property — start
           here.
@@ -104,7 +104,7 @@ export function Hero() {
               {i > 0 && (
                 <span className="mx-3 hidden h-3 w-px bg-gold/30 sm:block" />
               )}
-              <span className="flex items-center gap-2 text-xs font-medium tracking-wide text-gold/70">
+              <span className="flex items-center gap-2 text-xs font-medium tracking-wide text-gold/80">
                 <span className="inline-block h-1 w-1 rounded-full bg-gold/40 sm:hidden" />
                 {item}
               </span>
@@ -116,7 +116,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.1 }}
-          className="mt-6 text-xs text-white/40"
+          className="mt-6 text-xs text-white/50"
         >
           Currently sourcing across South East England, Greater London, Surrey, Berkshire, Hampshire &amp; Dorset
         </motion.p>

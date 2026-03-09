@@ -30,7 +30,7 @@ export function ExpandableSection({ trigger, children }: ExpandableSectionProps)
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
             <div className="pt-3">{children}</div>
