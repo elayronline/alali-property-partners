@@ -8,7 +8,7 @@ import { scrollToSection } from "@/lib/smoothScroll"
 const pricingCards = [
   {
     title: "Investment Purchase",
-    subtitle: "BTL, BRR, HMO, SA, Flip — all strategies",
+    subtitle: "Buy-to-Let, BRR, HMO, SA, Flip — all strategies",
     fee: "2%",
     feeDetail: "of purchase price (min £3,000)",
     valueNote: "Most investors spend 40+ hours finding a single deal. We deliver it ready to go.",
@@ -20,11 +20,11 @@ const pricingCards = [
   {
     title: "Rent-to-Rent",
     subtitle: "Ready-to-go rental agreements",
-    fee: "£2,750",
-    feeDetail: "from",
+    fee: "From £2,750",
+    feeDetail: "depending on deal complexity",
     payment: "Payable upfront on instruction",
     includes: "Deal identification, negotiation, heads of terms",
-    reassurance: "14-day due diligence period — if it's not right, you're covered. Full details in our terms.",
+    reassurance: "14-day due diligence period — if the deal isn't right, you're covered. Full details in our terms.",
     popular: false,
   },
   {

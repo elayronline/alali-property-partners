@@ -5,11 +5,11 @@ import { motion } from "framer-motion"
 const methods = ["Below Market Value", "Off-Market", "Auction", "Pre-Market", "Direct to Seller", "Probate"]
 
 const strategies = [
-  "Buy-to-Let",
-  "Refurb & Refinance",
-  "Rent-to-Rent",
-  "Serviced Accommodation",
-  "HMO",
+  "Buy-to-Let (BTL)",
+  "Refurb & Refinance (BRR)",
+  "Rent-to-Rent (R2R)",
+  "Serviced Accommodation (SA)",
+  "HMO (Houses in Multiple Occupation)",
   "Flips",
   "Commercial Conversion",
   "Bespoke Briefs",

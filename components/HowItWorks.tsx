@@ -40,13 +40,11 @@ const dealPackItems = [
   "Full property address and location details",
   "Property photos (interior and exterior where available)",
   "Purchase price and comparable sold prices",
-  "Gross and net yield calculations",
-  "Rental income evidence (room-level or nightly rates where applicable)",
+  "Yield calculations and rental income evidence",
   "Refurbishment cost estimate (where applicable)",
-  "Target resale value for flip and development deals",
-  "Area demand and occupancy summary",
+  "Target resale value (for flip and development deals)",
+  "Area demand and local market summary",
   "Recommended strategy and exit options",
-  "R2R: guaranteed rent vs market rent, lease terms, and projected profit",
 ]
 
 export function HowItWorks() {
