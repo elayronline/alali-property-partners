@@ -64,7 +64,10 @@ export function Pricing() {
           Our Fees
         </motion.h2>
 
-        <div className="-mx-4 mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:gap-6 sm:snap-none sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
+        <div className="relative">
+          {/* Scroll affordance fade — mobile only */}
+          <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-8 bg-gradient-to-l from-white to-transparent sm:hidden" />
+        <div className="hide-scrollbar -mx-4 mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:gap-6 sm:snap-none sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
           {pricingCards.map((card, i) => (
             <motion.div
               key={card.title}
@@ -99,7 +102,7 @@ export function Pricing() {
                 {/* When you pay */}
                 <div className="mt-4 space-y-2.5">
                   <div>
-                    <p className="text-[0.65rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                    <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
                       When you pay
                     </p>
                     <p className="mt-0.5 text-sm text-muted-light">{card.payment}</p>
@@ -107,7 +110,7 @@ export function Pricing() {
 
                   {/* What's included */}
                   <div>
-                    <p className="text-[0.65rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                    <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
                       What&apos;s included
                     </p>
                     <p className="mt-0.5 text-sm text-muted-light">{card.includes}</p>
@@ -154,6 +157,7 @@ export function Pricing() {
               </div>
             </motion.div>
           ))}
+        </div>
         </div>
 
         <motion.p

@@ -97,7 +97,7 @@ export function HowItWorks() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mx-auto mt-14 max-w-3xl rounded-xl border border-gold/20 bg-dark-bg p-8"
+          className="mx-auto mt-14 max-w-3xl rounded-xl border border-gold/20 bg-dark-bg p-5 sm:p-8"
         >
           <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gold">
             Deal Pack

@@ -41,8 +41,17 @@ export function GotADeal() {
           className="mt-6 text-base leading-relaxed text-muted-light"
         >
           Whether you&apos;re a landlord with a tricky situation, an agent with a listing that
-          won&apos;t shift, or anyone who needs a serious buyer fast — send it our way. We assess
-          every property within 48 hours and connect it to funded, ready-to-move investors.
+          won&apos;t shift, or anyone who needs a serious buyer fast — send it our way.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.12 }}
+          className="mt-3 text-base leading-relaxed text-muted-light"
+        >
+          We assess every property within 48 hours and connect it to funded, ready-to-move investors.
           We pay a referral fee on every deal that completes — and you keep your full agency commission.
         </motion.p>
 

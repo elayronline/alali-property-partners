@@ -44,7 +44,7 @@ export function WhatsAppCTA() {
           >
             Join Free &rarr;
           </a>
-          <p className="mt-4 text-sm text-dark-bg/60">
+          <p className="mt-4 text-sm text-dark-bg/70">
             Free forever. Leave anytime with one tap.
           </p>
         </motion.div>

@@ -49,7 +49,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl"
+          className="text-3xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl"
         >
           Real Deals. Real Numbers.{" "}
           <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
@@ -82,7 +82,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+          className="mt-10 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-center"
         >
           <Button size="large" onClick={handleInvestorClick}>
             I&apos;m Looking for Deals
