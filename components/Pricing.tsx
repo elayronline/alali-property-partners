@@ -64,7 +64,7 @@ export function Pricing() {
           Our Fees
         </motion.h2>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-3">
+        <div className="-mx-4 mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:snap-none sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
           {pricingCards.map((card, i) => (
             <motion.div
               key={card.title}
@@ -72,7 +72,7 @@ export function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`relative rounded-xl border bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg ${
+              className={`relative min-w-[280px] shrink-0 snap-center rounded-xl border bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg sm:min-w-0 sm:shrink ${
                 card.popular ? "border-gold" : "border-gray-100"
               }`}
             >

@@ -7,7 +7,7 @@ import { scrollToSection } from "@/lib/smoothScroll"
 const trustStrip = [
   "Every deal verified before you see it",
   "Complete deal pack included",
-  "South East England, Greater London, Surrey, Berkshire, Hampshire & Dorset",
+  "SE England, Greater London & surrounding counties",
 ]
 
 export function Hero() {
@@ -97,14 +97,17 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="mx-auto mt-10 flex max-w-lg flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-0"
+          className="mx-auto mt-10 flex max-w-lg flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-0"
         >
           {trustStrip.map((item, i) => (
             <div key={item} className="flex items-center">
               {i > 0 && (
-                <span className="mx-4 hidden h-3 w-px bg-gold/30 sm:block" />
+                <span className="mx-3 hidden h-3 w-px bg-gold/30 sm:block" />
               )}
-              <span className="text-xs font-medium tracking-wide text-gold/70">{item}</span>
+              <span className="flex items-center gap-2 text-xs font-medium tracking-wide text-gold/70">
+                <span className="inline-block h-1 w-1 rounded-full bg-gold/40 sm:hidden" />
+                {item}
+              </span>
             </div>
           ))}
         </motion.div>
@@ -115,7 +118,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 1.1 }}
           className="mt-6 text-xs text-white/40"
         >
-          Currently sourcing across South East England &amp; Greater London
+          Currently sourcing across South East England, Greater London, Surrey, Berkshire, Hampshire &amp; Dorset
         </motion.p>
       </div>
     </section>

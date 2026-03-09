@@ -406,14 +406,14 @@ export function ContactForm() {
             </div>
 
             {/* Always visible bottom fields */}
-            <div className="flex items-start gap-3 pt-2">
+            <div className="flex items-center gap-3 pt-2">
               <input
                 type="checkbox"
                 id="whatsapp-broadcast"
-                className="mt-1 h-5 w-5 cursor-pointer accent-gold"
+                className="h-4 w-4 shrink-0 cursor-pointer accent-gold"
                 {...register("whatsappBroadcast")}
               />
-              <label htmlFor="whatsapp-broadcast" className="text-sm text-white/50">
+              <label htmlFor="whatsapp-broadcast" className="text-sm leading-snug text-white/50">
                 Add me to the free WhatsApp Deal Broadcast
               </label>
             </div>

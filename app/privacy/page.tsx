@@ -172,7 +172,7 @@ export default function Privacy() {
           </p>
           <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
             <li>Email: contact@alalipropertypartners.com</li>
-            <li>Phone: +44 7802 816863</li>
+            <li>Phone: 020 4515 5330</li>
             <li>Address: 86-90 Paul Street, London EC2A 4NE</li>
           </ul>
         </section>

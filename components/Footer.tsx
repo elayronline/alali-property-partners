@@ -24,18 +24,11 @@ export function Footer() {
             contact@alalipropertypartners.com
           </a>
           <a
-            href="tel:+447802816863"
+            href="tel:+442045155330"
             className="flex items-center gap-2 text-sm text-muted-dark transition-colors hover:text-gold"
           >
             <Phone className="h-4 w-4" />
-            +44 7802 816863
-          </a>
-          <a
-            href="tel:+447392637828"
-            className="flex items-center gap-2 text-sm text-muted-dark transition-colors hover:text-gold"
-          >
-            <Phone className="h-4 w-4" />
-            +44 7392 637828
+            020 4515 5330
           </a>
         </div>
 
@@ -51,7 +44,7 @@ export function Footer() {
             <Instagram className="h-4 w-4" />
           </a>
           <a
-            href="https://wa.me/447802816863"
+            href="https://wa.me/442045155330"
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-muted-dark transition-colors hover:border-gold/40 hover:text-gold"
@@ -69,9 +62,6 @@ export function Footer() {
             Company No. 17057401
           </span>
           <span className="rounded-md border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-muted-dark">
-            Professional Indemnity Insured
-          </span>
-          <span className="rounded-md border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-muted-dark">
             Transparent Pricing
           </span>
         </div>
@@ -81,7 +71,10 @@ export function Footer() {
 
         {/* Links and copyright */}
         <div className="mt-8 flex flex-col items-center gap-3 border-t border-white/10 pt-6 sm:flex-row sm:justify-between">
-          <div className="flex gap-4 text-xs text-muted-dark/60">
+          <p className="order-2 text-xs text-muted-dark/60 sm:order-1">
+            &copy; 2026 Alali Property Partners Ltd. 86-90 Paul Street, London EC2A 4NE.
+          </p>
+          <div className="order-1 flex gap-4 text-xs text-muted-dark/60 sm:order-2">
             <Link href="/privacy" className="transition-colors hover:text-gold">
               Privacy Policy
             </Link>
@@ -89,9 +82,6 @@ export function Footer() {
               Terms of Service
             </Link>
           </div>
-          <p className="text-xs text-muted-dark/60">
-            &copy; 2026 Alali Property Partners Ltd. 86-90 Paul Street, London EC2A 4NE.
-          </p>
         </div>
       </div>
     </footer>

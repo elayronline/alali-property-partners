@@ -186,16 +186,7 @@ export default function Terms() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-charcoal">10. Professional Indemnity Insurance</h2>
-          <p className="mt-2">
-            We hold professional indemnity insurance to protect our clients in the event of
-            professional negligence or errors in our services. Details of our cover are available
-            on request.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-lg font-bold text-charcoal">11. Intellectual Property</h2>
+          <h2 className="text-lg font-bold text-charcoal">10. Intellectual Property</h2>
           <p className="mt-2">
             All content on this website, including text, images, logos, and design, is the property
             of Alali Property Partners Ltd and is protected by copyright. You may not reproduce,
@@ -204,7 +195,7 @@ export default function Terms() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-charcoal">12. Governing Law</h2>
+          <h2 className="text-lg font-bold text-charcoal">11. Governing Law</h2>
           <p className="mt-2">
             These terms are governed by and construed in accordance with the laws of England and
             Wales. Any disputes arising from these terms or our services shall be subject to the
@@ -213,7 +204,7 @@ export default function Terms() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-charcoal">13. Changes to These Terms</h2>
+          <h2 className="text-lg font-bold text-charcoal">12. Changes to These Terms</h2>
           <p className="mt-2">
             We may update these terms from time to time. Any changes will be posted on this page
             with an updated date. Continued use of our website or services after changes are posted
@@ -222,13 +213,13 @@ export default function Terms() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-charcoal">14. Contact Us</h2>
+          <h2 className="text-lg font-bold text-charcoal">13. Contact Us</h2>
           <p className="mt-2">
             If you have any questions about these terms, please contact us:
           </p>
           <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
             <li>Email: contact@alalipropertypartners.com</li>
-            <li>Phone: +44 7802 816863</li>
+            <li>Phone: 020 4515 5330</li>
             <li>Address: 86-90 Paul Street, London EC2A 4NE</li>
           </ul>
         </section>
