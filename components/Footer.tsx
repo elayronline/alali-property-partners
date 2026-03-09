@@ -61,9 +61,6 @@ export function Footer() {
           <span className="rounded-md border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-muted-dark">
             Company No. 17057401
           </span>
-          <span className="rounded-md border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-muted-dark">
-            Transparent Pricing
-          </span>
         </div>
 
         {/* Gold divider */}
