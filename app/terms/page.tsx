@@ -116,7 +116,7 @@ export default function Terms() {
             Referral fee amounts are agreed on a case-by-case basis.
           </p>
           <p className="mt-3">
-            All fees are plus VAT where applicable.
+            All fees are VAT inclusive.
           </p>
         </section>
 

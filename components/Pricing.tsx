@@ -164,7 +164,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mx-auto mt-8 max-w-2xl text-center text-xs text-muted-light"
         >
-          All fees are plus VAT where applicable. No hidden costs. All fees are payable upfront.
+          All fees are VAT inclusive. No hidden costs. All fees are payable upfront.
           Every deal comes with a 14-day due diligence period — if the deal isn&apos;t right for
           you, you&apos;re protected. See our{" "}
           <a href="/terms" className="text-gold underline hover:text-gold-light">terms of service</a>{" "}
