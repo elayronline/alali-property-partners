@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
 import { scrollToSection } from "@/lib/smoothScroll"
 
 const navLinks = [
@@ -22,6 +23,18 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [isOpen])
 
   const handleNavClick = (href: string) => {
     scrollToSection(href)
@@ -65,7 +78,7 @@ export function Navbar() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="cursor-pointer text-gold lg:hidden"
+          className="relative z-50 cursor-pointer p-2 text-gold lg:hidden"
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -73,25 +86,41 @@ export function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
-        <div className="border-t border-white/10 bg-dark-bg px-4 pb-4 lg:hidden">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleNavClick(link.href)}
-              className="block w-full cursor-pointer py-3 text-left text-sm font-medium text-white/80 transition-colors hover:text-gold"
-            >
-              {link.label}
-            </button>
-          ))}
-          <button
-            onClick={() => handleNavClick("whatsapp-cta")}
-            className="mt-2 w-full cursor-pointer rounded-lg bg-gold px-5 py-2 text-sm font-semibold text-dark-bg transition-colors hover:bg-gold-light"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="overflow-hidden border-t border-white/10 bg-dark-bg lg:hidden"
           >
-            Get Deals First
-          </button>
-        </div>
-      )}
+            <div className="px-4 pb-6 pt-2">
+              {navLinks.map((link, i) => (
+                <motion.button
+                  key={link.href}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  onClick={() => handleNavClick(link.href)}
+                  className="block w-full cursor-pointer py-3.5 text-left text-base font-medium text-white/80 transition-colors hover:text-gold"
+                >
+                  {link.label}
+                </motion.button>
+              ))}
+              <motion.button
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: navLinks.length * 0.05 }}
+                onClick={() => handleNavClick("whatsapp-cta")}
+                className="mt-3 w-full cursor-pointer rounded-lg bg-gold px-5 py-3 text-base font-semibold text-dark-bg transition-colors hover:bg-gold-light"
+              >
+                Get Deals First
+              </motion.button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }

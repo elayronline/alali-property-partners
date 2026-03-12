@@ -13,7 +13,7 @@ export function WhatsAppCTA() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-dark-bg sm:text-4xl lg:text-5xl"
+          className="text-2xl font-bold text-dark-bg sm:text-4xl lg:text-5xl"
         >
           Deals that stack up, sent straight to your phone.
         </motion.h2>
@@ -40,7 +40,7 @@ export function WhatsAppCTA() {
             href="https://chat.whatsapp.com/JHY65Dz00z44iH175xUcwS?mode=gi_t"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-dark-bg px-10 py-4 text-base font-bold text-white transition-colors hover:bg-charcoal sm:text-lg"
+            className="inline-flex items-center gap-2 rounded-lg bg-dark-bg px-8 py-3.5 text-base font-bold text-white transition-colors hover:bg-charcoal sm:px-10 sm:py-4 sm:text-lg"
           >
             Join Free &rarr;
           </a>

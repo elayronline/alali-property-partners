@@ -10,7 +10,7 @@ interface CardProps {
 export function Card({ icon: Icon, title, description, className = "" }: CardProps) {
   return (
     <div
-      className={`rounded-xl border border-gray-100 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg ${className}`}
+      className={`rounded-xl border border-gray-100 bg-white p-5 transition-all duration-200 sm:p-6 md:hover:-translate-y-1 md:hover:shadow-lg ${className}`}
     >
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10">
         <Icon className="h-6 w-6 text-gold" />

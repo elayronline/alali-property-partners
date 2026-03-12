@@ -66,12 +66,12 @@ export function HowItWorks() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 text-center text-3xl font-bold text-charcoal sm:text-4xl"
+          className="mt-3 text-center text-2xl font-bold text-charcoal sm:text-4xl"
         >
           How It Works
         </motion.h2>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           {steps.map((s, i) => (
             <motion.div
               key={s.step}
@@ -95,7 +95,7 @@ export function HowItWorks() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mx-auto mt-14 max-w-3xl rounded-xl border border-gold/20 bg-dark-bg p-5 sm:p-8"
+          className="mx-auto mt-14 max-w-3xl rounded-xl border border-gold/20 bg-dark-bg p-4 sm:p-8"
         >
           <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gold">
             Deal Pack

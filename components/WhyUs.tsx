@@ -65,12 +65,12 @@ export function WhyUs() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 text-center text-3xl font-bold text-charcoal sm:text-4xl"
+          className="mt-3 text-center text-2xl font-bold text-charcoal sm:text-4xl"
         >
           Why Work With Us
         </motion.h2>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 sm:gap-6">
           {cards.map((card, i) => (
             <motion.div
               key={card.title}
@@ -84,7 +84,7 @@ export function WhyUs() {
           ))}
         </div>
 
-        <div className="mt-5 grid gap-6 sm:grid-cols-2">
+        <div className="mt-5 grid gap-5 sm:grid-cols-2 sm:gap-6">
           {secondaryCards.map((card, i) => (
             <motion.div
               key={card.title}

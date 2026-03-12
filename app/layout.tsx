@@ -53,7 +53,7 @@ export default function RootLayout({
               description:
                 "Property deal sourcing and introducer service covering South East England, Greater London, Surrey, Hampshire, Berkshire and Dorset. We find verified, high-yield property deals for investors and connect them with regulated professionals — BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
               url: "https://www.alalipropertypartners.com",
-              telephone: ["+442045155330"],
+              telephone: ["+442045158438"],
               email: "contact@alalipropertypartners.com",
               address: {
                 "@type": "PostalAddress",

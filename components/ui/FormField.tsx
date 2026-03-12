@@ -34,14 +34,21 @@ export function FormSelect({ label, error, options, placeholderText, ...props }:
   return (
     <div>
       {label && <label className="mb-1.5 block text-sm font-medium text-white">{label}</label>}
-      <select className={`${inputStyles} appearance-none`} {...props}>
-        <option value="">{placeholderText || "Select..."}</option>
-        {options.map((opt) => (
-          <option key={opt} value={opt}>
-            {opt}
-          </option>
-        ))}
-      </select>
+      <div className="relative">
+        <select className={`${inputStyles} appearance-none pr-10`} {...props}>
+          <option value="">{placeholderText || "Select..."}</option>
+          {options.map((opt) => (
+            <option key={opt} value={opt}>
+              {opt}
+            </option>
+          ))}
+        </select>
+        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+          <svg className="h-4 w-4 text-muted-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
       {error && <p className="mt-1 text-xs text-red-400">{error}</p>}
     </div>
   )

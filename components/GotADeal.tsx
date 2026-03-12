@@ -28,7 +28,7 @@ export function GotADeal() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 text-3xl font-bold text-charcoal sm:text-4xl"
+          className="mt-3 text-2xl font-bold text-charcoal sm:text-4xl"
         >
           Got a Property That Needs a Buyer?
         </motion.h2>

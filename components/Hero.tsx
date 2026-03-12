@@ -24,7 +24,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-dark-bg px-4 pt-20 pb-16 sm:px-6"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-dark-bg px-4 pt-24 pb-16 sm:px-6 sm:pt-28"
     >
       {/* Subtle background grid */}
       <div
@@ -49,7 +49,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-3xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl"
+          className="text-[1.75rem] font-bold leading-tight text-white sm:text-5xl lg:text-6xl"
         >
           Real Deals. Real Numbers.{" "}
           <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
@@ -61,7 +61,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70"
+          className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg"
         >
           We find below-market-value and off-market property deals, verify every number, and
           introduce the right opportunities to the right investors — working alongside regulated
@@ -97,15 +97,15 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="mx-auto mt-10 flex max-w-lg flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-0"
+          className="mx-auto mt-10 flex max-w-2xl flex-col items-center gap-2.5 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-0"
         >
           {trustStrip.map((item, i) => (
             <div key={item} className="flex items-center">
               {i > 0 && (
                 <span className="mx-3 hidden h-3 w-px bg-gold/30 sm:block" />
               )}
-              <span className="flex items-center gap-2 text-xs font-medium tracking-wide text-gold/80">
-                <span className="inline-block h-1 w-1 rounded-full bg-gold/40 sm:hidden" />
+              <span className="flex items-center gap-2 text-[0.7rem] font-medium tracking-wide text-gold/80 sm:text-xs">
+                <span className="inline-block h-1 w-1 shrink-0 rounded-full bg-gold/40 sm:hidden" />
                 {item}
               </span>
             </div>

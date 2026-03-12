@@ -42,7 +42,7 @@ const pricingCards = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="bg-white px-4 py-20 sm:px-6 sm:py-28">
+    <section id="pricing" className="overflow-x-hidden bg-white px-5 py-20 sm:px-6 sm:py-28">
       {/* Gold divider */}
       <div className="mx-auto mb-16 h-px max-w-6xl bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
 
@@ -59,15 +59,13 @@ export function Pricing() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 text-center text-3xl font-bold text-charcoal sm:text-4xl"
+          className="mt-3 text-center text-2xl font-bold text-charcoal sm:text-4xl"
         >
           Our Fees
         </motion.h2>
 
-        <div className="relative">
-          {/* Scroll affordance fade — mobile only */}
-          <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-8 bg-gradient-to-l from-white to-transparent sm:hidden" />
-        <div className="hide-scrollbar -mx-4 mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:gap-6 sm:snap-none sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
+        <div className="relative overflow-visible">
+        <div className="mt-14 grid gap-5 overflow-visible sm:grid-cols-2 md:grid-cols-3 md:gap-6">
           {pricingCards.map((card, i) => (
             <motion.div
               key={card.title}
@@ -75,7 +73,7 @@ export function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`relative min-w-[280px] shrink-0 snap-center rounded-xl border bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg sm:min-w-0 sm:shrink ${
+              className={`relative rounded-xl border bg-white p-5 shadow-sm transition-all duration-200 sm:p-6 md:hover:-translate-y-1 md:hover:shadow-lg ${
                 card.popular ? "border-gold" : "border-gray-100"
               }`}
             >

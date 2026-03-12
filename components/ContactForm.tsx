@@ -181,7 +181,7 @@ export function ContactForm() {
           className="text-center"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-gold">Get Started</p>
-          <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="mt-3 text-2xl font-bold text-white sm:text-4xl">
             Let&apos;s Start a Conversation
           </h2>
           <p className="mt-3 text-white/60">
@@ -225,7 +225,7 @@ export function ContactForm() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="mt-8 rounded-2xl border border-white/5 bg-dark-bg-light p-6 sm:p-8"
+          className="mt-8 rounded-xl border border-white/10 bg-dark-bg-light p-4 sm:rounded-2xl sm:p-8"
         >
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             {/* Always visible fields */}
@@ -439,7 +439,7 @@ export function ContactForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full cursor-pointer rounded-lg bg-gradient-to-r from-gold-dark via-gold to-gold px-8 py-4 text-base font-bold text-dark-bg transition-all hover:from-gold hover:via-gold-light hover:to-gold-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-dark-bg disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full cursor-pointer rounded-lg bg-gradient-to-r from-gold-dark via-gold to-gold px-8 py-3.5 text-base font-bold text-dark-bg transition-all hover:from-gold hover:via-gold-light hover:to-gold-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-dark-bg disabled:cursor-not-allowed disabled:opacity-60 sm:py-4"
             >
               {isSubmitting ? (
                 <span className="flex items-center justify-center gap-2">

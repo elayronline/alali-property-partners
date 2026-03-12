@@ -4,7 +4,7 @@ import { Instagram, Mail, Phone } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-dark-bg px-4 pt-16 pb-8 sm:px-6">
+    <footer className="safe-bottom bg-dark-bg px-4 pt-16 pb-8 sm:px-6">
       {/* Gold divider */}
       <div className="mx-auto mb-12 h-px max-w-6xl bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
 
@@ -18,17 +18,17 @@ export function Footer() {
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-8">
           <a
             href="mailto:contact@alalipropertypartners.com"
-            className="flex items-center gap-2 text-sm text-muted-dark transition-colors hover:text-gold"
+            className="flex items-center gap-2 text-xs text-muted-dark transition-colors hover:text-gold sm:text-sm"
           >
-            <Mail className="h-4 w-4" />
-            contact@alalipropertypartners.com
+            <Mail className="h-4 w-4 shrink-0" />
+            <span className="break-all sm:break-normal">contact@alalipropertypartners.com</span>
           </a>
           <a
-            href="tel:+442045155330"
+            href="tel:+442045158438"
             className="flex items-center gap-2 text-sm text-muted-dark transition-colors hover:text-gold"
           >
-            <Phone className="h-4 w-4" />
-            020 4515 5330
+            <Phone className="h-4 w-4 shrink-0" />
+            020 4515 8438
           </a>
         </div>
 
@@ -44,7 +44,7 @@ export function Footer() {
             <Instagram className="h-4 w-4" />
           </a>
           <a
-            href="https://wa.me/442045155330"
+            href="https://wa.me/442045158438"
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-muted-dark transition-colors hover:border-gold/40 hover:text-gold"
@@ -68,7 +68,7 @@ export function Footer() {
 
         {/* Links and copyright */}
         <div className="mt-8 flex flex-col items-center gap-3 border-t border-white/10 pt-6 sm:flex-row sm:justify-between">
-          <p className="order-2 text-xs text-muted-dark/80 sm:order-1">
+          <p className="order-2 text-center text-[0.65rem] leading-relaxed text-muted-dark/80 sm:order-1 sm:text-left sm:text-xs">
             &copy; 2026 Alali Property Partners Ltd. 86-90 Paul Street, London EC2A 4NE.
           </p>
           <div className="order-1 flex gap-4 text-xs text-muted-dark/80 sm:order-2">
