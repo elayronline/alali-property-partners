@@ -80,6 +80,8 @@ export function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           className="relative z-50 cursor-pointer p-2 text-gold lg:hidden"
           aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -93,6 +95,9 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
+            id="mobile-menu"
+            role="region"
+            aria-label="Mobile navigation"
             className="overflow-hidden border-t border-white/10 bg-dark-bg lg:hidden"
           >
             <div className="px-4 pb-6 pt-2">
