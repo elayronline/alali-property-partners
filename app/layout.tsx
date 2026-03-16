@@ -77,14 +77,21 @@ export const metadata: Metadata = {
 const businessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
+  "@id": "https://www.alalipropertypartners.com/#organization",
   name: "Alali Property Partners",
+  legalName: "Alali Property Partners Ltd",
   description:
     "Property deal sourcing and introducer service covering South East England, Greater London, Surrey, Hampshire, Berkshire and Dorset. We find verified, high-yield property deals for investors and connect them with regulated professionals — BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
   url: "https://www.alalipropertypartners.com",
   telephone: "+442045158438",
   email: "contact@alalipropertypartners.com",
   image: "https://www.alalipropertypartners.com/icon-512.png",
-  logo: "https://www.alalipropertypartners.com/icon-512.png",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.alalipropertypartners.com/icon-512.png",
+    width: 512,
+    height: 512,
+  },
   address: {
     "@type": "PostalAddress",
     streetAddress: "86-90 Paul Street",
@@ -115,6 +122,19 @@ const businessSchema = {
     areaServed: "GB",
     availableLanguage: "English",
   },
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    value: "2-10",
+  },
+  knowsAbout: [
+    "Property Deal Sourcing",
+    "Below Market Value Properties",
+    "Buy to Let Investment",
+    "BRR Strategy",
+    "Rent to Rent",
+    "HMO Investment",
+    "Property Flipping",
+  ],
 }
 
 // Service schema for deal sourcing packages
