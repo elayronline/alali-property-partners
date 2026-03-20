@@ -50,7 +50,7 @@ export function WhyUs() {
   return (
     <section id="why-us" className="bg-white px-4 py-20 sm:px-6 sm:py-28">
       {/* Gold divider */}
-      <div className="mx-auto mb-16 h-px max-w-6xl bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      <div className="mx-auto mb-16 h-px max-w-6xl bg-gray-200" />
 
       <div className="mx-auto max-w-5xl">
         <motion.p
@@ -93,7 +93,7 @@ export function WhyUs() {
               viewport={{ once: true }}
               transition={{ delay: 0.4 + i * 0.1 }}
             >
-              <Card {...card} className="border-gold/20 bg-gold/5" />
+              <Card {...card} className="border-gray-100 bg-warm-grey" />
             </motion.div>
           ))}
         </div>

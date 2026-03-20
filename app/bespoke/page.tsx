@@ -248,6 +248,12 @@ export default function BespokeSourcing() {
   const [clientSignature, setClientSignature] = useState("")
   const [pdfBlobForDownload, setPdfBlobForDownload] = useState<Blob | null>(null)
   const [pdfFileName, setPdfFileName] = useState("")
+  const [idFile, setIdFile] = useState<File | null>(null)
+  const [fundsFile, setFundsFile] = useState<File | null>(null)
+  const [fundsLater, setFundsLater] = useState(false)
+  const [idUploadUrl, setIdUploadUrl] = useState("")
+  const [fundsUploadUrl, setFundsUploadUrl] = useState("")
+  const [uploadingDocs, setUploadingDocs] = useState(false)
 
   // Contract details form (step 2)
   const contractForm = useForm({
@@ -276,12 +282,51 @@ export default function BespokeSourcing() {
     setClientSignature(dataUrl)
   }, [])
 
+  // ── Upload a document to Vercel Blob ─────────────────────────────
+  const uploadDocument = async (file: File, label: string): Promise<string> => {
+    const clientName = contractForm.getValues().fullName.replace(/\s+/g, "_")
+    const ext = file.name.split(".").pop() || "file"
+    const fileName = `${label}_${clientName}.${ext}`
+    const formData = new FormData()
+    formData.append("file", file)
+    formData.append("fileName", fileName)
+    const res = await fetch("/api/upload-document", { method: "POST", body: formData })
+    const result = await res.json()
+    if (!res.ok) throw new Error(result.error || "Upload failed")
+    return result.url
+  }
+
   // ── Step 2 → Step 3 ──────────────────────────────────────────────
-  const handleContractSubmit = contractForm.handleSubmit(() => {
+  const handleContractSubmit = contractForm.handleSubmit(async () => {
     if (!clientSignature) {
       alert("Please sign the agreement before continuing.")
       return
     }
+    if (!idFile) {
+      alert("Please upload your photo ID before continuing.")
+      return
+    }
+    if (!fundsFile && !fundsLater) {
+      alert("Please upload your proof of funds, or select the option to provide it later.")
+      return
+    }
+
+    // Upload documents
+    setUploadingDocs(true)
+    try {
+      const uploads: Promise<string>[] = [uploadDocument(idFile, "Photo_ID")]
+      if (fundsFile) uploads.push(uploadDocument(fundsFile, "Proof_of_Funds"))
+
+      const results = await Promise.all(uploads)
+      setIdUploadUrl(results[0])
+      if (results[1]) setFundsUploadUrl(results[1])
+    } catch {
+      alert("There was a problem uploading your documents. Please try again.")
+      setUploadingDocs(false)
+      return
+    }
+    setUploadingDocs(false)
+
     // Pre-fill requirements form with contract details
     const vals = contractForm.getValues()
     requirementsForm.setValue("fullName", vals.fullName)
@@ -367,6 +412,12 @@ export default function BespokeSourcing() {
       formData.append("Agreement Signed", "Yes")
       formData.append("Agreement Date", today)
       formData.append("Signed Agreement PDF", pdfDownloadUrl)
+      if (idUploadUrl) formData.append("Photo ID", idUploadUrl)
+      if (fundsUploadUrl) {
+        formData.append("Proof of Funds", fundsUploadUrl)
+      } else {
+        formData.append("Proof of Funds", "To be provided later — budget not yet confirmed")
+      }
 
       // Requirements data
       for (const [key, value] of Object.entries(reqData)) {
@@ -572,8 +623,9 @@ export default function BespokeSourcing() {
                   <div className="flex-1">
                     <h2 className="text-xl font-bold text-white">Pay the £1,000 Retainer</h2>
                     <p className="mt-2 text-sm text-white/50">
-                      Secure your bespoke sourcing slot. If we don&apos;t find a deal matching your
-                      brief within 14 days, you&apos;re covered. See our{" "}
+                      Secure your bespoke sourcing slot. Your retainer locks in our team for a dedicated
+                      14-day search, and it comes off the final sourcing fee when you proceed with a deal.
+                      You also have a 14-day cooling-off period — see our{" "}
                       <Link href="/terms" className="text-gold underline hover:text-gold-light">
                         terms
                       </Link>{" "}
@@ -588,7 +640,7 @@ export default function BespokeSourcing() {
                         setCurrentStep(2)
                         window.scrollTo({ top: 0, behavior: "smooth" })
                       }}
-                      className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-gold-dark via-gold to-gold px-6 py-3 text-sm font-bold text-dark-bg transition-all hover:from-gold hover:via-gold-light hover:to-gold-light"
+                      className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gold px-6 py-3 text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
                     >
                       Pay £1,000 Retainer &amp; Continue
                       <ExternalLink className="h-4 w-4" />
@@ -744,7 +796,7 @@ export default function BespokeSourcing() {
                             Target Location(s) <span className="text-gold">*</span>
                           </label>
                           <FormInput
-                            placeholder="e.g. Surrey, Hampshire, Greater London"
+                            placeholder="e.g. Manchester, Birmingham, London, Bristol"
                             {...contractForm.register("targetLocations", { required: true })}
                           />
                           {contractForm.formState.errors.targetLocations && (
@@ -910,18 +962,20 @@ export default function BespokeSourcing() {
                         </ContractBox>
                       </ContractClause>
 
-                      <ContractClause number="7" title="PROOF OF FUNDS AND ID">
+                      <ContractClause number="7" title="IDENTIFICATION AND PROOF OF FUNDS">
                         <p>
-                          7.1 Before the Sourcer commences work, the Client must provide satisfactory
-                          proof of funds sufficient to complete the intended property transaction.
+                          7.1 The Client must provide valid photo identification at the time of
+                          signing this Agreement.
                         </p>
                         <p>
-                          7.2 The Client must provide valid photo identification and proof of address
-                          for Anti-Money Laundering compliance.
+                          7.2 The Client must provide satisfactory proof of funds sufficient to
+                          complete the intended property transaction before any deal is presented.
+                          Proof of funds may be provided at signing or at a later date prior to
+                          deal presentation.
                         </p>
                         <p>
-                          7.3 Failure to provide satisfactory documentation may result in termination
-                          of this Agreement with forfeiture of the Retainer Deposit.
+                          7.3 The Sourcer reserves the right to pause the search if proof of funds
+                          has not been received within a reasonable timeframe.
                         </p>
                       </ContractClause>
 
@@ -956,6 +1010,133 @@ export default function BespokeSourcing() {
                     </div>
                   </div>
 
+                  {/* ID & Proof of Funds upload */}
+                  <div className="rounded-xl border border-white/5 bg-dark-bg-light p-6 sm:p-8">
+                    <Section title="ID & Proof of Funds">
+                      <p className="text-sm text-white/50">
+                        We need a copy of your photo ID to get started. If you have proof of
+                        funds available, uploading it now helps us move faster — but you can
+                        provide it later if your budget isn&apos;t confirmed yet.
+                      </p>
+
+                      <div className="mt-4 space-y-5">
+                        {/* Photo ID */}
+                        <div>
+                          <label className="mb-1.5 block text-xs font-medium text-white/50">
+                            Photo ID <span className="text-gold">*</span>
+                          </label>
+                          <p className="mb-3 text-xs text-white/40">
+                            Upload a clear photo or scan of your passport or driving licence.
+                          </p>
+                          <label className="flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-white/20 bg-dark-bg p-4 transition-colors hover:border-gold/40">
+                            <input
+                              type="file"
+                              accept="image/*,.pdf"
+                              className="hidden"
+                              onChange={(e) => {
+                                const file = e.target.files?.[0]
+                                if (file) setIdFile(file)
+                              }}
+                            />
+                            {idFile ? (
+                              <div className="flex items-center gap-2">
+                                <CheckCircle2 className="h-5 w-5 shrink-0 text-gold" />
+                                <span className="text-sm text-white/70">{idFile.name}</span>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault()
+                                    setIdFile(null)
+                                  }}
+                                  className="ml-2 text-xs text-white/40 hover:text-white"
+                                >
+                                  Remove
+                                </button>
+                              </div>
+                            ) : (
+                              <div className="flex items-center gap-2">
+                                <ArrowRight className="h-4 w-4 text-gold" />
+                                <span className="text-sm text-white/50">
+                                  Choose file or tap to upload
+                                </span>
+                              </div>
+                            )}
+                          </label>
+                        </div>
+
+                        {/* Proof of Funds */}
+                        <div>
+                          <label className="mb-1.5 block text-xs font-medium text-white/50">
+                            Proof of Funds
+                          </label>
+                          <p className="mb-3 text-xs text-white/40">
+                            Upload a recent bank statement, mortgage agreement in principle, or
+                            proof of available funds for your stated budget. This helps us understand
+                            your position and source suitable deals faster.
+                          </p>
+                          {!fundsLater && (
+                            <label className="flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-white/20 bg-dark-bg p-4 transition-colors hover:border-gold/40">
+                              <input
+                                type="file"
+                                accept="image/*,.pdf"
+                                className="hidden"
+                                onChange={(e) => {
+                                  const file = e.target.files?.[0]
+                                  if (file) setFundsFile(file)
+                                }}
+                              />
+                              {fundsFile ? (
+                                <div className="flex items-center gap-2">
+                                  <CheckCircle2 className="h-5 w-5 shrink-0 text-gold" />
+                                  <span className="text-sm text-white/70">{fundsFile.name}</span>
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.preventDefault()
+                                      setFundsFile(null)
+                                    }}
+                                    className="ml-2 text-xs text-white/40 hover:text-white"
+                                  >
+                                    Remove
+                                  </button>
+                                </div>
+                              ) : (
+                                <div className="flex items-center gap-2">
+                                  <ArrowRight className="h-4 w-4 text-gold" />
+                                  <span className="text-sm text-white/50">
+                                    Choose file or tap to upload
+                                  </span>
+                                </div>
+                              )}
+                            </label>
+                          )}
+                          <label className="mt-3 flex cursor-pointer items-center gap-2 text-sm text-white/50">
+                            <input
+                              type="checkbox"
+                              className="h-4 w-4 accent-gold"
+                              checked={fundsLater}
+                              onChange={(e) => {
+                                setFundsLater(e.target.checked)
+                                if (e.target.checked) setFundsFile(null)
+                              }}
+                            />
+                            I&apos;ll provide proof of funds later — my budget isn&apos;t confirmed yet
+                          </label>
+                          {fundsLater && (
+                            <p className="mt-2 text-xs text-white/30">
+                              No problem — we&apos;ll request this before presenting any deals. You can
+                              send it to us by email at any point.
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      <p className="mt-4 text-xs text-white/30">
+                        Accepted formats: JPG, PNG, PDF. Max 10MB per file. Your documents are stored securely and never shared with third parties.
+                      </p>
+                    </Section>
+                  </div>
+
                   {/* Client acknowledgment */}
                   <div className="rounded-xl border border-white/5 bg-dark-bg-light p-6 sm:p-8">
                     <Section title="Client Acknowledgment">
@@ -970,7 +1151,7 @@ export default function BespokeSourcing() {
                           "I understand the 14-day cooling off period.",
                           "I understand NO REFUNDS are available after 14 days.",
                           "I understand incomplete requirements may result in deposit forfeiture.",
-                          "I have provided valid ID and proof of funds.",
+                          "I have uploaded valid photo ID and, where available, proof of funds.",
                         ].map((ack) => (
                           <label
                             key={ack}
@@ -1076,9 +1257,20 @@ export default function BespokeSourcing() {
                     <div className="mt-6">
                       <button
                         type="submit"
-                        className="w-full cursor-pointer rounded-lg bg-gradient-to-r from-gold-dark via-gold to-gold px-8 py-3 text-sm font-bold text-dark-bg transition-all hover:from-gold hover:via-gold-light hover:to-gold-light"
+                        disabled={uploadingDocs}
+                        className="w-full cursor-pointer rounded-lg bg-gold px-8 py-3 text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light disabled:cursor-not-allowed disabled:opacity-60"
                       >
-                        Sign &amp; Continue to Requirements &rarr;
+                        {uploadingDocs ? (
+                          <span className="flex items-center justify-center gap-2">
+                            <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" className="opacity-25" />
+                              <path d="M4 12a8 8 0 018-8" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="opacity-75" />
+                            </svg>
+                            Uploading documents...
+                          </span>
+                        ) : (
+                          <>Sign &amp; Continue to Requirements &rarr;</>
+                        )}
                       </button>
                     </div>
                   </div>
@@ -1183,11 +1375,11 @@ export default function BespokeSourcing() {
                         </p>
 
                         {/* Warning banner */}
-                        <div className="mt-4 rounded-lg border border-gold/30 bg-gold/5 p-4">
-                          <p className="text-xs font-semibold text-gold">
-                            This document must be completed in full with clear and detailed
-                            responses. Incomplete or unclear requirements may result in refusal to
-                            commence the search or forfeiture of the retainer.
+                        <div className="mt-4 rounded-lg border border-white/10 bg-dark-bg p-4">
+                          <p className="text-xs font-medium text-white/60">
+                            The more detail you provide, the better we can match deals to your brief.
+                            Please complete every section as thoroughly as possible — it helps us
+                            deliver exactly what you&apos;re looking for.
                           </p>
                         </div>
 
@@ -1458,7 +1650,7 @@ export default function BespokeSourcing() {
                                 <span className="text-gold">*</span>
                               </label>
                               <FormInput
-                                placeholder="e.g. Surrey, Hampshire, Greater London"
+                                placeholder="e.g. Manchester, Birmingham, London, Bristol"
                                 {...requirementsForm.register("preferredAreas", {
                                   required: true,
                                 })}
@@ -1918,7 +2110,7 @@ export default function BespokeSourcing() {
                             <button
                               type="submit"
                               disabled={requirementsForm.formState.isSubmitting}
-                              className="flex-1 cursor-pointer rounded-lg bg-gradient-to-r from-gold-dark via-gold to-gold px-8 py-4 text-base font-bold text-dark-bg transition-all hover:from-gold hover:via-gold-light hover:to-gold-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-dark-bg disabled:cursor-not-allowed disabled:opacity-60"
+                              className="flex-1 cursor-pointer rounded-lg bg-gold px-8 py-4 text-base font-bold text-dark-bg transition-colors hover:bg-gold-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-dark-bg disabled:cursor-not-allowed disabled:opacity-60"
                             >
                               {requirementsForm.formState.isSubmitting ? (
                                 <span className="flex items-center justify-center gap-2">

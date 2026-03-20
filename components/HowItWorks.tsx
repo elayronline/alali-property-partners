@@ -1,24 +1,24 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ClipboardList, FileCheck, Package, ShieldCheck } from "lucide-react"
-import { Button } from "@/components/ui/Button"
+import { Search, BookmarkCheck, Package, ShieldCheck } from "lucide-react"
+import Link from "next/link"
 import { scrollToSection } from "@/lib/smoothScroll"
 
 const steps = [
   {
-    icon: ClipboardList,
+    icon: Search,
     step: "1",
-    title: "Tell us what you're looking for",
+    title: "Browse the marketplace",
     description:
-      "Strategy, budget, target areas, and preferred yield — we source to your brief. Not sure yet? We'll help you figure it out.",
+      "Explore our live deal portfolio — every listing includes key numbers, strategy, and location so you can quickly see if it fits.",
   },
   {
-    icon: FileCheck,
+    icon: BookmarkCheck,
     step: "2",
-    title: "Sign up and secure the deal",
+    title: "Reserve for £100",
     description:
-      "Once we've found a deal that fits, you sign our agreement and pay the sourcing fee to lock it in. This confirms your serious intent and secures the opportunity for you.",
+      "Found a deal that works? Secure it with a £100 reservation fee. The deal is locked in for you while we prepare your full pack.",
   },
   {
     icon: Package,
@@ -50,8 +50,8 @@ const dealPackItems = [
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-warm-grey px-4 py-20 sm:px-6 sm:py-28">
-      {/* Gold divider */}
-      <div className="mx-auto mb-16 h-px max-w-6xl bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      {/* Divider */}
+      <div className="mx-auto mb-16 h-px max-w-6xl bg-gray-200" />
 
       <div className="mx-auto max-w-5xl">
         <motion.p
@@ -90,18 +90,18 @@ export function HowItWorks() {
           ))}
         </div>
 
-        {/* Premium deal pack box */}
+        {/* Deal pack box */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mx-auto mt-14 max-w-3xl rounded-xl border border-gold/20 bg-dark-bg p-4 sm:p-8"
+          className="mx-auto mt-14 max-w-3xl rounded-xl border border-white/10 bg-dark-bg p-4 sm:p-8"
         >
           <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gold">
             Deal Pack
           </p>
           <p className="mb-4 text-sm font-bold text-white">
-            What&apos;s in your deal pack:
+            Every deal includes:
           </p>
           <ul className="grid gap-2 text-sm text-muted-dark sm:grid-cols-2">
             {dealPackItems.map((item) => (
@@ -113,16 +113,37 @@ export function HowItWorks() {
           </ul>
         </motion.div>
 
+        {/* Bespoke alternative */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-8 text-center"
+          className="mx-auto mt-8 max-w-3xl rounded-xl border border-gray-100 bg-white p-5 sm:p-6"
         >
-          <Button variant="secondary" onClick={() => scrollToSection("contact")}>
-            Start a Conversation &rarr;
-          </Button>
-          <p className="mt-3 text-xs text-muted-light">No commitment. No pressure. Just a chat.</p>
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-6">
+            <div className="flex-1 text-center sm:text-left">
+              <p className="text-sm font-bold text-charcoal">
+                Looking for something specific?
+              </p>
+              <p className="mt-1 text-sm text-muted-light">
+                Our bespoke sourcing service finds deals matched to your exact brief — strategy, budget, and location.
+              </p>
+            </div>
+            <div className="flex shrink-0 gap-3">
+              <Link
+                href="/bespoke"
+                className="rounded-lg bg-gold px-5 py-2.5 text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
+              >
+                Bespoke Sourcing
+              </Link>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="rounded-lg border-2 border-gold px-5 py-2.5 text-sm font-bold text-gold transition-colors hover:bg-gold/10"
+              >
+                Talk to Us
+              </button>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

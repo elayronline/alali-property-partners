@@ -125,7 +125,7 @@ export function ContactForm() {
             `
                 : ""
             }
-            <p style="color:#999;font-size:12px;margin-top:24px;">Alali Property Partners — Property Deal Sourcing Across South East England & Greater London</p>
+            <p style="color:#999;font-size:12px;margin-top:24px;">Alali Property Partners — Property Deal Sourcing Across England & Wales</p>
           </div>
         </div>
         `,
@@ -171,7 +171,7 @@ export function ContactForm() {
   return (
     <section id="contact" className="bg-dark-bg px-4 py-20 sm:px-6 sm:py-28">
       {/* Gold divider */}
-      <div className="mx-auto mb-16 h-px max-w-6xl bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      <div className="mx-auto mb-16 h-px max-w-6xl bg-white/10" />
 
       <div className="mx-auto max-w-2xl">
         <motion.div
@@ -323,7 +323,7 @@ export function ContactForm() {
                       </label>
                       <FormInput
                         id="preferredAreas"
-                        placeholder="e.g. Surrey, Hampshire, Greater London"
+                        placeholder="e.g. Manchester, Birmingham, London, Bristol"
                         {...register("preferredAreas")}
                       />
                     </div>
@@ -439,7 +439,7 @@ export function ContactForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full cursor-pointer rounded-lg bg-gradient-to-r from-gold-dark via-gold to-gold px-8 py-3.5 text-base font-bold text-dark-bg transition-all hover:from-gold hover:via-gold-light hover:to-gold-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-dark-bg disabled:cursor-not-allowed disabled:opacity-60 sm:py-4"
+              className="w-full cursor-pointer rounded-lg bg-gold px-8 py-3.5 text-base font-bold text-dark-bg transition-colors hover:bg-gold-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-dark-bg disabled:cursor-not-allowed disabled:opacity-60 sm:py-4"
             >
               {isSubmitting ? (
                 <span className="flex items-center justify-center gap-2">

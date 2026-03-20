@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/Navbar"
 import { Hero } from "@/components/Hero"
+import { DealMarketplace } from "@/components/DealMarketplace"
 import { WhatWeSource } from "@/components/WhatWeSource"
 import { HowItWorks } from "@/components/HowItWorks"
 import { WhyUs } from "@/components/WhyUs"
@@ -19,6 +20,7 @@ export default function Home() {
       <WhatWeSource />
       <HowItWorks />
       <WhyUs />
+      <DealMarketplace />
       <Pricing />
       <GotADeal />
       <WhatsAppCTA />

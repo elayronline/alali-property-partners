@@ -69,7 +69,7 @@ export default async function OGImage() {
             lineHeight: 1.5,
           }}
         >
-          We find the right property deals for investors across South East England
+          We find the right property deals for investors across England & Wales
           and work with compliant professionals to get them over the line.
         </div>
 

@@ -7,15 +7,10 @@ import { scrollToSection } from "@/lib/smoothScroll"
 const trustStrip = [
   "Every deal verified before you see it",
   "Complete deal pack included",
-  "Covering SE England, Greater London, Surrey, Berkshire, Hampshire & Dorset",
+  "Covering the whole of England & Wales",
 ]
 
 export function Hero() {
-  const handleInvestorClick = () => {
-    window.dispatchEvent(new CustomEvent("preselect-role", { detail: "Investor" }))
-    scrollToSection("contact")
-  }
-
   const handleSellerClick = () => {
     window.dispatchEvent(new CustomEvent("preselect-role", { detail: "Property Owner" }))
     scrollToSection("contact")
@@ -42,7 +37,7 @@ export function Hero() {
           initial={{ width: 0 }}
           animate={{ width: 64 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mx-auto mb-8 h-px bg-gradient-to-r from-gold-dark via-gold to-gold-light"
+          className="mx-auto mb-8 h-px bg-gold/40"
         />
 
         <motion.h1
@@ -63,9 +58,10 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg"
         >
-          We find below-market-value and off-market property deals, verify every number, and
-          introduce the right opportunities to the right investors — working alongside regulated
-          professionals to get deals over the line.
+          We find below-market-value and off-market property deals across England &amp; Wales,
+          verify every number, and deliver them ready to go — complete with a full deal pack,
+          comparables, and exit strategy. Browse our live marketplace or tell us what you&apos;re
+          looking for.
         </motion.p>
 
         <motion.p
@@ -84,9 +80,14 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-10 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-center"
         >
-          <Button size="large" onClick={handleInvestorClick}>
-            I&apos;m Looking for Deals
-          </Button>
+          <a
+            href="https://alalipropertypartnersdeals.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-lg bg-gold px-8 py-4 text-base font-semibold text-dark-bg transition-colors hover:bg-gold-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-dark-bg"
+          >
+            Browse Deals
+          </a>
           <Button variant="secondary" size="large" onClick={handleSellerClick}>
             I Have a Property to Move
           </Button>

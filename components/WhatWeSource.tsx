@@ -26,7 +26,7 @@ const sellerSituations = [
 
 function DarkPill({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-block rounded-full border border-gold/30 px-3.5 py-2 text-xs text-white/80 transition-colors duration-200 sm:px-4 sm:text-sm md:hover:border-gold md:hover:bg-gold md:hover:text-dark-bg">
+    <span className="inline-block rounded-full border border-white/15 px-3.5 py-2 text-xs text-white/70 transition-colors duration-200 sm:px-4 sm:text-sm md:hover:border-gold md:hover:bg-gold md:hover:text-dark-bg">
       {children}
     </span>
   )
@@ -36,7 +36,7 @@ export function WhatWeSource() {
   return (
     <section id="what-we-source" className="bg-dark-bg px-4 py-20 sm:px-6 sm:py-28">
       {/* Gold divider */}
-      <div className="mx-auto mb-16 h-px max-w-6xl bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      <div className="mx-auto mb-16 h-px max-w-6xl bg-white/10" />
 
       <div className="mx-auto max-w-4xl text-center">
         <motion.p

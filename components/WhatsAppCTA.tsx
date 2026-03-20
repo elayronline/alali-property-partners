@@ -6,7 +6,7 @@ export function WhatsAppCTA() {
   return (
     <section
       id="whatsapp-cta"
-      className="bg-gradient-to-r from-gold-dark via-gold to-gold-light px-4 py-20 sm:px-6 sm:py-28 md:py-32"
+      className="bg-gold px-4 py-20 sm:px-6 sm:py-28 md:py-32"
     >
       <div className="mx-auto max-w-3xl text-center">
         <motion.h2
@@ -15,7 +15,7 @@ export function WhatsAppCTA() {
           viewport={{ once: true }}
           className="text-2xl font-bold text-dark-bg sm:text-4xl lg:text-5xl"
         >
-          Deals that stack up, sent straight to your phone.
+          Exclusive deals that never hit the marketplace.
         </motion.h2>
 
         <motion.p
@@ -25,8 +25,10 @@ export function WhatsAppCTA() {
           transition={{ delay: 0.1 }}
           className="mx-auto mt-6 max-w-xl text-lg text-dark-bg/80"
         >
-          Join our free WhatsApp Broadcast — new opportunities sent directly to you. No spam. No
-          commitment. Unsubscribe anytime.
+          Our WhatsApp community gets first access to off-market deals you won&apos;t find on the
+          marketplace — at <span className="font-bold text-dark-bg">2% sourcing fee</span> (min
+          £3,000) and R2R from <span className="font-bold text-dark-bg">£2,750</span>. Sent
+          straight to your phone.
         </motion.p>
 
         <motion.div
@@ -44,8 +46,8 @@ export function WhatsAppCTA() {
           >
             Join Free &rarr;
           </a>
-          <p className="mt-4 text-sm text-dark-bg/70">
-            Free forever. Leave anytime with one tap.
+          <p className="mt-4 text-sm text-dark-bg/60">
+            Free forever. No spam. Leave anytime with one tap.
           </p>
         </motion.div>
       </div>

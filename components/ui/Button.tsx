@@ -19,7 +19,7 @@ export function Button({
 
   const variants = {
     primary:
-      "bg-gradient-to-r from-gold-dark via-gold to-gold text-dark-bg hover:from-gold hover:via-gold-light hover:to-gold-light",
+      "bg-gold text-dark-bg hover:bg-gold-light",
     secondary: "border-2 border-gold text-gold hover:bg-gold hover:text-dark-bg",
   }
 

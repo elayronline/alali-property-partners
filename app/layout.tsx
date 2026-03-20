@@ -1,17 +1,18 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Raleway } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({
-  variable: "--font-inter",
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.alalipropertypartners.com"),
-  title: "Alali Property Partners | Property Deal Sourcing — South East England & Greater London",
+  title: "Alali Property Partners | Property Deal Sourcing — England & Wales",
   description:
-    "We find and introduce verified, high-yield property deals for investors across South East England, Greater London, Surrey, Hampshire, Berkshire and Dorset. BTL, BRR, R2R, HMO, flips, and bespoke sourcing. Working alongside regulated professionals. Transparent fees. Complete deal packs delivered to your WhatsApp.",
+    "We find and introduce verified, high-yield property deals for investors across England & Wales. BTL, BRR, R2R, HMO, flips, and bespoke sourcing. Browse our online deal marketplace or tell us what you're looking for. Working alongside regulated professionals. Transparent fees. Complete deal packs.",
   keywords: [
     "property deal sourcing",
     "property sourcing agent",
@@ -22,17 +23,17 @@ export const metadata: Metadata = {
     "BRR property",
     "rent to rent deals",
     "HMO investment",
-    "property investment South East England",
+    "property investment UK",
+    "property deal marketplace",
     "deal sourcing London",
-    "property deals Surrey",
-    "property deals Hampshire",
-    "property deals Berkshire",
-    "property deals Dorset",
+    "deal sourcing Manchester",
+    "deal sourcing Birmingham",
     "property sourcing for investors",
     "off-market property deals",
     "property deal packager",
     "investment property sourcing",
     "buy to let sourcing agent",
+    "property deals England",
   ],
   alternates: {
     canonical: "/",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alali Property Partners | Property Deal Sourcing",
     description:
-      "Verified property deals for investors across South East England, Greater London, Surrey, Hampshire, Berkshire & Dorset. BTL, BRR, R2R, HMO, flips — complete deal packs with transparent fees.",
+      "Verified property deals for investors across England & Wales. BTL, BRR, R2R, HMO, flips — browse our marketplace or tell us what you're looking for.",
     type: "website",
     locale: "en_GB",
     url: "https://www.alalipropertypartners.com",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alali Property Partners | Property Deal Sourcing",
     description:
-      "Verified property deals for investors across South East England, Greater London, Surrey, Hampshire, Berkshire & Dorset. Complete deal packs with transparent fees.",
+      "Verified property deals for investors across England & Wales. Browse our marketplace or tell us what you're looking for. Complete deal packs with transparent fees.",
   },
   robots: {
     index: true,
@@ -81,7 +82,7 @@ const businessSchema = {
   name: "Alali Property Partners",
   legalName: "Alali Property Partners Ltd",
   description:
-    "Property deal sourcing and introducer service covering South East England, Greater London, Surrey, Hampshire, Berkshire and Dorset. We find verified, high-yield property deals for investors and connect them with regulated professionals — BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
+    "Property deal sourcing and introducer service covering England & Wales. We find verified, high-yield property deals for investors and connect them with regulated professionals — BTL, BRR, R2R, HMO, flips, and bespoke sourcing. Browse our online deal marketplace.",
   url: "https://www.alalipropertypartners.com",
   telephone: "+442045158438",
   email: "contact@alalipropertypartners.com",
@@ -100,12 +101,8 @@ const businessSchema = {
     addressCountry: "GB",
   },
   areaServed: [
-    { "@type": "AdministrativeArea", name: "South East England" },
-    { "@type": "AdministrativeArea", name: "Greater London" },
-    { "@type": "AdministrativeArea", name: "Surrey" },
-    { "@type": "AdministrativeArea", name: "Hampshire" },
-    { "@type": "AdministrativeArea", name: "Berkshire" },
-    { "@type": "AdministrativeArea", name: "Dorset" },
+    { "@type": "Country", name: "England" },
+    { "@type": "Country", name: "Wales" },
   ],
   sameAs: [
     "https://www.instagram.com/alalipropertypartners",
@@ -143,15 +140,15 @@ const serviceSchema = {
   "@type": "Service",
   name: "Property Deal Sourcing",
   description:
-    "We source verified, high-yield property deals for investors across South East England and Greater London. Investment purchases, rent-to-rent, and bespoke sourcing with complete deal packs.",
+    "We source verified, high-yield property deals for investors across England & Wales. Investment purchases, rent-to-rent, and bespoke sourcing with complete deal packs. Browse our online deal marketplace.",
   provider: {
     "@type": "Organization",
     name: "Alali Property Partners",
     url: "https://www.alalipropertypartners.com",
   },
   areaServed: [
-    { "@type": "AdministrativeArea", name: "South East England" },
-    { "@type": "AdministrativeArea", name: "Greater London" },
+    { "@type": "Country", name: "England" },
+    { "@type": "Country", name: "Wales" },
   ],
   serviceType: "Property Deal Sourcing",
   hasOfferCatalog: {
@@ -161,15 +158,15 @@ const serviceSchema = {
       {
         "@type": "Offer",
         name: "Investment Purchase Sourcing",
-        description: "BTL, BRR, HMO, SA, Flip — full deal pack with comparables, yield analysis and exit strategy. 2% of purchase price (min £3,000).",
+        description: "BTL, BRR, HMO, SA, Flip — full deal pack with comparables, yield analysis and exit strategy. 2.4% of purchase price (min £3,600) + £100 reservation fee.",
         priceCurrency: "GBP",
       },
       {
         "@type": "Offer",
         name: "Rent-to-Rent Sourcing",
-        description: "Ready-to-go rental agreement sourcing. Deal identification, negotiation, heads of terms. From £2,750.",
+        description: "Ready-to-go rental agreement sourcing. Deal identification, negotiation, heads of terms. From £3,600 + £100 reservation fee.",
         priceCurrency: "GBP",
-        price: "2750",
+        price: "3600",
       },
       {
         "@type": "Offer",
@@ -200,7 +197,7 @@ const faqSchema = {
       name: "What types of property deals do you source?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We source Buy-to-Let (BTL), BRR (Buy Refurb Refinance), Rent-to-Rent (R2R), HMO (Houses in Multiple Occupation), flips, commercial conversions, and serviced accommodation deals across South East England and Greater London.",
+        text: "We source Buy-to-Let (BTL), BRR (Buy Refurb Refinance), Rent-to-Rent (R2R), HMO (Houses in Multiple Occupation), flips, commercial conversions, and serviced accommodation deals across England & Wales.",
       },
     },
     {
@@ -208,7 +205,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Investment purchases are 2% of purchase price (min £3,000). Rent-to-Rent deals start from £2,750. Bespoke sourcing requires a £1,000 retainer plus an agreed fee on completion. All fees are VAT inclusive with no hidden costs.",
+        text: "Marketplace investment purchases are 2.4% of purchase price (min £3,600) plus a £100 reservation fee. Rent-to-Rent deals start from £3,600. Bespoke sourcing requires a £1,000 retainer plus an agreed fee on completion. All fees are VAT inclusive with no hidden costs.",
       },
     },
     {
@@ -224,7 +221,7 @@ const faqSchema = {
       name: "What areas do you cover for property deal sourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We cover South East England, Greater London, Surrey, Hampshire, Berkshire, and Dorset. We source deals across these regions for all investment strategies.",
+        text: "We cover the whole of England & Wales. Browse our online deal marketplace for live deals or tell us what you're looking for and we'll source to your brief.",
       },
     },
     {
@@ -245,7 +242,7 @@ const websiteSchema = {
   name: "Alali Property Partners",
   url: "https://www.alalipropertypartners.com",
   description:
-    "Property deal sourcing service for investors across South East England and Greater London. BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
+    "Property deal sourcing service for investors across England & Wales. BTL, BRR, R2R, HMO, flips, and bespoke sourcing. Browse our online deal marketplace.",
   publisher: {
     "@type": "Organization",
     name: "Alali Property Partners",
@@ -277,7 +274,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${raleway.variable} antialiased`}>{children}</body>
     </html>
   )
 }

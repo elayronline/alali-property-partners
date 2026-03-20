@@ -13,7 +13,7 @@ export function GotADeal() {
   return (
     <section id="got-a-deal" className="bg-warm-grey px-4 py-20 sm:px-6 sm:py-28">
       {/* Gold divider */}
-      <div className="mx-auto mb-16 h-px max-w-6xl bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      <div className="mx-auto mb-16 h-px max-w-6xl bg-gray-200" />
 
       <div className="mx-auto max-w-3xl">
         <motion.p
@@ -51,8 +51,9 @@ export function GotADeal() {
           transition={{ delay: 0.12 }}
           className="mt-3 text-base leading-relaxed text-muted-light"
         >
-          We assess every property within 48 hours and connect it to funded, ready-to-move investors.
-          We pay a referral fee on every deal that completes — and you keep your full agency commission.
+          We assess every property within 48 hours and connect it to a funded, ready-to-move investor —
+          typically within 14 days. We pay a referral fee on every deal that completes, and you keep your
+          full agency commission.
         </motion.p>
 
         <motion.div
@@ -62,13 +63,13 @@ export function GotADeal() {
           transition={{ delay: 0.15 }}
           className="mt-6 flex flex-wrap gap-3"
         >
-          <span className="rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 text-xs font-medium text-gold">
+          <span className="rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs font-medium text-charcoal">
             Referral fees paid on completion
           </span>
-          <span className="rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 text-xs font-medium text-gold">
+          <span className="rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs font-medium text-charcoal">
             No exclusive arrangements
           </span>
-          <span className="rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 text-xs font-medium text-gold">
+          <span className="rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs font-medium text-charcoal">
             48-hour assessment
           </span>
         </motion.div>

@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="safe-bottom bg-dark-bg px-4 pt-16 pb-8 sm:px-6">
       {/* Gold divider */}
-      <div className="mx-auto mb-12 h-px max-w-6xl bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      <div className="mx-auto mb-12 h-px max-w-6xl bg-white/10" />
 
       <div className="mx-auto max-w-5xl">
         {/* Logo */}
@@ -64,7 +64,7 @@ export function Footer() {
         </div>
 
         {/* Gold divider */}
-        <div className="mx-auto mt-10 h-px max-w-md bg-gradient-to-r from-transparent via-gold/15 to-transparent" />
+        <div className="mx-auto mt-10 h-px max-w-md bg-white/10" />
 
         {/* Links and copyright */}
         <div className="mt-8 flex flex-col items-center gap-3 border-t border-white/10 pt-6 sm:flex-row sm:justify-between">
