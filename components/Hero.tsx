@@ -19,7 +19,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[100dvh] items-start justify-center overflow-hidden bg-dark-bg px-4 pt-28 pb-16 sm:items-center sm:px-6 sm:pt-32"
+      className="relative flex min-h-[100dvh] items-start justify-center overflow-hidden bg-dark-bg px-4 pt-32 pb-16 sm:items-center sm:px-6 sm:pt-32"
     >
       {/* Subtle background grid */}
       <div
