@@ -1,7 +1,8 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { Search, BookmarkCheck, Package, ShieldCheck } from "lucide-react"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Search, BookmarkCheck, Package, ShieldCheck, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import { scrollToSection } from "@/lib/smoothScroll"
 
@@ -48,6 +49,8 @@ const dealPackItems = [
 ]
 
 export function HowItWorks() {
+  const [packOpen, setPackOpen] = useState(false)
+
   return (
     <section id="how-it-works" className="bg-warm-grey px-4 py-20 sm:px-6 sm:py-28">
       {/* Divider */}
@@ -90,27 +93,52 @@ export function HowItWorks() {
           ))}
         </div>
 
-        {/* Deal pack box */}
+        {/* Deal pack box — collapsible */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mx-auto mt-14 max-w-3xl rounded-xl border border-white/10 bg-dark-bg p-4 sm:p-8"
+          className="mx-auto mt-14 max-w-3xl rounded-xl border border-white/10 bg-dark-bg"
         >
-          <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gold">
-            Deal Pack
-          </p>
-          <p className="mb-4 text-sm font-bold text-white">
-            Every deal includes:
-          </p>
-          <ul className="grid gap-2 text-sm text-muted-dark sm:grid-cols-2">
-            {dealPackItems.map((item) => (
-              <li key={item} className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-                {item}
-              </li>
-            ))}
-          </ul>
+          <button
+            onClick={() => setPackOpen((prev) => !prev)}
+            className="flex w-full cursor-pointer items-center justify-between p-4 sm:p-8"
+            aria-expanded={packOpen}
+            aria-controls="deal-pack-content"
+          >
+            <div className="text-left">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gold">
+                Deal Pack
+              </p>
+              <p className="text-sm font-bold text-white">
+                Every deal includes:
+              </p>
+            </div>
+            <ChevronDown
+              className={`h-5 w-5 shrink-0 text-gold transition-transform duration-300 ${packOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+          <AnimatePresence initial={false}>
+            {packOpen && (
+              <motion.div
+                id="deal-pack-content"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <ul className="grid gap-2 px-4 pb-4 text-sm text-muted-dark sm:grid-cols-2 sm:px-8 sm:pb-8">
+                  {dealPackItems.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
 
         {/* Bespoke alternative */}
