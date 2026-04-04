@@ -104,8 +104,10 @@ const businessSchema = {
     { "@type": "Country", name: "England" },
     { "@type": "Country", name: "Wales" },
   ],
+  foundingDate: "2025",
   sameAs: [
     "https://www.instagram.com/alalipropertypartners",
+    "https://find-and-update.company-information.service.gov.uk/company/17057401",
   ],
   founder: [
     { "@type": "Person", name: "Alayi MacPepple-Jaja" },
@@ -140,7 +142,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Property Deal Sourcing",
   description:
-    "We source verified, high-yield property deals for investors across England & Wales. Investment purchases, rent-to-rent, and bespoke sourcing with complete deal packs. Browse our online deal marketplace.",
+    "We source verified, high-yield property deals for investors across England & Wales. Website deals, off-market opportunities, and bespoke sourcing with complete deal packs. Browse our online deal marketplace.",
   provider: {
     "@type": "Organization",
     name: "Alali Property Partners",
@@ -157,21 +159,21 @@ const serviceSchema = {
     itemListElement: [
       {
         "@type": "Offer",
-        name: "Investment Purchase Sourcing",
-        description: "BTL, BRR, HMO, SA, Flip — full deal pack with comparables, yield analysis and exit strategy. 2.4% of purchase price (min £3,600) + £100 reservation fee.",
+        name: "Website Deals",
+        description: "Ready-made investment opportunities on our marketplace. BTL, BRR, HMO, SA, Flip — full deal pack with comparables, yield analysis and exit strategy. £100 reservation fee, then 2.4% sourcing fee (min £3,600, VAT inc.).",
         priceCurrency: "GBP",
       },
       {
         "@type": "Offer",
-        name: "Rent-to-Rent Sourcing",
-        description: "Ready-to-go rental agreement sourcing. Deal identification, negotiation, heads of terms. From £3,600 + £100 reservation fee.",
+        name: "Off-Market Deals",
+        description: "Exclusive off-market property deals shared within our private investor network. Full deal pack and introduction to agent/vendor. 2.4% sourcing fee (min £3,600, VAT inc.) paid upfront. 14-day due diligence period.",
         priceCurrency: "GBP",
         price: "3600",
       },
       {
         "@type": "Offer",
         name: "Bespoke Sourcing",
-        description: "Sourced to your exact brief with a £1,000 retainer plus agreed fee on completion. 14-day sourcing window.",
+        description: "We go to market and source deals tailored to your exact investment criteria. £1,000 upfront retainer, then 2.4% sourcing fee (min £3,600, VAT inc.) on completion. Retainer deducted from final fee. 14-day sourcing window.",
         priceCurrency: "GBP",
         price: "1000",
       },
