@@ -107,7 +107,7 @@ const businessSchema = {
   foundingDate: "2025",
   sameAs: [
     "https://www.instagram.com/alalipropertypartners",
-    "https://www.facebook.com/profile.php?id=61578669435149",
+    "https://www.facebook.com/alalipropertypartners",
     "https://find-and-update.company-information.service.gov.uk/company/17057401",
   ],
   founder: [
