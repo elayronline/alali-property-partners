@@ -12,7 +12,7 @@ const highlights = [
   {
     icon: BookmarkCheck,
     title: "Reserve for £100",
-    description: "Secure any deal with a £100 reservation fee — simple and fast.",
+    description: "Secure any deal with a £100 reservation fee. Our 2.4% sourcing fee (min £3,600) is payable upfront on instruction.",
   },
   {
     icon: ShieldCheck,

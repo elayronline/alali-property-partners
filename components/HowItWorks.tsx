@@ -10,23 +10,23 @@ const steps = [
   {
     icon: Search,
     step: "1",
-    title: "Browse the marketplace",
+    title: "Choose how you want to invest",
     description:
-      "Explore our live deal portfolio — every listing includes key numbers, strategy, and location so you can quickly see if it fits.",
+      "Browse ready-made deals on our marketplace, get exclusive off-market opportunities through our investor network, or let us source to your exact brief.",
   },
   {
     icon: BookmarkCheck,
     step: "2",
-    title: "Reserve for £100",
+    title: "Secure your deal",
     description:
-      "Found a deal that works? Secure it with a £100 reservation fee. The deal is locked in for you while we prepare your full pack.",
+      "Marketplace deals: £100 reservation fee. Off-market deals: 2.4% sourcing fee upfront. Bespoke sourcing: £1,000 retainer to start your search.",
   },
   {
     icon: Package,
     step: "3",
     title: "Receive your full deal pack",
     description:
-      "Within 24 hours we release everything: property address, photos, comparables, yield analysis, refurb costs, and recommended exit strategy.",
+      "Every deal includes the full property address, photos, comparables, yield analysis, refurb costs, and recommended exit strategy.",
   },
   {
     icon: ShieldCheck,
