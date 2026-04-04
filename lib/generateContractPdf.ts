@@ -11,7 +11,7 @@ export interface ContractData {
   targetLocations: string
   budgetRange: string
   retainerDeposit: string
-  findersFee: string
+  sourcingFee: string
   totalFee: string
   date: string
   clientSignatureDataUrl: string
@@ -187,7 +187,7 @@ export function generateContractPdf(data: ContractData): jsPDF {
   // Fees
   subheading("FEES AND PAYMENTS")
   tableRow("Retainer Deposit", data.retainerDeposit)
-  tableRow("Finder's Fee (on success)", data.findersFee)
+  tableRow("Sourcing Fee (on success)", data.sourcingFee)
   tableRow("Total Fee Payable", data.totalFee)
   y += 6
   divider()
@@ -228,7 +228,7 @@ export function generateContractPdf(data: ContractData): jsPDF {
   body("3.2 The Retainer Deposit is NON-REFUNDABLE except as provided in Clause 4 below.")
   y += 2
   body(
-    "3.3 The Retainer Deposit shall be deducted from the final Finder's Fee upon successful completion.",
+    "3.3 The Retainer Deposit shall be deducted from the final Sourcing Fee upon successful completion.",
   )
   y += 2
   body(

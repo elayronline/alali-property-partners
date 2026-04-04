@@ -360,8 +360,8 @@ export default function BespokeSourcing() {
         targetLocations: contractData.targetLocations,
         budgetRange: contractData.budgetRange,
         retainerDeposit: "£1,000",
-        findersFee: "2-3% of purchase price",
-        totalFee: "£1,000 retainer + Finder's Fee on completion",
+        sourcingFee: "2.4% of purchase price (min £3,600, VAT inc.)",
+        totalFee: "£1,000 retainer + sourcing fee on completion",
         date: today,
         clientSignatureDataUrl: clientSignature,
       }
@@ -815,15 +815,15 @@ export default function BespokeSourcing() {
                               <span className="font-medium text-white">£1,000</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-white/50">Finder&apos;s Fee (on success)</span>
+                              <span className="text-white/50">Sourcing Fee (on success)</span>
                               <span className="font-medium text-white">
-                                2-3% of purchase price
+                                2.4% of purchase price (min £3,600, VAT inc.)
                               </span>
                             </div>
                             <div className="flex justify-between border-t border-white/10 pt-2">
                               <span className="text-white/50">Total Fee</span>
                               <span className="font-medium text-gold">
-                                £1,000 retainer + fee on completion
+                                £1,000 retainer + sourcing fee on completion
                               </span>
                             </div>
                           </div>
@@ -886,7 +886,7 @@ export default function BespokeSourcing() {
                           below.
                         </p>
                         <p>
-                          3.3 The Retainer Deposit shall be deducted from the final Finder&apos;s
+                          3.3 The Retainer Deposit shall be deducted from the final Sourcing
                           Fee upon successful completion.
                         </p>
                         <p>

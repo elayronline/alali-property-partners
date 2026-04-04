@@ -7,35 +7,35 @@ import { scrollToSection } from "@/lib/smoothScroll"
 
 const pricingCards = [
   {
-    title: "Investment Purchase",
-    subtitle: "Buy-to-Let, BRR, HMO, SA, Flip — all strategies",
+    title: "Bespoke Sourcing",
+    subtitle: "We go to market and source deals tailored to your exact criteria — fully hands-off",
+    fee: "£1,000",
+    feeDetail: "upfront retainer, then 2.4% sourcing fee (min £3,600, VAT inc.)",
+    payment: "Retainer refundable if no deal found within 14 days (subject to terms)",
+    includes: "Sourced to your exact brief — location, budget, strategy, returns",
+    reassurance: "£1,000 deducted from the final sourcing fee. If we don't deliver, you're covered.",
+    popular: true,
+    expandable: true,
+  },
+  {
+    title: "Website Deals",
+    subtitle: "Ready-made investment opportunities listed on our platform",
     fee: "2.4%",
-    feeDetail: "of purchase price (min £3,600)",
-    payment: "£100 reservation fee to secure, balance payable upfront on instruction",
+    feeDetail: "sourcing fee (min £3,600, VAT inc.)",
+    payment: "£100 reservation fee to secure, then 14-day due diligence period",
     includes: "Full deal pack, comparables, yield analysis, exit strategy",
     reassurance: "14-day due diligence period — if the deal isn't right, you're covered.",
-    popular: true,
-  },
-  {
-    title: "Rent-to-Rent",
-    subtitle: "Ready-to-go rental agreements",
-    fee: "From £3,600",
-    feeDetail: "depending on deal complexity",
-    payment: "£100 reservation fee to secure, balance payable upfront on instruction",
-    includes: "Deal identification, negotiation, heads of terms",
-    reassurance: "14-day due diligence period — if the deal isn't right, you're covered.",
     popular: false,
   },
   {
-    title: "Bespoke Sourcing",
-    subtitle: "Sourced to your exact brief",
-    fee: "£1,000",
-    feeDetail: "retainer + agreed fee on completion",
-    payment: "Retainer payable upfront on brief",
-    includes: "Everything in Investment + sourced to your exact criteria",
-    reassurance: "14-day sourcing window — if we don't deliver, you're covered.",
+    title: "Off-Market Deals",
+    subtitle: "Exclusive deals shared within our private investor network",
+    fee: "2.4%",
+    feeDetail: "sourcing fee (min £3,600, VAT inc.) paid upfront",
+    payment: "Sourcing fee paid upfront on instruction",
+    includes: "Full deal pack + introduction to agent/vendor",
+    reassurance: "14-day due diligence period — full refund if you don't proceed (subject to terms).",
     popular: false,
-    expandable: true,
   },
 ]
 
@@ -68,7 +68,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mx-auto mt-4 max-w-xl text-center text-sm text-muted-light"
         >
-          Marketplace pricing — simple, upfront, no hidden costs. Every deal includes a 14-day due diligence period.
+          Simple, upfront, no hidden costs. Three ways to invest — each with transparent fees and a due diligence period.
         </motion.p>
 
         {/* Cards */}
@@ -90,7 +90,7 @@ export function Pricing() {
 
                 {card.popular && (
                   <span className="absolute -top-3 right-4 rounded-full bg-gold px-3 py-0.5 text-xs font-bold text-dark-bg">
-                    Most Popular
+                    Recommended
                   </span>
                 )}
 
@@ -138,11 +138,12 @@ export function Pricing() {
                     <div className="mt-4 space-y-3">
                       <ExpandableSection trigger="How does bespoke sourcing work?">
                         <p className="text-sm leading-relaxed text-muted-light">
-                          You pay a £1,000 retainer upfront. We then have 14 days to source a deal
-                          that matches your brief. If we don&apos;t deliver within that period,
-                          you&apos;re covered — full details in our terms. If you go ahead, the
-                          £1,000 comes off the final sourcing fee (typically 2–3% of purchase
-                          price), with the balance payable upfront on instruction.
+                          You pay a £1,000 retainer upfront. We then actively go to market and
+                          source deals tailored to your exact investment criteria — location, budget,
+                          strategy, and target returns. If we don&apos;t find a suitable deal within
+                          14 days, your retainer is refundable (subject to terms). Once you&apos;re
+                          happy with a deal, a 2.4% sourcing fee applies (min £3,600), with the
+                          £1,000 retainer deducted from the final fee.
                         </p>
                       </ExpandableSection>
                       <Link

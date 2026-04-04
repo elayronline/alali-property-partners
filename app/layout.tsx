@@ -213,7 +213,7 @@ const faqSchema = {
       name: "How does bespoke sourcing work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You pay a £1,000 retainer upfront. We then have 14 days to source a deal that matches your brief. If we don't deliver within that period, you're covered. If you go ahead, the £1,000 comes off the final sourcing fee (typically 2–3% of purchase price).",
+        text: "You pay a £1,000 retainer upfront. We then have 14 days to source a deal that matches your brief. If we don't deliver within that period, your retainer is refundable (subject to terms). If you go ahead, the £1,000 comes off the final sourcing fee of 2.4% of purchase price (min £3,600, VAT inc.).",
       },
     },
     {

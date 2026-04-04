@@ -40,8 +40,8 @@ export default function Terms() {
             <li>Sourcing below-market-value, off-market, and high-yield property deals</li>
             <li>Preparing deal packs with comparables, yield analysis, and exit strategies</li>
             <li>Connecting property owners and agents with our investor network</li>
+            <li>Sharing exclusive off-market deals within our private investor network</li>
             <li>Bespoke sourcing to specific investor briefs</li>
-            <li>Rent-to-rent deal identification and negotiation</li>
           </ul>
         </section>
 
@@ -91,24 +91,28 @@ export default function Terms() {
             reasonable administrative costs from any refund where significant work has been
             undertaken on your behalf.
           </p>
-          <p className="mt-3 font-semibold text-charcoal">Investment Purchase:</p>
+          <p className="mt-3 font-semibold text-charcoal">Website Deals:</p>
           <p className="mt-1">
-            Our sourcing fee is 2% of the purchase price (minimum £3,000), payable upfront on
-            instruction. The 14-day due diligence and refund policy applies.
+            A £100 reservation fee is payable to secure the deal. Our sourcing fee is 2.4% of
+            the purchase price (minimum £3,600, VAT inclusive), payable upfront on instruction.
+            The 14-day due diligence and refund policy applies.
           </p>
-          <p className="mt-3 font-semibold text-charcoal">Rent-to-Rent:</p>
+          <p className="mt-3 font-semibold text-charcoal">Off-Market Deals (Investor Network):</p>
           <p className="mt-1">
-            Fees start from £2,750, payable upfront on instruction. The 14-day due diligence
-            and refund policy applies.
+            Our sourcing fee is 2.4% of the purchase price (minimum £3,600, VAT inclusive),
+            payable upfront on instruction. This includes a full deal pack and introduction to
+            the agent or vendor. The 14-day due diligence and refund policy applies — if you
+            do not proceed within 14 days, you are entitled to a full refund (subject to the
+            conditions set out above).
           </p>
           <p className="mt-3 font-semibold text-charcoal">Bespoke Sourcing:</p>
           <p className="mt-1">
             A £1,000 retainer is payable upfront on brief. We then have 14 days to source a deal
-            that matches your criteria. If we do not deliver within 14 days, you receive a full
-            refund of the retainer. If you proceed, the retainer is deducted from the final
-            sourcing fee (typically 2–3% of purchase price), with the balance payable upfront
-            on instruction. The 14-day due diligence and refund policy applies to the final
-            sourcing fee.
+            that matches your criteria. If we do not deliver within 14 days, the retainer is
+            refundable (subject to terms). If you proceed, the retainer is deducted from the
+            final sourcing fee of 2.4% of purchase price (minimum £3,600, VAT inclusive), with
+            the balance payable upfront on instruction. The 14-day due diligence and refund
+            policy applies to the final sourcing fee.
           </p>
           <p className="mt-3 font-semibold text-charcoal">Referral Fees:</p>
           <p className="mt-1">

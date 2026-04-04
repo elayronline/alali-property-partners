@@ -26,9 +26,8 @@ export function WhatsAppCTA() {
           className="mx-auto mt-6 max-w-xl text-lg text-dark-bg/80"
         >
           Our WhatsApp community gets first access to off-market deals you won&apos;t find on the
-          marketplace — at <span className="font-bold text-dark-bg">2% sourcing fee</span> (min
-          £3,000) and R2R from <span className="font-bold text-dark-bg">£2,750</span>. Sent
-          straight to your phone.
+          marketplace — at <span className="font-bold text-dark-bg">2.4% sourcing fee</span> (min
+          £3,600, VAT inc.). Sent straight to your phone.
         </motion.p>
 
         <motion.div
