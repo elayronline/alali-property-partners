@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/Button"
-import { scrollToSection } from "@/lib/smoothScroll"
+import { useSmartNav } from "@/lib/smartNav"
 
 const trustStrip = [
   "Every deal verified before you see it",
@@ -11,14 +11,15 @@ const trustStrip = [
 ]
 
 export function Hero() {
+  const navigate = useSmartNav()
   const handleSellerClick = () => {
     window.dispatchEvent(new CustomEvent("preselect-role", { detail: "Property Owner" }))
-    scrollToSection("contact")
+    navigate("contact")
   }
 
   const handleInvestorClick = () => {
     window.dispatchEvent(new CustomEvent("preselect-role", { detail: "Investor" }))
-    scrollToSection("contact")
+    navigate("contact")
   }
 
   return (

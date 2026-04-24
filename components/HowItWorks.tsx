@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Search, BookmarkCheck, Package, ShieldCheck, ChevronDown } from "lucide-react"
 import Link from "next/link"
-import { scrollToSection } from "@/lib/smoothScroll"
+import { useSmartNav } from "@/lib/smartNav"
 
 const steps = [
   {
@@ -50,6 +50,7 @@ const dealPackItems = [
 
 export function HowItWorks() {
   const [packOpen, setPackOpen] = useState(false)
+  const navigate = useSmartNav()
 
   return (
     <section id="how-it-works" className="bg-warm-grey px-4 py-20 sm:px-6 sm:py-28">
@@ -165,7 +166,7 @@ export function HowItWorks() {
                 Bespoke Sourcing
               </Link>
               <button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => navigate("contact")}
                 className="rounded-lg border-2 border-gold px-5 py-2.5 text-sm font-bold text-gold transition-colors hover:bg-gold/10"
               >
                 Talk to Us

@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/Button"
-import { scrollToSection } from "@/lib/smoothScroll"
+import { useSmartNav } from "@/lib/smartNav"
 
 export function GotADeal() {
+  const navigate = useSmartNav()
   const handleClick = () => {
     window.dispatchEvent(new CustomEvent("preselect-role", { detail: "Property Owner" }))
-    scrollToSection("contact")
+    navigate("contact")
   }
 
   return (

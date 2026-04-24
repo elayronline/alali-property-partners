@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ExpandableSection } from "@/components/ui/ExpandableSection"
-import { scrollToSection } from "@/lib/smoothScroll"
+import { useSmartNav } from "@/lib/smartNav"
 
 const pricingCards = [
   {
@@ -30,6 +30,7 @@ const pricingCards = [
 ]
 
 export function Pricing() {
+  const navigate = useSmartNav()
   return (
     <section id="pricing" className="overflow-x-hidden bg-white px-5 py-20 sm:px-6 sm:py-28">
       {/* Divider */}
@@ -116,7 +117,7 @@ export function Pricing() {
                   {/* CTA */}
                   {!card.expandable && (
                     <button
-                      onClick={() => scrollToSection("contact")}
+                      onClick={() => navigate("contact")}
                       className="mt-4 block w-full rounded-lg bg-gold px-4 py-2.5 text-center text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
                     >
                       Speak to Us &rarr;

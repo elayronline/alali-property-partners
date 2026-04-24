@@ -2,19 +2,23 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { scrollToSection } from "@/lib/smoothScroll"
 
 const navLinks = [
-  { label: "How It Works", href: "how-it-works" },
-  { label: "Why Us", href: "why-us" },
-  { label: "Pricing", href: "pricing" },
+  { label: "How It Works", href: "/how-it-works", section: "how-it-works" },
+  { label: "Why Us", href: "/why-us", section: "why-us" },
+  { label: "Pricing", href: "/pricing", section: "pricing" },
 ]
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
+  const onHome = pathname === "/"
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10)
@@ -22,7 +26,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden"
@@ -34,9 +37,20 @@ export function Navbar() {
     }
   }, [isOpen])
 
-  const handleNavClick = (href: string) => {
-    scrollToSection(href)
-    setIsOpen(false)
+  const handleSectionClick =
+    (section: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (onHome) {
+        e.preventDefault()
+        scrollToSection(section)
+      }
+      setIsOpen(false)
+    }
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (onHome) {
+      e.preventDefault()
+      scrollToSection("hero")
+    }
   }
 
   return (
@@ -46,31 +60,34 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <button
-          onClick={() => scrollToSection("hero")}
+        <Link
+          href="/"
+          onClick={handleLogoClick}
           className="cursor-pointer"
           aria-label="Back to top"
         >
           <Image src="/logo.png" alt="Alali Property Partners" width={140} height={44} priority />
-        </button>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => (
-            <button
+            <Link
               key={link.href}
-              onClick={() => handleNavClick(link.href)}
+              href={link.href}
+              onClick={handleSectionClick(link.section)}
               className="cursor-pointer text-sm font-medium text-white/80 transition-colors hover:text-gold"
             >
               {link.label}
-            </button>
+            </Link>
           ))}
-          <button
-            onClick={() => handleNavClick("contact")}
+          <Link
+            href="/contact"
+            onClick={handleSectionClick("contact")}
             className="cursor-pointer rounded-lg bg-gold px-5 py-2 text-sm font-semibold text-dark-bg transition-colors hover:bg-gold-light"
           >
             Get in Touch
-          </button>
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -100,26 +117,34 @@ export function Navbar() {
           >
             <div className="px-4 pb-6 pt-2">
               {navLinks.map((link, i) => (
-                <motion.button
+                <motion.div
                   key={link.href}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  onClick={() => handleNavClick(link.href)}
-                  className="block w-full cursor-pointer py-3.5 text-left text-base font-medium text-white/80 transition-colors hover:text-gold"
                 >
-                  {link.label}
-                </motion.button>
+                  <Link
+                    href={link.href}
+                    onClick={handleSectionClick(link.section)}
+                    className="block w-full cursor-pointer py-3.5 text-left text-base font-medium text-white/80 transition-colors hover:text-gold"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
-              <motion.button
+              <motion.div
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navLinks.length * 0.05 }}
-                onClick={() => handleNavClick("contact")}
-                className="mt-3 block w-full cursor-pointer rounded-lg bg-gold px-5 py-3 text-center text-base font-semibold text-dark-bg transition-colors hover:bg-gold-light"
               >
-                Get in Touch
-              </motion.button>
+                <Link
+                  href="/contact"
+                  onClick={handleSectionClick("contact")}
+                  className="mt-3 block w-full cursor-pointer rounded-lg bg-gold px-5 py-3 text-center text-base font-semibold text-dark-bg transition-colors hover:bg-gold-light"
+                >
+                  Get in Touch
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         )}
