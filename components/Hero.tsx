@@ -16,6 +16,11 @@ export function Hero() {
     scrollToSection("contact")
   }
 
+  const handleInvestorClick = () => {
+    window.dispatchEvent(new CustomEvent("preselect-role", { detail: "Investor" }))
+    scrollToSection("contact")
+  }
+
   return (
     <section
       id="hero"
@@ -58,10 +63,10 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg"
         >
-          We find below-market-value and off-market property deals across England &amp; Wales,
-          verify every number, and deliver them ready to go — complete with a full deal pack,
-          comparables, and exit strategy. Browse our live marketplace or tell us what you&apos;re
-          looking for.
+          We source property deals across England &amp; Wales — on-market through our compliant
+          agent network and off-market through private contacts — verify every number, and
+          deliver them ready to go, complete with a full deal pack, comparables, and exit
+          strategy. Tell us what you&apos;re looking for and we&apos;ll source to your brief.
         </motion.p>
 
         <motion.p
@@ -80,14 +85,12 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-10 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-center"
         >
-          <a
-            href="https://alalipropertypartnersdeals.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-lg bg-gold px-8 py-4 text-base font-semibold text-dark-bg transition-colors hover:bg-gold-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-dark-bg"
+          <button
+            onClick={handleInvestorClick}
+            className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-gold px-8 py-4 text-base font-semibold text-dark-bg transition-colors hover:bg-gold-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-dark-bg"
           >
-            Browse Deals
-          </a>
+            Find Me a Deal
+          </button>
           <Button variant="secondary" size="large" onClick={handleSellerClick}>
             I Have a Property to Move
           </Button>

@@ -18,18 +18,8 @@ const pricingCards = [
     expandable: true,
   },
   {
-    title: "Website Deals",
-    subtitle: "Ready-made investment opportunities listed on our platform",
-    fee: "2.4%",
-    feeDetail: "sourcing fee (min £3,600, VAT inc.)",
-    payment: "£100 reservation fee to secure. Sourcing fee payable upfront on instruction.",
-    includes: "Full deal pack, comparables, yield analysis, exit strategy",
-    reassurance: "14-day due diligence period — if the deal isn't right, you're covered.",
-    popular: false,
-  },
-  {
-    title: "Off-Market Deals",
-    subtitle: "Exclusive deals shared within our private investor network",
+    title: "Sourced Deals",
+    subtitle: "On-market deals from our compliant agent network and off-market deals from our private contacts",
     fee: "2.4%",
     feeDetail: "sourcing fee (min £3,600, VAT inc.)",
     payment: "Sourcing fee paid in full upfront before deal pack is released",
@@ -68,12 +58,12 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mx-auto mt-4 max-w-xl text-center text-sm text-muted-light"
         >
-          Simple, upfront, no hidden costs. Three ways to invest — each with transparent fees and a due diligence period.
+          Simple, upfront, no hidden costs. Two ways to invest — each with transparent fees and a due diligence period.
         </motion.p>
 
         {/* Cards */}
         <div className="relative mt-14 overflow-visible">
-          <div className="grid gap-5 overflow-visible sm:grid-cols-2 md:grid-cols-3 md:gap-6">
+          <div className="mx-auto grid max-w-3xl gap-5 overflow-visible sm:grid-cols-2 md:gap-6">
             {pricingCards.map((card, i) => (
               <motion.div
                 key={card.title}

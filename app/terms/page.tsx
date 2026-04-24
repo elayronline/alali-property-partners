@@ -2,10 +2,25 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Alali Property Partners",
+  title: "Terms of Service",
   description:
-    "Terms of service for Alali Property Partners property deal sourcing services.",
+    "Terms of service for Alali Property Partners — property deal sourcing, sourcing fees, 14-day due diligence, refund policy, and introducer responsibilities across England & Wales.",
   alternates: { canonical: "/terms" },
+  openGraph: {
+    title: "Terms of Service | Alali Property Partners",
+    description:
+      "Terms governing our property deal sourcing services, fees, and 14-day due diligence policy.",
+    url: "/terms",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | Alali Property Partners",
+    description:
+      "Terms governing our property deal sourcing services, fees, and 14-day due diligence policy.",
+    images: ["/opengraph-image"],
+  },
 }
 
 export default function Terms() {
@@ -91,19 +106,14 @@ export default function Terms() {
             reasonable administrative costs from any refund where significant work has been
             undertaken on your behalf.
           </p>
-          <p className="mt-3 font-semibold text-charcoal">Website Deals:</p>
-          <p className="mt-1">
-            A £100 reservation fee is payable to secure the deal. Our sourcing fee is 2.4% of
-            the purchase price (minimum £3,600, VAT inclusive), payable upfront on instruction.
-            The 14-day due diligence and refund policy applies.
-          </p>
-          <p className="mt-3 font-semibold text-charcoal">Off-Market Deals (Investor Network):</p>
+          <p className="mt-3 font-semibold text-charcoal">Sourced Deals (On-Market and Off-Market):</p>
           <p className="mt-1">
             Our sourcing fee is 2.4% of the purchase price (minimum £3,600, VAT inclusive),
-            payable upfront on instruction. This includes a full deal pack and introduction to
-            the agent or vendor. The 14-day due diligence and refund policy applies — if you
-            do not proceed within 14 days, you are entitled to a full refund (subject to the
-            conditions set out above).
+            payable upfront on instruction. This applies to deals sourced through our compliant
+            agent network (on-market) and through our private contacts (off-market). It includes
+            a full deal pack and introduction to the agent or vendor. The 14-day due diligence
+            and refund policy applies — if you do not proceed within 14 days, you are entitled
+            to a full refund (subject to the conditions set out above).
           </p>
           <p className="mt-3 font-semibold text-charcoal">Bespoke Sourcing:</p>
           <p className="mt-1">

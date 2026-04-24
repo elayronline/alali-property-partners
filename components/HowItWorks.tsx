@@ -12,14 +12,14 @@ const steps = [
     step: "1",
     title: "Choose how you want to invest",
     description:
-      "Browse ready-made deals on our marketplace, get exclusive off-market opportunities through our investor network, or let us source to your exact brief.",
+      "Get sourced deals — on-market from our compliant agent network and off-market from our private contacts — or let us source to your exact brief.",
   },
   {
     icon: BookmarkCheck,
     step: "2",
     title: "Secure your deal",
     description:
-      "Marketplace deals: £100 reservation fee. Off-market deals: 2.4% sourcing fee upfront. Bespoke sourcing: £1,000 retainer to start your search.",
+      "Sourced deals: 2.4% sourcing fee upfront. Bespoke sourcing: £1,000 retainer to start your search.",
   },
   {
     icon: Package,

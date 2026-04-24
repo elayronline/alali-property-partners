@@ -2,10 +2,25 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Alali Property Partners",
+  title: "Privacy Policy",
   description:
-    "How Alali Property Partners collects, uses, and protects your personal data. GDPR compliant.",
+    "How Alali Property Partners collects, uses, and protects your personal data. GDPR compliant privacy policy covering contact form data, WhatsApp broadcasts, cookies, and your rights.",
   alternates: { canonical: "/privacy" },
+  openGraph: {
+    title: "Privacy Policy | Alali Property Partners",
+    description:
+      "How we collect, use, and protect your personal data. GDPR compliant.",
+    url: "/privacy",
+    type: "article",
+    images: ["/opengraph-image"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Alali Property Partners",
+    description:
+      "How we collect, use, and protect your personal data. GDPR compliant.",
+    images: ["/opengraph-image"],
+  },
 }
 
 export default function Privacy() {

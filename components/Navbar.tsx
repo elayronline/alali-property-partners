@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion"
 import { scrollToSection } from "@/lib/smoothScroll"
 
 const navLinks = [
-  { label: "Deals", href: "deal-marketplace" },
   { label: "How It Works", href: "how-it-works" },
   { label: "Why Us", href: "why-us" },
   { label: "Pricing", href: "pricing" },
@@ -67,14 +66,12 @@ export function Navbar() {
               {link.label}
             </button>
           ))}
-          <a
-            href="https://alalipropertypartnersdeals.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg bg-gold px-5 py-2 text-sm font-semibold text-dark-bg transition-colors hover:bg-gold-light"
+          <button
+            onClick={() => handleNavClick("contact")}
+            className="cursor-pointer rounded-lg bg-gold px-5 py-2 text-sm font-semibold text-dark-bg transition-colors hover:bg-gold-light"
           >
-            Browse Deals
-          </a>
+            Get in Touch
+          </button>
         </div>
 
         {/* Mobile hamburger */}
@@ -115,17 +112,15 @@ export function Navbar() {
                   {link.label}
                 </motion.button>
               ))}
-              <motion.a
+              <motion.button
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navLinks.length * 0.05 }}
-                href="https://alalipropertypartnersdeals.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 block w-full rounded-lg bg-gold px-5 py-3 text-center text-base font-semibold text-dark-bg transition-colors hover:bg-gold-light"
+                onClick={() => handleNavClick("contact")}
+                className="mt-3 block w-full cursor-pointer rounded-lg bg-gold px-5 py-3 text-center text-base font-semibold text-dark-bg transition-colors hover:bg-gold-light"
               >
-                Browse Deals
-              </motion.a>
+                Get in Touch
+              </motion.button>
             </div>
           </motion.div>
         )}
