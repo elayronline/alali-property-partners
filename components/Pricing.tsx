@@ -19,7 +19,7 @@ const pricingCards = [
   },
   {
     title: "Sourced Deals",
-    subtitle: "On-market deals from our compliant agent network and off-market deals from our private contacts",
+    subtitle: "Off-market deals from our private contacts and on-market deals from our compliant agent network",
     fee: "2.4%",
     feeDetail: "sourcing fee (min £3,600, VAT inc.)",
     payment: "Sourcing fee paid in full upfront before deal pack is released",

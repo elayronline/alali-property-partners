@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     absolute: "Alali Property Partners | Property Deal Sourcing — England & Wales",
   },
   description:
-    "We find and introduce verified, high-yield property deals for investors across England & Wales — on-market through our compliant agent network and off-market through private contacts. BTL, BRR, R2R, HMO, flips, and bespoke sourcing to your exact brief. Working alongside regulated professionals. Transparent fees. Complete deal packs.",
+    "We find and introduce verified, high-yield property deals for investors across England & Wales — off-market through our private contacts and on-market through our compliant agent network. BTL, BRR, R2R, HMO, flips, and bespoke sourcing to your exact brief. Working alongside regulated professionals. Transparent fees. Complete deal packs.",
   keywords: [
     "property deal sourcing",
     "property sourcing agent",
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     "deal sourcing Birmingham",
     "property sourcing for investors",
     "off-market property deals",
+    "off-market property UK",
     "on-market property deals",
     "property deal packager",
     "investment property sourcing",
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alali Property Partners | Property Deal Sourcing",
     description:
-      "Verified property deals for investors across England & Wales — on-market via compliant agents and off-market via private contacts. BTL, BRR, R2R, HMO, flips, and bespoke sourcing to your brief.",
+      "Verified property deals for investors across England & Wales — off-market via private contacts and on-market via our compliant agent network. BTL, BRR, R2R, HMO, flips, and bespoke sourcing to your brief.",
     url: "/",
     type: "website",
     images: ["/opengraph-image"],
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alali Property Partners | Property Deal Sourcing",
     description:
-      "Verified property deals for investors across England & Wales. On-market through our compliant agent network, off-market through private contacts, and bespoke sourcing.",
+      "Verified property deals for investors across England & Wales. Off-market through private contacts, on-market through our compliant agent network, and bespoke sourcing.",
     images: ["/opengraph-image"],
   },
 }
@@ -55,7 +56,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Property Deal Sourcing",
   description:
-    "We source verified, high-yield property deals for investors across England & Wales. On-market through our compliant agent network, off-market through private contacts, and bespoke sourcing — all with complete deal packs.",
+    "We source verified, high-yield property deals for investors across England & Wales. Off-market through private contacts, on-market through our compliant agent network, and bespoke sourcing — all with complete deal packs.",
   provider: {
     "@type": "Organization",
     name: "Alali Property Partners",
@@ -74,7 +75,7 @@ const serviceSchema = {
         "@type": "Offer",
         name: "Sourced Deals",
         description:
-          "Verified property deals sourced through our compliant agent network (on-market) and private contacts (off-market). Full deal pack and introduction to agent/vendor. 2.4% sourcing fee (min £3,600, VAT inc.) paid upfront. 14-day due diligence period.",
+          "Verified property deals sourced through our private contacts (off-market) and compliant agent network (on-market). Full deal pack and introduction to agent/vendor. 2.4% sourcing fee (min £3,600, VAT inc.) paid upfront. 14-day due diligence period.",
         priceCurrency: "GBP",
         price: "3600",
       },
@@ -116,7 +117,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sourced investment purchases (on-market or off-market) are 2.4% of purchase price (min £3,600), payable upfront on instruction. Rent-to-Rent deals start from £3,600. Bespoke sourcing requires a £1,000 retainer plus an agreed fee on completion. All fees are VAT inclusive with no hidden costs.",
+        text: "Sourced investment purchases (off-market or on-market) are 2.4% of purchase price (min £3,600), payable upfront on instruction. Rent-to-Rent deals start from £3,600. Bespoke sourcing requires a £1,000 retainer plus an agreed fee on completion. All fees are VAT inclusive with no hidden costs.",
       },
     },
     {
@@ -132,7 +133,7 @@ const faqSchema = {
       name: "What areas do you cover for property deal sourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We cover the whole of England & Wales. We source on-market deals through our compliant agent network and off-market deals through private contacts — or tell us what you're looking for and we'll source to your brief.",
+        text: "We cover the whole of England & Wales. We source off-market deals through our private contacts and on-market deals through our compliant agent network — or tell us what you're looking for and we'll source to your brief.",
       },
     },
     {

@@ -63,8 +63,8 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg"
         >
-          We source property deals across England &amp; Wales — on-market through our compliant
-          agent network and off-market through private contacts — verify every number, and
+          We source property deals across England &amp; Wales — off-market through our private
+          contacts and on-market through our compliant agent network — verify every number, and
           deliver them ready to go, complete with a full deal pack, comparables, and exit
           strategy. Tell us what you&apos;re looking for and we&apos;ll source to your brief.
         </motion.p>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 
-const methods = ["On-Market (Agent Network)", "Off-Market", "Below Market Value", "Pre-Market", "Auction", "Direct to Seller", "Probate"]
+const methods = ["Off-Market", "On-Market (Agent Network)", "Below Market Value", "Pre-Market", "Auction", "Direct to Seller", "Probate"]
 
 const strategies = [
   "Buy-to-Let (BTL)",

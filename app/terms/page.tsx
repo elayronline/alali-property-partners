@@ -106,14 +106,14 @@ export default function Terms() {
             reasonable administrative costs from any refund where significant work has been
             undertaken on your behalf.
           </p>
-          <p className="mt-3 font-semibold text-charcoal">Sourced Deals (On-Market and Off-Market):</p>
+          <p className="mt-3 font-semibold text-charcoal">Sourced Deals (Off-Market and On-Market):</p>
           <p className="mt-1">
             Our sourcing fee is 2.4% of the purchase price (minimum £3,600, VAT inclusive),
-            payable upfront on instruction. This applies to deals sourced through our compliant
-            agent network (on-market) and through our private contacts (off-market). It includes
-            a full deal pack and introduction to the agent or vendor. The 14-day due diligence
-            and refund policy applies — if you do not proceed within 14 days, you are entitled
-            to a full refund (subject to the conditions set out above).
+            payable upfront on instruction. This applies to deals sourced through our private
+            contacts (off-market) and through our compliant agent network (on-market). It
+            includes a full deal pack and introduction to the agent or vendor. The 14-day due
+            diligence and refund policy applies — if you do not proceed within 14 days, you are
+            entitled to a full refund (subject to the conditions set out above).
           </p>
           <p className="mt-3 font-semibold text-charcoal">Bespoke Sourcing:</p>
           <p className="mt-1">

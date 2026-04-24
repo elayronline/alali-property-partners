@@ -12,7 +12,7 @@ const steps = [
     step: "1",
     title: "Choose how you want to invest",
     description:
-      "Get sourced deals — on-market from our compliant agent network and off-market from our private contacts — or let us source to your exact brief.",
+      "Get sourced deals — off-market from our private contacts and on-market from our compliant agent network — or let us source to your exact brief.",
   },
   {
     icon: BookmarkCheck,

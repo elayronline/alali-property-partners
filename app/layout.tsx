@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | Alali Property Partners",
   },
   description:
-    "Property deal sourcing and introducer service across England & Wales. On-market via our compliant agent network, off-market via private contacts, and bespoke sourcing to your brief.",
+    "Property deal sourcing and introducer service across England & Wales. Off-market via our private contacts, on-market via our compliant agent network, and bespoke sourcing to your brief.",
   applicationName: "Alali Property Partners",
   authors: [{ name: "Alali Property Partners Ltd" }],
   creator: "Alali Property Partners Ltd",
@@ -62,7 +62,7 @@ const businessSchema = {
   name: "Alali Property Partners",
   legalName: "Alali Property Partners Ltd",
   description:
-    "Property deal sourcing and introducer service covering England & Wales. We find verified, high-yield property deals for investors and connect them with regulated professionals — on-market through our compliant agent network, off-market through private contacts, BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
+    "Property deal sourcing and introducer service covering England & Wales. We find verified, high-yield property deals for investors and connect them with regulated professionals — off-market through private contacts, on-market through our compliant agent network, BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
   url: "https://www.alalipropertypartners.com",
   telephone: "+442045158438",
   email: "contact@alalipropertypartners.com",
@@ -124,7 +124,7 @@ const websiteSchema = {
   name: "Alali Property Partners",
   url: "https://www.alalipropertypartners.com",
   description:
-    "Property deal sourcing service for investors across England & Wales. On-market through our compliant agent network, off-market through private contacts, BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
+    "Property deal sourcing service for investors across England & Wales. Off-market through private contacts, on-market through our compliant agent network, BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
   publisher: {
     "@type": "Organization",
     name: "Alali Property Partners",

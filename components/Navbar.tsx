@@ -10,7 +10,6 @@ const navLinks = [
   { label: "How It Works", href: "how-it-works" },
   { label: "Why Us", href: "why-us" },
   { label: "Pricing", href: "pricing" },
-  { label: "Contact", href: "contact" },
 ]
 
 export function Navbar() {
