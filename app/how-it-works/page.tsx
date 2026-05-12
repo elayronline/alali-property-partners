@@ -6,13 +6,13 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "How It Works — Property Deal Sourcing Process",
   description:
-    "Our 4-step property deal sourcing process — pick a deal, secure it, get a full deal pack, 14 days to verify. Transparent fees across England & Wales.",
+    "Our 4-step property deal sourcing process — pick a deal, secure it, get a full deal pack, 48-hour decision SLA. Transparent fees across England & Wales.",
   keywords: [
     "how property deal sourcing works",
     "property deal sourcing process",
     "property sourcing steps UK",
     "deal pack contents",
-    "14 day due diligence property",
+    "48 hour decision SLA property sourcing",
     "off-market property sourcing process",
     "on-market property sourcing process",
     "bespoke property sourcing",
@@ -66,7 +66,7 @@ const howToSchema = {
       "@type": "HowToStep",
       position: 2,
       name: "Secure your deal",
-      text: "Sourced deals: 2.4% sourcing fee (min £3,600, VAT inc.) paid upfront on instruction. Bespoke sourcing: £1,000 retainer to start your search.",
+      text: "Sourced deals: sign the sourcing agreement and pay £500 upfront to release the full deal pack. The balance (2.4% of purchase price, min £3,600 total, VAT inc.) is settled once you decide to proceed. Bespoke sourcing: £1,000 retainer to start your search.",
       url: "https://www.alalipropertypartners.com/how-it-works#step-2",
     },
     {
@@ -79,8 +79,8 @@ const howToSchema = {
     {
       "@type": "HowToStep",
       position: 4,
-      name: "14 days to verify everything",
-      text: "We introduce you to the agent or vendor. You have a full 14 days to run your own due diligence. If the deal is not suitable, the sourcing fee is refundable subject to our terms.",
+      name: "48 hours to decide",
+      text: "We facilitate viewings and introductions on your behalf — vendor and agent contact details remain with us. You have a 48-hour decision SLA from deal-pack release to decide whether to proceed, with extensions available on fair, justified reasoning. If there are valid reasons not to proceed, the £500 unlock fee is refundable subject to our terms.",
       url: "https://www.alalipropertypartners.com/how-it-works#step-4",
     },
   ],
@@ -95,7 +95,7 @@ const faqSchema = {
       name: "How long does property deal sourcing take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For sourced deals from our pipeline, you receive the deal pack within days of instruction. For bespoke sourcing, we work to a 14-day sourcing window from receipt of your £1,000 retainer. After a deal is presented, you get a further 14-day due diligence period before any decision is final.",
+        text: "For sourced deals from our pipeline, you receive the deal pack within days of signing the sourcing agreement and paying the £500 unlock fee. For bespoke sourcing, we work to a 14-day sourcing window from receipt of your £1,000 retainer in which we find and present a deal. Once a deal pack is released (or a bespoke deal is presented), you have a 48-hour decision SLA before any commitment is final — extensions are available on fair, justified reasoning where the vendor allows.",
       },
     },
     {
@@ -103,15 +103,15 @@ const faqSchema = {
       name: "What is included in a property deal pack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every deal pack includes the full property address and location details, interior and exterior photos where available, purchase price and comparable sold prices, yield calculations and rental income evidence, refurbishment cost estimate where applicable, target resale value for flips and developments, area demand and local market summary, and a recommended strategy with exit options.",
+        text: "Every deal pack includes the full property address and location details, interior and exterior photos where available, purchase price and comparable sold prices, yield calculations and rental income evidence, refurbishment cost estimate where applicable, target resale value for flips and developments, area demand and local market summary, and a recommended strategy with exit options. Vendor and agent contact details are held by us — we facilitate viewings and introductions on your behalf.",
       },
     },
     {
       "@type": "Question",
-      name: "How does the 14-day due diligence period work?",
+      name: "How does the 48-hour decision SLA work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "From the date a deal is presented, you have 14 days to instruct your own solicitor, surveyor, and mortgage broker, and to verify every figure independently. If you decide the property is not suitable during the 14-day window, you may request a refund of the sourcing fee in writing, subject to the conditions in our terms of service.",
+        text: "From the moment the deal pack is released (Sourced Deals) or the deal is presented (Bespoke), you have 48 hours to review it, get initial input from your solicitor, surveyor, or mortgage broker, and decide whether to proceed. Most off-market deals are time-sensitive, which is why the standard window is short — but extensions can be granted on fair, justified reasoning (for example, awaiting a survey or mortgage decision in principle) where the vendor agrees. If you decide to proceed, the balance of the sourcing fee is settled. If you decide not to proceed and there are valid reasons, the £500 unlock fee (Sourced Deals) or £1,000 retainer (Bespoke) is refundable subject to our terms of service.",
       },
     },
     {

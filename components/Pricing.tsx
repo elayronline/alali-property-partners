@@ -21,10 +21,10 @@ const pricingCards = [
     title: "Sourced Deals",
     subtitle: "Off-market deals from our private contacts and on-market deals from our compliant agent network",
     fee: "2.4%",
-    feeDetail: "sourcing fee (min £3,600, VAT inc.)",
-    payment: "Sourcing fee paid in full upfront before deal pack is released",
-    includes: "Full deal pack + introduction to agent/vendor",
-    reassurance: "14-day due diligence period — full refund if you don't proceed (subject to terms).",
+    feeDetail: "of purchase price (min £3,600, VAT inc.)",
+    payment: "£500 upfront on signed sourcing agreement to release the deal pack; balance settled once you decide to proceed",
+    includes: "Full deal pack + viewings and introductions facilitated by us",
+    reassurance: "£500 refundable where there are valid reasons not to proceed (subject to terms).",
     popular: false,
   },
 ]
@@ -59,7 +59,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mx-auto mt-4 max-w-xl text-center text-sm text-muted-light"
         >
-          Simple, upfront, no hidden costs. Two ways to invest — each with transparent fees and a due diligence period.
+          Simple, upfront, no hidden costs. Two ways to invest — each with transparent fees and a clear decision window.
         </motion.p>
 
         {/* Cards */}

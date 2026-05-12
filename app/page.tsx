@@ -76,15 +76,15 @@ const serviceSchema = {
         "@type": "Offer",
         name: "Sourced Deals",
         description:
-          "Verified property deals sourced through our private contacts (off-market) and compliant agent network (on-market). Full deal pack and introduction to agent/vendor. 2.4% sourcing fee (min £3,600, VAT inc.) paid upfront. 14-day due diligence period.",
+          "Verified property deals sourced through our private contacts (off-market) and our compliant agent network (on-market). 2.4% sourcing fee of purchase price (min £3,600, VAT inc.). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. We facilitate viewings and introductions on the investor's behalf. 48-hour decision SLA from deal-pack release, with extensions on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
         priceCurrency: "GBP",
-        price: "3600",
+        price: "500",
       },
       {
         "@type": "Offer",
         name: "Bespoke Sourcing",
         description:
-          "We go to market and source deals tailored to your exact investment criteria. £1,000 upfront retainer, then 2.4% sourcing fee (min £3,600, VAT inc.) on completion. Retainer deducted from final fee. 14-day sourcing window.",
+          "We go to market and source deals tailored to the investor's exact criteria. £1,000 upfront retainer, then 2.4% sourcing fee (min £3,600, VAT inc.) on completion. Retainer deducted from final fee. 14-day sourcing window.",
         priceCurrency: "GBP",
         price: "1000",
       },
@@ -122,7 +122,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sourced investment purchases (off-market or on-market) are 2.4% of purchase price (min £3,600), payable upfront on instruction. Rent-to-Rent deals start from £3,600. Bespoke sourcing requires a £1,000 retainer plus an agreed fee on completion. All fees are VAT inclusive with no hidden costs.",
+        text: "Sourced investment purchases (off-market or on-market) are 2.4% of purchase price (minimum £3,600, VAT inclusive). You sign a sourcing agreement and pay £500 upfront to release the deal pack; the balance is settled once you decide to proceed. The £500 is refundable where there are valid reasons not to proceed, subject to terms. Bespoke sourcing requires a £1,000 retainer plus 2.4% sourcing fee on completion. All fees are VAT inclusive with no hidden costs.",
       },
     },
     {
@@ -146,7 +146,7 @@ const faqSchema = {
       name: "What is included in a deal pack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every deal pack includes full property details, comparable sales data, yield analysis, projected returns, exit strategy, and all relevant due diligence information. Deal packs are delivered directly to your WhatsApp.",
+        text: "Every deal pack includes full property details, comparable sales data, yield analysis, projected returns, exit strategy, and all relevant due diligence information. Vendor and agent contact details are held by us — we facilitate viewings and introductions on your behalf. Deal packs are delivered directly to your WhatsApp once the sourcing agreement is signed and the £500 unlock fee is paid.",
       },
     },
   ],

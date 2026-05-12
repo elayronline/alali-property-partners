@@ -19,7 +19,7 @@ const steps = [
     step: "2",
     title: "Secure your deal",
     description:
-      "Sourced deals: 2.4% sourcing fee upfront. Bespoke sourcing: £1,000 retainer to start your search.",
+      "Sourced deals: sign the sourcing agreement and pay £500 to unlock the deal pack — balance settled when you decide to proceed. Bespoke sourcing: £1,000 retainer to start your search.",
   },
   {
     icon: Package,
@@ -31,9 +31,9 @@ const steps = [
   {
     icon: ShieldCheck,
     step: "4",
-    title: "14 days to verify everything",
+    title: "48 hours to decide",
     description:
-      "We introduce you to the agent or vendor. You have a full 14 days to run your own due diligence. Not satisfied? You're covered — full details in our terms.",
+      "We facilitate viewings and introductions on your behalf. You have a 48-hour decision SLA from deal-pack release to decide whether to proceed — extensions available on fair, justified reasoning. If you don't proceed, your £500 is refundable where there are valid reasons (subject to terms).",
   },
 ]
 

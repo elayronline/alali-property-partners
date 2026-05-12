@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "Why Investors Choose Us for Property Deal Sourcing",
   description:
-    "Why investors choose us — verified deals, transparent fees, FCA-regulated power team, 14-day due diligence, complete deal packs across England & Wales.",
+    "Why investors choose us — verified deals, transparent fees, FCA-regulated power team, complete deal packs and clear decision window across England & Wales.",
   keywords: [
     "best property sourcer UK",
     "property sourcing company reviews",
@@ -69,7 +69,7 @@ const faqSchema = {
       name: "What protection do investors have if a sourced deal is wrong?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every Alali Property Partners deal comes with a 14-day client due diligence period from the date the deal is presented. During this window, if you determine the property is not suitable, the sourcing fee is refundable subject to our terms of service. You are also free to instruct your own solicitor, surveyor, and broker for independent verification.",
+        text: "The sourcing fee is split into a £500 unlock fee on signed sourcing agreement and a balance settled only once you have decided to proceed. After the deal pack is released, you have a 48-hour decision SLA — extensions are available on fair, justified reasoning where the vendor agrees. If there are valid reasons not to proceed, the £500 is refundable subject to our terms of service. You are also free to instruct your own solicitor, surveyor, and broker for independent verification before deciding.",
       },
     },
   ],

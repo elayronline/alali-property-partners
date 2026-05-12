@@ -58,7 +58,7 @@ const bespokeServiceSchema = {
     "@type": "Offer",
     name: "Bespoke Sourcing Retainer",
     description:
-      "£1,000 upfront retainer. We then have 14 days to source a deal matching your brief. If we don't deliver in that window, the retainer is refundable subject to terms. On a deal, the £1,000 is deducted from the final 2.4% sourcing fee (min £3,600, VAT inclusive).",
+      "£1,000 upfront retainer. We then have 14 days to find and present a deal matching your brief. If we don't present a suitable deal in that window, the retainer is refundable subject to terms. Once a deal is presented, you have a 48-hour decision SLA — extensions available on fair, justified reasoning where the vendor agrees. On a decision to proceed, the £1,000 is deducted from the final 2.4% sourcing fee (min £3,600, VAT inclusive).",
     priceCurrency: "GBP",
     price: "1000",
     priceSpecification: {
@@ -106,7 +106,7 @@ const bespokeFaqSchema = {
       name: "How long does bespoke property sourcing take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We work to a 14-day bespoke sourcing window from receipt of your retainer and brief. If we don't deliver a suitable deal within 14 days, the retainer is refundable subject to terms. Once a deal is presented, the standard 14-day due diligence period applies.",
+        text: "We work to a 14-day bespoke sourcing window from receipt of your retainer and brief — within that window we find and present a deal matching your criteria. If we don't present a suitable deal within 14 days, the retainer is refundable subject to terms. Once a deal is presented, you have a 48-hour decision SLA — the same standard window as Sourced Deals — with extensions available on fair, justified reasoning where the vendor agrees.",
       },
     },
     {

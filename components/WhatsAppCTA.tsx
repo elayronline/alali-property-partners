@@ -25,9 +25,9 @@ export function WhatsAppCTA() {
           transition={{ delay: 0.1 }}
           className="mx-auto mt-6 max-w-xl text-lg text-dark-bg/80"
         >
-          Our WhatsApp community gets first access to exclusive off-market opportunities — at{" "}
-          <span className="font-bold text-dark-bg">2.4% sourcing fee</span> (min £3,600, VAT inc.).
-          Sent straight to your phone.
+          Our WhatsApp community gets first access to exclusive off-market opportunities —{" "}
+          <span className="font-bold text-dark-bg">2.4% sourcing fee</span> (min £3,600, VAT inc.),
+          with just £500 upfront to unlock the deal pack.
         </motion.p>
 
         <motion.div

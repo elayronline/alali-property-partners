@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "Property Sourcing Fees & Pricing",
   description:
-    "Property sourcing fees: 2.4% (min £3,600, VAT inc.) on sourced deals; £1,000 retainer on bespoke. No hidden costs. 14-day due diligence on every deal.",
+    "Property sourcing fees: 2.4% (min £3,600, VAT inc.) on sourced deals; £1,000 retainer on bespoke. No hidden costs. 48-hour decision SLA on every deal.",
   keywords: [
     "property sourcing fees",
     "property sourcing cost UK",
@@ -42,7 +42,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/pricing#service",
   name: "Property Deal Sourcing Service",
   description:
-    "Property deal sourcing for investors in England & Wales. Off-market deals via private contacts, on-market deals via compliant agent network, and bespoke sourcing to investor brief. Every deal includes a full deal pack and 14-day client due diligence period.",
+    "Property deal sourcing for investors in England & Wales. Off-market deals via private contacts, on-market deals via compliant agent network, and bespoke sourcing to investor brief. Every deal includes a full deal pack and a 48-hour decision SLA after release/presentation, with extensions on fair, justified reasoning.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -58,14 +58,15 @@ const serviceSchema = {
       "@type": "Offer",
       name: "Sourced Deals",
       description:
-        "Off-market deals from our private contacts and on-market deals from our compliant agent network. 2.4% sourcing fee (minimum £3,600, VAT inclusive) payable upfront on instruction. Full deal pack and introduction to agent/vendor included. 14-day due diligence period with refund subject to terms.",
+        "Off-market deals from our private contacts and on-market deals from our compliant agent network. 2.4% sourcing fee of purchase price (minimum £3,600, VAT inclusive). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. Viewings and introductions facilitated by us — vendor and agent contact details remain with us. 48-hour decision SLA from deal-pack release, with extensions available on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
       priceCurrency: "GBP",
-      price: "3600",
+      price: "500",
       priceSpecification: {
         "@type": "PriceSpecification",
         priceCurrency: "GBP",
+        price: "500",
         minPrice: "3600",
-        description: "2.4% of purchase price, minimum £3,600, VAT inclusive",
+        description: "£500 unlock fee upfront, balance to total 2.4% of purchase price (minimum £3,600 total, VAT inclusive)",
         valueAddedTaxIncluded: true,
       },
       availability: "https://schema.org/InStock",
@@ -100,7 +101,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost in the UK?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Alali Property Partners charges 2.4% of the purchase price (minimum £3,600, VAT inclusive) for sourced deals, payable upfront on instruction. Bespoke sourcing requires a £1,000 upfront retainer plus the same 2.4% sourcing fee on completion. All fees include VAT and there are no hidden costs.",
+        text: "Alali Property Partners charges 2.4% of the purchase price (minimum £3,600, VAT inclusive) for sourced deals. You sign a sourcing agreement and pay £500 upfront to release the deal pack; the balance is settled once you decide to proceed. Bespoke sourcing requires a £1,000 upfront retainer plus the same 2.4% sourcing fee on completion. All fees include VAT and there are no hidden costs.",
       },
     },
     {
@@ -108,7 +109,7 @@ const faqSchema = {
       name: "When do I pay the sourcing fee?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All sourcing fees are payable in full upfront on instruction. For sourced deals, the fee is paid before the deal pack is released. For bespoke sourcing, the £1,000 retainer is paid upfront on brief, then the balance is paid on instruction once a deal is presented and accepted.",
+        text: "For sourced deals, £500 is paid upfront on the signed sourcing agreement to release the deal pack. The remaining balance of the 2.4% sourcing fee (to a total minimum of £3,600, VAT inclusive) is settled once you decide to proceed. For bespoke sourcing, the £1,000 retainer is paid upfront on brief, then the balance is settled on instruction once a deal is presented and accepted.",
       },
     },
     {
@@ -116,7 +117,7 @@ const faqSchema = {
       name: "Is the property sourcing fee refundable?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, subject to terms. Every deal includes a 14-day client due diligence period from the date the deal is presented. If during that window you decide the property is not suitable and you have not proceeded (for example by instructing solicitors), you may request a refund of the sourcing fee in writing. Refunds are not issued after the 14-day window has expired or where significant work has been undertaken.",
+        text: "Yes, subject to terms. The £500 unlock fee (Sourced Deals) or £1,000 retainer (Bespoke Sourcing) is refundable where there are valid reasons not to proceed within the 48-hour decision SLA after the deal pack is released or the bespoke deal is presented. The balance of the sourcing fee is only ever charged once you have decided to proceed, so it is never paid in scenarios where a refund would apply. Extensions to the 48-hour SLA may be granted on fair, justified reasoning where the vendor agrees. Refunds are not issued once the window has expired or where significant work has been undertaken on your behalf.",
       },
     },
     {

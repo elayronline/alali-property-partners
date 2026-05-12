@@ -4,12 +4,12 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of service for Alali Property Partners — sourcing fees, 14-day due diligence, refund policy, and introducer terms (England & Wales).",
+    "Terms of service for Alali Property Partners — sourcing fees, 48-hour decision SLA, refund policy, and introducer terms (England & Wales).",
   alternates: { canonical: "/terms" },
   openGraph: {
     title: "Terms of Service | Alali Property Partners",
     description:
-      "Terms governing our property deal sourcing services, fees, and 14-day due diligence policy.",
+      "Terms governing our property deal sourcing services, fees, and 48-hour decision SLA policy.",
     url: "/terms",
     type: "article",
     images: ["/opengraph-image"],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Terms of Service | Alali Property Partners",
     description:
-      "Terms governing our property deal sourcing services, fees, and 14-day due diligence policy.",
+      "Terms governing our property deal sourcing services, fees, and 48-hour decision SLA policy.",
     images: ["/opengraph-image"],
   },
 }
@@ -111,41 +111,75 @@ export default function Terms() {
 
         <section>
           <h2 className="text-lg font-bold text-charcoal">4. Fees and Payment</h2>
-          <p className="mt-2 font-semibold text-charcoal">All fees are payable upfront.</p>
-          <p className="mt-1">
-            All sourcing fees are payable in full upfront upon instruction. You are entitled to
-            a 14-day client due diligence period from the date the deal is presented to you. If,
-            during this period, you determine that the property does not meet your requirements,
-            you may request a refund subject to the conditions set out below.
-          </p>
-          <p className="mt-3 font-semibold text-charcoal">14-Day Due Diligence and Refund Policy:</p>
-          <p className="mt-1">
-            You have 14 days from the date a deal is presented to carry out your own due diligence.
-            If during this period you decide the property is not suitable, you may request a
-            refund of the sourcing fee. Refund requests must be made in writing within the 14-day
-            period. Refunds will not be issued after the 14-day due diligence period has expired,
-            or where you have proceeded with the transaction (for example, by instructing
-            solicitors or applying for a mortgage on the property). We reserve the right to deduct
-            reasonable administrative costs from any refund where significant work has been
-            undertaken on your behalf.
-          </p>
           <p className="mt-3 font-semibold text-charcoal">Sourced Deals (Off-Market and On-Market):</p>
           <p className="mt-1">
-            Our sourcing fee is 2.4% of the purchase price (minimum £3,600, VAT inclusive),
-            payable upfront on instruction. This applies to deals sourced through our private
-            contacts (off-market) and through our compliant agent network (on-market). It
-            includes a full deal pack and introduction to the agent or vendor. The 14-day due
-            diligence and refund policy applies — if you do not proceed within 14 days, you are
-            entitled to a full refund (subject to the conditions set out above).
+            Our sourcing fee is 2.4% of the purchase price (minimum £3,600, VAT inclusive). This
+            applies to deals sourced through our private contacts (off-market) and through our
+            compliant agent network (on-market). The fee is paid in two stages:
+          </p>
+          <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
+            <li>
+              <span className="font-semibold text-charcoal">£500 upfront</span> on the signed
+              sourcing agreement, paid to release the full deal pack.
+            </li>
+            <li>
+              <span className="font-semibold text-charcoal">Balance</span> of the 2.4% sourcing
+              fee (so that the total reaches a minimum of £3,600 VAT inc.) settled once you have
+              decided to proceed with the deal.
+            </li>
+          </ul>
+          <p className="mt-2">
+            Vendor and agent contact details are not included in the deal pack. We facilitate
+            viewings and introductions on your behalf throughout the decision and transaction
+            process.
+          </p>
+          <p className="mt-3 font-semibold text-charcoal">48-Hour Decision SLA and Refund Policy:</p>
+          <p className="mt-1">
+            You have a 48-hour decision SLA from the time the deal pack is released to review
+            the pack, take initial input from your solicitor, surveyor, and mortgage broker, and
+            decide whether to proceed. Most off-market deals are time-sensitive, so this short
+            standard window reflects the urgency typical of these transactions. We may, at our
+            discretion, grant extensions to the 48-hour SLA where the investor demonstrates
+            fair and justified reasoning (for example, awaiting a survey or a mortgage decision
+            in principle) and the vendor agrees to the extended timeframe. Any extension will
+            be confirmed in writing.
+          </p>
+          <p className="mt-2">
+            If you decide not to proceed and there are valid reasons for that decision (for
+            example, material findings on independent due diligence, change in personal
+            circumstances, or the deal materially diverging from the pack), the £500 unlock fee
+            is refundable on written request within the decision SLA. The balance of the
+            sourcing fee is only ever charged once you have decided to proceed, so it is never
+            paid in scenarios where a refund would apply. Refunds of the £500 will not be issued
+            once the decision SLA (or any agreed extension) has expired, where you have
+            proceeded with the transaction (for example by instructing solicitors or applying for
+            a mortgage on the property), or where you cannot evidence valid reasons not to
+            proceed. We reserve the right to deduct reasonable administrative costs from any
+            refund where significant work has been undertaken on your behalf.
           </p>
           <p className="mt-3 font-semibold text-charcoal">Bespoke Sourcing:</p>
           <p className="mt-1">
-            A £1,000 retainer is payable upfront on brief. We then have 14 days to source a deal
-            that matches your criteria. If we do not deliver within 14 days, the retainer is
-            refundable (subject to terms). If you proceed, the retainer is deducted from the
-            final sourcing fee of 2.4% of purchase price (minimum £3,600, VAT inclusive), with
-            the balance payable upfront on instruction. The 14-day due diligence and refund
-            policy applies to the final sourcing fee.
+            A £1,000 retainer is payable upfront on brief. We then have 14 days from receipt of
+            the retainer to find and present a deal that matches your criteria. If we do not
+            present a suitable deal within 14 days, the retainer is refundable (subject to
+            terms). Where a deal is presented within the window, the £1,000 retainer covers our
+            sourcing work and the deal-pack release.
+          </p>
+          <p className="mt-2">
+            Once a deal is presented within the 14-day sourcing window, you have a 48-hour
+            decision SLA from the date of presentation to decide whether to proceed — the same
+            standard window that applies to Sourced Deals. Extensions can be granted on fair,
+            justified reasoning (for example, awaiting a survey or mortgage decision in
+            principle) where the vendor agrees, and will be confirmed in writing.
+          </p>
+          <p className="mt-2">
+            If you decide to proceed, the balance of the 2.4% sourcing fee (so the total reaches
+            a minimum of £3,600 VAT inclusive) is settled at that point. If you decide not to
+            proceed and there are valid reasons for that decision (for example, material findings
+            on independent due diligence, change in personal circumstances, or the deal
+            materially diverging from the brief), the £1,000 retainer is refundable on written
+            request within the decision SLA, subject to terms and to deduction of reasonable
+            administrative costs where significant work has been undertaken on your behalf.
           </p>
           <p className="mt-3 font-semibold text-charcoal">Referral Fees:</p>
           <p className="mt-1">

@@ -27,7 +27,7 @@ const cards = [
     icon: Wallet,
     title: "Clear fees. No surprises. No lock-in.",
     description:
-      "You see our pricing upfront. No hidden costs, no ongoing contracts. Plus a 14-day due diligence period on every deal — if it's not right, you're covered.",
+      "You see our pricing upfront. No hidden costs, no ongoing contracts. £500 unlocks the deal pack with the balance only on a decision to proceed — and refundable where there are valid reasons not to.",
   },
 ]
 
