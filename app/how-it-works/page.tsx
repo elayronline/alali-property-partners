@@ -103,7 +103,7 @@ const faqSchema = {
       name: "What is included in a property deal pack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every deal pack includes the full property address and location details, interior and exterior photos where available, purchase price and comparable sold prices, yield calculations and rental income evidence, refurbishment cost estimate where applicable, target resale value for flips and developments, area demand and local market summary, and a recommended strategy with exit options. Vendor and agent contact details are held by us — we facilitate viewings and introductions on your behalf.",
+        text: "Every deal pack includes the full property address and tenure, photos provided by the vendor or agent (where available), asking or agreed purchase price, Land Registry comparable evidence from public records (informational), observed local market rents from public lettings data (informational, not guaranteed), indicative gross yield based on those observed rents (not a return projection), indicative refurbishment scope where applicable to be verified by your contractor or surveyor, indicative resale comparables for flips and developments (not a valuation), a local area summary covering demand drivers, planning context, and transport links, and strategy options to consider (BTL, HMO, etc.) presented as information not advice. Vendor and agent contact details are held by us — we facilitate viewings and introductions on your behalf. Deal packs are informational only and do not constitute financial, mortgage, tax, or legal advice.",
       },
     },
     {

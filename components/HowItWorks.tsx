@@ -37,15 +37,22 @@ const steps = [
   },
 ]
 
+// Deal pack contents — introducer-compliant framing.
+// Every item is positioned as informational/observed (public data), not as
+// advice, valuation, or projection. Regulated-services items are signposted
+// for onward introduction, not delivered by us.
 const dealPackItems = [
-  "Full property address and location details",
-  "Property photos (interior and exterior where available)",
-  "Purchase price and comparable sold prices",
-  "Yield calculations and rental income evidence",
-  "Refurbishment cost estimate (where applicable)",
-  "Target resale value (for flip and development deals)",
-  "Area demand and local market summary",
-  "Recommended strategy and exit options",
+  "Full property address, location details, and tenure",
+  "Photos provided by the vendor or agent (where available)",
+  "Asking or agreed purchase price",
+  "Land Registry comparable evidence (public records, informational)",
+  "Observed local market rents from public lettings data (informational, not guaranteed)",
+  "Indicative gross yield based on observed rents (not a return projection)",
+  "Indicative refurbishment scope where applicable — to be verified by your contractor or surveyor",
+  "Indicative resale comparables for flips and developments (not a valuation)",
+  "Local area summary: demand drivers, planning context, transport links",
+  "Strategy options to consider (BTL, HMO, etc.) — informational, not financial advice",
+  "Introductions to FCA-regulated brokers, qualified solicitors, surveyors, and vetted contractors",
 ]
 
 export function HowItWorks() {
@@ -131,7 +138,7 @@ export function HowItWorks() {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <ul className="grid gap-2 px-4 pb-4 text-sm text-muted-dark sm:grid-cols-2 sm:px-8 sm:pb-8">
+                <ul className="grid gap-2 px-4 pb-4 text-sm text-muted-dark sm:grid-cols-2 sm:px-8 sm:pb-4">
                   {dealPackItems.map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
@@ -139,6 +146,13 @@ export function HowItWorks() {
                     </li>
                   ))}
                 </ul>
+                <p className="px-4 pb-4 text-[0.7rem] leading-relaxed text-white/40 sm:px-8 sm:pb-8">
+                  Deal packs are informational only. They are not financial,
+                  mortgage, tax, or legal advice. All figures are based on
+                  publicly available data and require your own independent
+                  verification (solicitor, surveyor, broker) before any
+                  commitment.
+                </p>
               </motion.div>
             )}
           </AnimatePresence>

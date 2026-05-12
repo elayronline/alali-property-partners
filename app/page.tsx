@@ -146,7 +146,7 @@ const faqSchema = {
       name: "What is included in a deal pack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every deal pack includes full property details, comparable sales data, yield analysis, projected returns, exit strategy, and all relevant due diligence information. Vendor and agent contact details are held by us — we facilitate viewings and introductions on your behalf. Deal packs are delivered directly to your WhatsApp once the sourcing agreement is signed and the £500 unlock fee is paid.",
+        text: "Every deal pack includes the full property address and tenure, photos provided by the vendor or agent, asking or agreed purchase price, Land Registry comparable evidence (informational, from public records), observed local market rents, indicative gross yield (not a return projection), indicative refurbishment scope where applicable, indicative resale comparables (not a valuation), a local area summary, and strategy options to consider. Vendor and agent contact details are held by us — we facilitate viewings and introductions on your behalf. Deal packs are informational only and do not constitute financial, mortgage, tax, or legal advice. Deal packs are delivered directly to your WhatsApp once the sourcing agreement is signed and the £500 unlock fee is paid.",
       },
     },
   ],
