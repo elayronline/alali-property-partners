@@ -9,23 +9,23 @@ import { useSmartNav } from "@/lib/smartNav"
 const pricingCards = [
   {
     title: "Bespoke Sourcing",
-    subtitle: "We go to market and source deals tailored to your exact criteria — fully hands-off",
+    subtitle: "Sourced to your exact brief — fully hands-off",
     fee: "£1,000",
-    feeDetail: "upfront retainer, then 2.4% sourcing fee (min £3,600, VAT inc.)",
-    payment: "Retainer refundable if no deal found within 14 days (subject to terms)",
-    includes: "Sourced to your exact brief — location, budget, strategy, returns",
-    reassurance: "£1,000 retainer covers our 14-day search. 2.4% sourcing fee charged additionally on completion. £1,000 refundable where we don't deliver a suitable deal in 14 days, or where there are valid reasons not to proceed after presentation (subject to terms).",
+    feeDetail: "retainer + 2.4% sourcing fee on completion (min £3,600, VAT inc.)",
+    payment: "Retainer upfront secures your dedicated 14-day search. Sourcing fee on completion.",
+    includes: "Dedicated bespoke search + full deal pack + viewings facilitated",
+    reassurance: "£1,000 refundable if no suitable deal in 14 days, or on valid reasons not to proceed (subject to terms).",
     popular: true,
     expandable: true,
   },
   {
     title: "Sourced Deals",
-    subtitle: "Off-market deals from our private contacts and on-market deals from our compliant agent network",
+    subtitle: "Off-market via our private contacts; on-market via our compliant agent network",
     fee: "2.4%",
     feeDetail: "of purchase price (min £3,600, VAT inc.)",
     payment: "£500 to unlock the deal pack. Balance only on a decision to proceed.",
-    includes: "Full deal pack + viewings and introductions facilitated by us",
-    reassurance: "£500 refundable where there are valid reasons not to proceed (subject to terms).",
+    includes: "Full deal pack + viewings and introductions facilitated",
+    reassurance: "£500 refundable on valid reasons not to proceed (subject to terms).",
     popular: false,
   },
 ]
@@ -144,16 +144,15 @@ export function Pricing() {
                     <div className="mt-4 space-y-3">
                       <ExpandableSection trigger="How does bespoke sourcing work?">
                         <p className="text-sm leading-relaxed text-muted-light">
-                          You pay a £1,000 retainer upfront. We then actively go to market and
-                          source deals tailored to your exact investment criteria — location, budget,
-                          strategy, and target returns. If we don&apos;t find a suitable deal within
-                          14 days, your retainer is refundable (subject to terms). Once a deal is
-                          presented, you have a 48-hour decision SLA — extensions available on fair,
-                          justified reasoning. If you decide not to proceed and there are valid
-                          reasons, the £1,000 is also refundable (subject to terms). On a decision
-                          to proceed, the 2.4% sourcing fee applies (min £3,600) in addition to the
-                          £1,000 retainer — the retainer covers our bespoke search effort and is
-                          not credited against the sourcing fee.
+                          The £1,000 retainer locks our dedicated 14-day search to your brief —
+                          location, budget, strategy, and target returns. If we don&apos;t
+                          present a suitable deal in 14 days, the retainer is refundable
+                          (subject to terms). On presentation you have a 48-hour decision SLA,
+                          with extensions on fair, justified reasoning. If you decline with
+                          valid reasons, the £1,000 is also refundable. On a decision to
+                          proceed, the 2.4% sourcing fee (min £3,600, VAT inc.) is charged in
+                          addition to the retainer — the retainer covers our bespoke search
+                          effort and is not credited against the sourcing fee.
                         </p>
                       </ExpandableSection>
                       <Link
