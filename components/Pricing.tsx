@@ -11,10 +11,10 @@ const pricingCards = [
     title: "Bespoke Sourcing",
     subtitle: "Sourced to your exact brief — fully hands-off",
     fee: "£1,000",
-    feeDetail: "retainer + 2.4% sourcing fee on completion (min £3,600, VAT inc.)",
+    feeDetail: "retainer + sourcing fee on completion",
     payment: "Retainer upfront secures your dedicated 14-day search. Sourcing fee on completion.",
     includes: "Dedicated bespoke search + full deal pack + viewings facilitated",
-    reassurance: "£1,000 refundable if no suitable deal in 14 days, or on valid reasons not to proceed (subject to terms).",
+    reassurance: "Retainer refundable if no suitable deal in 14 days, or on valid reasons not to proceed (subject to terms).",
     popular: true,
     expandable: true,
   },
@@ -22,10 +22,10 @@ const pricingCards = [
     title: "Sourced Deals",
     subtitle: "Off-market via our private contacts; on-market via our compliant agent network",
     fee: "2.4%",
-    feeDetail: "of purchase price (min £3,600, VAT inc.)",
+    feeDetail: "of purchase price, paid in two stages",
     payment: "£500 to unlock the deal pack. Balance only on a decision to proceed.",
     includes: "Full deal pack + viewings and introductions facilitated",
-    reassurance: "£500 refundable on valid reasons not to proceed (subject to terms).",
+    reassurance: "Unlock fee refundable on valid reasons not to proceed (subject to terms).",
     popular: false,
   },
 ]
@@ -184,14 +184,15 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-light/85"
         >
-          All fees are VAT inclusive. No hidden costs. See our{" "}
+          All fees VAT inclusive. No hidden costs. Exact figures, minimums, and refund
+          conditions discussed on the call and set out in our{" "}
           <a
             href="/terms"
             className="text-gold underline decoration-gold/30 underline-offset-4 transition-colors hover:text-gold-dark hover:decoration-gold"
           >
             terms of service
-          </a>{" "}
-          for full refund details.
+          </a>
+          .
         </motion.p>
       </div>
     </section>
