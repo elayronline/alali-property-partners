@@ -1,39 +1,33 @@
 "use client"
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Search, BookmarkCheck, Package, ShieldCheck, ChevronDown } from "lucide-react"
+import { motion } from "framer-motion"
 import Link from "next/link"
 import { useSmartNav } from "@/lib/smartNav"
 
 const steps = [
   {
-    icon: Search,
-    step: "1",
+    step: "01",
     title: "Choose how you want to invest",
     description:
-      "Get sourced deals — off-market from our private contacts and on-market from our compliant agent network — or let us source to your exact brief.",
+      "Get sourced deals — off-market from our private contacts and on-market from our compliant agent network — or commission bespoke sourcing to your exact brief.",
   },
   {
-    icon: BookmarkCheck,
-    step: "2",
+    step: "02",
     title: "Secure your deal",
     description:
       "Sourced deals: sign the sourcing agreement and pay £500 to unlock the deal pack — balance settled when you decide to proceed. Bespoke sourcing: £1,000 retainer to start your search.",
   },
   {
-    icon: Package,
-    step: "3",
+    step: "03",
     title: "Receive your full deal pack",
     description:
-      "Every deal includes the full property address, photos, comparables, yield analysis, refurb costs, and recommended exit strategy.",
+      "Every deal includes the full property address, photos, comparables, indicative yield, indicative refurb scope, and a local area summary — informational only, not advice.",
   },
   {
-    icon: ShieldCheck,
-    step: "4",
+    step: "04",
     title: "Move with confidence",
     description:
-      "Off-market deals move fast — we make sure you have everything you need to make a confident call quickly, with us on hand throughout. Viewings and introductions are facilitated by us, and the £500 is refundable where the deal isn't right for you (subject to terms).",
+      "We facilitate viewings and introductions on your behalf. Off-market deals move fast — extensions available on fair, justified reasoning. £500 refundable where there are valid reasons (subject to terms).",
   },
 ]
 
@@ -56,27 +50,31 @@ const dealPackItems = [
 ]
 
 export function HowItWorks() {
-  const [packOpen, setPackOpen] = useState(false)
   const navigate = useSmartNav()
 
   return (
-    <section id="how-it-works" className="bg-warm-grey px-4 py-20 sm:px-6 sm:py-28">
-      {/* Divider */}
-      <div className="mx-auto mb-16 h-px max-w-6xl bg-gray-200" />
+    <section
+      id="how-it-works"
+      className="relative overflow-hidden bg-warm-grey px-4 py-20 sm:px-6 sm:py-28"
+    >
+      <div className="relative mx-auto mb-16 h-px max-w-6xl bg-gray-200" />
 
-      <div className="mx-auto max-w-5xl">
+      <div className="relative mx-auto max-w-5xl">
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gold"
         >
-          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">03</span>
+          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">
+            03
+          </span>
           <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
           The Process
         </motion.p>
+
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="font-display mt-3 text-center text-3xl text-charcoal sm:text-5xl"
@@ -84,110 +82,141 @@ export function HowItWorks() {
           How It Works
         </motion.h2>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
-          {steps.map((s, i) => (
-            <motion.div
-              key={s.step}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="text-center"
-            >
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gold/10">
-                <s.icon className="h-7 w-7 text-gold" />
-              </div>
-              <h3 className="mt-5 text-lg font-bold text-charcoal">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-light">{s.description}</p>
-            </motion.div>
-          ))}
-        </div>
+        {/* Desktop horizontal timeline (lg+) */}
+        <div className="relative mt-16 hidden lg:block">
+          {/* Connecting rail */}
+          <div className="absolute top-12 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
-        {/* Deal pack box — collapsible */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mx-auto mt-14 max-w-3xl rounded-xl border border-white/10 bg-dark-bg"
-        >
-          <button
-            onClick={() => setPackOpen((prev) => !prev)}
-            className="flex w-full cursor-pointer items-center justify-between p-4 sm:p-8"
-            aria-expanded={packOpen}
-            aria-controls="deal-pack-content"
-          >
-            <div className="text-left">
-              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gold">
-                Deal Pack
-              </p>
-              <p className="text-sm font-bold text-white">
-                Every deal includes:
-              </p>
-            </div>
-            <ChevronDown
-              className={`h-5 w-5 shrink-0 text-gold transition-transform duration-300 ${packOpen ? "rotate-180" : ""}`}
-            />
-          </button>
-          <AnimatePresence initial={false}>
-            {packOpen && (
+          <div className="relative grid grid-cols-4 gap-6">
+            {steps.map((s, i) => (
               <motion.div
-                id="deal-pack-content"
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="overflow-hidden"
+                key={s.step}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12, duration: 0.5 }}
+                className="group relative text-center"
               >
-                <ul className="grid gap-2 px-4 pb-4 text-sm text-muted-dark sm:grid-cols-2 sm:px-8 sm:pb-4">
-                  {dealPackItems.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <p className="px-4 pb-4 text-[0.7rem] leading-relaxed text-white/40 sm:px-8 sm:pb-8">
-                  Deal packs are informational only. They are not financial,
-                  mortgage, tax, or legal advice. All figures are based on
-                  publicly available data and require your own independent
-                  verification (solicitor, surveyor, broker) before any
-                  commitment.
+                {/* Numeral + dot on rail */}
+                <div className="relative mx-auto mb-6 flex h-24 items-center justify-center">
+                  <span
+                    aria-hidden
+                    className="absolute top-12 -mt-1 h-2.5 w-2.5 rounded-full bg-gold shadow-[0_0_0_4px_var(--warm-grey)] transition-all duration-300 group-hover:h-3 group-hover:w-3 group-hover:bg-gold-light"
+                  />
+                  <span className="font-display select-none text-7xl text-gold/[0.13] transition-colors duration-300 group-hover:text-gold/30">
+                    {s.step}
+                  </span>
+                </div>
+                <h3 className="font-display text-xl tracking-tight text-charcoal">
+                  {s.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-light">
+                  {s.description}
                 </p>
               </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.div>
+            ))}
+          </div>
+        </div>
 
-        {/* Bespoke alternative */}
+        {/* Mobile / tablet vertical timeline (< lg) */}
+        <div className="relative mt-12 lg:hidden">
+          {/* Vertical rail */}
+          <div className="absolute top-4 bottom-4 left-7 w-px bg-gradient-to-b from-gold/0 via-gold/30 to-gold/0" />
+
+          <div className="space-y-8">
+            {steps.map((s, i) => (
+              <motion.div
+                key={s.step}
+                initial={{ opacity: 0, x: -12 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.4 }}
+                className="relative flex gap-5"
+              >
+                {/* Numeral marker on rail */}
+                <div className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-warm-grey ring-1 ring-gold/20">
+                  <span className="font-display text-2xl font-medium text-gold">
+                    {s.step}
+                  </span>
+                </div>
+                <div className="flex-1 pt-2">
+                  <h3 className="font-display text-lg tracking-tight text-charcoal">
+                    {s.title}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-light">
+                    {s.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Deal pack — inline editorial list */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mx-auto mt-8 max-w-3xl rounded-xl border border-gray-100 bg-white p-5 sm:p-6"
+          transition={{ duration: 0.5 }}
+          className="mx-auto mt-20 max-w-4xl"
         >
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-6">
-            <div className="flex-1 text-center sm:text-left">
-              <p className="text-sm font-bold text-charcoal">
-                Looking for something specific?
-              </p>
-              <p className="mt-1 text-sm text-muted-light">
-                Our bespoke sourcing service finds deals matched to your exact brief — strategy, budget, and location.
-              </p>
-            </div>
-            <div className="flex shrink-0 gap-3">
-              <Link
-                href="/bespoke"
-                className="rounded-lg bg-gold px-5 py-2.5 text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
-              >
-                Bespoke Sourcing
-              </Link>
-              <button
-                onClick={() => navigate("contact")}
-                className="rounded-lg border-2 border-gold px-5 py-2.5 text-sm font-bold text-gold transition-colors hover:bg-gold/10"
-              >
-                Talk to Us
-              </button>
-            </div>
+          <div className="border-t border-gray-200 pt-12">
+            <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+              What every deal pack includes
+            </p>
+            <ul className="mx-auto mt-8 grid max-w-3xl gap-y-3 gap-x-10 text-sm leading-relaxed text-charcoal/80 sm:grid-cols-2">
+              {dealPackItems.map((item, i) => (
+                <motion.li
+                  key={item}
+                  initial={{ opacity: 0, y: 6 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.03, duration: 0.3 }}
+                  className="flex items-start gap-2.5"
+                >
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-gold/70" />
+                  {item}
+                </motion.li>
+              ))}
+            </ul>
+            <p className="mx-auto mt-8 max-w-3xl text-center text-[0.7rem] leading-relaxed text-charcoal/45">
+              Deal packs are informational only and do not constitute financial, mortgage,
+              tax, or legal advice. All figures are based on publicly available data and
+              require your own independent verification (solicitor, surveyor, broker)
+              before any commitment.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Bespoke alternative — refined inline CTA */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="mx-auto mt-12 flex max-w-2xl flex-col items-center gap-3 rounded-xl border border-gold/15 bg-white/60 px-6 py-5 text-center sm:flex-row sm:gap-6 sm:text-left"
+        >
+          <div className="flex-1">
+            <p className="font-display text-base text-charcoal">
+              Looking for something specific?
+            </p>
+            <p className="mt-0.5 text-xs leading-relaxed text-muted-light">
+              Bespoke sourcing — find deals matched to your exact brief.
+            </p>
+          </div>
+          <div className="flex shrink-0 items-center gap-3">
+            <Link
+              href="/bespoke"
+              className="rounded-full bg-gold px-4 py-2 text-xs font-semibold text-dark-bg transition-colors hover:bg-gold-light"
+            >
+              Bespoke Sourcing
+            </Link>
+            <button
+              onClick={() => navigate("contact")}
+              className="text-xs font-semibold text-gold underline-offset-4 transition-colors hover:text-gold-dark hover:underline"
+            >
+              Talk to us →
+            </button>
           </div>
         </motion.div>
       </div>
