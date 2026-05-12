@@ -53,7 +53,8 @@ function CheckboxGroup({
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="space-y-4">
-      <h3 className="border-b border-gold/20 pb-2 text-sm font-bold uppercase tracking-wider text-gold">
+      <h3 className="flex items-center gap-3 border-b border-gold/15 pb-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+        <span className="h-1 w-1 rotate-45 bg-gold/60" />
         {title}
       </h3>
       {children}
@@ -506,34 +507,42 @@ export default function BespokeSourcing() {
   // ── Success state ──────────────────────────────────────────────────
   if (submitted) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-dark-bg px-4">
+      <main className="section-glow relative flex min-h-screen items-center justify-center overflow-hidden bg-dark-bg px-4">
+        <div className="animated-grid pointer-events-none absolute inset-0" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-lg text-center"
+          className="relative max-w-lg text-center"
         >
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gold/10">
-            <CheckCircle2 className="h-8 w-8 text-gold" />
+          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-gold/30 via-gold/10 to-gold/30 p-[1px]">
+            <div className="flex h-full w-full items-center justify-center rounded-full bg-dark-bg">
+              <CheckCircle2 className="h-7 w-7 text-gold" strokeWidth={1.5} />
+            </div>
           </div>
-          <h1 className="text-3xl font-bold text-white">You&apos;re All Set</h1>
-          <p className="mt-4 text-white/60">
-            Your signed agreement and requirements have been received. Your signed contract
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+            Confirmed
+          </p>
+          <h1 className="font-display mt-3 text-4xl tracking-tight text-white sm:text-5xl">
+            You&apos;re all set
+          </h1>
+          <p className="mt-5 text-base leading-relaxed text-white/65">
+            Your signed agreement and requirements have been received. The signed contract
             has been downloaded to your device — please keep it for your records.
           </p>
-          <p className="mt-3 text-white/60">
+          <p className="mt-3 text-base leading-relaxed text-white/65">
             Your 14-day sourcing window has now started. We&apos;ll be in touch shortly to confirm
             your brief and begin the search.
           </p>
           {pdfBlobForDownload && (
             <button
               onClick={handleRedownload}
-              className="mt-4 inline-flex cursor-pointer items-center gap-2 rounded-lg border border-gold/30 px-5 py-2.5 text-sm font-semibold text-gold transition-all hover:border-gold hover:bg-gold/10"
+              className="mt-6 inline-flex cursor-pointer items-center gap-2 rounded-full border border-gold/40 px-5 py-2.5 text-sm font-semibold text-gold transition-all hover:border-gold hover:bg-gold/10 hover:shadow-[0_6px_22px_-8px_rgba(201,160,61,0.5)]"
             >
               Download Signed Agreement Again
             </button>
           )}
-          <div className="mt-4">
-            <Link href="/" className="text-sm text-gold hover:text-gold-light">
+          <div className="mt-6">
+            <Link href="/" className="text-sm text-gold/70 transition-colors hover:text-gold">
               &larr; Back to homepage
             </Link>
           </div>
@@ -550,52 +559,62 @@ export default function BespokeSourcing() {
   ]
 
   return (
-    <main className="min-h-screen bg-dark-bg px-4 pt-24 pb-20 sm:px-6">
-      <div className="mx-auto max-w-3xl">
+    <main className="section-glow relative min-h-screen overflow-hidden bg-dark-bg px-4 pt-24 pb-20 sm:px-6">
+      <div className="animated-grid pointer-events-none absolute inset-0" />
+      <div className="relative mx-auto max-w-3xl">
         <Link
           href="/"
-          className="mb-8 inline-flex items-center gap-1 text-sm text-gold hover:text-gold-light"
+          className="mb-10 inline-flex items-center gap-1.5 text-sm text-gold/70 transition-colors hover:text-gold"
         >
           <ArrowLeft className="h-4 w-4" />
           Back to homepage
         </Link>
 
-        <h1 className="text-3xl font-bold text-white sm:text-4xl">Bespoke Sourcing</h1>
-        <p className="mt-3 text-white/60">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">
+            §
+          </span>
+          <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
+          Bespoke Intake
+        </p>
+        <h1 className="font-display mt-3 text-4xl tracking-tight text-white sm:text-6xl">
+          Bespoke Sourcing
+        </h1>
+        <p className="mt-4 max-w-xl text-base leading-relaxed text-white/65">
           Pay your retainer, sign the agreement, complete your requirements, and we&apos;ll start
           sourcing within 24 hours.
         </p>
 
         {/* Step indicator */}
-        <div className="mt-8 flex items-center gap-2">
+        <div className="mt-10 flex items-center gap-1.5 sm:gap-3">
           {steps.map((step, i) => (
-            <div key={step.num} className="flex items-center gap-2">
+            <div key={step.num} className="flex items-center gap-2 sm:gap-3">
               <div
-                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors ${
+                className={`relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold transition-all duration-300 sm:h-10 sm:w-10 ${
                   currentStep > step.num
-                    ? "bg-gold text-dark-bg"
+                    ? "bg-gradient-to-br from-gold to-gold-light text-dark-bg shadow-[0_4px_18px_-6px_rgba(201,160,61,0.6)]"
                     : currentStep === step.num
-                      ? "bg-gold/20 text-gold ring-2 ring-gold/40"
-                      : "bg-white/5 text-white/30"
+                      ? "bg-dark-bg-light text-gold ring-2 ring-gold shadow-[0_0_18px_-4px_rgba(201,160,61,0.5)]"
+                      : "bg-white/5 text-white/30 ring-1 ring-white/10"
                 }`}
               >
                 {currentStep > step.num ? (
-                  <CheckCircle2 className="h-4 w-4" />
+                  <CheckCircle2 className="h-4 w-4" strokeWidth={2} />
                 ) : (
-                  step.num
+                  <span className="font-display text-base">{step.num.toString().padStart(2, "0")}</span>
                 )}
               </div>
               <span
-                className={`text-[0.6rem] font-medium sm:text-xs ${
-                  currentStep >= step.num ? "text-white/70" : "text-white/30"
+                className={`hidden text-xs font-medium tracking-wide transition-colors duration-300 sm:inline ${
+                  currentStep >= step.num ? "text-white/75" : "text-white/30"
                 }`}
               >
                 {step.label}
               </span>
               {i < steps.length - 1 && (
                 <div
-                  className={`mx-1 h-px w-8 sm:w-12 ${
-                    currentStep > step.num ? "bg-gold" : "bg-white/10"
+                  className={`mx-1 h-px w-8 transition-colors duration-300 sm:w-14 ${
+                    currentStep > step.num ? "bg-gold/60" : "bg-white/10"
                   }`}
                 />
               )}
@@ -614,43 +633,51 @@ export default function BespokeSourcing() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="rounded-xl border border-gold/20 bg-dark-bg-light p-6 sm:p-8"
+                className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gold/30 via-gold/10 to-gold/30 p-[1.5px] shadow-[0_15px_50px_-15px_rgba(201,160,61,0.4)]"
               >
-                <div className="flex items-start gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold text-base font-bold text-dark-bg">
-                    1
-                  </span>
-                  <div className="flex-1">
-                    <h2 className="text-xl font-bold text-white">Pay the £1,000 Retainer</h2>
-                    <p className="mt-2 text-sm text-white/50">
-                      Secure your bespoke sourcing slot. Your retainer locks in our team for a dedicated
-                      14-day search and covers that search effort. The 2.4% sourcing fee (min £3,600, VAT inc.)
-                      is charged additionally on completion — the retainer is not credited against the sourcing
-                      fee. You also have a 14-day cooling-off period — see our{" "}
-                      <Link href="/terms" className="text-gold underline hover:text-gold-light">
-                        terms
-                      </Link>{" "}
-                      for full details.
-                    </p>
+                <div className="rounded-[calc(1rem-1.5px)] bg-dark-bg-light/95 p-6 sm:p-8">
+                  <div className="flex items-start gap-4 sm:gap-5">
+                    <span className="font-display flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-gold to-gold-light text-lg font-medium text-dark-bg shadow-[0_4px_14px_-4px_rgba(201,160,61,0.6)]">
+                      01
+                    </span>
+                    <div className="flex-1">
+                      <h2 className="font-display text-2xl tracking-tight text-white sm:text-3xl">
+                        Pay the £1,000 retainer
+                      </h2>
+                      <p className="mt-3 text-sm leading-relaxed text-white/65">
+                        Secure your bespoke sourcing slot. The retainer covers our dedicated
+                        14-day search effort. The 2.4% sourcing fee (min £3,600, VAT inc.) is
+                        charged additionally on completion — the retainer is not credited
+                        against the sourcing fee. You also have a 14-day cooling-off period
+                        — see our{" "}
+                        <Link
+                          href="/terms"
+                          className="text-gold underline decoration-gold/30 underline-offset-4 transition-colors hover:text-gold-light hover:decoration-gold"
+                        >
+                          terms
+                        </Link>{" "}
+                        for full details.
+                      </p>
 
-                    <a
-                      href="https://pay.tide.co/products/bespoke-sou-a00Y2k1H"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => {
-                        setCurrentStep(2)
-                        window.scrollTo({ top: 0, behavior: "smooth" })
-                      }}
-                      className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gold px-6 py-3 text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
-                    >
-                      Pay £1,000 Retainer &amp; Continue
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
+                      <a
+                        href="https://pay.tide.co/products/bespoke-sou-a00Y2k1H"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => {
+                          setCurrentStep(2)
+                          window.scrollTo({ top: 0, behavior: "smooth" })
+                        }}
+                        className="mt-7 inline-flex items-center gap-2.5 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-dark-bg shadow-[0_8px_28px_-8px_rgba(201,160,61,0.7)] transition-all hover:bg-gold-light hover:shadow-[0_12px_36px_-8px_rgba(201,160,61,0.85)]"
+                      >
+                        Pay £1,000 Retainer &amp; Continue
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
 
-                    <p className="mt-4 text-xs text-white/40">
-                      Secure payment opens in a new tab. Your agreement will be
-                      ready when you return.
-                    </p>
+                      <p className="mt-4 text-xs text-white/40">
+                        Secure payment opens in a new tab. Your agreement will be ready when
+                        you return.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -668,31 +695,35 @@ export default function BespokeSourcing() {
               >
                 <form onSubmit={handleContractSubmit} className="space-y-6">
                   {/* Payment confirmation banner */}
-                  <div className="rounded-xl border border-gold/30 bg-gold/5 p-5">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle2 className="h-6 w-6 shrink-0 text-gold" />
+                  <div className="rounded-2xl border border-gold/25 bg-gradient-to-br from-gold/10 via-gold/5 to-gold/10 p-5 backdrop-blur-sm">
+                    <div className="flex items-center gap-3.5">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold/20">
+                        <CheckCircle2 className="h-4 w-4 text-gold" strokeWidth={2} />
+                      </span>
                       <div>
                         <p className="text-sm font-semibold text-gold">
                           Payment initiated — complete your agreement below
                         </p>
-                        <p className="mt-1 text-xs text-white/50">
-                          Once we confirm your £1,000 retainer, your 14-day bespoke
-                          search begins. Fill in your details, review the terms, and
-                          sign to get started.
+                        <p className="mt-1 text-xs leading-relaxed text-white/55">
+                          Once we confirm your retainer, your 14-day bespoke search begins.
+                          Fill in your details, review the terms, and sign to get started.
                         </p>
                       </div>
                     </div>
                   </div>
 
                   {/* Client details */}
-                  <div className="rounded-xl border border-white/5 bg-dark-bg-light p-6 sm:p-8">
-                    <div className="mb-6 flex items-start gap-4">
-                      <FileSignature className="mt-1 h-6 w-6 shrink-0 text-gold" />
+                  <div className="rounded-2xl border border-white/10 bg-dark-bg-light/80 p-6 backdrop-blur-sm sm:p-8">
+                    <div className="mb-7 flex items-start gap-4">
+                      <FileSignature className="mt-1 h-5 w-5 shrink-0 text-gold" strokeWidth={1.5} />
                       <div>
-                        <h2 className="text-xl font-bold text-white">
+                        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold/80">
+                          02 — Agreement
+                        </p>
+                        <h2 className="font-display mt-2 text-2xl tracking-tight text-white sm:text-3xl">
                           Bespoke Property Sourcing Agreement
                         </h2>
-                        <p className="mt-1 text-sm text-white/50">
+                        <p className="mt-2 text-sm leading-relaxed text-white/55">
                           Enter your details, review the agreement, and sign digitally below.
                         </p>
                       </div>
@@ -1292,14 +1323,17 @@ export default function BespokeSourcing() {
                 exit={{ opacity: 0, x: -20 }}
               >
                 {/* Property type selector */}
-                <div className="rounded-xl border border-white/5 bg-dark-bg-light p-6 sm:p-8">
-                  <h2 className="text-xl font-bold text-white">
+                <div className="rounded-2xl border border-white/10 bg-dark-bg-light/80 p-6 backdrop-blur-sm sm:p-8">
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold/80">
+                    03 — Requirements
+                  </p>
+                  <h2 className="font-display mt-2 text-2xl tracking-tight text-white sm:text-3xl">
                     What type of property are you looking for?
                   </h2>
-                  <p className="mt-1 text-sm text-white/50">
+                  <p className="mt-2 text-sm leading-relaxed text-white/55">
                     Choose your property type so we can tailor the brief.
                   </p>
-                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
                     <button
                       type="button"
                       onClick={() => {
@@ -1314,16 +1348,16 @@ export default function BespokeSourcing() {
                         }
                         setPropertyType("residential")
                       }}
-                      className={`flex cursor-pointer items-center gap-3 rounded-lg border p-4 text-left transition-all ${
+                      className={`group flex cursor-pointer items-center gap-3.5 rounded-xl border p-5 text-left transition-all duration-200 ${
                         propertyType === "residential"
-                          ? "border-gold bg-gold/10 text-white"
-                          : "border-white/10 text-white/60 hover:border-gold/30 hover:text-white"
+                          ? "border-gold bg-gold/10 text-white shadow-[0_8px_24px_-8px_rgba(201,160,61,0.4)]"
+                          : "border-white/10 text-white/60 hover:border-gold/40 hover:bg-white/[0.02] hover:text-white"
                       }`}
                     >
-                      <Home className="h-6 w-6 shrink-0 text-gold" />
+                      <Home className="h-6 w-6 shrink-0 text-gold transition-transform duration-200 group-hover:scale-110" strokeWidth={1.5} />
                       <div>
-                        <p className="font-bold">Residential</p>
-                        <p className="text-xs text-white/40">BTL, HMO, SA, BRRR, Flips</p>
+                        <p className="font-display text-lg tracking-tight">Residential</p>
+                        <p className="mt-0.5 text-xs text-white/45">BTL, HMO, SA, BRRR, Flips</p>
                       </div>
                     </button>
                     <button
@@ -1340,16 +1374,16 @@ export default function BespokeSourcing() {
                         }
                         setPropertyType("commercial")
                       }}
-                      className={`flex cursor-pointer items-center gap-3 rounded-lg border p-4 text-left transition-all ${
+                      className={`group flex cursor-pointer items-center gap-3.5 rounded-xl border p-5 text-left transition-all duration-200 ${
                         propertyType === "commercial"
-                          ? "border-gold bg-gold/10 text-white"
-                          : "border-white/10 text-white/60 hover:border-gold/30 hover:text-white"
+                          ? "border-gold bg-gold/10 text-white shadow-[0_8px_24px_-8px_rgba(201,160,61,0.4)]"
+                          : "border-white/10 text-white/60 hover:border-gold/40 hover:bg-white/[0.02] hover:text-white"
                       }`}
                     >
-                      <Building2 className="h-6 w-6 shrink-0 text-gold" />
+                      <Building2 className="h-6 w-6 shrink-0 text-gold transition-transform duration-200 group-hover:scale-110" strokeWidth={1.5} />
                       <div>
-                        <p className="font-bold">Commercial</p>
-                        <p className="text-xs text-white/40">
+                        <p className="font-display text-lg tracking-tight">Commercial</p>
+                        <p className="mt-0.5 text-xs text-white/45">
                           Office, Retail, Industrial, Mixed Use
                         </p>
                       </div>
@@ -1367,19 +1401,18 @@ export default function BespokeSourcing() {
                       transition={{ duration: 0.4 }}
                       className="mt-6 overflow-hidden"
                     >
-                      <div className="rounded-xl border border-white/5 bg-dark-bg-light p-6 sm:p-8">
-                        <h2 className="text-lg font-bold text-white">
+                      <div className="rounded-2xl border border-white/10 bg-dark-bg-light/80 p-6 backdrop-blur-sm sm:p-8">
+                        <h2 className="font-display text-2xl tracking-tight text-white sm:text-3xl">
                           {propertyType === "residential" ? "Residential" : "Commercial"}{" "}
-                          Requirements
+                          requirements
                         </h2>
-                        <p className="mt-1 text-sm text-white/50">
-                          The more detail you provide, the better we can match deals to your brief.
-                          Fields marked with <span className="text-gold">*</span> are required.
+                        <p className="mt-2 text-sm leading-relaxed text-white/55">
+                          Tell us about your brief. Fields marked with <span className="text-gold">*</span> are required.
                         </p>
 
-                        {/* Warning banner */}
-                        <div className="mt-4 rounded-lg border border-white/10 bg-dark-bg p-4">
-                          <p className="text-xs font-medium text-white/60">
+                        {/* Detail prompt banner */}
+                        <div className="mt-5 rounded-xl border border-gold/15 bg-gold/[0.04] p-4">
+                          <p className="text-xs leading-relaxed text-white/65">
                             The more detail you provide, the better we can match deals to your brief.
                             Please complete every section as thoroughly as possible — it helps us
                             deliver exactly what you&apos;re looking for.
