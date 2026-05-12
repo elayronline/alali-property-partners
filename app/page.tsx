@@ -93,7 +93,7 @@ const serviceSchema = {
         "@type": "Offer",
         name: "Bespoke Sourcing",
         description:
-          "We go to market and source deals tailored to the investor's exact criteria. £1,000 upfront retainer, then 2.4% sourcing fee (min £3,600, VAT inc.) on completion. Retainer deducted from final fee. 14-day sourcing window.",
+          "We go to market and source deals tailored to the investor's exact criteria. £1,000 upfront retainer covers our 14-day bespoke search effort. 2.4% sourcing fee (min £3,600, VAT inc.) charged additionally on completion — the retainer is not credited against the sourcing fee. 14-day sourcing window.",
         priceCurrency: "GBP",
         price: "1000",
       },
@@ -139,7 +139,7 @@ const faqSchema = {
       name: "How does bespoke sourcing work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You pay a £1,000 retainer upfront. We then have 14 days to find and present a deal that matches your brief. If we don't present a suitable deal within that period, your retainer is refundable (subject to terms). Once a deal is presented, you have a 48-hour decision SLA — if you decide not to proceed and there are valid reasons, the £1,000 is also refundable (subject to terms). If you go ahead, the £1,000 comes off the final sourcing fee of 2.4% of purchase price (min £3,600, VAT inc.).",
+        text: "You pay a £1,000 retainer upfront. The retainer covers our 14-day bespoke search effort. We then have 14 days to find and present a deal that matches your brief. If we don't present a suitable deal within that period, your retainer is refundable (subject to terms). Once a deal is presented, you have a 48-hour decision SLA — if you decide not to proceed and there are valid reasons, the £1,000 is also refundable (subject to terms). If you go ahead, the 2.4% sourcing fee (min £3,600, VAT inc.) is charged additionally — the £1,000 retainer is not credited against the sourcing fee.",
       },
     },
     {

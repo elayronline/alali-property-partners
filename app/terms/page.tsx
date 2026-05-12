@@ -169,10 +169,9 @@ export default function Terms() {
           <p className="mt-3 font-semibold text-charcoal">Bespoke Sourcing:</p>
           <p className="mt-1">
             A £1,000 retainer is payable upfront on brief. We then have 14 days from receipt of
-            the retainer to find and present a deal that matches your criteria. If we do not
-            present a suitable deal within 14 days, the retainer is refundable (subject to
-            terms). Where a deal is presented within the window, the £1,000 retainer covers our
-            sourcing work and the deal-pack release.
+            the retainer to find and present a deal that matches your criteria. The retainer
+            covers our bespoke search effort during that 14-day window. If we do not present a
+            suitable deal within 14 days, the retainer is refundable (subject to terms).
           </p>
           <p className="mt-2">
             Once a deal is presented within the 14-day sourcing window, you have a 48-hour
@@ -182,13 +181,14 @@ export default function Terms() {
             principle) where the vendor agrees, and will be confirmed in writing.
           </p>
           <p className="mt-2">
-            If you decide to proceed, the balance of the 2.4% sourcing fee (so the total reaches
-            a minimum of £3,600 VAT inclusive) is settled at that point. If you decide not to
-            proceed and there are valid reasons for that decision (for example, material findings
-            on independent due diligence, change in personal circumstances, or the deal
-            materially diverging from the brief), the £1,000 retainer is refundable on written
-            request within the decision SLA, subject to terms and to deduction of reasonable
-            administrative costs where significant work has been undertaken on your behalf.
+            If you decide to proceed, the 2.4% sourcing fee (minimum £3,600 VAT inclusive) is
+            charged in addition to the £1,000 retainer. The retainer is not credited against or
+            deducted from the sourcing fee. If you decide not to proceed and there are valid
+            reasons for that decision (for example, material findings on independent due
+            diligence, change in personal circumstances, or the deal materially diverging from
+            the brief), the £1,000 retainer is refundable on written request within the decision
+            SLA, subject to terms and to deduction of reasonable administrative costs where
+            significant work has been undertaken on your behalf.
           </p>
           <p className="mt-3 font-semibold text-charcoal">Referral Fees:</p>
           <p className="mt-1">

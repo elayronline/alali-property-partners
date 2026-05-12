@@ -14,7 +14,7 @@ const pricingCards = [
     feeDetail: "upfront retainer, then 2.4% sourcing fee (min £3,600, VAT inc.)",
     payment: "Retainer refundable if no deal found within 14 days (subject to terms)",
     includes: "Sourced to your exact brief — location, budget, strategy, returns",
-    reassurance: "£1,000 deducted from the final sourcing fee. £1,000 refundable where we don't deliver a suitable deal in 14 days, or where there are valid reasons not to proceed after presentation (subject to terms).",
+    reassurance: "£1,000 retainer covers our 14-day search. 2.4% sourcing fee charged additionally on completion. £1,000 refundable where we don't deliver a suitable deal in 14 days, or where there are valid reasons not to proceed after presentation (subject to terms).",
     popular: true,
     expandable: true,
   },
@@ -151,8 +151,9 @@ export function Pricing() {
                           presented, you have a 48-hour decision SLA — extensions available on fair,
                           justified reasoning. If you decide not to proceed and there are valid
                           reasons, the £1,000 is also refundable (subject to terms). On a decision
-                          to proceed, the 2.4% sourcing fee applies (min £3,600), with the £1,000
-                          retainer deducted from the final fee.
+                          to proceed, the 2.4% sourcing fee applies (min £3,600) in addition to the
+                          £1,000 retainer — the retainer covers our bespoke search effort and is
+                          not credited against the sourcing fee.
                         </p>
                       </ExpandableSection>
                       <Link

@@ -624,8 +624,9 @@ export default function BespokeSourcing() {
                     <h2 className="text-xl font-bold text-white">Pay the £1,000 Retainer</h2>
                     <p className="mt-2 text-sm text-white/50">
                       Secure your bespoke sourcing slot. Your retainer locks in our team for a dedicated
-                      14-day search, and it comes off the final sourcing fee when you proceed with a deal.
-                      You also have a 14-day cooling-off period — see our{" "}
+                      14-day search and covers that search effort. The 2.4% sourcing fee (min £3,600, VAT inc.)
+                      is charged additionally on completion — the retainer is not credited against the sourcing
+                      fee. You also have a 14-day cooling-off period — see our{" "}
                       <Link href="/terms" className="text-gold underline hover:text-gold-light">
                         terms
                       </Link>{" "}
@@ -886,8 +887,10 @@ export default function BespokeSourcing() {
                           below.
                         </p>
                         <p>
-                          3.3 The Retainer Deposit shall be deducted from the final Sourcing
-                          Fee upon successful completion.
+                          3.3 The Retainer Deposit is in addition to, and shall NOT be credited
+                          against or deducted from, the Sourcing Fee. The Retainer Deposit covers
+                          the Sourcer&apos;s search effort during the Sourcing Period; the Sourcing
+                          Fee is a separate fee payable on successful completion of a transaction.
                         </p>
                         <p>
                           3.4 This Agreement shall not become effective, and the Sourcer shall
