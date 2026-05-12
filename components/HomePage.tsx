@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/Navbar"
 import { Hero } from "@/components/Hero"
 import { WhatWeSource } from "@/components/WhatWeSource"
+import { CoverageMap } from "@/components/CoverageMap"
 import { HowItWorks } from "@/components/HowItWorks"
 import { WhyUs } from "@/components/WhyUs"
 import { WhatsAppCTA } from "@/components/WhatsAppCTA"
@@ -17,6 +18,7 @@ export function HomePage() {
       <Navbar />
       <Hero />
       <WhatWeSource />
+      <CoverageMap />
       <HowItWorks />
       <WhyUs />
       <Pricing />

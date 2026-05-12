@@ -64,7 +64,7 @@ export function HowItWorks() {
           viewport={{ once: true }}
           className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gold"
         >
-          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">02</span>
+          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">03</span>
           <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
           The Process
         </motion.p>
