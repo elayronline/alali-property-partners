@@ -58,7 +58,7 @@ const bespokeServiceSchema = {
     "@type": "Offer",
     name: "Bespoke Sourcing Retainer",
     description:
-      "£1,000 upfront retainer. We then have 14 days to find and present a deal matching your brief. If we don't present a suitable deal in that window, the retainer is refundable subject to terms. Once a deal is presented, you have a 48-hour decision SLA — extensions available on fair, justified reasoning where the vendor agrees. On a decision to proceed, the £1,000 is deducted from the final 2.4% sourcing fee (min £3,600, VAT inclusive).",
+      "£1,000 upfront retainer. We then have 14 days to find and present a deal matching your brief. If we don't present a suitable deal in that window, the retainer is refundable subject to terms. Once a deal is presented, you have a 48-hour decision SLA — extensions available on fair, justified reasoning where the vendor agrees. £1,000 also refundable on valid reasons not to proceed within the SLA (subject to terms). On a decision to proceed, the £1,000 is deducted from the final 2.4% sourcing fee (min £3,600, VAT inclusive).",
     priceCurrency: "GBP",
     price: "1000",
     priceSpecification: {
@@ -90,7 +90,7 @@ const bespokeFaqSchema = {
       name: "How much is the bespoke property sourcing retainer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The bespoke sourcing retainer is £1,000, payable upfront on brief. The retainer is refundable if we do not source a suitable deal within 14 days (subject to terms). If you proceed with a deal, the £1,000 is deducted from the final 2.4% sourcing fee (minimum £3,600, VAT inclusive).",
+        text: "The bespoke sourcing retainer is £1,000, payable upfront on brief. The retainer is refundable if we do not present a suitable deal within the 14-day sourcing window (subject to terms). After a deal is presented, you have a 48-hour decision SLA — if there are valid reasons not to proceed, the £1,000 is also refundable (subject to terms). If you proceed with a deal, the £1,000 is deducted from the final 2.4% sourcing fee (minimum £3,600, VAT inclusive).",
       },
     },
     {

@@ -125,7 +125,7 @@ const faqSchema = {
       name: "What does the bespoke sourcing retainer cover?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The £1,000 upfront retainer commits us to actively go to market and source deals tailored to your exact criteria (location, budget, strategy, target returns) within a 14-day window. If we do not source a suitable deal within those 14 days, the retainer is refundable subject to terms. If you proceed, the £1,000 is deducted from the final 2.4% sourcing fee.",
+        text: "The £1,000 upfront retainer commits us to actively go to market and source deals tailored to your exact criteria (location, budget, strategy, target returns) within a 14-day window in which we find and present a deal. If we do not present a suitable deal within those 14 days, the retainer is refundable subject to terms. Once a deal is presented, the standard 48-hour decision SLA applies — if you decide not to proceed and there are valid reasons, the £1,000 is also refundable subject to terms. If you proceed, the £1,000 is deducted from the final 2.4% sourcing fee.",
       },
     },
     {
