@@ -70,21 +70,22 @@ export function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="hidden items-center gap-7 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={handleSectionClick(link.section)}
-              className="cursor-pointer text-sm font-medium text-white/80 transition-colors hover:text-gold"
+              className="group relative cursor-pointer text-sm font-normal tracking-wide text-white/75 transition-colors hover:text-white"
             >
               {link.label}
+              <span className="pointer-events-none absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100" />
             </Link>
           ))}
           <Link
             href="/contact"
             onClick={handleSectionClick("contact")}
-            className="cursor-pointer rounded-lg bg-gold px-5 py-2 text-sm font-semibold text-dark-bg transition-colors hover:bg-gold-light"
+            className="cursor-pointer rounded-full bg-gold px-5 py-2 text-xs font-semibold tracking-wide text-dark-bg shadow-[0_4px_18px_-6px_rgba(201,160,61,0.6)] transition-all hover:bg-gold-light hover:shadow-[0_6px_22px_-4px_rgba(201,160,61,0.7)]"
           >
             Get in Touch
           </Link>

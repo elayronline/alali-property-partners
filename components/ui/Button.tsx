@@ -19,8 +19,9 @@ export function Button({
 
   const variants = {
     primary:
-      "bg-gold text-dark-bg hover:bg-gold-light",
-    secondary: "border-2 border-gold text-gold hover:bg-gold hover:text-dark-bg",
+      "bg-gold text-dark-bg shadow-[0_4px_18px_-6px_rgba(201,160,61,0.5)] hover:bg-gold-light hover:shadow-[0_8px_28px_-6px_rgba(201,160,61,0.65)]",
+    secondary:
+      "border border-gold/70 text-gold hover:border-gold hover:bg-gold hover:text-dark-bg hover:shadow-[0_6px_22px_-8px_rgba(201,160,61,0.5)]",
   }
 
   const sizes = {

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ExpandableSection } from "@/components/ui/ExpandableSection"
+import { SectionDivider } from "@/components/ui/SectionDivider"
 import { useSmartNav } from "@/lib/smartNav"
 
 const pricingCards = [
@@ -34,7 +35,7 @@ export function Pricing() {
   return (
     <section id="pricing" className="overflow-x-hidden bg-white px-5 py-20 sm:px-6 sm:py-28">
       {/* Divider */}
-      <div className="mx-auto mb-16 h-px max-w-6xl bg-gray-200" />
+      <SectionDivider variant="light" className="mb-16" />
 
       <div className="mx-auto max-w-5xl">
         <motion.p

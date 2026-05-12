@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/Button"
+import { SectionDivider } from "@/components/ui/SectionDivider"
 import { useSmartNav } from "@/lib/smartNav"
 
 export function GotADeal() {
@@ -14,7 +15,7 @@ export function GotADeal() {
   return (
     <section id="got-a-deal" className="bg-warm-grey px-4 py-20 sm:px-6 sm:py-28">
       {/* Gold divider */}
-      <div className="mx-auto mb-16 h-px max-w-6xl bg-gray-200" />
+      <SectionDivider variant="light" className="mb-16" />
 
       <div className="mx-auto max-w-3xl">
         <motion.p

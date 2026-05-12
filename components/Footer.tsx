@@ -1,82 +1,147 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram, Mail, Phone } from "lucide-react"
+import { Instagram, Mail, Phone, MapPin } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="safe-bottom bg-dark-bg px-4 pt-16 pb-8 sm:px-6">
-      {/* Gold divider */}
-      <div className="mx-auto mb-12 h-px max-w-6xl bg-white/10" />
+    <footer className="safe-bottom relative overflow-hidden bg-dark-bg px-4 pt-20 pb-10 sm:px-6 sm:pt-24">
+      <div className="animated-grid pointer-events-none absolute inset-0 opacity-60" />
 
-      <div className="mx-auto max-w-5xl">
-        {/* Logo */}
-        <div className="flex justify-center">
-          <Image src="/logo.png" alt="Alali Property Partners" width={160} height={50} />
+      {/* Top gold spark divider */}
+      <div className="relative mx-auto mb-16 flex max-w-6xl items-center gap-4">
+        <div className="h-px flex-1 bg-white/10" />
+        <span className="h-1.5 w-1.5 rotate-45 bg-gold/60" />
+        <div className="h-px flex-1 bg-white/10" />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]">
+          {/* Brand + intro */}
+          <div>
+            <Image src="/logo.png" alt="Alali Property Partners" width={150} height={48} />
+            <p className="mt-7 max-w-sm text-sm leading-relaxed text-white/55">
+              Property deal sourcing and introducer service. We find verified, high-yield deals
+              across Greater London and the South of England, and connect investors with the
+              regulated professionals they need.
+            </p>
+            <div className="mt-8 flex gap-3">
+              <a
+                href="https://www.instagram.com/alalipropertypartners"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all duration-200 hover:border-gold hover:text-gold hover:shadow-[0_0_18px_-4px_rgba(201,160,61,0.5)]"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="h-4 w-4" strokeWidth={1.5} />
+              </a>
+              <a
+                href="https://wa.me/442045158438"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all duration-200 hover:border-gold hover:text-gold hover:shadow-[0_0_18px_-4px_rgba(201,160,61,0.5)]"
+                aria-label="Message us on WhatsApp"
+              >
+                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+              Get in touch
+            </p>
+            <ul className="mt-6 space-y-3.5 text-sm text-white/65">
+              <li>
+                <a
+                  href="mailto:contact@alalipropertypartners.com"
+                  className="group inline-flex items-start gap-2.5 transition-colors hover:text-gold"
+                >
+                  <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold/60 transition-colors group-hover:text-gold" strokeWidth={1.5} />
+                  <span className="break-all">contact@alalipropertypartners.com</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+442045158438"
+                  className="group inline-flex items-start gap-2.5 transition-colors hover:text-gold"
+                >
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold/60 transition-colors group-hover:text-gold" strokeWidth={1.5} />
+                  020 4515 8438
+                </a>
+              </li>
+              <li className="inline-flex items-start gap-2.5">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold/60" strokeWidth={1.5} />
+                <span>
+                  86-90 Paul Street
+                  <br />
+                  London EC2A 4NE
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Sitemap */}
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Site</p>
+            <ul className="mt-6 space-y-3 text-sm text-white/65">
+              <li>
+                <Link href="/how-it-works" className="transition-colors hover:text-gold">
+                  How It Works
+                </Link>
+              </li>
+              <li>
+                <Link href="/why-us" className="transition-colors hover:text-gold">
+                  Why Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="transition-colors hover:text-gold">
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/bespoke" className="transition-colors hover:text-gold">
+                  Bespoke Sourcing
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="transition-colors hover:text-gold">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        {/* Contact info */}
-        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-8">
-          <a
-            href="mailto:contact@alalipropertypartners.com"
-            className="flex items-center gap-2 text-xs text-muted-dark transition-colors hover:text-gold sm:text-sm"
-          >
-            <Mail className="h-4 w-4 shrink-0" />
-            <span className="break-all sm:break-normal">contact@alalipropertypartners.com</span>
-          </a>
-          <a
-            href="tel:+442045158438"
-            className="flex items-center gap-2 text-sm text-muted-dark transition-colors hover:text-gold"
-          >
-            <Phone className="h-4 w-4 shrink-0" />
-            020 4515 8438
-          </a>
-        </div>
-
-        {/* Social icons */}
-        <div className="mt-6 flex justify-center gap-4">
-          <a
-            href="https://www.instagram.com/alalipropertypartners"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-muted-dark transition-colors hover:border-gold/40 hover:text-gold"
-            aria-label="Follow us on Instagram"
-          >
-            <Instagram className="h-4 w-4" />
-          </a>
-          <a
-            href="https://wa.me/442045158438"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-muted-dark transition-colors hover:border-gold/40 hover:text-gold"
-            aria-label="Message us on WhatsApp"
-          >
-            <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-          </a>
-        </div>
-
-        {/* Honest trust signals */}
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <span className="rounded-md border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-muted-dark">
-            Company No. 17057401
-          </span>
-        </div>
-
-        {/* Gold divider */}
-        <div className="mx-auto mt-10 h-px max-w-md bg-white/10" />
-
-        {/* Links and copyright */}
-        <div className="mt-8 flex flex-col items-center gap-3 border-t border-white/10 pt-6 sm:flex-row sm:justify-between">
-          <p className="order-2 text-center text-[0.65rem] leading-relaxed text-muted-dark/80 sm:order-1 sm:text-left sm:text-xs">
-            &copy; 2026 Alali Property Partners Ltd. 86-90 Paul Street, London EC2A 4NE.
+        {/* Regulatory blurb */}
+        <div className="mt-16 border-t border-white/10 pt-8">
+          <p className="text-xs leading-relaxed text-white/40">
+            Alali Property Partners Ltd is a property deal sourcing and introducer company
+            registered in England and Wales (Company No. 17057401). Property deal sourcing and
+            introduction is not a regulated activity. We do not provide financial, mortgage,
+            tax, or legal advice — regulated services are delivered by the independent
+            FCA-regulated brokers, qualified solicitors, and other appropriately authorised
+            professionals we introduce.
           </p>
-          <div className="order-1 flex gap-4 text-xs text-muted-dark/80 sm:order-2">
-            <Link href="/privacy" className="rounded transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold">
-              Privacy Policy
+        </div>
+
+        {/* Bottom row */}
+        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+          <p className="text-center text-[0.65rem] leading-relaxed text-white/40 sm:text-left sm:text-xs">
+            &copy; 2026 Alali Property Partners Ltd. All rights reserved.
+          </p>
+          <div className="flex gap-6 text-xs text-white/55">
+            <Link href="/privacy" className="transition-colors hover:text-gold">
+              Privacy
             </Link>
-            <Link href="/terms" className="rounded transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold">
-              Terms of Service
+            <Link href="/terms" className="transition-colors hover:text-gold">
+              Terms
+            </Link>
+            <Link href="/sitemap.xml" className="transition-colors hover:text-gold">
+              Sitemap
             </Link>
           </div>
         </div>

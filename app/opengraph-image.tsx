@@ -16,7 +16,7 @@ export default async function OGImage() {
           justifyContent: "center",
           width: "100%",
           height: "100%",
-          backgroundColor: "#0D0D0D",
+          backgroundColor: "#16171a",
           padding: "60px",
         }}
       >

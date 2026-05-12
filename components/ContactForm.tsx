@@ -14,6 +14,7 @@ import {
   hearAboutOptions,
 } from "@/lib/formSchema"
 import { FormInput, FormSelect, FormTextarea } from "@/components/ui/FormField"
+import { SectionDivider } from "@/components/ui/SectionDivider"
 
 export function ContactForm() {
   const {
@@ -171,7 +172,7 @@ export function ContactForm() {
   return (
     <section id="contact" className="bg-dark-bg px-4 py-20 sm:px-6 sm:py-28">
       {/* Gold divider */}
-      <div className="mx-auto mb-16 h-px max-w-6xl bg-white/10" />
+      <SectionDivider variant="dark" className="mb-16" />
 
       <div className="mx-auto max-w-2xl">
         <motion.div
@@ -180,9 +181,15 @@ export function ContactForm() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-gold">Get Started</p>
-          <h2 className="mt-3 text-2xl font-bold text-white sm:text-4xl">
-            Let&apos;s Start a Conversation
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+            <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">
+              07
+            </span>
+            <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
+            Get Started
+          </p>
+          <h2 className="font-display mt-3 text-3xl text-white sm:text-5xl">
+            Let&apos;s start a conversation
           </h2>
           <p className="mt-3 text-white/60">
             Whether you&apos;re looking for deals or have a property to move — start here.

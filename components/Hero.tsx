@@ -56,7 +56,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at center, transparent 0%, rgba(13,13,13,0.6) 100%)",
+            "radial-gradient(ellipse at center, transparent 0%, rgba(22,23,26,0.65) 100%)",
         }}
       />
 

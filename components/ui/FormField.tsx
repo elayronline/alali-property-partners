@@ -18,7 +18,7 @@ interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 }
 
 const inputStyles =
-  "w-full rounded-lg border border-muted-dark/30 bg-dark-bg px-4 py-3 text-sm text-white placeholder:text-muted-dark focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold focus:ring-offset-1 focus:ring-offset-dark-bg"
+  "w-full rounded-lg border border-white/15 bg-dark-bg/60 px-4 py-3 text-sm text-white placeholder:text-white/35 transition-all duration-200 hover:border-gold/40 focus:border-gold focus:outline-none focus:shadow-[0_0_0_4px_rgba(201,160,61,0.15)]"
 
 export function FormInput({ label, error, ...props }: InputProps) {
   return (

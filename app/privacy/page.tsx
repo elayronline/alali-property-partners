@@ -50,8 +50,17 @@ export default function Privacy() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <h1 className="text-3xl font-bold text-charcoal">Privacy Policy</h1>
-      <p className="mt-2 text-sm text-muted-light">Last updated: February 2026</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+        <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">
+          §
+        </span>
+        <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
+        Legal
+      </p>
+      <h1 className="font-display mt-3 text-4xl tracking-tight text-charcoal sm:text-5xl">
+        Privacy Policy
+      </h1>
+      <p className="mt-3 text-sm text-muted-light">Last updated: February 2026</p>
 
       <div className="mt-8 space-y-8 text-sm leading-relaxed text-muted-light">
         <section>

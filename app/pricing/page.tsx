@@ -184,6 +184,26 @@ export default function Page() {
       />
       <Navbar />
       <main className="pt-20">
+        {/* Intro band — gives the standalone /pricing page some breathing room */}
+        <section className="section-glow relative overflow-hidden bg-dark-bg px-4 py-20 sm:px-6 sm:py-24">
+          <div className="animated-grid pointer-events-none absolute inset-0" />
+          <div className="relative mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+              <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">
+                Fees
+              </span>
+              <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
+              Transparent &amp; Stage-Based
+            </p>
+            <h1 className="font-display mt-4 text-4xl tracking-tight text-white sm:text-6xl">
+              Property sourcing pricing
+            </h1>
+            <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">
+              No hidden costs, no ongoing contracts. Two ways to invest — each with transparent
+              fees, a clear decision window, and a refund mechanism if the deal isn&apos;t right.
+            </p>
+          </div>
+        </section>
         <Pricing />
       </main>
       <Footer />

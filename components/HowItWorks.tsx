@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { SectionDivider } from "@/components/ui/SectionDivider"
 import { useSmartNav } from "@/lib/smartNav"
 
 const steps = [
@@ -57,7 +58,7 @@ export function HowItWorks() {
       id="how-it-works"
       className="relative overflow-hidden bg-warm-grey px-4 py-20 sm:px-6 sm:py-28"
     >
-      <div className="relative mx-auto mb-16 h-px max-w-6xl bg-gray-200" />
+      <SectionDivider variant="light" className="relative mb-16" />
 
       <div className="relative mx-auto max-w-5xl">
         <motion.p

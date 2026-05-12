@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { CheckCircle, Users, Phone, Wallet, Link, ShieldCheck } from "lucide-react"
 import { Card } from "@/components/ui/Card"
+import { SectionDivider } from "@/components/ui/SectionDivider"
 
 const cards = [
   {
@@ -50,7 +51,7 @@ export function WhyUs() {
   return (
     <section id="why-us" className="bg-white px-4 py-20 sm:px-6 sm:py-28">
       {/* Gold divider */}
-      <div className="mx-auto mb-16 h-px max-w-6xl bg-gray-200" />
+      <SectionDivider variant="light" className="mb-16" />
 
       <div className="mx-auto max-w-5xl">
         <motion.p
@@ -95,7 +96,7 @@ export function WhyUs() {
               viewport={{ once: true }}
               transition={{ delay: 0.4 + i * 0.1 }}
             >
-              <Card {...card} className="border-gray-100 bg-warm-grey" />
+              <Card {...card} />
             </motion.div>
           ))}
         </div>

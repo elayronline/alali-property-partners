@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { SectionDivider } from "@/components/ui/SectionDivider"
 
 const methods: Array<{ label: string; detail: string }> = [
   { label: "Off-Market", detail: "Direct from our private contacts" },
@@ -58,7 +59,7 @@ export function WhatWeSource() {
       <div className="animated-grid absolute inset-0" />
 
       {/* Gold divider */}
-      <div className="relative mx-auto mb-16 h-px max-w-6xl bg-white/10" />
+      <SectionDivider variant="dark" className="relative mb-16" />
 
       <div className="relative mx-auto max-w-4xl text-center">
         <motion.p

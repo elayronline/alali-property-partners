@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { SectionDivider } from "@/components/ui/SectionDivider"
 
 // City positions on the 420x600 SVG viewBox.
 // Mapped from real lat/long for a London + South East + Dorset constellation.
@@ -56,7 +57,7 @@ export function CoverageMap() {
     >
       <div className="animated-grid absolute inset-0" />
 
-      <div className="relative mx-auto mb-16 h-px max-w-6xl bg-white/10" />
+      <SectionDivider variant="dark" className="relative mb-16" />
 
       <div className="relative mx-auto max-w-5xl">
         <motion.p
