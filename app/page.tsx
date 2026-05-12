@@ -3,10 +3,10 @@ import { HomePage } from "@/components/HomePage"
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Alali Property Partners | Property Deal Sourcing — London & South East",
+    absolute: "Alali Property Partners | Property Deal Sourcing — London & the South",
   },
   description:
-    "Verified property deals across London & the South East — off-market via private contacts and on-market via our compliant agent network. Transparent fees.",
+    "Verified property deals across London & the South of England — off-market via private contacts and on-market via our compliant agent network. Transparent fees.",
   keywords: [
     "property deal sourcing",
     "property sourcing agent",
@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "property sourcing Sussex",
     "property sourcing Berkshire",
     "property sourcing Oxford",
+    "property sourcing Dorset",
+    "property sourcing Bournemouth",
+    "property sourcing Poole",
     "property sourcing for investors",
     "off-market property deals",
     "off-market property London",
@@ -41,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alali Property Partners | Property Deal Sourcing",
     description:
-      "Verified property deals for investors across Greater London & the South East — off-market via private contacts and on-market via our compliant agent network. BTL, BRR, R2R, HMO, flips, and bespoke sourcing to your brief.",
+      "Verified property deals for investors across Greater London and the South of England — off-market via private contacts and on-market via our compliant agent network. BTL, BRR, R2R, HMO, flips, and bespoke sourcing to your brief.",
     url: "/",
     type: "website",
     images: ["/opengraph-image"],
@@ -50,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alali Property Partners | Property Deal Sourcing",
     description:
-      "Verified property deals for investors across Greater London & the South East. Off-market through private contacts, on-market through our compliant agent network, and bespoke sourcing.",
+      "Verified property deals across Greater London and the South of England. Off-market via private contacts and on-market via our compliant agent network.",
     images: ["/opengraph-image"],
   },
 }
@@ -62,7 +65,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/#sourcing-service",
   name: "Property Deal Sourcing",
   description:
-    "We source verified, high-yield property deals for investors across Greater London and the South East of England. Off-market through private contacts, on-market through our compliant agent network, and bespoke sourcing — all with complete deal packs.",
+    "We source verified, high-yield property deals for investors across Greater London and the South of England (the South East and Dorset). Off-market through private contacts, on-market through our compliant agent network, and bespoke sourcing — all with complete deal packs.",
   provider: {
     "@type": "Organization",
     name: "Alali Property Partners",
@@ -71,6 +74,7 @@ const serviceSchema = {
   areaServed: [
     { "@type": "AdministrativeArea", name: "Greater London" },
     { "@type": "AdministrativeArea", name: "South East England" },
+    { "@type": "AdministrativeArea", name: "Dorset" },
   ],
   serviceType: "Property Deal Sourcing",
   hasOfferCatalog: {
@@ -119,7 +123,7 @@ const faqSchema = {
       name: "What types of property deals do you source?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We source Buy-to-Let (BTL), BRR (Buy Refurb Refinance), Rent-to-Rent (R2R), HMO (Houses in Multiple Occupation), flips, commercial conversions, and serviced accommodation deals across Greater London and the South East of England.",
+        text: "We source Buy-to-Let (BTL), BRR (Buy Refurb Refinance), Rent-to-Rent (R2R), HMO (Houses in Multiple Occupation), flips, commercial conversions, and serviced accommodation deals across Greater London and the South of England (the South East and Dorset).",
       },
     },
     {
@@ -143,7 +147,7 @@ const faqSchema = {
       name: "What areas do you cover for property deal sourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We cover Greater London and the South East of England (Surrey, Kent, East and West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, and the Isle of Wight). We source off-market deals through our private contacts and on-market deals through our compliant agent network — or tell us what you're looking for and we'll source to your brief.",
+        text: "We cover Greater London, the South East of England (Surrey, Kent, East and West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, and the Isle of Wight), and Dorset. We source off-market deals through our private contacts and on-market deals through our compliant agent network — or tell us what you're looking for and we'll source to your brief.",
       },
     },
     {

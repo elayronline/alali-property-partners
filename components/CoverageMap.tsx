@@ -3,25 +3,26 @@
 import { motion } from "framer-motion"
 
 // City positions on the 400x600 SVG viewBox.
-// Roughly mapped from real lat/long for a London & South East constellation.
+// Roughly mapped from real lat/long for a London + South East + Dorset constellation.
 const cities = [
-  { name: "Milton Keynes", x: 129, y: 89, region: "Buckinghamshire" },
-  { name: "Oxford", x: 82, y: 174, region: "Oxfordshire" },
-  { name: "Reading", x: 109, y: 262, region: "Berkshire" },
-  { name: "London", x: 188, y: 247, region: "Greater London", hub: true },
-  { name: "Maidstone", x: 248, y: 314, region: "Kent" },
-  { name: "Canterbury", x: 301, y: 311, region: "Kent" },
-  { name: "Guildford", x: 147, y: 323, region: "Surrey" },
-  { name: "Southampton", x: 69, y: 420, region: "Hampshire" },
-  { name: "Portsmouth", x: 98, y: 446, region: "Hampshire" },
-  { name: "Brighton", x: 207, y: 462, region: "East Sussex" },
+  { name: "Milton Keynes", x: 199, y: 89, region: "Buckinghamshire" },
+  { name: "Oxford", x: 159, y: 174, region: "Oxfordshire" },
+  { name: "Reading", x: 182, y: 262, region: "Berkshire" },
+  { name: "London", x: 250, y: 247, region: "Greater London", hub: true },
+  { name: "Maidstone", x: 302, y: 314, region: "Kent" },
+  { name: "Canterbury", x: 346, y: 311, region: "Kent" },
+  { name: "Guildford", x: 214, y: 323, region: "Surrey" },
+  { name: "Southampton", x: 148, y: 420, region: "Hampshire" },
+  { name: "Portsmouth", x: 173, y: 446, region: "Hampshire" },
+  { name: "Brighton", x: 249, y: 462, region: "East Sussex" },
+  { name: "Bournemouth", x: 110, y: 478, region: "Dorset" },
 ]
 
-// Stylized outline of Greater London + South East England.
+// Stylized outline of Greater London + South East England + Dorset.
 // Hand-traced at the same scale as the city coords — not GIS-accurate,
 // just enough silhouette to anchor the constellation.
 const seOutline =
-  "M 70 100 C 95 75, 130 65, 165 70 C 200 75, 235 78, 270 88 C 295 100, 315 120, 320 150 C 320 175, 315 200, 318 225 C 325 250, 335 275, 330 305 C 340 330, 345 360, 335 385 C 330 410, 320 430, 305 445 C 280 460, 250 475, 225 485 C 200 495, 175 500, 150 495 C 125 488, 100 475, 80 458 C 60 440, 50 415, 52 388 C 55 360, 65 335, 70 308 C 65 280, 58 252, 55 225 C 52 195, 55 165, 60 135 C 62 120, 65 108, 70 100 Z"
+  "M 145 95 C 165 72, 200 60, 235 65 C 270 70, 305 75, 335 90 C 355 102, 370 125, 372 155 C 370 180, 365 205, 365 230 C 372 255, 380 280, 372 310 C 380 335, 385 365, 372 390 C 365 415, 350 435, 335 445 C 305 460, 270 470, 245 478 C 215 488, 180 495, 145 488 C 115 482, 88 472, 78 460 C 60 450, 55 425, 60 400 C 65 375, 78 355, 95 340 C 105 325, 110 305, 110 285 C 105 258, 100 230, 105 202 C 110 175, 120 145, 135 120 C 140 108, 142 100, 145 95 Z"
 
 const hub = cities.find((c) => c.hub)!
 
@@ -32,6 +33,7 @@ const regions = [
   "East Sussex",
   "West Sussex",
   "Hampshire",
+  "Dorset",
   "Berkshire",
   "Oxfordshire",
   "Buckinghamshire",
@@ -68,7 +70,7 @@ export function CoverageMap() {
           viewport={{ once: true }}
           className="font-display mt-3 text-center text-3xl text-white sm:text-5xl"
         >
-          London &amp; the South East
+          London &amp; the South of England
         </motion.h2>
 
         <motion.p
@@ -77,8 +79,8 @@ export function CoverageMap() {
           viewport={{ once: true }}
           className="mx-auto mt-4 max-w-xl text-center text-sm text-white/60 sm:text-base"
         >
-          Focused coverage across Greater London and the South East of England. Off-market via
-          our private contacts, on-market via our compliant agent network.
+          Focused coverage across Greater London and the South of England. Off-market via our
+          private contacts, on-market via our compliant agent network.
         </motion.p>
 
         <div className="mt-14 grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
@@ -91,10 +93,10 @@ export function CoverageMap() {
             className="relative mx-auto w-full max-w-md"
           >
             <svg
-              viewBox="0 0 400 600"
+              viewBox="0 0 420 600"
               className="h-auto w-full"
               role="img"
-              aria-label="Map of Greater London and South East England with major property investment cities highlighted"
+              aria-label="Map of Greater London, South East England, and Dorset with major property investment cities highlighted"
             >
               <defs>
                 <radialGradient id="hubGlow" cx="0.5" cy="0.5" r="0.5">
@@ -202,8 +204,8 @@ export function CoverageMap() {
             <p className="mt-8 text-sm leading-relaxed text-white/60">
               Focused coverage isn&apos;t a limitation — it&apos;s the reason our private
               contacts and compliant agent network produce real deals. If your brief sits
-              outside Greater London or the South East, we&apos;ll tell you upfront before
-              you commit anything.
+              outside Greater London or the South, we&apos;ll tell you upfront before you
+              commit anything.
             </p>
           </div>
         </div>

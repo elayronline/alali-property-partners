@@ -12,11 +12,11 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.alalipropertypartners.com"),
   title: {
-    default: "Alali Property Partners | Property Deal Sourcing — London & South East",
+    default: "Alali Property Partners | Property Deal Sourcing — London & the South",
     template: "%s | Alali Property Partners",
   },
   description:
-    "Property deal sourcing and introducer service across Greater London and the South East of England. Off-market via our private contacts, on-market via our compliant agent network, and bespoke sourcing to your brief.",
+    "Property deal sourcing and introducer service across Greater London and the South of England. Off-market via our private contacts, on-market via our compliant agent network, and bespoke sourcing to your brief.",
   applicationName: "Alali Property Partners",
   authors: [{ name: "Alali Property Partners Ltd" }],
   creator: "Alali Property Partners Ltd",
@@ -63,7 +63,7 @@ const businessSchema = {
   name: "Alali Property Partners",
   legalName: "Alali Property Partners Ltd",
   description:
-    "Property deal sourcing and introducer service covering Greater London and the South East of England. We find verified, high-yield property deals for investors and connect them with regulated professionals — off-market through private contacts, on-market through our compliant agent network, BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
+    "Property deal sourcing and introducer service covering Greater London and the South of England (the South East and Dorset). We find verified, high-yield property deals for investors and connect them with regulated professionals — off-market through private contacts, on-market through our compliant agent network, BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
   url: "https://www.alalipropertypartners.com",
   telephone: "+442045158438",
   email: "contact@alalipropertypartners.com",
@@ -84,6 +84,7 @@ const businessSchema = {
   areaServed: [
     { "@type": "AdministrativeArea", name: "Greater London" },
     { "@type": "AdministrativeArea", name: "South East England" },
+    { "@type": "AdministrativeArea", name: "Dorset" },
   ],
   foundingDate: "2025",
   sameAs: [
@@ -125,7 +126,7 @@ const websiteSchema = {
   name: "Alali Property Partners",
   url: "https://www.alalipropertypartners.com",
   description:
-    "Property deal sourcing service for investors across Greater London and the South East of England. Off-market through private contacts, on-market through our compliant agent network, BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
+    "Property deal sourcing service for investors across Greater London and the South of England. Off-market through private contacts, on-market through our compliant agent network, BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
   publisher: {
     "@type": "Organization",
     name: "Alali Property Partners",
