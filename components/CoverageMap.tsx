@@ -2,27 +2,36 @@
 
 import { motion } from "framer-motion"
 
-// City positions on the 400x600 SVG viewBox.
-// Roughly mapped from real lat/long for a London + South East + Dorset constellation.
-const cities = [
+// City positions on the 420x600 SVG viewBox.
+// Mapped from real lat/long for a London + South East + Dorset constellation.
+// labelAnchor / labelDx / labelDy let us nudge labels for clarity at edges
+// and resolve collisions between near-neighbours.
+type City = {
+  name: string
+  x: number
+  y: number
+  region: string
+  hub?: boolean
+  labelAnchor?: "start" | "end"
+  labelDx?: number
+  labelDy?: number
+}
+
+const cities: City[] = [
   { name: "Milton Keynes", x: 199, y: 89, region: "Buckinghamshire" },
   { name: "Oxford", x: 159, y: 174, region: "Oxfordshire" },
   { name: "Reading", x: 182, y: 262, region: "Berkshire" },
   { name: "London", x: 250, y: 247, region: "Greater London", hub: true },
-  { name: "Maidstone", x: 302, y: 314, region: "Kent" },
-  { name: "Canterbury", x: 346, y: 311, region: "Kent" },
+  // Maidstone & Canterbury sit on the same latitude — bump Maidstone's label up,
+  // Canterbury's label down to avoid collision.
+  { name: "Maidstone", x: 302, y: 314, region: "Kent", labelDy: -7 },
+  { name: "Canterbury", x: 346, y: 311, region: "Kent", labelDy: 12 },
   { name: "Guildford", x: 214, y: 323, region: "Surrey" },
   { name: "Southampton", x: 148, y: 420, region: "Hampshire" },
   { name: "Portsmouth", x: 173, y: 446, region: "Hampshire" },
   { name: "Brighton", x: 249, y: 462, region: "East Sussex" },
   { name: "Bournemouth", x: 110, y: 478, region: "Dorset" },
 ]
-
-// Stylized outline of Greater London + South East England + Dorset.
-// Hand-traced at the same scale as the city coords — not GIS-accurate,
-// just enough silhouette to anchor the constellation.
-const seOutline =
-  "M 145 95 C 165 72, 200 60, 235 65 C 270 70, 305 75, 335 90 C 355 102, 370 125, 372 155 C 370 180, 365 205, 365 230 C 372 255, 380 280, 372 310 C 380 335, 385 365, 372 390 C 365 415, 350 435, 335 445 C 305 460, 270 470, 245 478 C 215 488, 180 495, 145 488 C 115 482, 88 472, 78 460 C 60 450, 55 425, 60 400 C 65 375, 78 355, 95 340 C 105 325, 110 305, 110 285 C 105 258, 100 230, 105 202 C 110 175, 120 145, 135 120 C 140 108, 142 100, 145 95 Z"
 
 const hub = cities.find((c) => c.hub)!
 
@@ -37,7 +46,6 @@ const regions = [
   "Berkshire",
   "Oxfordshire",
   "Buckinghamshire",
-  "Isle of Wight",
 ]
 
 export function CoverageMap() {
@@ -109,12 +117,13 @@ export function CoverageMap() {
                 </linearGradient>
               </defs>
 
-              {/* SE England outline — soft fill underneath */}
-              <path
-                d={seOutline}
-                fill="rgba(201,160,61,0.03)"
-                stroke="rgba(201,160,61,0.18)"
-                strokeWidth="1"
+              {/* Region anchor — soft elliptical glow, no false geography */}
+              <ellipse
+                cx="215"
+                cy="290"
+                rx="190"
+                ry="225"
+                fill="rgba(201,160,61,0.025)"
               />
 
               {/* Radiating lines from London to every other city */}
@@ -171,20 +180,25 @@ export function CoverageMap() {
               ))}
 
               {/* City labels */}
-              {cities.map((c) => (
-                <text
-                  key={`label-${c.name}`}
-                  x={c.x + (c.hub ? 10 : 8)}
-                  y={c.y + 4}
-                  fontSize="11"
-                  fill="rgba(255,255,255,0.7)"
-                  fontFamily="var(--font-raleway), sans-serif"
-                  fontWeight={c.hub ? "500" : "300"}
-                  letterSpacing="0.04em"
-                >
-                  {c.name}
-                </text>
-              ))}
+              {cities.map((c) => {
+                const anchor = c.labelAnchor ?? "start"
+                const baseDx = anchor === "end" ? -(c.hub ? 10 : 8) : c.hub ? 10 : 8
+                return (
+                  <text
+                    key={`label-${c.name}`}
+                    x={c.x + baseDx + (c.labelDx ?? 0)}
+                    y={c.y + 4 + (c.labelDy ?? 0)}
+                    fontSize="11"
+                    fill="rgba(255,255,255,0.72)"
+                    fontFamily="var(--font-raleway), sans-serif"
+                    fontWeight={c.hub ? "500" : "300"}
+                    letterSpacing="0.04em"
+                    textAnchor={anchor}
+                  >
+                    {c.name}
+                  </text>
+                )
+              })}
             </svg>
           </motion.div>
 
