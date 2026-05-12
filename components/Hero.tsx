@@ -62,11 +62,10 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-3xl text-center">
         <motion.h1
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          style={{ willChange: "transform, opacity" }}
+          initial={{ y: 8 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="font-display text-[2rem] font-semibold leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl"
+          className="font-display text-[1.75rem] leading-[1.1] text-white sm:text-5xl lg:text-6xl"
         >
           Real Deals. Real Numbers.{" "}
           <span className="bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">
@@ -75,9 +74,8 @@ export function Hero() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          style={{ willChange: "transform, opacity" }}
+          initial={{ y: 8 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/80 sm:mt-6 sm:text-lg"
         >
@@ -86,9 +84,8 @@ export function Hero() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          style={{ willChange: "transform, opacity" }}
+          initial={{ y: 8 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-8 flex flex-col items-stretch gap-4 sm:mt-10 sm:flex-row sm:items-center sm:justify-center"
         >

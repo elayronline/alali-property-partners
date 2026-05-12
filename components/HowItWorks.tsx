@@ -72,7 +72,7 @@ export function HowItWorks() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display mt-3 text-center text-3xl font-semibold tracking-tight text-charcoal sm:text-5xl"
+          className="font-display mt-3 text-center text-3xl text-charcoal sm:text-5xl"
         >
           How It Works
         </motion.h2>

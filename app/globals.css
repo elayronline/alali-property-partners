@@ -27,12 +27,15 @@
   --color-warm-grey: var(--warm-grey);
   --color-charcoal: var(--charcoal);
   --font-sans: var(--font-raleway);
-  --font-display: var(--font-display);
 }
 
+/* Display heading style — mirrors the slim, calligraphic feel of the Alali
+   wordmark by leaning into Raleway's lightest weights at large sizes with
+   tightened tracking. Single family across the site = consistent brand. */
 .font-display {
-  font-family: var(--font-display), "Cormorant Garamond", Georgia, serif;
-  letter-spacing: -0.01em;
+  font-family: var(--font-raleway), system-ui, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.02em;
 }
 
 /* Subtle drifting grid overlay — adds depth to dark sections */

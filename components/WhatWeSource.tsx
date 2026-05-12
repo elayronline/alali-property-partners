@@ -56,7 +56,7 @@ export function WhatWeSource() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display mt-3 text-3xl font-semibold tracking-tight text-white sm:text-5xl"
+          className="font-display mt-3 text-3xl text-white sm:text-5xl"
         >
           We Source to Your Numbers
         </motion.h2>

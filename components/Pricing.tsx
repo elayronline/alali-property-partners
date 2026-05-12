@@ -51,7 +51,7 @@ export function Pricing() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display mt-3 text-center text-3xl font-semibold tracking-tight text-charcoal sm:text-5xl"
+          className="font-display mt-3 text-center text-3xl text-charcoal sm:text-5xl"
         >
           Our Fees
         </motion.h2>
@@ -96,11 +96,11 @@ export function Pricing() {
                 )}
 
                 <div className="pt-2">
-                  <h3 className="font-display text-2xl font-semibold tracking-tight text-charcoal">{card.title}</h3>
+                  <h3 className="font-display text-2xl text-charcoal">{card.title}</h3>
                   <p className="mt-1 text-xs text-muted-light">{card.subtitle}</p>
 
                   {/* Fee */}
-                  <p className="mt-5 font-display text-5xl font-semibold tracking-tight text-charcoal">{card.fee}</p>
+                  <p className="mt-5 font-display text-5xl text-charcoal" style={{ fontWeight: 400 }}>{card.fee}</p>
                   <p className="mt-1 text-xs text-muted-light">{card.feeDetail}</p>
 
                   {/* Details */}
