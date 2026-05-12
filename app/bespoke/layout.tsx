@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Bespoke Property Sourcing — Source to Your Brief",
   description:
-    "Bespoke property sourcing for investors across England & Wales. We source to your exact brief — strategy, budget, location, target returns. £1,000 retainer (refundable if no suitable deal in 14 days, subject to terms), then 2.4% sourcing fee (min £3,600, VAT inc.) on completion. Residential and commercial.",
+    "Bespoke property sourcing across England & Wales — sourced to your exact brief. £1,000 retainer, then 2.4% (min £3,600 VAT inc.). Residential & commercial.",
   keywords: [
     "bespoke property sourcing",
     "custom property sourcing UK",

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     absolute: "Alali Property Partners | Property Deal Sourcing — England & Wales",
   },
   description:
-    "We find and introduce verified, high-yield property deals for investors across England & Wales — off-market through our private contacts and on-market through our compliant agent network. BTL, BRR, R2R, HMO, flips, and bespoke sourcing to your exact brief. Working alongside regulated professionals. Transparent fees. Complete deal packs.",
+    "Verified property deals for investors across England & Wales — off-market via private contacts and on-market via our compliant agent network. Transparent fees.",
   keywords: [
     "property deal sourcing",
     "property sourcing agent",

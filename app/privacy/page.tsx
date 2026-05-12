@@ -4,7 +4,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Alali Property Partners collects, uses, and protects your personal data. UK GDPR compliant privacy policy covering contact form data, WhatsApp broadcasts, cookies, and your rights.",
+    "How Alali Property Partners collects, uses, and protects your personal data. UK GDPR compliant privacy policy for our property sourcing service.",
   alternates: { canonical: "/privacy" },
   robots: { index: true, follow: true },
   openGraph: {

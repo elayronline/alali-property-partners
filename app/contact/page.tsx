@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "Contact Us — Property Deal Sourcing Enquiries",
   description:
-    "Get in touch with Alali Property Partners. Whether you're looking for your next investment, need to move a property, or want to source to a specific brief — tell us what you need. We respond within one working day.",
+    "Contact Alali Property Partners — tell us what you're looking for or what you need to move. UK property deal sourcing, response within one working day.",
   keywords: [
     "contact property sourcer UK",
     "property sourcing contact",

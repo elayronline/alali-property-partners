@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "Why Investors Choose Us for Property Deal Sourcing",
   description:
-    "Why investors choose Alali Property Partners — verified deals, transparent fees, FCA-regulated power team, 14-day due diligence, and complete deal packs across England & Wales. We don't buy from our own pipeline — every deal goes to clients first.",
+    "Why investors choose us — verified deals, transparent fees, FCA-regulated power team, 14-day due diligence, complete deal packs across England & Wales.",
   keywords: [
     "best property sourcer UK",
     "property sourcing company reviews",
