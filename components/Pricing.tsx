@@ -101,7 +101,14 @@ export function Pricing() {
                   <p className="mt-1 text-xs text-muted-light">{card.subtitle}</p>
 
                   {/* Fee */}
-                  <p className="mt-5 font-display text-5xl text-charcoal" style={{ fontWeight: 400 }}>{card.fee}</p>
+                  <div className="mt-5 flex items-baseline gap-2.5">
+                    <p className="font-display text-5xl text-charcoal" style={{ fontWeight: 400 }}>
+                      {card.fee}
+                    </p>
+                    <span className="rounded-full bg-gold/10 px-2 py-0.5 text-[0.65rem] font-semibold tracking-wide text-gold">
+                      VAT inc.
+                    </span>
+                  </div>
                   <p className="mt-1 text-xs text-muted-light">{card.feeDetail}</p>
 
                   {/* Details */}
@@ -171,10 +178,15 @@ export function Pricing() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mx-auto mt-8 max-w-2xl text-center text-xs text-muted-light"
+          className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-light/85"
         >
           All fees are VAT inclusive. No hidden costs. See our{" "}
-          <a href="/terms" className="text-gold underline hover:text-gold-light">terms of service</a>{" "}
+          <a
+            href="/terms"
+            className="text-gold underline decoration-gold/30 underline-offset-4 transition-colors hover:text-gold-dark hover:decoration-gold"
+          >
+            terms of service
+          </a>{" "}
           for full refund details.
         </motion.p>
       </div>

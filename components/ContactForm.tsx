@@ -174,7 +174,7 @@ export function ContactForm() {
       {/* Gold divider */}
       <SectionDivider variant="dark" className="mb-16" />
 
-      <div className="mx-auto max-w-2xl">
+      <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -191,49 +191,20 @@ export function ContactForm() {
           <h2 className="font-display mt-3 text-3xl text-white sm:text-5xl">
             Let&apos;s start a conversation
           </h2>
-          <p className="mt-3 text-white/60">
+          <p className="mx-auto mt-3 max-w-xl text-white/60">
             Whether you&apos;re looking for deals or have a property to move — start here.
           </p>
         </motion.div>
 
-        {/* Reassurance strip */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.05 }}
-          className="mt-6 flex flex-wrap justify-center gap-4 text-xs text-white/50"
-        >
-          <span className="flex items-center gap-1.5">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-gold/60" aria-hidden="true">
-              <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-            </svg>
-            No obligation
-          </span>
-          <span className="flex items-center gap-1.5">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-gold/60" aria-hidden="true">
-              <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-            </svg>
-            No hidden fees
-          </span>
-          <span className="flex items-center gap-1.5">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-gold/60" aria-hidden="true">
-              <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-            </svg>
-            We respond fast
-          </span>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="mt-8 rounded-xl border border-white/10 bg-dark-bg-light p-4 sm:rounded-2xl sm:p-8"
-        >
+        <div className="mt-12 grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:gap-12">
+          {/* Form column */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="rounded-xl border border-white/10 bg-dark-bg-light p-4 sm:rounded-2xl sm:p-8"
+          >
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             {/* Always visible fields */}
             <div className="grid gap-4 sm:grid-cols-2">
@@ -465,7 +436,82 @@ export function ContactForm() {
               Your details are safe. We never share your information with third parties.
             </p>
           </form>
-        </motion.div>
+          </motion.div>
+
+          {/* What happens next panel */}
+          <motion.aside
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            className="self-start lg:sticky lg:top-28"
+          >
+            <div className="rounded-2xl border border-gold/15 bg-dark-bg-light/60 p-6 sm:p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold/80">
+                What happens next
+              </p>
+
+              <ol className="mt-6 space-y-5">
+                {[
+                  {
+                    n: "01",
+                    title: "We reply within one working day",
+                    detail:
+                      "Usually faster. You'll hear from one of us directly — not a call centre or bot.",
+                  },
+                  {
+                    n: "02",
+                    title: "A short call to understand your brief",
+                    detail:
+                      "15–20 minutes to talk strategy, budget, target areas, and timeline.",
+                  },
+                  {
+                    n: "03",
+                    title: "We start — or tell you upfront we can't help",
+                    detail:
+                      "If we have live coverage in your area and the brief is workable, we get going. If not, we say so plainly. No time wasted on either side.",
+                  },
+                ].map((s, i) => (
+                  <motion.li
+                    key={s.n}
+                    initial={{ opacity: 0, x: -8 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 + i * 0.08 }}
+                    className="flex items-start gap-4"
+                  >
+                    <span className="font-display shrink-0 text-2xl text-gold/50">
+                      {s.n}
+                    </span>
+                    <div className="-mt-0.5">
+                      <p className="font-display text-base tracking-tight text-white">
+                        {s.title}
+                      </p>
+                      <p className="mt-1 text-xs leading-relaxed text-white/55">
+                        {s.detail}
+                      </p>
+                    </div>
+                  </motion.li>
+                ))}
+              </ol>
+
+              <div className="mt-8 flex flex-wrap gap-x-4 gap-y-1.5 border-t border-white/10 pt-5 text-[0.7rem] text-white/45">
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="h-1 w-1 rounded-full bg-gold/60" />
+                  No obligation
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="h-1 w-1 rounded-full bg-gold/60" />
+                  No hidden fees
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="h-1 w-1 rounded-full bg-gold/60" />
+                  UK GDPR-compliant
+                </span>
+              </div>
+            </div>
+          </motion.aside>
+        </div>
       </div>
     </section>
   )
