@@ -75,12 +75,15 @@ export function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`group relative overflow-hidden rounded-2xl p-[1.5px] transition-all duration-300 md:hover:-translate-y-1.5 ${
-                  card.popular
-                    ? "bg-gradient-to-br from-gold via-gold-light to-gold-dark shadow-[0_8px_40px_-12px_rgba(201,160,61,0.45)] md:hover:shadow-[0_20px_60px_-15px_rgba(201,160,61,0.6)]"
-                    : "bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 shadow-sm md:hover:shadow-xl"
-                }`}
+                className="group relative"
               >
+                <div
+                  className={`relative overflow-hidden rounded-2xl p-[1.5px] transition-all duration-300 md:group-hover:-translate-y-1.5 ${
+                    card.popular
+                      ? "bg-gradient-to-br from-gold via-gold-light to-gold-dark shadow-[0_8px_40px_-12px_rgba(201,160,61,0.45)] md:group-hover:shadow-[0_20px_60px_-15px_rgba(201,160,61,0.6)]"
+                      : "bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 shadow-sm md:group-hover:shadow-xl"
+                  }`}
+                >
                 <div className="relative h-full rounded-[calc(1rem-1.5px)] bg-white p-5 sm:p-6">
                   {/* Hover glow */}
                   <div className="pointer-events-none absolute -inset-px rounded-[calc(1rem-1.5px)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -89,12 +92,6 @@ export function Pricing() {
                         "radial-gradient(circle at 50% 0%, rgba(201,160,61,0.12), transparent 70%)",
                     }}
                   />
-
-                {card.popular && (
-                  <span className="absolute -top-3 right-4 z-10 rounded-full bg-gradient-to-r from-gold to-gold-light px-3 py-1 text-xs font-bold tracking-wide text-dark-bg shadow-md shadow-gold/20">
-                    ✦ Recommended
-                  </span>
-                )}
 
                 <div className="pt-2">
                   <h3 className="font-display text-2xl text-charcoal">{card.title}</h3>
@@ -168,6 +165,13 @@ export function Pricing() {
                   )}
                 </div>
                 </div>
+                </div>
+
+                {card.popular && (
+                  <span className="pointer-events-none absolute -top-3 right-5 z-20 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-gold to-gold-light px-3 py-1 text-[0.7rem] font-bold tracking-wide text-dark-bg shadow-[0_4px_14px_-2px_rgba(201,160,61,0.6)]">
+                    ✦ Recommended
+                  </span>
+                )}
               </motion.div>
             ))}
           </div>
