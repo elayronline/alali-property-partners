@@ -25,7 +25,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[100dvh] items-start justify-center overflow-hidden bg-dark-bg px-4 pt-32 pb-16 sm:items-center sm:px-6 sm:pt-32"
+      className="relative flex min-h-[80dvh] items-center justify-center overflow-hidden bg-dark-bg px-4 pt-24 pb-16 sm:min-h-[85dvh] sm:px-6 sm:pt-20"
     >
       {/* Subtle background grid */}
       <div
@@ -38,53 +38,36 @@ export function Hero() {
       />
 
       <div className="relative mx-auto max-w-3xl text-center">
-        {/* Decorative gold line */}
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: 64 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mx-auto mb-8 h-px bg-gold/40"
-        />
-
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-[1.75rem] font-bold leading-tight text-white sm:text-5xl lg:text-6xl"
+          style={{ willChange: "transform, opacity" }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-[1.5rem] font-bold leading-tight text-white sm:text-5xl lg:text-6xl"
         >
           Real Deals. Real Numbers.{" "}
-          <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">
             No Guesswork.
           </span>
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg"
+          style={{ willChange: "transform, opacity" }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/80 sm:mt-6 sm:text-lg"
         >
-          We source property deals across England &amp; Wales — off-market through our private
-          contacts and on-market through our compliant agent network — verify every number, and
-          deliver them ready to go, complete with a full deal pack, comparables, and exit
-          strategy. Tell us what you&apos;re looking for and we&apos;ll source to your brief.
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.65 }}
-          className="mx-auto mt-4 max-w-xl text-sm text-white/60"
-        >
-          Whether you&apos;re looking for your next investment or need to move a property — start
-          here.
+          We source verified property deals across England &amp; Wales — off-market and on-market —
+          delivered ready to go with a complete deal pack.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-10 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-center"
+          style={{ willChange: "transform, opacity" }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-8 flex flex-col items-stretch gap-4 sm:mt-10 sm:flex-row sm:items-center sm:justify-center"
         >
           <button
             onClick={handleInvestorClick}
@@ -101,16 +84,16 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          className="mx-auto mt-10 flex max-w-2xl flex-col items-center gap-2.5 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-0"
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mx-auto mt-8 flex max-w-2xl flex-col items-center gap-2.5 sm:mt-10 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-0"
         >
           {trustStrip.map((item, i) => (
             <div key={item} className="flex items-center">
               {i > 0 && (
-                <span className="mx-3 hidden h-3 w-px bg-gold/30 sm:block" />
+                <span className="mx-3 hidden h-3 w-px bg-white/20 sm:block" />
               )}
-              <span className="flex items-center gap-2 text-[0.7rem] font-medium tracking-wide text-gold/80 sm:text-xs">
-                <span className="inline-block h-1 w-1 shrink-0 rounded-full bg-gold/40 sm:hidden" />
+              <span className="flex items-center gap-2 text-xs font-medium tracking-wide text-white/75">
+                <span className="inline-block h-1 w-1 shrink-0 rounded-full bg-gold sm:hidden" />
                 {item}
               </span>
             </div>
