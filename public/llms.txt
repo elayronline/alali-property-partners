@@ -1,6 +1,6 @@
 # Alali Property Partners
 
-> Alali Property Partners Ltd is a UK property deal sourcing and introducer company serving investors across England and Wales. We find verified, high-yield property investment deals — off-market through our private contacts and on-market through our compliant agent network — and connect investors with regulated professionals (FCA-regulated mortgage brokers, qualified solicitors, vetted contractors) to complete each transaction.
+> Alali Property Partners Ltd is a UK property deal sourcing and introducer company serving investors across Greater London and the South East of England. We find verified, high-yield property investment deals — off-market through our private contacts and on-market through our compliant agent network — and connect investors with regulated professionals (FCA-regulated mortgage brokers, qualified solicitors, vetted contractors) to complete each transaction.
 
 Company: Alali Property Partners Ltd
 Companies House Number: 17057401
@@ -8,7 +8,7 @@ Registered address: 86-90 Paul Street, London EC2A 4NE, United Kingdom
 Email: contact@alalipropertypartners.com
 Phone: +44 20 4515 8438
 Website: https://www.alalipropertypartners.com
-Areas served: England and Wales (entire territory)
+Areas served: Greater London and the South East of England (Surrey, Kent, East Sussex, West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Isle of Wight). The company is registered in England and Wales for legal purposes, but property sourcing services are focused on Greater London and the South East only.
 Founded: 2025
 
 ## What we do
@@ -54,5 +54,5 @@ We are a property deal sourcing and introducer company. Property deal sourcing a
 - Decision SLA (Sourced Deals): 48 hours from deal pack release (extensions available on fair, justified reasoning where the vendor agrees)
 - Decision SLA (Bespoke): 48 hours from deal presentation (same as Sourced Deals; extensions available on fair, justified reasoning where the vendor agrees)
 - Vendor / agent contact: held by Alali Property Partners; viewings and introductions facilitated by us
-- Geography: England and Wales
+- Geography: Greater London and the South East of England (Surrey, Kent, East Sussex, West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Isle of Wight). Legal entity is registered in England and Wales but services are NOT offered outside Greater London and the South East.
 - Companies House: 17057401

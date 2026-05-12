@@ -3,29 +3,40 @@
 import { motion } from "framer-motion"
 
 // City positions on the 400x600 SVG viewBox.
-// Roughly mapped from real lat/long so the constellation reads as England & Wales.
+// Roughly mapped from real lat/long for a London & South East constellation.
 const cities = [
-  { name: "Newcastle", x: 235, y: 78, region: "North East" },
-  { name: "Leeds", x: 238, y: 178, region: "Yorkshire" },
-  { name: "Manchester", x: 200, y: 210, region: "North West" },
-  { name: "Liverpool", x: 165, y: 218, region: "North West" },
-  { name: "Sheffield", x: 240, y: 222, region: "Yorkshire" },
-  { name: "Nottingham", x: 257, y: 265, region: "East Midlands" },
-  { name: "Birmingham", x: 218, y: 314, region: "West Midlands" },
-  { name: "Swansea", x: 128, y: 405, region: "South Wales" },
-  { name: "Cardiff", x: 162, y: 420, region: "South Wales" },
-  { name: "Bristol", x: 190, y: 422, region: "South West" },
-  { name: "London", x: 305, y: 418, region: "Greater London", hub: true },
-  { name: "Brighton", x: 305, y: 488, region: "South East" },
-  { name: "Plymouth", x: 122, y: 537, region: "South West" },
+  { name: "Milton Keynes", x: 129, y: 89, region: "Buckinghamshire" },
+  { name: "Oxford", x: 82, y: 174, region: "Oxfordshire" },
+  { name: "Reading", x: 109, y: 262, region: "Berkshire" },
+  { name: "London", x: 188, y: 247, region: "Greater London", hub: true },
+  { name: "Maidstone", x: 248, y: 314, region: "Kent" },
+  { name: "Canterbury", x: 301, y: 311, region: "Kent" },
+  { name: "Guildford", x: 147, y: 323, region: "Surrey" },
+  { name: "Southampton", x: 69, y: 420, region: "Hampshire" },
+  { name: "Portsmouth", x: 98, y: 446, region: "Hampshire" },
+  { name: "Brighton", x: 207, y: 462, region: "East Sussex" },
 ]
 
-// Roughly hand-traced England & Wales outline at the same scale as the city coords.
-// Not GIS-accurate — stylized for the silhouette only.
-const ukOutline =
-  "M 300 65 C 285 58, 270 52, 250 55 L 230 60 C 220 62, 215 70, 220 82 L 230 105 C 240 130, 250 155, 248 175 L 250 200 C 260 220, 275 235, 290 250 C 305 270, 320 290, 330 310 C 335 330, 340 355, 335 380 C 333 395, 330 410, 325 425 C 330 440, 325 455, 318 470 C 305 480, 290 488, 280 500 C 268 510, 250 515, 235 510 L 200 510 C 180 515, 160 525, 145 535 C 130 543, 115 548, 100 543 C 88 538, 80 528, 78 515 C 75 500, 78 485, 85 472 C 95 455, 88 440, 92 425 C 95 410, 100 395, 110 385 C 100 375, 92 360, 90 345 C 92 325, 100 305, 108 290 C 95 275, 80 265, 70 250 C 65 235, 70 220, 80 210 C 92 195, 105 180, 115 165 C 125 150, 135 135, 145 125 C 155 115, 168 110, 180 105 C 195 95, 210 88, 225 80 C 240 72, 260 65, 280 62 C 290 60, 295 62, 300 65 Z"
+// Stylized outline of Greater London + South East England.
+// Hand-traced at the same scale as the city coords — not GIS-accurate,
+// just enough silhouette to anchor the constellation.
+const seOutline =
+  "M 70 100 C 95 75, 130 65, 165 70 C 200 75, 235 78, 270 88 C 295 100, 315 120, 320 150 C 320 175, 315 200, 318 225 C 325 250, 335 275, 330 305 C 340 330, 345 360, 335 385 C 330 410, 320 430, 305 445 C 280 460, 250 475, 225 485 C 200 495, 175 500, 150 495 C 125 488, 100 475, 80 458 C 60 440, 50 415, 52 388 C 55 360, 65 335, 70 308 C 65 280, 58 252, 55 225 C 52 195, 55 165, 60 135 C 62 120, 65 108, 70 100 Z"
 
 const hub = cities.find((c) => c.hub)!
+
+const regions = [
+  "Greater London",
+  "Surrey",
+  "Kent",
+  "East Sussex",
+  "West Sussex",
+  "Hampshire",
+  "Berkshire",
+  "Oxfordshire",
+  "Buckinghamshire",
+  "Isle of Wight",
+]
 
 export function CoverageMap() {
   return (
@@ -57,7 +68,7 @@ export function CoverageMap() {
           viewport={{ once: true }}
           className="font-display mt-3 text-center text-3xl text-white sm:text-5xl"
         >
-          Sourcing across England &amp; Wales
+          London &amp; the South East
         </motion.h2>
 
         <motion.p
@@ -66,8 +77,8 @@ export function CoverageMap() {
           viewport={{ once: true }}
           className="mx-auto mt-4 max-w-xl text-center text-sm text-white/60 sm:text-base"
         >
-          Off-market through our private contacts, on-market through our compliant agent network.
-          Active in every major investment market.
+          Focused coverage across Greater London and the South East of England. Off-market via
+          our private contacts, on-market via our compliant agent network.
         </motion.p>
 
         <div className="mt-14 grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
@@ -83,29 +94,29 @@ export function CoverageMap() {
               viewBox="0 0 400 600"
               className="h-auto w-full"
               role="img"
-              aria-label="Map of England and Wales with major property investment cities highlighted"
+              aria-label="Map of Greater London and South East England with major property investment cities highlighted"
             >
               <defs>
                 <radialGradient id="hubGlow" cx="0.5" cy="0.5" r="0.5">
-                  <stop offset="0%" stopColor="rgba(201,160,61,0.35)" />
+                  <stop offset="0%" stopColor="rgba(201,160,61,0.4)" />
                   <stop offset="100%" stopColor="rgba(201,160,61,0)" />
                 </radialGradient>
                 <linearGradient id="lineFade" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="rgba(201,160,61,0.45)" />
-                  <stop offset="100%" stopColor="rgba(201,160,61,0.1)" />
+                  <stop offset="0%" stopColor="rgba(201,160,61,0.5)" />
+                  <stop offset="100%" stopColor="rgba(201,160,61,0.12)" />
                 </linearGradient>
               </defs>
 
-              {/* Country outline — soft glow underneath */}
+              {/* SE England outline — soft fill underneath */}
               <path
-                d={ukOutline}
-                fill="rgba(201,160,61,0.025)"
+                d={seOutline}
+                fill="rgba(201,160,61,0.03)"
                 stroke="rgba(201,160,61,0.18)"
                 strokeWidth="1"
               />
 
               {/* Radiating lines from London to every other city */}
-              <g opacity="0.5">
+              <g opacity="0.55">
                 {cities
                   .filter((c) => !c.hub)
                   .map((c) => (
@@ -122,7 +133,7 @@ export function CoverageMap() {
               </g>
 
               {/* London hub glow */}
-              <circle cx={hub.x} cy={hub.y} r="38" fill="url(#hubGlow)" />
+              <circle cx={hub.x} cy={hub.y} r="42" fill="url(#hubGlow)" />
 
               {/* City dots */}
               {cities.map((c, i) => (
@@ -136,14 +147,14 @@ export function CoverageMap() {
                   >
                     <animate
                       attributeName="r"
-                      values={c.hub ? "6;14;6" : "4;10;4"}
-                      dur={`${2 + (i % 4) * 0.3}s`}
+                      values={c.hub ? "6;16;6" : "4;10;4"}
+                      dur={`${2.2 + (i % 4) * 0.3}s`}
                       repeatCount="indefinite"
                     />
                     <animate
                       attributeName="opacity"
                       values="0.6;0;0.6"
-                      dur={`${2 + (i % 4) * 0.3}s`}
+                      dur={`${2.2 + (i % 4) * 0.3}s`}
                       repeatCount="indefinite"
                     />
                   </circle>
@@ -151,20 +162,20 @@ export function CoverageMap() {
                   <circle
                     cx={c.x}
                     cy={c.y}
-                    r={c.hub ? 4.5 : 3}
+                    r={c.hub ? 5 : 3.5}
                     fill={c.hub ? "#DEBB5C" : "#C9A03D"}
                   />
                 </g>
               ))}
 
-              {/* City labels — small Raleway */}
+              {/* City labels */}
               {cities.map((c) => (
                 <text
                   key={`label-${c.name}`}
-                  x={c.x + (c.hub ? 9 : 7)}
-                  y={c.y + 3}
-                  fontSize="9"
-                  fill="rgba(255,255,255,0.55)"
+                  x={c.x + (c.hub ? 10 : 8)}
+                  y={c.y + 4}
+                  fontSize="11"
+                  fill="rgba(255,255,255,0.7)"
                   fontFamily="var(--font-raleway), sans-serif"
                   fontWeight={c.hub ? "500" : "300"}
                   letterSpacing="0.04em"
@@ -181,18 +192,7 @@ export function CoverageMap() {
               Active regions
             </p>
             <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
-              {[
-                "Greater London",
-                "North West",
-                "Yorkshire",
-                "West Midlands",
-                "East Midlands",
-                "South East",
-                "South West",
-                "North East",
-                "South Wales",
-                "Mid Wales",
-              ].map((region) => (
+              {regions.map((region) => (
                 <div key={region} className="flex items-center gap-2.5 text-white/75">
                   <span className="inline-block h-1 w-1 shrink-0 rounded-full bg-gold" />
                   {region}
@@ -200,10 +200,10 @@ export function CoverageMap() {
               ))}
             </div>
             <p className="mt-8 text-sm leading-relaxed text-white/60">
-              Coverage isn&apos;t marketing copy — it&apos;s where our private contacts and
-              compliant agent network actively source deals. If you&apos;re investing in a
-              specific area, we&apos;ll tell you upfront whether we&apos;ve got live coverage
-              there before you commit.
+              Focused coverage isn&apos;t a limitation — it&apos;s the reason our private
+              contacts and compliant agent network produce real deals. If your brief sits
+              outside Greater London or the South East, we&apos;ll tell you upfront before
+              you commit anything.
             </p>
           </div>
         </div>

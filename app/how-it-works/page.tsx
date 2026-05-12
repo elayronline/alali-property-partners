@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "How It Works — Property Deal Sourcing Process",
   description:
-    "Our 4-step property deal sourcing process — pick a deal, secure it, get a full deal pack, move with confidence. Transparent fees across England & Wales.",
+    "Our 4-step property deal sourcing process — pick a deal, secure it, get a full deal pack, move with confidence. Transparent fees across London & the South East.",
   keywords: [
     "how property deal sourcing works",
     "property deal sourcing process",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How It Works | Alali Property Partners",
     description:
-      "Our 4-step process for sourcing and securing verified property deals across England & Wales.",
+      "Our 4-step process for sourcing and securing verified property deals across London & the South East.",
     url: "/how-it-works",
     type: "article",
     images: ["/opengraph-image"],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "How It Works | Alali Property Partners",
     description:
-      "Our 4-step process for sourcing and securing verified property deals across England & Wales.",
+      "Our 4-step process for sourcing and securing verified property deals across London & the South East.",
     images: ["/opengraph-image"],
   },
 }
@@ -42,7 +42,7 @@ const howToSchema = {
   "@type": "HowTo",
   name: "How property deal sourcing works with Alali Property Partners",
   description:
-    "A 4-step process for investors to commission property deal sourcing in England & Wales, receive a full deal pack, and complete due diligence.",
+    "A 4-step process for investors to commission property deal sourcing across Greater London and the South East of England, receive a full deal pack, and complete due diligence.",
   totalTime: "P14D",
   estimatedCost: {
     "@type": "MonetaryAmount",

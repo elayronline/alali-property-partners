@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "Why Investors Choose Us for Property Deal Sourcing",
   description:
-    "Why investors choose us — verified deals, transparent fees, FCA-regulated power team, complete deal packs and clear decision window across England & Wales.",
+    "Why investors choose us — verified deals, transparent fees, FCA-regulated team, complete deal packs and clear decision window. London & the South East.",
   keywords: [
     "best property sourcer UK",
     "property sourcing company reviews",

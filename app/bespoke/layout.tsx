@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Bespoke Property Sourcing — Source to Your Brief",
   description:
-    "Bespoke property sourcing across England & Wales — sourced to your exact brief. £1,000 retainer, then 2.4% (min £3,600 VAT inc.). Residential & commercial.",
+    "Bespoke property sourcing in London & the South East — sourced to your brief. £1,000 retainer, then 2.4% (min £3,600 VAT inc.). Residential & commercial.",
   keywords: [
     "bespoke property sourcing",
     "custom property sourcing UK",
@@ -50,8 +50,8 @@ const bespokeServiceSchema = {
     name: "Alali Property Partners",
   },
   areaServed: [
-    { "@type": "Country", name: "England" },
-    { "@type": "Country", name: "Wales" },
+    { "@type": "AdministrativeArea", name: "Greater London" },
+    { "@type": "AdministrativeArea", name: "South East England" },
   ],
   serviceType: "Bespoke Property Deal Sourcing",
   offers: {
@@ -98,7 +98,7 @@ const bespokeFaqSchema = {
       name: "Does bespoke sourcing cover commercial property?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Bespoke sourcing covers both residential and commercial property in England & Wales. Commercial sectors include office, retail (high street, retail park), industrial and warehouse, light industrial, leisure and hospitality, healthcare, care homes and assisted living, student accommodation, mixed use, and land with or without planning.",
+        text: "Yes. Bespoke sourcing covers both residential and commercial property across Greater London and the South East of England. Commercial sectors include office, retail (high street, retail park), industrial and warehouse, light industrial, leisure and hospitality, healthcare, care homes and assisted living, student accommodation, mixed use, and land with or without planning.",
       },
     },
     {

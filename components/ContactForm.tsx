@@ -125,7 +125,7 @@ export function ContactForm() {
             `
                 : ""
             }
-            <p style="color:#999;font-size:12px;margin-top:24px;">Alali Property Partners — Property Deal Sourcing Across England & Wales</p>
+            <p style="color:#999;font-size:12px;margin-top:24px;">Alali Property Partners — Property Deal Sourcing across London &amp; the South East</p>
           </div>
         </div>
         `,

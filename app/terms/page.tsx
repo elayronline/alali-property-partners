@@ -4,7 +4,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of service for Alali Property Partners — sourcing fees, 48-hour decision SLA, refund policy, and introducer terms (England & Wales).",
+    "Terms of service for Alali Property Partners — sourcing fees, 48-hour decision SLA, refund policy, and introducer terms. Services cover London & the South East.",
   alternates: { canonical: "/terms" },
   openGraph: {
     title: "Terms of Service | Alali Property Partners",

@@ -7,7 +7,7 @@ import { useSmartNav } from "@/lib/smartNav"
 const trustStrip = [
   "Every deal verified before you see it",
   "Complete deal pack included",
-  "Covering the whole of England & Wales",
+  "Greater London & South East coverage",
 ]
 
 export function Hero() {
@@ -79,8 +79,8 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/80 sm:mt-6 sm:text-lg"
         >
-          We source verified property deals across England &amp; Wales — off-market and on-market —
-          delivered ready to go with a complete deal pack.
+          We source verified property deals across Greater London &amp; the South East —
+          off-market and on-market — delivered ready to go with a complete deal pack.
         </motion.p>
 
         <motion.div

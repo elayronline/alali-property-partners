@@ -42,15 +42,15 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/pricing#service",
   name: "Property Deal Sourcing Service",
   description:
-    "Property deal sourcing for investors in England & Wales. Off-market deals via private contacts, on-market deals via compliant agent network, and bespoke sourcing to investor brief. Every deal includes a full deal pack and a 48-hour decision SLA after release/presentation, with extensions on fair, justified reasoning.",
+    "Property deal sourcing for investors across Greater London and the South East of England. Off-market deals via private contacts, on-market deals via compliant agent network, and bespoke sourcing to investor brief. Every deal includes a full deal pack and a 48-hour decision SLA after release/presentation, with extensions on fair, justified reasoning.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
     name: "Alali Property Partners",
   },
   areaServed: [
-    { "@type": "Country", name: "England" },
-    { "@type": "Country", name: "Wales" },
+    { "@type": "AdministrativeArea", name: "Greater London" },
+    { "@type": "AdministrativeArea", name: "South East England" },
   ],
   serviceType: "Property Deal Sourcing",
   offers: [
