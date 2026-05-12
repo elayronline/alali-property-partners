@@ -4,12 +4,13 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Alali Property Partners collects, uses, and protects your personal data. GDPR compliant privacy policy covering contact form data, WhatsApp broadcasts, cookies, and your rights.",
+    "How Alali Property Partners collects, uses, and protects your personal data. UK GDPR compliant privacy policy covering contact form data, WhatsApp broadcasts, cookies, and your rights.",
   alternates: { canonical: "/privacy" },
+  robots: { index: true, follow: true },
   openGraph: {
     title: "Privacy Policy | Alali Property Partners",
     description:
-      "How we collect, use, and protect your personal data. GDPR compliant.",
+      "How we collect, use, and protect your personal data. UK GDPR compliant.",
     url: "/privacy",
     type: "article",
     images: ["/opengraph-image"],
@@ -18,14 +19,37 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Privacy Policy | Alali Property Partners",
     description:
-      "How we collect, use, and protect your personal data. GDPR compliant.",
+      "How we collect, use, and protect your personal data. UK GDPR compliant.",
     images: ["/opengraph-image"],
   },
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.alalipropertypartners.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Privacy Policy",
+      item: "https://www.alalipropertypartners.com/privacy",
+    },
+  ],
 }
 
 export default function Privacy() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <h1 className="text-3xl font-bold text-charcoal">Privacy Policy</h1>
       <p className="mt-2 text-sm text-muted-light">Last updated: February 2026</p>
 

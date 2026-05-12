@@ -54,6 +54,7 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://www.alalipropertypartners.com/#sourcing-service",
   name: "Property Deal Sourcing",
   description:
     "We source verified, high-yield property deals for investors across England & Wales. Off-market through private contacts, on-market through our compliant agent network, and bespoke sourcing — all with complete deal packs.",
@@ -95,6 +96,10 @@ const serviceSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "h2", "h3"],
+  },
   mainEntity: [
     {
       "@type": "Question",

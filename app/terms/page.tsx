@@ -23,9 +23,32 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.alalipropertypartners.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Terms of Service",
+      item: "https://www.alalipropertypartners.com/terms",
+    },
+  ],
+}
+
 export default function Terms() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <h1 className="text-3xl font-bold text-charcoal">Terms of Service</h1>
       <p className="mt-2 text-sm text-muted-light">Last updated: February 2026</p>
 
