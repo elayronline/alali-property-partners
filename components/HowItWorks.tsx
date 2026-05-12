@@ -31,9 +31,9 @@ const steps = [
   {
     icon: ShieldCheck,
     step: "4",
-    title: "48 hours to decide",
+    title: "Move with confidence",
     description:
-      "We facilitate viewings and introductions on your behalf. You have a 48-hour decision SLA from deal-pack release to decide whether to proceed — extensions available on fair, justified reasoning. If you don't proceed, your £500 is refundable where there are valid reasons (subject to terms).",
+      "Off-market deals move fast — we make sure you have everything you need to make a confident call quickly, with us on hand throughout. Viewings and introductions are facilitated by us, and the £500 is refundable where the deal isn't right for you (subject to terms).",
   },
 ]
 

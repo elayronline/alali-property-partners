@@ -22,7 +22,7 @@ const pricingCards = [
     subtitle: "Off-market deals from our private contacts and on-market deals from our compliant agent network",
     fee: "2.4%",
     feeDetail: "of purchase price (min £3,600, VAT inc.)",
-    payment: "£500 upfront on signed sourcing agreement to release the deal pack; balance settled once you decide to proceed",
+    payment: "£500 to unlock the deal pack. Balance only on a decision to proceed.",
     includes: "Full deal pack + viewings and introductions facilitated by us",
     reassurance: "£500 refundable where there are valid reasons not to proceed (subject to terms).",
     popular: false,

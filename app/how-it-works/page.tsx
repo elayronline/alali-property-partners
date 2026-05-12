@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "How It Works — Property Deal Sourcing Process",
   description:
-    "Our 4-step property deal sourcing process — pick a deal, secure it, get a full deal pack, 48-hour decision SLA. Transparent fees across England & Wales.",
+    "Our 4-step property deal sourcing process — pick a deal, secure it, get a full deal pack, move with confidence. Transparent fees across England & Wales.",
   keywords: [
     "how property deal sourcing works",
     "property deal sourcing process",

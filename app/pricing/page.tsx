@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "Property Sourcing Fees & Pricing",
   description:
-    "Property sourcing fees: 2.4% (min £3,600, VAT inc.) on sourced deals; £1,000 retainer on bespoke. No hidden costs. 48-hour decision SLA on every deal.",
+    "Property sourcing fees: 2.4% (min £3,600, VAT inc.) on sourced deals; £1,000 retainer on bespoke. No hidden costs. Refundable where the deal isn't right.",
   keywords: [
     "property sourcing fees",
     "property sourcing cost UK",
