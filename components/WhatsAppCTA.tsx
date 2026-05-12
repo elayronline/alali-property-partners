@@ -13,7 +13,7 @@ export function WhatsAppCTA() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-2xl font-bold text-dark-bg sm:text-4xl lg:text-5xl"
+          className="font-display text-3xl font-semibold tracking-tight text-dark-bg sm:text-5xl lg:text-6xl"
         >
           Exclusive off-market deals, straight to your phone.
         </motion.h2>

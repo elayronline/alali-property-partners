@@ -34,24 +34,29 @@ function DarkPill({ children }: { children: React.ReactNode }) {
 
 export function WhatWeSource() {
   return (
-    <section id="what-we-source" className="bg-dark-bg px-4 py-20 sm:px-6 sm:py-28">
+    <section id="what-we-source" className="section-glow relative overflow-hidden bg-dark-bg px-4 py-20 sm:px-6 sm:py-28">
+      {/* Animated drifting grid */}
+      <div className="animated-grid absolute inset-0" />
+
       {/* Gold divider */}
-      <div className="mx-auto mb-16 h-px max-w-6xl bg-white/10" />
+      <div className="relative mx-auto mb-16 h-px max-w-6xl bg-white/10" />
 
       <div className="mx-auto max-w-4xl text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-xs font-semibold uppercase tracking-widest text-gold"
+          className="text-xs font-semibold uppercase tracking-[0.25em] text-gold"
         >
-          What We Do
+          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">01</span>
+          <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
+          What We Source
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 text-2xl font-bold text-white sm:text-4xl"
+          className="font-display mt-3 text-3xl font-semibold tracking-tight text-white sm:text-5xl"
         >
           We Source to Your Numbers
         </motion.h2>

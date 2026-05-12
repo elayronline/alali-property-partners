@@ -27,6 +27,47 @@
   --color-warm-grey: var(--warm-grey);
   --color-charcoal: var(--charcoal);
   --font-sans: var(--font-raleway);
+  --font-display: var(--font-display);
+}
+
+.font-display {
+  font-family: var(--font-display), "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* Subtle drifting grid overlay — adds depth to dark sections */
+.animated-grid {
+  background-image:
+    linear-gradient(rgba(201, 160, 61, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 160, 61, 0.5) 1px, transparent 1px);
+  background-size: 60px 60px;
+  background-position: 0 0;
+  animation: gridDrift 30s linear infinite;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+@keyframes gridDrift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 60px;
+  }
+}
+
+/* Section glow accent — a soft gold radial blur in dark sections */
+.section-glow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(201, 160, 61, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 html {

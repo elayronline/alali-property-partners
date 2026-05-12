@@ -62,15 +62,17 @@ export function HowItWorks() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center text-xs font-semibold uppercase tracking-widest text-gold"
+          className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gold"
         >
+          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">02</span>
+          <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
           The Process
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 text-center text-2xl font-bold text-charcoal sm:text-4xl"
+          className="font-display mt-3 text-center text-3xl font-semibold tracking-tight text-charcoal sm:text-5xl"
         >
           How It Works
         </motion.h2>

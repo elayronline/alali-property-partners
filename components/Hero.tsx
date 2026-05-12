@@ -27,13 +27,36 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-[80dvh] items-center justify-center overflow-hidden bg-dark-bg px-4 pt-24 pb-16 sm:min-h-[85dvh] sm:px-6 sm:pt-20"
     >
-      {/* Subtle background grid */}
+      {/* Background video — UK aerial. Muted, looped, no controls. */}
+      <video
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        poster="/hero-poster.jpg"
+        aria-hidden="true"
+      >
+        <source src="/hero-bg.webm" type="video/webm" />
+        <source src="/hero-bg.mp4" type="video/mp4" />
+      </video>
+
+      {/* Cinematic overlay: dark gradient + vignette + subtle gold gridlines for depth */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-dark-bg/85 via-dark-bg/70 to-dark-bg" />
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.03]"
+        className="pointer-events-none absolute inset-0 opacity-[0.04] mix-blend-screen"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(212,168,67,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,168,67,0.3) 1px, transparent 1px)",
+            "linear-gradient(rgba(212,168,67,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(212,168,67,0.6) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, transparent 0%, rgba(13,13,13,0.6) 100%)",
         }}
       />
 
@@ -43,7 +66,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           style={{ willChange: "transform, opacity" }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[1.5rem] font-bold leading-tight text-white sm:text-5xl lg:text-6xl"
+          className="font-display text-[2rem] font-semibold leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl"
         >
           Real Deals. Real Numbers.{" "}
           <span className="bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">

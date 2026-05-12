@@ -41,15 +41,17 @@ export function Pricing() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center text-xs font-semibold uppercase tracking-widest text-gold"
+          className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gold"
         >
+          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">04</span>
+          <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
           Transparent Pricing
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 text-center text-2xl font-bold text-charcoal sm:text-4xl"
+          className="font-display mt-3 text-center text-3xl font-semibold tracking-tight text-charcoal sm:text-5xl"
         >
           Our Fees
         </motion.h2>
@@ -72,26 +74,34 @@ export function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`relative rounded-xl border bg-white p-5 shadow-sm transition-all duration-200 sm:p-6 md:hover:-translate-y-1 md:hover:shadow-lg ${
-                  card.popular ? "border-gold" : "border-gray-100"
+                className={`group relative overflow-hidden rounded-2xl p-[1.5px] transition-all duration-300 md:hover:-translate-y-1.5 ${
+                  card.popular
+                    ? "bg-gradient-to-br from-gold via-gold-light to-gold-dark shadow-[0_8px_40px_-12px_rgba(201,160,61,0.45)] md:hover:shadow-[0_20px_60px_-15px_rgba(201,160,61,0.6)]"
+                    : "bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 shadow-sm md:hover:shadow-xl"
                 }`}
               >
-                {/* Top accent */}
-                <div className="absolute top-0 right-0 left-0 h-1 rounded-t-xl bg-gold" />
+                <div className="relative h-full rounded-[calc(1rem-1.5px)] bg-white p-5 sm:p-6">
+                  {/* Hover glow */}
+                  <div className="pointer-events-none absolute -inset-px rounded-[calc(1rem-1.5px)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    style={{
+                      background:
+                        "radial-gradient(circle at 50% 0%, rgba(201,160,61,0.12), transparent 70%)",
+                    }}
+                  />
 
                 {card.popular && (
-                  <span className="absolute -top-3 right-4 rounded-full bg-gold px-3 py-0.5 text-xs font-bold text-dark-bg">
-                    Recommended
+                  <span className="absolute -top-3 right-4 z-10 rounded-full bg-gradient-to-r from-gold to-gold-light px-3 py-1 text-xs font-bold tracking-wide text-dark-bg shadow-md shadow-gold/20">
+                    ✦ Recommended
                   </span>
                 )}
 
                 <div className="pt-2">
-                  <h3 className="text-lg font-bold text-charcoal">{card.title}</h3>
-                  <p className="mt-0.5 text-xs text-muted-light">{card.subtitle}</p>
+                  <h3 className="font-display text-2xl font-semibold tracking-tight text-charcoal">{card.title}</h3>
+                  <p className="mt-1 text-xs text-muted-light">{card.subtitle}</p>
 
                   {/* Fee */}
-                  <p className="mt-4 text-2xl font-bold text-charcoal">{card.fee}</p>
-                  <p className="mt-0.5 text-xs text-muted-light">{card.feeDetail}</p>
+                  <p className="mt-5 font-display text-5xl font-semibold tracking-tight text-charcoal">{card.fee}</p>
+                  <p className="mt-1 text-xs text-muted-light">{card.feeDetail}</p>
 
                   {/* Details */}
                   <div className="mt-4 space-y-2.5">
@@ -148,6 +158,7 @@ export function Pricing() {
                       </Link>
                     </div>
                   )}
+                </div>
                 </div>
               </motion.div>
             ))}
