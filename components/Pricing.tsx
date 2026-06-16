@@ -2,14 +2,29 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { usePathname, useRouter } from "next/navigation"
 import { ExpandableSection } from "@/components/ui/ExpandableSection"
 import { SectionDivider } from "@/components/ui/SectionDivider"
 import { useSmartNav } from "@/lib/smartNav"
+import { scrollToSection } from "@/lib/smoothScroll"
 
-const pricingCards = [
+type PricingCard = {
+  title: string
+  subtitle: string
+  fee?: string
+  feeDetail?: string
+  payment?: string
+  includes?: string
+  reassurance?: string
+  popular?: boolean
+  expandable?: boolean
+  byApplication?: boolean
+}
+
+const pricingCards: PricingCard[] = [
   {
     title: "Bespoke Sourcing",
-    subtitle: "Sourced to your exact brief — fully hands-off",
+    subtitle: "Sourced to your exact brief — fully hands-off sourcing",
     fee: "£1,000",
     feeDetail: "retainer + sourcing fee on completion",
     payment: "Retainer upfront secures your dedicated 14-day search. Sourcing fee on completion.",
@@ -20,7 +35,7 @@ const pricingCards = [
   },
   {
     title: "Sourced Deals",
-    subtitle: "Off-market via our private contacts; on-market via our compliant agent network",
+    subtitle: "Pre-auction, off-market and direct-to-vendor via our agent network",
     fee: "2.4%",
     feeDetail: "of purchase price, paid in two stages",
     payment: "£500 to unlock the deal pack. Balance only on a decision to proceed.",
@@ -28,16 +43,35 @@ const pricingCards = [
     reassurance: "Unlock fee refundable on valid reasons not to proceed (subject to terms).",
     popular: false,
   },
+  {
+    title: "Development Management",
+    subtitle: "Fully managed HMO conversion, end to end",
+    byApplication: true,
+  },
 ]
 
 export function Pricing() {
   const navigate = useSmartNav()
+  const pathname = usePathname()
+  const router = useRouter()
+
+  // Pre-tags the contact enquiry as Development Management. Same-page uses an
+  // event + scroll; cross-page carries the tag via a query param.
+  const handleDevEnquiry = () => {
+    if (pathname === "/") {
+      window.dispatchEvent(new CustomEvent("preselect-enquiry", { detail: "Development Management" }))
+      scrollToSection("contact")
+    } else {
+      router.push("/contact?enquiry=Development%20Management")
+    }
+  }
+
   return (
     <section id="pricing" className="overflow-x-hidden bg-white px-5 py-20 sm:px-6 sm:py-28">
       {/* Divider */}
       <SectionDivider variant="light" className="mb-16" />
 
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,12 +96,13 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mx-auto mt-4 max-w-xl text-center text-sm text-muted-light"
         >
-          Simple, upfront, no hidden costs. Two ways to invest — each with transparent fees and a clear decision window.
+          Simple, upfront, no hidden costs. Three ways to work with us — each with transparent fees
+          and a clear decision window.
         </motion.p>
 
         {/* Cards */}
         <div className="relative mt-14 overflow-visible">
-          <div className="mx-auto grid max-w-3xl gap-5 overflow-visible sm:grid-cols-2 md:gap-6">
+          <div className="mx-auto grid max-w-3xl gap-5 overflow-visible sm:grid-cols-2 md:gap-6 lg:max-w-none lg:grid-cols-3">
             {pricingCards.map((card, i) => (
               <motion.div
                 key={card.title}
@@ -81,7 +116,9 @@ export function Pricing() {
                   className={`relative overflow-hidden rounded-2xl p-[1.5px] transition-all duration-300 md:group-hover:-translate-y-1.5 ${
                     card.popular
                       ? "bg-gradient-to-br from-gold via-gold-light to-gold-dark shadow-[0_8px_40px_-12px_rgba(201,160,61,0.45)] md:group-hover:shadow-[0_20px_60px_-15px_rgba(201,160,61,0.6)]"
-                      : "bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 shadow-sm md:group-hover:shadow-xl"
+                      : card.byApplication
+                        ? "bg-gradient-to-br from-charcoal via-charcoal/85 to-charcoal shadow-[0_8px_40px_-14px_rgba(38,40,44,0.5)] md:group-hover:shadow-[0_20px_60px_-15px_rgba(38,40,44,0.55)]"
+                        : "bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 shadow-sm md:group-hover:shadow-xl"
                   }`}
                 >
                 <div className="relative h-full rounded-[calc(1rem-1.5px)] bg-white p-5 sm:p-6">
@@ -97,71 +134,115 @@ export function Pricing() {
                   <h3 className="font-display text-2xl text-charcoal">{card.title}</h3>
                   <p className="mt-1 text-xs text-muted-light">{card.subtitle}</p>
 
-                  {/* Fee */}
-                  <div className="mt-5 flex items-baseline gap-2.5">
-                    <p className="font-display text-5xl text-charcoal" style={{ fontWeight: 400 }}>
-                      {card.fee}
-                    </p>
-                    <span className="rounded-full bg-gold/10 px-2 py-0.5 text-[0.65rem] font-semibold tracking-wide text-gold">
-                      VAT inc.
-                    </span>
-                  </div>
-                  <p className="mt-1 text-xs text-muted-light">{card.feeDetail}</p>
-
-                  {/* Details */}
-                  <div className="mt-4 space-y-2.5">
-                    <div>
-                      <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
-                        When you pay
-                      </p>
-                      <p className="mt-0.5 text-sm text-muted-light">{card.payment}</p>
-                    </div>
-                    <div>
-                      <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
-                        What&apos;s included
-                      </p>
-                      <p className="mt-0.5 text-sm text-muted-light">{card.includes}</p>
-                    </div>
-                  </div>
-
-                  {/* Reassurance */}
-                  <div className="mt-4 rounded-lg bg-warm-grey px-3 py-2">
-                    <p className="text-xs font-medium text-muted-light">{card.reassurance}</p>
-                  </div>
-
-                  {/* CTA */}
-                  {!card.expandable && (
-                    <button
-                      onClick={() => navigate("contact")}
-                      className="mt-4 block w-full rounded-lg bg-gold px-4 py-2.5 text-center text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
-                    >
-                      Speak to Us &rarr;
-                    </button>
-                  )}
-
-                  {/* Expandable for bespoke */}
-                  {card.expandable && (
-                    <div className="mt-4 space-y-3">
-                      <ExpandableSection trigger="How does bespoke sourcing work?">
-                        <p className="text-sm leading-relaxed text-muted-light">
-                          The £1,000 retainer locks our dedicated 14-day search to your brief —
-                          location, budget, strategy, and target returns. If we don&apos;t
-                          present a suitable deal in 14 days, the retainer is refundable
-                          (subject to terms). On presentation you have a 48-hour decision SLA,
-                          with extensions on fair, justified reasoning. If you decline with
-                          valid reasons, the £1,000 is also refundable. On a decision to
-                          proceed, the 2.4% sourcing fee (min £3,600, VAT inc.) is charged in
-                          addition to the retainer — the retainer covers our bespoke search
-                          effort and is not credited against the sourcing fee.
+                  {card.byApplication ? (
+                    <>
+                      {/* By-application headline (no price) */}
+                      <div className="mt-5">
+                        <p className="font-display text-4xl text-charcoal" style={{ fontWeight: 400 }}>
+                          By Application
                         </p>
-                      </ExpandableSection>
-                      <Link
-                        href="/bespoke"
-                        className="block w-full rounded-lg bg-gold px-4 py-2.5 text-center text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
+                        <p className="mt-1 text-xs text-muted-light">
+                          Selective — limited projects per quarter
+                        </p>
+                      </div>
+
+                      {/* Details */}
+                      <div className="mt-4 space-y-2.5">
+                        <div>
+                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                            What it is
+                          </p>
+                          <p className="mt-0.5 text-sm text-muted-light">
+                            Fully managed HMO conversion — design, planning, build and handover,
+                            project-managed end to end.
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                            Availability
+                          </p>
+                          <p className="mt-0.5 text-sm text-muted-light">
+                            We take on a limited number of projects per quarter.
+                          </p>
+                        </div>
+                      </div>
+
+                      <button
+                        onClick={handleDevEnquiry}
+                        className="mt-5 block w-full rounded-lg bg-charcoal px-4 py-2.5 text-center text-sm font-bold text-white transition-colors hover:bg-charcoal/90"
                       >
-                        Get Started &rarr;
-                      </Link>
-                    </div>
+                        Apply / Enquire &rarr;
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      {/* Fee */}
+                      <div className="mt-5 flex items-baseline gap-2.5">
+                        <p className="font-display text-5xl text-charcoal" style={{ fontWeight: 400 }}>
+                          {card.fee}
+                        </p>
+                        <span className="rounded-full bg-gold/10 px-2 py-0.5 text-[0.65rem] font-semibold tracking-wide text-gold">
+                          VAT inc.
+                        </span>
+                      </div>
+                      <p className="mt-1 text-xs text-muted-light">{card.feeDetail}</p>
+
+                      {/* Details */}
+                      <div className="mt-4 space-y-2.5">
+                        <div>
+                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                            When you pay
+                          </p>
+                          <p className="mt-0.5 text-sm text-muted-light">{card.payment}</p>
+                        </div>
+                        <div>
+                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                            What&apos;s included
+                          </p>
+                          <p className="mt-0.5 text-sm text-muted-light">{card.includes}</p>
+                        </div>
+                      </div>
+
+                      {/* Reassurance */}
+                      <div className="mt-4 rounded-lg bg-warm-grey px-3 py-2">
+                        <p className="text-xs font-medium text-muted-light">{card.reassurance}</p>
+                      </div>
+
+                      {/* CTA */}
+                      {!card.expandable && (
+                        <button
+                          onClick={() => navigate("contact")}
+                          className="mt-4 block w-full rounded-lg bg-gold px-4 py-2.5 text-center text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
+                        >
+                          Speak to Us &rarr;
+                        </button>
+                      )}
+
+                      {/* Expandable for bespoke */}
+                      {card.expandable && (
+                        <div className="mt-4 space-y-3">
+                          <ExpandableSection trigger="How does bespoke sourcing work?">
+                            <p className="text-sm leading-relaxed text-muted-light">
+                              The £1,000 retainer locks our dedicated 14-day search to your brief —
+                              location, budget, strategy, and target returns. If we don&apos;t
+                              present a suitable deal in 14 days, the retainer is refundable
+                              (subject to terms). On presentation you have a 48-hour decision SLA,
+                              with extensions on fair, justified reasoning. If you decline with
+                              valid reasons, the £1,000 is also refundable. On a decision to
+                              proceed, the 2.4% sourcing fee (min £3,600, VAT inc.) is charged in
+                              addition to the retainer — the retainer covers our bespoke search
+                              effort and is not credited against the sourcing fee.
+                            </p>
+                          </ExpandableSection>
+                          <Link
+                            href="/bespoke"
+                            className="block w-full rounded-lg bg-gold px-4 py-2.5 text-center text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
+                          >
+                            Get Started &rarr;
+                          </Link>
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
                 </div>
@@ -170,6 +251,12 @@ export function Pricing() {
                 {card.popular && (
                   <span className="pointer-events-none absolute -top-3 right-5 z-20 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-gold to-gold-light px-3 py-1 text-[0.7rem] font-bold tracking-wide text-dark-bg shadow-[0_4px_14px_-2px_rgba(201,160,61,0.6)]">
                     ✦ Recommended
+                  </span>
+                )}
+
+                {card.byApplication && (
+                  <span className="pointer-events-none absolute -top-3 right-5 z-20 inline-flex items-center gap-1 rounded-full border border-gold/40 bg-charcoal px-3 py-1 text-[0.7rem] font-bold tracking-wide text-gold shadow-[0_4px_14px_-4px_rgba(38,40,44,0.6)]">
+                    By Application
                   </span>
                 )}
               </motion.div>

@@ -8,23 +8,21 @@ export const roleOptions = [
   "Other",
 ] as const
 
+// Brand leads with HMO + conversion-ready BRR. "Other" keeps the door open
+// without putting demoted strategies (R2R, SA, commercial conversion, flips)
+// front and centre.
 export const strategyOptions = [
-  "Buy-to-Let",
-  "Refurb & Refinance",
-  "Rent-to-Rent",
-  "Serviced Accommodation",
   "HMO",
-  "Flip",
-  "Bespoke Brief",
-  "Open to All",
+  "BRR / Conversion",
+  "Other",
 ] as const
 
 export const budgetOptions = [
-  "Under £50k",
-  "£50–100k",
-  "£100–200k",
-  "£200–500k",
-  "£500k+",
+  "Under £150k",
+  "£150–250k",
+  "£250–400k",
+  "£400–600k",
+  "£600k+",
 ] as const
 
 export const propertyTypeOptions = [
@@ -40,11 +38,15 @@ export const propertyTypeOptions = [
 export const hearAboutOptions = [
   "Instagram",
   "LinkedIn",
-  "WhatsApp",
+  "Mailing list",
   "Google",
   "Referral",
   "Other",
 ] as const
+
+// Investor brief path — "known" reveals optional brief fields, "unsure" skips
+// them in favour of a short call. Never used to gate submission.
+export const briefPathOptions = ["known", "unsure"] as const
 
 const baseSchema = z.object({
   fullName: z.string().min(1, "Full name is required"),
@@ -52,14 +54,19 @@ const baseSchema = z.object({
   phone: z.string().min(1, "Phone number is required"),
   role: z.enum(roleOptions, { message: "Please select your role" }),
   message: z.string().optional(),
-  whatsappBroadcast: z.boolean(),
+  mailingList: z.boolean(),
   hearAbout: z.string().optional(),
+  // Hidden — set when an enquiry arrives pre-tagged (e.g. Development Management).
+  enquiryType: z.string().optional(),
 })
 
 const investorFields = z.object({
+  briefPath: z.enum(briefPathOptions).optional(),
   strategy: z.string().optional(),
   budget: z.string().optional(),
   preferredAreas: z.string().optional(),
+  targetReturns: z.string().optional(),
+  timeline: z.string().optional(),
 })
 
 const sellerFields = z.object({

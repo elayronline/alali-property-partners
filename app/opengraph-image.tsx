@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
-export const alt = "Alali Property Partners — Property Deal Sourcing"
+export const alt = "Alali Property Partners — HMO & Conversion-Ready BRR Deal Sourcing"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -55,7 +55,7 @@ export default async function OGImage() {
             marginBottom: 40,
           }}
         >
-          Real Deals. Real Numbers. No Guesswork.
+          High-Yield HMOs &amp; Conversion-Ready Deals. Sourced for You.
         </div>
 
         {/* Description */}
@@ -69,8 +69,8 @@ export default async function OGImage() {
             lineHeight: 1.5,
           }}
         >
-          We find the right property deals for investors across London & the South of England
-          and work with compliant professionals to get them over the line.
+          Specialist sourcing of high-yield HMOs and conversion-ready BRR deals for investors across
+          Greater London & the South East — pre-auction, off-market and direct-to-vendor.
         </div>
 
         {/* Bottom strip */}

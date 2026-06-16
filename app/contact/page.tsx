@@ -4,9 +4,9 @@ import { ContactForm } from "@/components/ContactForm"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "Contact Us — Property Deal Sourcing Enquiries",
+  title: "Tell Us Your Brief — HMO & BRR Sourcing Enquiries",
   description:
-    "Contact Alali Property Partners — tell us what you're looking for or what you need to move. UK property deal sourcing, response within one working day.",
+    "Tell us your brief — specialist HMO and conversion-ready BRR sourcing across Greater London & the South East. Know what you want or not sure yet, either works. Response within one working day.",
   keywords: [
     "contact property sourcer UK",
     "property sourcing contact",

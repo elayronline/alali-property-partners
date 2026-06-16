@@ -4,9 +4,9 @@ import { WhyUs } from "@/components/WhyUs"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "Why Investors Choose Us for Property Deal Sourcing",
+  title: "Why Investors Choose Us for HMO & BRR Sourcing",
   description:
-    "Why investors choose us — verified deals, transparent fees, FCA-regulated team, complete deal packs. London & the South of England.",
+    "Why investors choose us — verified high-yield HMO and conversion-ready BRR deals, transparent fees, FCA-regulated team, complete deal packs. Greater London & the South East.",
   keywords: [
     "best property sourcer UK",
     "property sourcing company reviews",

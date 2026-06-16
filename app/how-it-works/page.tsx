@@ -4,19 +4,20 @@ import { HowItWorks } from "@/components/HowItWorks"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "How It Works — Property Deal Sourcing Process",
+  title: "How It Works — HMO & BRR Deal Sourcing Process",
   description:
-    "Our 4-step property deal sourcing process — pick a deal, secure it, get a full deal pack, move with confidence. London & the South of England.",
+    "Our 4-step HMO and conversion-ready BRR sourcing process — pick a deal, secure it, get a full deal pack, move with confidence. Greater London & the South East.",
   keywords: [
-    "how property deal sourcing works",
-    "property deal sourcing process",
-    "property sourcing steps UK",
+    "how HMO deal sourcing works",
+    "HMO sourcing process",
+    "BRR sourcing process",
+    "conversion-ready property sourcing",
     "deal pack contents",
     "48 hour decision SLA property sourcing",
+    "pre-auction property sourcing",
     "off-market property sourcing process",
-    "on-market property sourcing process",
-    "bespoke property sourcing",
-    "property sourcing England Wales",
+    "bespoke HMO property sourcing",
+    "property sourcing South East",
   ],
   alternates: { canonical: "/how-it-works" },
   openGraph: {

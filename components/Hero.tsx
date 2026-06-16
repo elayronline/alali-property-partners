@@ -7,7 +7,7 @@ import { useSmartNav } from "@/lib/smartNav"
 const trustStrip = [
   "Every deal verified before you see it",
   "Complete deal pack included",
-  "Greater London & the South of England",
+  "Greater London & the South East",
 ]
 
 export function Hero() {
@@ -67,9 +67,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="font-display text-[1.75rem] leading-[1.1] text-white sm:text-5xl lg:text-6xl"
         >
-          Real Deals. Real Numbers.{" "}
+          High-Yield HMOs &amp; Conversion-Ready Deals.{" "}
           <span className="bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">
-            No Guesswork.
+            Sourced for You.
           </span>
         </motion.h1>
 
@@ -79,8 +79,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/80 sm:mt-6 sm:text-lg"
         >
-          We source verified property deals across Greater London &amp; the South of England —
-          off-market and on-market — delivered ready to go with a complete deal pack.
+          We source verified HMO and BRR deals across Greater London and the South East —
+          pre-auction, off-market and direct-to-vendor — delivered ready to go with a complete
+          deal pack.
         </motion.p>
 
         <motion.div
@@ -93,12 +94,23 @@ export function Hero() {
             onClick={handleInvestorClick}
             className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-gold px-8 py-4 text-base font-semibold text-dark-bg transition-colors hover:bg-gold-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-dark-bg"
           >
-            Find Me a Deal
+            Tell Us Your Brief
           </button>
           <Button variant="secondary" size="large" onClick={handleSellerClick}>
             I Have a Property to Move
           </Button>
         </motion.div>
+
+        {/* Reassurance — keep "brief" from reading as a barrier */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="mx-auto mt-4 max-w-xl text-xs leading-relaxed text-white/55 sm:text-sm"
+        >
+          Know exactly what you want, or just know you want cashflow? Either works — we&apos;ll
+          shape the brief with you.
+        </motion.p>
 
         {/* Trust strip */}
         <motion.div

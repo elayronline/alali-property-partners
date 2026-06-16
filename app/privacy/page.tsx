@@ -91,9 +91,9 @@ export default function Privacy() {
             <li>Email address</li>
             <li>Phone number</li>
             <li>Your role (e.g. Investor, Property Owner, Estate Agent, Sourcer)</li>
-            <li>Investment preferences (strategy, budget, preferred areas) — if provided</li>
+            <li>Investment preferences (strategy, budget, target areas, target returns, timeline) — if provided</li>
             <li>Property details (address, asking price, property type, brief details) — if provided</li>
-            <li>Whether you opted into our WhatsApp broadcast</li>
+            <li>Whether you opted into our deal mailing list</li>
             <li>How you heard about us</li>
           </ul>
           <p className="mt-3 font-semibold text-charcoal">Automatically collected:</p>
@@ -109,8 +109,8 @@ export default function Privacy() {
           <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
             <li>To respond to your enquiry and discuss potential property deals</li>
             <li>To send you property opportunities that match your criteria</li>
-            <li>To add you to our WhatsApp Deal Broadcast (only if you opt in)</li>
-            <li>To contact you by phone, email, or WhatsApp regarding your enquiry</li>
+            <li>To add you to our deal mailing list (only if you opt in)</li>
+            <li>To contact you by phone or email regarding your enquiry</li>
             <li>To improve our website and services</li>
           </ul>
           <p className="mt-2">
@@ -128,7 +128,7 @@ export default function Privacy() {
           <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
             <li>
               <span className="font-semibold text-charcoal">Consent</span> — when you submit our
-              contact form or opt into our WhatsApp broadcast, you consent to us processing your data
+              contact form or opt into our deal mailing list, you consent to us processing your data
               for the stated purposes. You can withdraw consent at any time.
             </li>
             <li>
@@ -154,8 +154,8 @@ export default function Privacy() {
               may collect basic analytics data.
             </li>
             <li>
-              <span className="font-semibold text-charcoal">WhatsApp (Meta)</span> — used for our
-              deal broadcast group if you opt in.
+              <span className="font-semibold text-charcoal">Google (Google Sheets / Apps Script)</span>{" "}
+              — stores deal mailing list sign-ups if you opt in.
             </li>
           </ul>
           <p className="mt-2">
@@ -181,7 +181,7 @@ export default function Privacy() {
             <li>Access the personal data we hold about you</li>
             <li>Request correction of inaccurate data</li>
             <li>Request deletion of your data</li>
-            <li>Withdraw consent at any time (including opting out of our WhatsApp broadcast)</li>
+            <li>Withdraw consent at any time (including opting out of our deal mailing list)</li>
             <li>Object to processing based on legitimate interest</li>
             <li>Request a copy of your data in a portable format</li>
             <li>Lodge a complaint with the Information Commissioner&apos;s Office (ICO)</li>

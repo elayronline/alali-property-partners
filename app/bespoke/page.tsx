@@ -828,7 +828,7 @@ export default function BespokeSourcing() {
                             Target Location(s) <span className="text-gold">*</span>
                           </label>
                           <FormInput
-                            placeholder="e.g. Manchester, Birmingham, London, Bristol"
+                            placeholder="e.g. Croydon, Reading, Medway, South East London"
                             {...contractForm.register("targetLocations", { required: true })}
                           />
                           {contractForm.formState.errors.targetLocations && (
@@ -1686,7 +1686,7 @@ export default function BespokeSourcing() {
                                 <span className="text-gold">*</span>
                               </label>
                               <FormInput
-                                placeholder="e.g. Manchester, Birmingham, London, Bristol"
+                                placeholder="e.g. Croydon, Reading, Medway, South East London"
                                 {...requirementsForm.register("preferredAreas", {
                                   required: true,
                                 })}

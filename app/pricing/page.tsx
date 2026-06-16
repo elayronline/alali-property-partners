@@ -4,9 +4,9 @@ import { Pricing } from "@/components/Pricing"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "Property Sourcing Fees & Pricing",
+  title: "HMO & BRR Sourcing Fees & Pricing",
   description:
-    "Property sourcing fees: 2.4% (min £3,600, VAT inc.) on sourced deals; £1,000 retainer on bespoke. No hidden costs. Refundable where the deal isn't right.",
+    "HMO and conversion-ready BRR sourcing fees: 2.4% (min £3,600, VAT inc.) on sourced deals; £1,000 retainer on bespoke; development management by application. No hidden costs. Refundable where the deal isn't right.",
   keywords: [
     "property sourcing fees",
     "property sourcing cost UK",
@@ -134,7 +134,7 @@ const faqSchema = {
       name: "Are there any ongoing fees or contracts?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. There are no ongoing contracts, retainers, or lock-ins. You pay per deal. The WhatsApp deal broadcast is free.",
+        text: "No. There are no ongoing contracts, retainers, or lock-ins. You pay per deal. The deal mailing list is free.",
       },
     },
     {
@@ -199,8 +199,9 @@ export default function Page() {
               Property sourcing pricing
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">
-              No hidden costs, no ongoing contracts. Two ways to invest — each with transparent
-              fees, a clear decision window, and a refund mechanism if the deal isn&apos;t right.
+              No hidden costs, no ongoing contracts. Three ways to work with us — sourced deals,
+              bespoke sourcing, and development management by application — each with transparent
+              fees and a clear decision window.
             </p>
           </div>
         </section>

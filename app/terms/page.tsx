@@ -237,12 +237,12 @@ export default function Terms() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-charcoal">8. WhatsApp Broadcast</h2>
+          <h2 className="text-lg font-bold text-charcoal">8. Deal Mailing List</h2>
           <p className="mt-2">
-            Our WhatsApp Deal Broadcast is a free service. By joining, you consent to receiving
-            property deal notifications via WhatsApp. You can leave the broadcast at any time by
-            exiting the group or contacting us. We will never share your phone number with other
-            group members or third parties.
+            Our deal mailing list is a free service. By joining, you consent to receiving occasional
+            property deal notifications by email. You can unsubscribe at any time using the
+            unsubscribe option or by contacting us. We will never share your email address or other
+            details with third parties.
           </p>
         </section>
 

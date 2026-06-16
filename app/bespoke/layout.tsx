@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Bespoke Property Sourcing — Source to Your Brief",
   description:
-    "Bespoke property sourcing in London & the South of England — to your brief. £1,000 retainer, then 2.4% (min £3,600 VAT inc.). Residential & commercial.",
+    "Bespoke HMO, BRR and wider property sourcing across Greater London & the South East — to your brief. £1,000 retainer, then 2.4% (min £3,600 VAT inc.). Residential & commercial.",
   keywords: [
     "bespoke property sourcing",
     "custom property sourcing UK",

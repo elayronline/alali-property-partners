@@ -6,10 +6,11 @@ import { WhatWeSource } from "@/components/WhatWeSource"
 import { CoverageMap } from "@/components/CoverageMap"
 import { HowItWorks } from "@/components/HowItWorks"
 import { WhyUs } from "@/components/WhyUs"
-import { WhatsAppCTA } from "@/components/WhatsAppCTA"
+import { CaseStudy } from "@/components/CaseStudy"
 import { GotADeal } from "@/components/GotADeal"
 import { Pricing } from "@/components/Pricing"
 import { ContactForm } from "@/components/ContactForm"
+import { MailingList } from "@/components/MailingList"
 import { Footer } from "@/components/Footer"
 
 export function HomePage() {
@@ -21,10 +22,11 @@ export function HomePage() {
       <CoverageMap />
       <HowItWorks />
       <WhyUs />
+      <CaseStudy />
       <Pricing />
       <GotADeal />
-      <WhatsAppCTA />
       <ContactForm />
+      <MailingList />
       <Footer />
     </main>
   )

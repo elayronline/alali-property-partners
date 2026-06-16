@@ -28,11 +28,13 @@ export function ContactForm() {
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      whatsappBroadcast: true,
+      mailingList: true,
     },
   })
 
   const selectedRole = watch("role")
+  const briefPath = watch("briefPath")
+  const enquiryType = watch("enquiryType")
 
   const isInvestor = selectedRole === "Investor"
   const isSeller =
@@ -40,15 +42,40 @@ export function ContactForm() {
     selectedRole === "Estate Agent" ||
     selectedRole === "Sourcer"
 
-  // Listen for pre-selection events from CTAs
+  // Listen for pre-selection events from CTAs (role + optional enquiry tag).
   useEffect(() => {
-    const handler = (e: Event) => {
+    const roleHandler = (e: Event) => {
       const role = (e as CustomEvent).detail
       setValue("role", role)
       document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
     }
-    window.addEventListener("preselect-role", handler)
-    return () => window.removeEventListener("preselect-role", handler)
+    const enquiryHandler = (e: Event) => {
+      const type = (e as CustomEvent).detail
+      setValue("enquiryType", type)
+      setValue("role", "Investor")
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+    }
+    window.addEventListener("preselect-role", roleHandler)
+    window.addEventListener("preselect-enquiry", enquiryHandler)
+    return () => {
+      window.removeEventListener("preselect-role", roleHandler)
+      window.removeEventListener("preselect-enquiry", enquiryHandler)
+    }
+  }, [setValue])
+
+  // Pick up an enquiry/role tag passed via query param (cross-page CTAs,
+  // e.g. /contact?enquiry=Development%20Management).
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const enquiry = params.get("enquiry")
+    const role = params.get("role")
+    if (enquiry) {
+      setValue("enquiryType", enquiry)
+      setValue("role", "Investor")
+    }
+    if (role && (roleOptions as readonly string[]).includes(role)) {
+      setValue("role", role as ContactFormData["role"])
+    }
   }, [setValue])
 
   const onSubmit = async (data: ContactFormData) => {
@@ -60,7 +87,8 @@ export function ContactForm() {
 
     const formData = new FormData()
     formData.append("access_key", "4e50844e-651a-4107-9928-0fb0edd47d94")
-    formData.append("subject", `New Enquiry: ${data.fullName} (${data.role})`)
+    const subjectTag = data.enquiryType ? ` — ${data.enquiryType}` : ""
+    formData.append("subject", `New Enquiry: ${data.fullName} (${data.role})${subjectTag}`)
     formData.append("from_name", "Alali Property Partners")
     formData.append("replyto", data.email)
 
@@ -69,16 +97,25 @@ export function ContactForm() {
     formData.append("Email", data.email)
     formData.append("Phone", data.phone)
     formData.append("Role", data.role)
-    formData.append("WhatsApp Broadcast", data.whatsappBroadcast ? "Yes" : "No")
+    if (data.enquiryType) formData.append("Enquiry Type", data.enquiryType)
+    formData.append("Mailing List", data.mailingList ? "Yes" : "No")
 
     if (data.message) formData.append("Message", data.message)
     if (data.hearAbout) formData.append("Found Via", data.hearAbout)
 
     // Investor fields
     if (isInvestorRole) {
+      if (data.briefPath) {
+        formData.append(
+          "Brief",
+          data.briefPath === "known" ? "Knows what they want" : "Wants help shaping the brief",
+        )
+      }
       if (data.strategy) formData.append("Strategy", data.strategy)
       if (data.budget) formData.append("Budget", data.budget)
-      if (data.preferredAreas) formData.append("Preferred Areas", data.preferredAreas)
+      if (data.preferredAreas) formData.append("Target Areas", data.preferredAreas)
+      if (data.targetReturns) formData.append("Target Returns", data.targetReturns)
+      if (data.timeline) formData.append("Timeline", data.timeline)
     }
 
     // Seller fields
@@ -101,6 +138,15 @@ export function ContactForm() {
         return
       }
 
+      // Add to the deal mailing list if opted in (non-blocking).
+      if (data.mailingList) {
+        fetch("/api/mailing-list", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: data.email, name: data.fullName, source: "contact-form" }),
+        }).catch(() => {})
+      }
+
       // Send auto-reply thank you email
       const autoReply = new FormData()
       autoReply.append("access_key", "4e50844e-651a-4107-9928-0fb0edd47d94")
@@ -113,20 +159,19 @@ export function ContactForm() {
         <div style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;">
           <div style="background:#1a1a1a;padding:32px;border-radius:12px;">
             <h2 style="color:#c9a84c;margin-top:0;">Thanks for getting in touch, ${data.fullName}!</h2>
-            <p style="color:#fff;">We've received your enquiry and will be in touch within a few hours during business hours.</p>
+            <p style="color:#fff;">We've received your enquiry and will be in touch within one working day — usually faster.</p>
             <p style="color:#fff;">In the meantime, if you have any urgent questions, feel free to reply to this email.</p>
             ${
-              data.whatsappBroadcast
+              data.mailingList
                 ? `
-              <div style="margin-top:24px;padding:16px;background:#25D366;border-radius:8px;text-align:center;">
-                <p style="color:#fff;margin:0 0 8px 0;font-weight:bold;">Join our WhatsApp Deal Broadcast</p>
-                <p style="color:#fff;margin:0 0 12px 0;font-size:14px;">Verified property deals sent straight to your phone.</p>
-                <a href="https://chat.whatsapp.com/JHY65Dz00z44iH175xUcwS?mode=gi_t" style="display:inline-block;background:#fff;color:#25D366;font-weight:bold;padding:10px 24px;border-radius:6px;text-decoration:none;">Join WhatsApp Group</a>
+              <div style="margin-top:24px;padding:16px;background:#26282c;border:1px solid rgba(201,160,61,0.4);border-radius:8px;">
+                <p style="color:#c9a84c;margin:0 0 6px 0;font-weight:bold;">You're on the deal mailing list</p>
+                <p style="color:#fff;margin:0;font-size:14px;">We'll send occasional verified HMO and BRR opportunities across London and the South East. No spam — unsubscribe anytime.</p>
               </div>
             `
                 : ""
             }
-            <p style="color:#999;font-size:12px;margin-top:24px;">Alali Property Partners — Property Deal Sourcing across London &amp; the South of England</p>
+            <p style="color:#999;font-size:12px;margin-top:24px;">Alali Property Partners — Specialist HMO &amp; conversion-ready BRR sourcing across Greater London &amp; the South East</p>
           </div>
         </div>
         `,
@@ -155,7 +200,7 @@ export function ContactForm() {
               Thanks — we&apos;ll be in touch soon.
             </h2>
             <p className="mt-4 text-white/60">
-              We typically respond within a few hours during business hours. Check your inbox and WhatsApp.
+              We reply within one working day, usually faster. Keep an eye on your inbox.
             </p>
             <button
               onClick={() => reset()}
@@ -186,13 +231,14 @@ export function ContactForm() {
               07
             </span>
             <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
-            Get Started
+            Tell Us Your Brief
           </p>
           <h2 className="font-display mt-3 text-3xl text-white sm:text-5xl">
-            Let&apos;s start a conversation
+            Let&apos;s start with your brief
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-white/60">
-            Whether you&apos;re looking for deals or have a property to move — start here.
+            Know exactly what you want, or just know you want HMO cashflow? Either works — start here
+            and we&apos;ll shape the brief with you.
           </p>
         </motion.div>
 
@@ -206,6 +252,22 @@ export function ContactForm() {
             className="rounded-xl border border-white/10 bg-dark-bg-light p-4 sm:rounded-2xl sm:p-8"
           >
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            {/* Pre-tagged enquiry badge (e.g. Development Management) */}
+            {enquiryType && (
+              <div className="flex items-center justify-between gap-3 rounded-lg border border-gold/25 bg-gold/[0.06] px-4 py-2.5">
+                <p className="text-sm text-white/75">
+                  Enquiry: <span className="font-semibold text-gold">{enquiryType}</span>
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setValue("enquiryType", undefined)}
+                  className="cursor-pointer text-xs text-white/40 transition-colors hover:text-white/70"
+                >
+                  Clear
+                </button>
+              </div>
+            )}
+
             {/* Always visible fields */}
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
@@ -260,7 +322,7 @@ export function ContactForm() {
               </div>
             </div>
 
-            {/* Investor fields */}
+            {/* Investor brief — two-path intake */}
             <AnimatePresence>
               {isInvestor && (
                 <motion.div
@@ -271,40 +333,132 @@ export function ContactForm() {
                   className="overflow-hidden"
                 >
                   <div className="space-y-4 pt-2">
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <div>
-                        <label htmlFor="strategy" className="mb-1.5 block text-xs font-medium text-white/50">
-                          Strategy
-                        </label>
-                        <FormSelect
-                          id="strategy"
-                          options={strategyOptions}
-                          placeholderText="Select strategy"
-                          {...register("strategy")}
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="budget" className="mb-1.5 block text-xs font-medium text-white/50">
-                          Budget range
-                        </label>
-                        <FormSelect
-                          id="budget"
-                          options={budgetOptions}
-                          placeholderText="Select budget"
-                          {...register("budget")}
-                        />
-                      </div>
-                    </div>
+                    {/* Path chooser */}
                     <div>
-                      <label htmlFor="preferredAreas" className="mb-1.5 block text-xs font-medium text-white/50">
-                        Preferred area(s)
-                      </label>
-                      <FormInput
-                        id="preferredAreas"
-                        placeholder="e.g. Manchester, Birmingham, London, Bristol"
-                        {...register("preferredAreas")}
-                      />
+                      <p className="mb-2 text-xs font-medium text-white/50">
+                        Where are you up to?
+                      </p>
+                      <div className="grid gap-3 sm:grid-cols-2">
+                        {[
+                          { value: "known" as const, label: "I know what I'm looking for", hint: "Share your brief below" },
+                          { value: "unsure" as const, label: "Help me figure it out", hint: "Not sure yet — that's fine" },
+                        ].map((opt) => {
+                          const active = briefPath === opt.value
+                          return (
+                            <button
+                              key={opt.value}
+                              type="button"
+                              onClick={() => setValue("briefPath", opt.value)}
+                              className={`cursor-pointer rounded-xl border p-4 text-left transition-all duration-200 ${
+                                active
+                                  ? "border-gold bg-gold/10 shadow-[0_8px_24px_-10px_rgba(201,160,61,0.4)]"
+                                  : "border-white/10 hover:border-gold/40 hover:bg-white/[0.02]"
+                              }`}
+                            >
+                              <p className={`text-sm font-medium ${active ? "text-white" : "text-white/75"}`}>
+                                {opt.label}
+                              </p>
+                              <p className="mt-0.5 text-xs text-white/45">{opt.hint}</p>
+                            </button>
+                          )
+                        })}
+                      </div>
                     </div>
+
+                    {/* Known path — optional brief fields */}
+                    <AnimatePresence>
+                      {briefPath === "known" && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="space-y-4 pt-1">
+                            <p className="text-xs leading-relaxed text-white/45">
+                              All optional — share what you have. Not sure of your numbers? That&apos;s
+                              what the call is for.
+                            </p>
+                            <div className="grid gap-4 sm:grid-cols-2">
+                              <div>
+                                <label htmlFor="strategy" className="mb-1.5 block text-xs font-medium text-white/50">
+                                  Strategy
+                                </label>
+                                <FormSelect
+                                  id="strategy"
+                                  options={strategyOptions}
+                                  placeholderText="HMO, BRR / conversion, other"
+                                  {...register("strategy")}
+                                />
+                              </div>
+                              <div>
+                                <label htmlFor="budget" className="mb-1.5 block text-xs font-medium text-white/50">
+                                  Budget range
+                                </label>
+                                <FormSelect
+                                  id="budget"
+                                  options={budgetOptions}
+                                  placeholderText="Select budget"
+                                  {...register("budget")}
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <label htmlFor="preferredAreas" className="mb-1.5 block text-xs font-medium text-white/50">
+                                Location / target areas
+                              </label>
+                              <FormInput
+                                id="preferredAreas"
+                                placeholder="e.g. Croydon, Reading, Medway, South East London"
+                                {...register("preferredAreas")}
+                              />
+                            </div>
+                            <div className="grid gap-4 sm:grid-cols-2">
+                              <div>
+                                <label htmlFor="targetReturns" className="mb-1.5 block text-xs font-medium text-white/50">
+                                  Target returns
+                                </label>
+                                <FormInput
+                                  id="targetReturns"
+                                  placeholder="e.g. 10%+ gross yield"
+                                  {...register("targetReturns")}
+                                />
+                              </div>
+                              <div>
+                                <label htmlFor="timeline" className="mb-1.5 block text-xs font-medium text-white/50">
+                                  Timeline
+                                </label>
+                                <FormInput
+                                  id="timeline"
+                                  placeholder="e.g. ready to buy in 1–3 months"
+                                  {...register("timeline")}
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    {/* Unsure path — reassurance */}
+                    <AnimatePresence>
+                      {briefPath === "unsure" && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="rounded-xl border border-gold/15 bg-gold/[0.04] px-4 py-3.5">
+                            <p className="text-sm leading-relaxed text-white/65">
+                              No problem — we&apos;ll shape your strategy together on a short call.
+                            </p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 </motion.div>
               )}
@@ -387,12 +541,12 @@ export function ContactForm() {
             <div className="flex items-center gap-3 pt-2">
               <input
                 type="checkbox"
-                id="whatsapp-broadcast"
+                id="mailing-list"
                 className="h-4 w-4 shrink-0 cursor-pointer accent-gold"
-                {...register("whatsappBroadcast")}
+                {...register("mailingList")}
               />
-              <label htmlFor="whatsapp-broadcast" className="text-sm leading-snug text-white/50">
-                Add me to the free WhatsApp Deal Broadcast
+              <label htmlFor="mailing-list" className="text-sm leading-snug text-white/50">
+                Add me to the deal mailing list
               </label>
             </div>
 
@@ -463,7 +617,7 @@ export function ContactForm() {
                     n: "02",
                     title: "A short call to understand your brief",
                     detail:
-                      "15–20 minutes to talk strategy, budget, target areas, and timeline.",
+                      "15–20 minutes to talk strategy, budget, target areas, and timeline. Not sure of your numbers? That's what the call is for.",
                   },
                   {
                     n: "03",

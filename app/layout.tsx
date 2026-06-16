@@ -12,11 +12,11 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.alalipropertypartners.com"),
   title: {
-    default: "Alali Property Partners | Property Deal Sourcing — London & the South",
+    default: "Alali Property Partners | HMO & Conversion-Ready BRR Deal Sourcing — London & the South East",
     template: "%s | Alali Property Partners",
   },
   description:
-    "Property deal sourcing and introducer service across Greater London and the South of England. Off-market via our private contacts, on-market via our compliant agent network, and bespoke sourcing to your brief.",
+    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London and the South East. Pre-auction, off-market and direct-to-vendor, with HMO conversion and change-of-use potential — delivered with a complete deal pack.",
   applicationName: "Alali Property Partners",
   authors: [{ name: "Alali Property Partners Ltd" }],
   creator: "Alali Property Partners Ltd",
@@ -63,7 +63,7 @@ const businessSchema = {
   name: "Alali Property Partners",
   legalName: "Alali Property Partners Ltd",
   description:
-    "Property deal sourcing and introducer service covering Greater London and the South of England (the South East and Dorset). We find verified, high-yield property deals for investors and connect them with regulated professionals — off-market through private contacts, on-market through our compliant agent network, BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
+    "Specialist property deal sourcing covering Greater London and the South East. We source high-yield HMOs and conversion-ready BRR deals — properties with HMO conversion and change-of-use potential (permitted development, non-Article 4) — pre-auction, off-market and direct-to-vendor via a network of compliant agents, and connect investors with the regulated professionals they need.",
   url: "https://www.alalipropertypartners.com",
   telephone: "+442045158438",
   email: "contact@alalipropertypartners.com",
@@ -109,13 +109,15 @@ const businessSchema = {
     value: "2-10",
   },
   knowsAbout: [
-    "Property Deal Sourcing",
+    "HMO Property Sourcing",
+    "Houses in Multiple Occupation",
+    "Conversion-Ready BRR Deals",
+    "HMO Conversion & Change of Use",
+    "Permitted Development",
+    "Article 4 Areas",
+    "Pre-Auction Property",
+    "Off-Market Property Sourcing",
     "Below Market Value Properties",
-    "Buy to Let Investment",
-    "BRR Strategy",
-    "Rent to Rent",
-    "HMO Investment",
-    "Property Flipping",
   ],
 }
 
@@ -126,7 +128,7 @@ const websiteSchema = {
   name: "Alali Property Partners",
   url: "https://www.alalipropertypartners.com",
   description:
-    "Property deal sourcing service for investors across Greater London and the South of England. Off-market through private contacts, on-market through our compliant agent network, BTL, BRR, R2R, HMO, flips, and bespoke sourcing.",
+    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East. Pre-auction, off-market and direct-to-vendor, with HMO conversion and change-of-use potential.",
   publisher: {
     "@type": "Organization",
     name: "Alali Property Partners",

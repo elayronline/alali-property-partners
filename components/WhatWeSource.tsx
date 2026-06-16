@@ -13,15 +13,24 @@ const methods: Array<{ label: string; detail: string }> = [
   { label: "Probate", detail: "Motivated executors, quick sale" },
 ]
 
-const strategies: Array<{ label: string; detail: string }> = [
-  { label: "Buy-to-Let (BTL)", detail: "Single-family let, ~5–8% gross yield" },
-  { label: "Refurb & Refinance (BRR)", detail: "Recycle capital, accelerate portfolio" },
-  { label: "Rent-to-Rent (R2R)", detail: "Lease, sub-let, low capital required" },
-  { label: "Serviced Accommodation (SA)", detail: "Short-let, higher margin / occupancy risk" },
-  { label: "HMO (Houses in Multiple Occupation)", detail: "Per-room let, 8–12% gross yield" },
-  { label: "Flips", detail: "Buy, refurb, sell within 6–12 months" },
-  { label: "Commercial Conversion", detail: "Office / retail to residential" },
+// We lead with HMO + conversion-ready BRR — the two strategies the brand
+// specialises in. BTL stays as a secondary option; R2R, SA, commercial
+// conversion, and flips are no longer headline strategies.
+const primaryStrategies: Array<{ label: string; detail: string }> = [
+  {
+    label: "HMO (Houses in Multiple Occupation)",
+    detail: "Per-room let, 8–12% gross yield",
+  },
+  {
+    label: "BRR / Conversion-Ready",
+    detail:
+      "HMO conversion & change-of-use potential (permitted development, non-Article 4) — recycle your capital",
+  },
+]
+
+const otherStrategies: Array<{ label: string; detail: string }> = [
   { label: "Bespoke Briefs", detail: "We source to your exact criteria" },
+  { label: "Buy-to-Let (BTL)", detail: "Single-family let, ~5–8% gross yield" },
 ]
 
 const sellerSituations: Array<{ label: string; detail: string }> = [
@@ -119,10 +128,25 @@ export function WhatWeSource() {
           className="mt-10"
         >
           <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-gold/80">
-            Investment strategies we cover
+            What we specialise in
           </p>
-          <div className="flex flex-wrap justify-center gap-2.5">
-            {strategies.map((item) => (
+          {/* Primary strategies — featured */}
+          <div className="mx-auto grid max-w-2xl gap-3 sm:grid-cols-2">
+            {primaryStrategies.map((item) => (
+              <div
+                key={item.label}
+                className="rounded-xl border border-gold/30 bg-gradient-to-br from-gold/10 via-gold/[0.04] to-transparent p-4 text-left transition-all duration-300 md:hover:border-gold/60 md:hover:shadow-[0_10px_30px_-14px_rgba(201,160,61,0.4)]"
+              >
+                <p className="text-sm font-semibold text-white sm:text-base">{item.label}</p>
+                <p className="mt-1 text-xs leading-relaxed text-white/55 sm:text-sm">
+                  {item.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+          {/* Secondary strategies */}
+          <div className="mt-4 flex flex-wrap justify-center gap-2.5">
+            {otherStrategies.map((item) => (
               <DarkPill key={item.label} label={item.label} detail={item.detail} />
             ))}
           </div>
