@@ -94,13 +94,6 @@ export function CaseStudy() {
                     sizes="(max-width: 768px) 100vw, 360px"
                     className="object-cover"
                   />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-black/55 px-3 py-1 backdrop-blur-sm">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                    <span className="text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-white/85">
-                      Secured by client
-                    </span>
-                  </div>
                 </div>
               </div>
 
