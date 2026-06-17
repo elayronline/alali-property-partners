@@ -33,7 +33,7 @@ Decisions taken: **(P1-B)** keep "retainer" — rename declined; **(P0)** align 
 **Still open / needs you:**
 - **ICO registration number (P3):** cannot be added without the real number — I won't fabricate compliance data. Provide it and I'll add it to `/privacy`.
 - **Founding-year "inconsistency" (P3): non-issue.** `foundingDate: "2025"` (incorporated) and "© 2026" (current year) are both correct — no change needed.
-- **IA (optional):** the deeper split into a marketing `/bespoke` + gated `/bespoke/start` pay flow was *not* done (a "talk first" link was added instead). Raise if you want the full split.
+- **IA — RESOLVED a different way:** rather than split `/bespoke` into marketing + gated pay flow, the on-site payment/contract flow was **removed entirely**. The Tide payment link, the displayed legal agreement, signature pad, contract-PDF generation, and document-upload APIs are deleted; `/bespoke` 307-redirects to the contact form. Interested prospects now always reach the contact form first; payment and any agreement are handled off-site after a call. (Files removed: `app/bespoke/*`, `lib/generateContractPdf.ts`, `components/SignaturePad.tsx`, `app/api/upload-contract`, `app/api/upload-document`.)
 - **`/case-studies` is a single deal** — add more real dated deals as they complete; do not invent.
 
 ---
