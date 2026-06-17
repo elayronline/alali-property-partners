@@ -227,10 +227,6 @@ export function ContactForm() {
           className="text-center"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-            <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">
-              07
-            </span>
-            <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
             Tell Us Your Brief
           </p>
           <h2 className="font-display mt-3 text-3xl text-white sm:text-5xl">
