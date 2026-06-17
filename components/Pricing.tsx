@@ -23,17 +23,6 @@ type PricingCard = {
 
 const pricingCards: PricingCard[] = [
   {
-    title: "Bespoke Sourcing",
-    subtitle: "Sourced to your exact brief — fully hands-off sourcing",
-    fee: "£1,000",
-    feeDetail: "retainer + sourcing fee on completion",
-    payment: "Start with a quick call to confirm your brief. The £1,000 retainer then secures your dedicated 14-day search; sourcing fee on completion.",
-    includes: "Dedicated bespoke search + full deal pack + viewings facilitated",
-    reassurance: "Retainer refundable if no suitable deal in 14 days, or on valid reasons not to proceed (subject to terms).",
-    popular: true,
-    expandable: true,
-  },
-  {
     title: "Sourced Deals",
     subtitle: "Pre-auction, off-market and direct-to-vendor via our agent network",
     fee: "2.4%",
@@ -42,6 +31,17 @@ const pricingCards: PricingCard[] = [
     includes: "Full deal pack + viewings and introductions facilitated",
     reassurance: "Unlock fee refundable on valid reasons not to proceed (subject to terms).",
     popular: false,
+  },
+  {
+    title: "Bespoke Sourcing",
+    subtitle: "Sourced to your exact brief — fully hands-off sourcing",
+    fee: "£1,000 + 2.4%",
+    feeDetail: "retainer + sourcing fee · min £3,600",
+    payment: "Start with a quick call to confirm your brief. The £1,000 retainer then secures your dedicated 14-day search; sourcing fee on completion.",
+    includes: "Dedicated bespoke search + full deal pack + viewings facilitated",
+    reassurance: "Retainer refundable if no suitable deal in 14 days, or on valid reasons not to proceed (subject to terms).",
+    popular: true,
+    expandable: true,
   },
   {
     title: "Source & Develop",
@@ -177,8 +177,8 @@ export function Pricing() {
                   ) : (
                     <>
                       {/* Fee */}
-                      <div className="mt-5 flex items-baseline gap-2.5">
-                        <p className="font-display text-5xl text-white" style={{ fontWeight: 400 }}>
+                      <div className="mt-5 flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+                        <p className="font-display text-4xl text-white" style={{ fontWeight: 400 }}>
                           {card.fee}
                         </p>
                         <span className="rounded-full bg-gold/10 px-2 py-0.5 text-[0.65rem] font-semibold tracking-wide text-gold">
@@ -251,7 +251,7 @@ export function Pricing() {
 
                 {card.popular && (
                   <span className="pointer-events-none absolute -top-3 right-5 z-20 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-gold to-gold-light px-3 py-1 text-[0.7rem] font-bold tracking-wide text-dark-bg shadow-[0_4px_14px_-2px_rgba(201,160,61,0.6)]">
-                    ✦ Recommended
+                    Most Popular
                   </span>
                 )}
 
