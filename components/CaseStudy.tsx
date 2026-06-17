@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { MapPin } from "lucide-react"
 import { SectionDivider } from "@/components/ui/SectionDivider"
@@ -65,11 +66,22 @@ export function CaseStudy() {
             />
 
             <div className="relative">
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
-                <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                  Hampshire
-                </span>
+              <div className="flex items-start justify-between gap-4">
+                <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
+                  <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                    Hampshire
+                  </span>
+                </div>
+
+                {/* The sourced property */}
+                <Image
+                  src="/hampshire-deal.jpg"
+                  alt="The four-bed property sourced pre-auction in Hampshire"
+                  width={700}
+                  height={700}
+                  className="h-24 w-24 shrink-0 rounded-2xl border border-white/15 object-cover shadow-lg shadow-black/30 sm:h-32 sm:w-32"
+                />
               </div>
 
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
