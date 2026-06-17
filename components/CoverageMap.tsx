@@ -7,8 +7,8 @@ import { SectionDivider } from "@/components/ui/SectionDivider"
 // County label positions as a % of the rendered map image (computed from the
 // real Ordnance Survey county geometry in public/coverage-map.png).
 const labels: { name: string; x: number; y: number }[] = [
-  { name: "Oxfordshire", x: 38.4, y: 25 },
-  { name: "Buckinghamshire", x: 48.8, y: 23.4 },
+  { name: "Oxfordshire", x: 30, y: 29 },
+  { name: "Bucks", x: 50, y: 21 },
   { name: "Berkshire", x: 43.9, y: 44.6 },
   { name: "London", x: 64.3, y: 42.7 },
   { name: "Surrey", x: 57.7, y: 54.6 },
