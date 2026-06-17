@@ -55,7 +55,7 @@ export function GotADeal() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-display mt-3 text-3xl tracking-tight text-charcoal sm:text-5xl"
+              className="font-display mt-3 text-3xl tracking-tight text-white sm:text-5xl"
             >
               Got a property that needs a buyer?
             </motion.h2>
@@ -102,7 +102,7 @@ export function GotADeal() {
             transition={{ delay: 0.15 }}
             className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gold/20 via-gold/8 to-gold/20 p-[1px] shadow-sm md:hover:shadow-[0_15px_40px_-12px_rgba(201,160,61,0.25)]"
           >
-            <div className="rounded-[calc(1rem-1px)] bg-white p-6 sm:p-8">
+            <div className="rounded-[calc(1rem-1px)] bg-ink-raised p-6 sm:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold/80">
                 Owner / Agent snapshot
               </p>
@@ -121,7 +121,7 @@ export function GotADeal() {
                       <s.icon className="h-4 w-4 text-gold" strokeWidth={1.5} />
                     </span>
                     <div>
-                      <p className="font-display text-base tracking-tight text-charcoal">
+                      <p className="font-display text-base tracking-tight text-white">
                         {s.label}
                       </p>
                       <p className="mt-1 text-xs leading-relaxed text-muted-light">

@@ -67,7 +67,7 @@ export function Navbar() {
           className="cursor-pointer"
           aria-label="Alali Property Partners — back to top"
         >
-          <Logo markSize={34} />
+          <Logo height={38} />
         </Link>
 
         {/* Desktop nav */}

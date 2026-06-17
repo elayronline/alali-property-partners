@@ -18,7 +18,7 @@ export function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]">
           {/* Brand + intro */}
           <div>
-            <Logo markSize={42} />
+            <Logo height={50} />
             <p className="mt-7 max-w-sm text-sm leading-relaxed text-white/55">
               Specialist sourcing of high-yield HMO and conversion-ready BRR deals across Greater
               London and the South East. We connect investors with verified deals and the regulated

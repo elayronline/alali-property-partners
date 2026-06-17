@@ -20,7 +20,7 @@ const cards = [
 
 export function WhatWeSource() {
   return (
-    <section id="what-we-source" className="bg-cream px-4 py-24 sm:px-6 sm:py-28">
+    <section id="what-we-source" className="bg-ink px-4 py-24 sm:px-6 sm:py-28">
       <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[0.9fr_1.4fr] lg:gap-16">
         {/* Heading */}
         <motion.div
@@ -29,7 +29,7 @@ export function WhatWeSource() {
           viewport={{ once: true }}
         >
           <p className="text-xs font-semibold uppercase tracking-luxe text-gold">What We Source</p>
-          <h2 className="font-display mt-5 text-4xl leading-[1.1] text-ink sm:text-5xl">
+          <h2 className="font-display mt-5 text-3xl leading-[1.12] text-white sm:text-4xl">
             We source the right opportunities. You build the portfolio.
           </h2>
         </motion.div>
@@ -43,12 +43,12 @@ export function WhatWeSource() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group rounded-sm border border-ink/10 bg-white p-7 shadow-[0_10px_40px_-24px_rgba(20,17,12,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_20px_50px_-24px_rgba(201,160,61,0.4)] sm:p-8"
+              className="group rounded-sm border border-white/10 bg-ink-raised p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_20px_50px_-24px_rgba(201,160,61,0.4)] sm:p-8"
             >
               <card.icon className="h-9 w-9 text-gold" strokeWidth={1.25} />
-              <h3 className="font-display mt-6 text-2xl text-ink">{card.title}</h3>
+              <h3 className="font-display mt-6 text-xl text-white">{card.title}</h3>
               <div className="mt-3 h-px w-10 bg-gold/60" />
-              <p className="mt-4 text-sm leading-relaxed text-ink/60">{card.detail}</p>
+              <p className="mt-4 text-sm leading-relaxed text-white/60">{card.detail}</p>
             </motion.div>
           ))}
         </div>

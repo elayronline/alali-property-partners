@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Raleway, Playfair_Display } from "next/font/google"
+import { Raleway, Montserrat } from "next/font/google"
 import "./globals.css"
 
 const raleway = Raleway({
@@ -9,12 +9,11 @@ const raleway = Raleway({
   style: ["normal", "italic"],
 })
 
-// Serif display face for the luxury-editorial headlines in the refreshed design.
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+// Bold geometric sans for display headings — matches the Alali brand collateral.
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["500", "600", "700", "800"],
 })
 
 export const metadata: Metadata = {
@@ -160,7 +159,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={`${raleway.variable} ${playfair.variable} antialiased`}>{children}</body>
+      <body className={`${raleway.variable} ${montserrat.variable} antialiased`}>{children}</body>
     </html>
   )
 }

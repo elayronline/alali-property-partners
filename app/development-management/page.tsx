@@ -187,7 +187,7 @@ export default function Page() {
         <section className="bg-warm-grey px-4 py-20 sm:px-6 sm:py-28">
           <SectionDivider variant="light" className="mb-16" />
           <div className="mx-auto max-w-5xl">
-            <h2 className="font-display text-center text-3xl text-charcoal sm:text-4xl">
+            <h2 className="font-display text-center text-3xl text-white sm:text-4xl">
               End to end, project-managed
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-center text-sm text-muted-light">
@@ -196,9 +196,9 @@ export default function Page() {
             </p>
             <div className="mt-14 grid gap-6 sm:grid-cols-2">
               {stages.map((s) => (
-                <div key={s.step} className="rounded-2xl border border-gold/15 bg-white p-6 shadow-sm">
+                <div key={s.step} className="rounded-2xl border border-gold/15 bg-ink-raised p-6 shadow-sm">
                   <span className="font-display text-3xl text-gold/30">{s.step}</span>
-                  <h3 className="font-display mt-2 text-xl tracking-tight text-charcoal">{s.title}</h3>
+                  <h3 className="font-display mt-2 text-xl tracking-tight text-white">{s.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-light">{s.detail}</p>
                 </div>
               ))}

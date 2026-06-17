@@ -3,19 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #1E293B;
-  --dark-bg: #14110C;
-  --dark-bg-light: #20190F;
+  --dark-bg: #0E1013;
+  --dark-bg-light: #191D24;
   --gold: #C9A03D;
   --gold-dark: #A87D1A;
   --gold-light: #DEBB5C;
   --muted-light: #9CA3AF;
   --muted-dark: #A1A1AA;
-  --warm-grey: #F4F1EA;
+  --warm-grey: #0E1116;
   --charcoal: #1E293B;
-  /* Warm editorial neutrals for the refreshed light sections */
-  --cream: #F4F1EA;
-  --cream-deep: #EDE8DD;
-  --ink: #14110C;
+  /* Cool dark charcoal — the single brand surface (matches the logo + collateral) */
+  --ink: #0E1013;
+  --ink-raised: #191D24;
 }
 
 @theme inline {
@@ -30,19 +29,18 @@
   --color-muted-dark: var(--muted-dark);
   --color-warm-grey: var(--warm-grey);
   --color-charcoal: var(--charcoal);
-  --color-cream: var(--cream);
-  --color-cream-deep: var(--cream-deep);
   --color-ink: var(--ink);
+  --color-ink-raised: var(--ink-raised);
   --font-sans: var(--font-raleway);
-  --font-serif: var(--font-playfair);
+  --font-display: var(--font-montserrat);
 }
 
-/* Display heading style — luxury-editorial serif (Playfair Display) for the
-   refreshed brand. Single family across the site = consistent brand. */
+/* Display heading style — bold geometric sans (Montserrat), matching the Alali
+   brand collateral. Single family across the site = one consistent brand. */
 .font-display {
-  font-family: var(--font-playfair), Georgia, "Times New Roman", serif;
-  font-weight: 500;
-  letter-spacing: -0.005em;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 /* Uppercase letter-spaced eyebrow / button label */
