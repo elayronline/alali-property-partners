@@ -66,31 +66,43 @@ export function CaseStudy() {
             />
 
             <div className="relative">
-              <div className="flex items-start justify-between gap-4">
-                <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
-                  <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                    Hampshire
-                  </span>
+              {/* Top: brief + property photo side by side */}
+              <div className="grid items-stretch gap-7 md:grid-cols-[1.45fr_1fr]">
+                <div>
+                  <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
+                    <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
+                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                      Hampshire
+                    </span>
+                  </div>
+
+                  <p className="mt-5 text-lg leading-relaxed text-white/85 sm:text-xl">
+                    Sourced a 4-bed pre-auction property in Hampshire in under 14 days, 10% below our
+                    client&apos;s budget. Being converted into a 6-bed HMO under permitted development
+                    in a non-Article 4 area, projected{" "}
+                    <span className="font-semibold text-gold">£700–900 per room, per month</span>,
+                    with capital pulled back out for the next build.
+                  </p>
                 </div>
 
                 {/* The sourced property */}
-                <Image
-                  src="/hampshire-deal.jpg"
-                  alt="The four-bed property sourced pre-auction in Hampshire"
-                  width={700}
-                  height={700}
-                  className="h-24 w-24 shrink-0 rounded-2xl border border-white/15 object-cover shadow-lg shadow-black/30 sm:h-32 sm:w-32"
-                />
+                <div className="relative min-h-[200px] overflow-hidden rounded-2xl border border-white/10 shadow-lg shadow-black/40">
+                  <Image
+                    src="/hampshire-deal.jpg"
+                    alt="The four-bed property sourced pre-auction in Hampshire"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 360px"
+                    className="object-cover"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-3 inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-black/55 px-3 py-1 backdrop-blur-sm">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                    <span className="text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-white/85">
+                      Secured by client
+                    </span>
+                  </div>
+                </div>
               </div>
-
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
-                Sourced a 4-bed pre-auction property in Hampshire in under 14 days, 10% below our
-                client&apos;s budget. Being converted into a 6-bed HMO under permitted development
-                in a non-Article 4 area, projected{" "}
-                <span className="font-semibold text-gold">£700–900 per room, per month</span>, with
-                capital pulled back out for the next build.
-              </p>
 
               {/* Stat strip */}
               <div className="mt-8 grid gap-px overflow-hidden rounded-xl border border-white/10 bg-white/5 sm:grid-cols-3">
