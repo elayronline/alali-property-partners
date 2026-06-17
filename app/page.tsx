@@ -98,7 +98,7 @@ const serviceSchema = {
         "@type": "Offer",
         name: "Development Management",
         description:
-          "Fully managed HMO conversion — design, planning, build and handover, project-managed end to end. A selective service offered by application; we take on a limited number of projects per quarter. Price on application.",
+          "Our complete service: we source the property to your brief, then manage the full HMO conversion — design, planning, build and handover, end to end. A selective service offered by application; we take on a limited number of projects per quarter. Price on application.",
         availability: "https://schema.org/LimitedAvailability",
       },
     ],

@@ -45,7 +45,7 @@ const pricingCards: PricingCard[] = [
   },
   {
     title: "Development Management",
-    subtitle: "Fully managed HMO conversion, end to end",
+    subtitle: "Sourced and converted, end to end",
     byApplication: true,
   },
 ]
@@ -153,8 +153,8 @@ export function Pricing() {
                             What it is
                           </p>
                           <p className="mt-0.5 text-sm text-muted-light">
-                            Fully managed HMO conversion — design, planning, build and handover,
-                            project-managed end to end.
+                            We source the property to your brief, then manage the full HMO
+                            conversion — design, planning, build and handover. End to end.
                           </p>
                         </div>
                         <div>
