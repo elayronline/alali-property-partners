@@ -7,16 +7,16 @@ import { SectionDivider } from "@/components/ui/SectionDivider"
 // County label positions as a % of the rendered map image (computed from the
 // real Ordnance Survey county geometry in public/coverage-map.png).
 const labels: { name: string; x: number; y: number }[] = [
-  { name: "Oxfordshire", x: 30, y: 29 },
-  { name: "Bucks", x: 50, y: 21 },
-  { name: "Berkshire", x: 43.9, y: 44.6 },
-  { name: "London", x: 64.3, y: 42.7 },
-  { name: "Surrey", x: 57.7, y: 54.6 },
-  { name: "Kent", x: 82.2, y: 58.1 },
-  { name: "Hampshire", x: 37.4, y: 66.9 },
-  { name: "West Sussex", x: 56.4, y: 72.5 },
-  { name: "East Sussex", x: 72.9, y: 72.7 },
-  { name: "Dorset", x: 16.4, y: 80.5 },
+  { name: "Oxfordshire", x: 36, y: 29 },
+  { name: "Buckinghamshire", x: 51, y: 19 },
+  { name: "Berkshire", x: 43.3, y: 44.8 },
+  { name: "London", x: 63.8, y: 42.2 },
+  { name: "Surrey", x: 57, y: 56 },
+  { name: "Kent", x: 81.9, y: 56.6 },
+  { name: "Hampshire", x: 38.3, y: 66.7 },
+  { name: "West Sussex", x: 55.6, y: 71.9 },
+  { name: "East Sussex", x: 71.8, y: 73.3 },
+  { name: "Dorset", x: 16.5, y: 80.3 },
 ]
 
 export function CoverageMap() {
