@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     "property sourcing Oxfordshire",
     "property sourcing Buckinghamshire",
     "property sourcing Dorset",
+    "property sourcing Somerset",
     "HMO sourcing for investors",
   ],
   alternates: {
@@ -72,6 +73,7 @@ const serviceSchema = {
     { "@type": "AdministrativeArea", name: "Greater London" },
     { "@type": "AdministrativeArea", name: "South East England" },
     { "@type": "AdministrativeArea", name: "Dorset" },
+    { "@type": "AdministrativeArea", name: "Somerset" },
   ],
   serviceType: "Property Deal Sourcing",
   hasOfferCatalog: {
@@ -151,7 +153,7 @@ const faqSchema = {
       name: "What areas do you cover for property deal sourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We cover Greater London and the South of England — Surrey, Kent, East and West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, and Dorset. We source off-market deals through our private contacts and on-market deals through our compliant agent network — or tell us what you're looking for and we'll source to your brief.",
+        text: "We cover Greater London and the South of England — Surrey, Kent, East and West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Dorset, and Somerset. We source off-market deals through our private contacts and on-market deals through our compliant agent network — or tell us what you're looking for and we'll source to your brief.",
       },
     },
     {

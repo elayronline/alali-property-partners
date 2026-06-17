@@ -7,16 +7,17 @@ import { SectionDivider } from "@/components/ui/SectionDivider"
 // County label positions as a % of the rendered map image (computed from the
 // real Ordnance Survey county geometry in public/coverage-map.png).
 const labels: { name: string; x: number; y: number }[] = [
-  { name: "Oxfordshire", x: 36, y: 29 },
-  { name: "Buckinghamshire", x: 51, y: 19 },
-  { name: "Berkshire", x: 43.3, y: 44.8 },
-  { name: "London", x: 63.8, y: 42.2 },
-  { name: "Surrey", x: 57, y: 56 },
-  { name: "Kent", x: 81.9, y: 56.6 },
-  { name: "Hampshire", x: 38.3, y: 66.7 },
-  { name: "West Sussex", x: 55.6, y: 71.9 },
-  { name: "East Sussex", x: 71.8, y: 73.3 },
-  { name: "Dorset", x: 16.5, y: 80.3 },
+  { name: "Oxfordshire", x: 47, y: 27 },
+  { name: "Buckinghamshire", x: 58, y: 16 },
+  { name: "Berkshire", x: 52.3, y: 44.8 },
+  { name: "London", x: 69.6, y: 42.1 },
+  { name: "Surrey", x: 63.8, y: 56 },
+  { name: "Kent", x: 84.8, y: 56.6 },
+  { name: "Hampshire", x: 47.9, y: 66.9 },
+  { name: "West Sussex", x: 62.7, y: 71.8 },
+  { name: "East Sussex", x: 76.2, y: 73.5 },
+  { name: "Somerset", x: 19.3, y: 61.3 },
+  { name: "Dorset", x: 29.9, y: 80.8 },
 ]
 
 export function CoverageMap() {
@@ -67,9 +68,9 @@ export function CoverageMap() {
         >
           <Image
             src="/coverage-map.png"
-            alt="Map of the counties we cover — Greater London, Surrey, Kent, East and West Sussex, Hampshire, Dorset, Berkshire, Oxfordshire and Buckinghamshire"
-            width={1300}
-            height={867}
+            alt="Map of the counties we cover — Greater London, Surrey, Kent, East and West Sussex, Hampshire, Dorset, Somerset, Berkshire, Oxfordshire and Buckinghamshire"
+            width={1400}
+            height={785}
             className="h-auto w-full"
             priority={false}
           />
