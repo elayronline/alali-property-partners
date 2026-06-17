@@ -207,7 +207,7 @@ export function HowItWorks() {
           </div>
           <div className="flex shrink-0 items-center gap-3">
             <Link
-              href="/bespoke"
+              href="/contact?enquiry=Bespoke%20Sourcing"
               className="rounded-full bg-gold px-4 py-2 text-xs font-semibold text-dark-bg transition-colors hover:bg-gold-light"
             >
               Bespoke Sourcing

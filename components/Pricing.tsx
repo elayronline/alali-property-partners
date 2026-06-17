@@ -235,7 +235,7 @@ export function Pricing() {
                             </p>
                           </ExpandableSection>
                           <Link
-                            href="/bespoke"
+                            href="/contact?enquiry=Bespoke%20Sourcing"
                             className="block w-full rounded-lg bg-gold px-4 py-2.5 text-center text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
                           >
                             Get Started &rarr;

@@ -107,7 +107,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/bespoke" className="transition-colors hover:text-gold">
+                <Link href="/contact?enquiry=Bespoke%20Sourcing" className="transition-colors hover:text-gold">
                   Bespoke Sourcing
                 </Link>
               </li>
