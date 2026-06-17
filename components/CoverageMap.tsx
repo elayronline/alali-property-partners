@@ -3,51 +3,32 @@
 import { motion } from "framer-motion"
 import { SectionDivider } from "@/components/ui/SectionDivider"
 
-// City positions on the 420x600 SVG viewBox.
-// Mapped from real lat/long for a London + South East + Dorset constellation.
-// labelAnchor / labelDx / labelDy let us nudge labels for clarity at edges
-// and resolve collisions between near-neighbours.
-type City = {
+// County positions on the 420x600 SVG viewBox — a London + South East + Dorset
+// constellation. anchor / dx / dy nudge labels to avoid collisions and edges.
+type County = {
   name: string
   x: number
   y: number
-  region: string
   hub?: boolean
-  labelAnchor?: "start" | "end"
-  labelDx?: number
-  labelDy?: number
+  anchor?: "start" | "end"
+  dx?: number
+  dy?: number
 }
 
-const cities: City[] = [
-  { name: "Milton Keynes", x: 199, y: 89, region: "Buckinghamshire" },
-  { name: "Oxford", x: 159, y: 174, region: "Oxfordshire" },
-  { name: "Reading", x: 182, y: 262, region: "Berkshire" },
-  { name: "London", x: 250, y: 247, region: "Greater London", hub: true },
-  // Maidstone & Canterbury sit on the same latitude — bump Maidstone's label up,
-  // Canterbury's label down to avoid collision.
-  { name: "Maidstone", x: 302, y: 314, region: "Kent", labelDy: -7 },
-  { name: "Canterbury", x: 346, y: 311, region: "Kent", labelDy: 12 },
-  { name: "Guildford", x: 214, y: 323, region: "Surrey" },
-  { name: "Southampton", x: 148, y: 420, region: "Hampshire" },
-  { name: "Portsmouth", x: 173, y: 446, region: "Hampshire" },
-  { name: "Brighton", x: 249, y: 462, region: "East Sussex" },
-  { name: "Bournemouth", x: 110, y: 478, region: "Dorset" },
+const counties: County[] = [
+  { name: "Buckinghamshire", x: 208, y: 80, anchor: "start" },
+  { name: "Oxfordshire", x: 150, y: 168, anchor: "end" },
+  { name: "Berkshire", x: 176, y: 258, anchor: "end" },
+  { name: "Greater London", x: 256, y: 248, hub: true, anchor: "start" },
+  { name: "Kent", x: 330, y: 300, anchor: "start" },
+  { name: "Surrey", x: 222, y: 342, anchor: "start", dy: 3 },
+  { name: "Hampshire", x: 146, y: 412, anchor: "end" },
+  { name: "West Sussex", x: 214, y: 470, anchor: "end", dy: 4 },
+  { name: "East Sussex", x: 286, y: 452, anchor: "start" },
+  { name: "Dorset", x: 108, y: 492, anchor: "end" },
 ]
 
-const hub = cities.find((c) => c.hub)!
-
-const regions = [
-  "Greater London",
-  "Surrey",
-  "Kent",
-  "East Sussex",
-  "West Sussex",
-  "Hampshire",
-  "Dorset",
-  "Berkshire",
-  "Oxfordshire",
-  "Buckinghamshire",
-]
+const hub = counties.find((c) => c.hub)!
 
 export function CoverageMap() {
   return (
@@ -59,17 +40,13 @@ export function CoverageMap() {
 
       <SectionDivider variant="dark" className="relative mb-16" />
 
-      <div className="relative mx-auto max-w-5xl">
+      <div className="relative mx-auto max-w-3xl">
         <motion.p
           initial={{ y: 8 }}
           whileInView={{ y: 0 }}
           viewport={{ once: true }}
-          className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gold"
+          className="text-center text-xs font-semibold uppercase tracking-luxe text-gold"
         >
-          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">
-            02
-          </span>
-          <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
           Where We Operate
         </motion.p>
 
@@ -91,136 +68,112 @@ export function CoverageMap() {
           We go deep in the areas we know, rather than spread thin across the country.
         </motion.p>
 
-        <div className="mt-14 grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
-          {/* Map */}
-          <motion.div
-            initial={{ opacity: 0.6, scale: 0.96 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative mx-auto w-full max-w-md"
+        {/* County map */}
+        <motion.div
+          initial={{ opacity: 0.6, scale: 0.96 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative mx-auto mt-14 w-full max-w-lg"
+        >
+          <svg
+            viewBox="0 0 420 600"
+            className="h-auto w-full"
+            role="img"
+            aria-label="Map of the counties we cover across Greater London and the South of England"
           >
-            <svg
-              viewBox="0 0 420 600"
-              className="h-auto w-full"
-              role="img"
-              aria-label="Map of Greater London, South East England, and Dorset with major property investment cities highlighted"
-            >
-              <defs>
-                <radialGradient id="hubGlow" cx="0.5" cy="0.5" r="0.5">
-                  <stop offset="0%" stopColor="rgba(201,160,61,0.4)" />
-                  <stop offset="100%" stopColor="rgba(201,160,61,0)" />
-                </radialGradient>
-                <linearGradient id="lineFade" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="rgba(201,160,61,0.5)" />
-                  <stop offset="100%" stopColor="rgba(201,160,61,0.12)" />
-                </linearGradient>
-              </defs>
+            <defs>
+              <radialGradient id="hubGlow" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0%" stopColor="rgba(201,160,61,0.4)" />
+                <stop offset="100%" stopColor="rgba(201,160,61,0)" />
+              </radialGradient>
+              <linearGradient id="lineFade" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(201,160,61,0.5)" />
+                <stop offset="100%" stopColor="rgba(201,160,61,0.12)" />
+              </linearGradient>
+            </defs>
 
-              {/* Region anchor — soft elliptical glow, no false geography */}
-              <ellipse
-                cx="215"
-                cy="290"
-                rx="190"
-                ry="225"
-                fill="rgba(201,160,61,0.025)"
-              />
+            {/* Soft elliptical glow anchoring the region — no false geography */}
+            <ellipse cx="215" cy="290" rx="190" ry="225" fill="rgba(201,160,61,0.025)" />
 
-              {/* Radiating lines from London to every other city */}
-              <g opacity="0.55">
-                {cities
-                  .filter((c) => !c.hub)
-                  .map((c) => (
-                    <line
-                      key={`line-${c.name}`}
-                      x1={hub.x}
-                      y1={hub.y}
-                      x2={c.x}
-                      y2={c.y}
-                      stroke="url(#lineFade)"
-                      strokeWidth="0.6"
-                    />
-                  ))}
-              </g>
-
-              {/* London hub glow */}
-              <circle cx={hub.x} cy={hub.y} r="42" fill="url(#hubGlow)" />
-
-              {/* City dots */}
-              {cities.map((c, i) => (
-                <g key={c.name}>
-                  {/* Pulse ring */}
-                  <circle
-                    cx={c.x}
-                    cy={c.y}
-                    r={c.hub ? 6 : 4}
-                    fill="rgba(201,160,61,0.5)"
-                  >
-                    <animate
-                      attributeName="r"
-                      values={c.hub ? "6;16;6" : "4;10;4"}
-                      dur={`${2.2 + (i % 4) * 0.3}s`}
-                      repeatCount="indefinite"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      values="0.6;0;0.6"
-                      dur={`${2.2 + (i % 4) * 0.3}s`}
-                      repeatCount="indefinite"
-                    />
-                  </circle>
-                  {/* Solid dot */}
-                  <circle
-                    cx={c.x}
-                    cy={c.y}
-                    r={c.hub ? 5 : 3.5}
-                    fill={c.hub ? "#DEBB5C" : "#C9A03D"}
+            {/* Radiating lines from the London hub */}
+            <g opacity="0.55">
+              {counties
+                .filter((c) => !c.hub)
+                .map((c) => (
+                  <line
+                    key={`line-${c.name}`}
+                    x1={hub.x}
+                    y1={hub.y}
+                    x2={c.x}
+                    y2={c.y}
+                    stroke="url(#lineFade)"
+                    strokeWidth="0.6"
                   />
-                </g>
-              ))}
+                ))}
+            </g>
 
-              {/* City labels */}
-              {cities.map((c) => {
-                const anchor = c.labelAnchor ?? "start"
-                const baseDx = anchor === "end" ? -(c.hub ? 10 : 8) : c.hub ? 10 : 8
-                return (
-                  <text
-                    key={`label-${c.name}`}
-                    x={c.x + baseDx + (c.labelDx ?? 0)}
-                    y={c.y + 4 + (c.labelDy ?? 0)}
-                    fontSize="11"
-                    fill="rgba(255,255,255,0.72)"
-                    fontFamily="var(--font-raleway), sans-serif"
-                    fontWeight={c.hub ? "500" : "300"}
-                    letterSpacing="0.04em"
-                    textAnchor={anchor}
-                  >
-                    {c.name}
-                  </text>
-                )
-              })}
-            </svg>
-          </motion.div>
+            {/* London hub glow */}
+            <circle cx={hub.x} cy={hub.y} r="42" fill="url(#hubGlow)" />
 
-          {/* Regional list */}
-          <div className="mx-auto max-w-md lg:mx-0">
-            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              Active regions
-            </p>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
-              {regions.map((region) => (
-                <div key={region} className="flex items-center gap-2.5 text-white/75">
-                  <span className="inline-block h-1 w-1 shrink-0 rounded-full bg-gold" />
-                  {region}
-                </div>
-              ))}
-            </div>
-            <p className="mt-8 text-sm leading-relaxed text-white/60">
-              If your brief sits outside Greater London or the South, we&apos;ll tell you
-              upfront — before you commit anything.
-            </p>
-          </div>
-        </div>
+            {/* County dots */}
+            {counties.map((c, i) => (
+              <g key={c.name}>
+                <circle cx={c.x} cy={c.y} r={c.hub ? 6 : 4} fill="rgba(201,160,61,0.5)">
+                  <animate
+                    attributeName="r"
+                    values={c.hub ? "6;16;6" : "4;10;4"}
+                    dur={`${2.2 + (i % 4) * 0.3}s`}
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="opacity"
+                    values="0.6;0;0.6"
+                    dur={`${2.2 + (i % 4) * 0.3}s`}
+                    repeatCount="indefinite"
+                  />
+                </circle>
+                <circle
+                  cx={c.x}
+                  cy={c.y}
+                  r={c.hub ? 5 : 3.5}
+                  fill={c.hub ? "#DEBB5C" : "#C9A03D"}
+                />
+              </g>
+            ))}
+
+            {/* County labels */}
+            {counties.map((c) => {
+              const anchor = c.anchor ?? "start"
+              const baseDx = anchor === "end" ? -(c.hub ? 10 : 8) : c.hub ? 10 : 8
+              return (
+                <text
+                  key={`label-${c.name}`}
+                  x={c.x + baseDx + (c.dx ?? 0)}
+                  y={c.y + 4 + (c.dy ?? 0)}
+                  fontSize="12"
+                  fill="rgba(255,255,255,0.78)"
+                  fontFamily="var(--font-raleway), sans-serif"
+                  fontWeight={c.hub ? "600" : "400"}
+                  letterSpacing="0.03em"
+                  textAnchor={anchor}
+                >
+                  {c.name}
+                </text>
+              )
+            })}
+          </svg>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mx-auto mt-12 max-w-xl text-center text-sm leading-relaxed text-white/55"
+        >
+          If your brief sits outside Greater London or the South, we&apos;ll tell you upfront —
+          before you commit anything.
+        </motion.p>
       </div>
     </section>
   )
