@@ -67,7 +67,7 @@ export function CaseStudy() {
 
             <div className="relative">
               {/* Top: brief + property photo side by side */}
-              <div className="grid items-stretch gap-7 md:grid-cols-[2.2fr_0.6fr]">
+              <div className="grid items-start gap-6 md:grid-cols-[1fr_10rem]">
                 <div>
                   <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
                     <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
@@ -86,12 +86,12 @@ export function CaseStudy() {
                 </div>
 
                 {/* The sourced property */}
-                <div className="relative min-h-[200px] overflow-hidden rounded-2xl border border-white/10 shadow-lg shadow-black/40">
+                <div className="relative mx-auto aspect-square w-40 shrink-0 overflow-hidden rounded-2xl border border-white/10 shadow-lg shadow-black/40 md:mx-0 md:w-full">
                   <Image
                     src="/hampshire-deal.jpg"
                     alt="The four-bed property sourced pre-auction in Hampshire"
                     fill
-                    sizes="(max-width: 768px) 100vw, 360px"
+                    sizes="160px"
                     className="object-cover"
                   />
                 </div>
