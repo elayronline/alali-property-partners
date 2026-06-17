@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer"
 import { SectionDivider } from "@/components/ui/SectionDivider"
 
 export const metadata: Metadata = {
-  title: "Development Management — Sourced & Converted, End to End",
+  title: "Source & Develop — HMO Sourcing & Development, End to End",
   description:
     "Our complete service: we source the property to your brief, then manage the full HMO conversion — design, planning, build and handover, end to end. Across Greater London & the South East. By application; price on application.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/development-management" },
   openGraph: {
-    title: "Development Management | Alali Property Partners",
+    title: "Source & Develop | Alali Property Partners",
     description:
       "Sourced to your brief, then converted — design, planning, build and handover, end to end. By application, selective.",
     url: "/development-management",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Development Management | Alali Property Partners",
+    title: "Source & Develop | Alali Property Partners",
     description:
       "Sourced to your brief, then converted — design, planning, build and handover, end to end. By application, selective.",
     images: ["/opengraph-image"],
@@ -55,7 +55,7 @@ const serviceSchema = {
   serviceType: "HMO Development Management",
   offers: {
     "@type": "Offer",
-    name: "Development Management",
+    name: "Source & Develop",
     description:
       "Our complete service: we source the property to your brief, then manage the full HMO conversion — design, planning, build and handover, end to end. A selective service offered by application; we take on a limited number of projects per quarter. Price on application.",
     availability: "https://schema.org/LimitedAvailability",
@@ -102,7 +102,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Development Management",
+      name: "Source & Develop",
       item: "https://www.alalipropertypartners.com/development-management",
     },
   ],
@@ -161,7 +161,7 @@ export default function Page() {
               By Application
             </p>
             <h1 className="font-display mt-4 text-4xl tracking-tight text-white sm:text-6xl">
-              Development Management
+              Source &amp; Develop
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">
               The complete service: we source the property to your brief, then manage the full HMO
@@ -170,7 +170,7 @@ export default function Page() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
-                href="/contact?enquiry=Development%20Management"
+                href="/contact?enquiry=Source%20%26%20Develop"
                 className="rounded-lg bg-gold px-7 py-3.5 text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
               >
                 Apply / Enquire &rarr;

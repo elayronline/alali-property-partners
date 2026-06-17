@@ -44,8 +44,8 @@ const pricingCards: PricingCard[] = [
     popular: false,
   },
   {
-    title: "Development Management",
-    subtitle: "Sourced and converted, end to end",
+    title: "Source & Develop",
+    subtitle: "From sourcing to finished HMO",
     byApplication: true,
   },
 ]
@@ -55,14 +55,14 @@ export function Pricing() {
   const pathname = usePathname()
   const router = useRouter()
 
-  // Pre-tags the contact enquiry as Development Management. Same-page uses an
+  // Pre-tags the contact enquiry as Source & Develop. Same-page uses an
   // event + scroll; cross-page carries the tag via a query param.
   const handleDevEnquiry = () => {
     if (pathname === "/") {
-      window.dispatchEvent(new CustomEvent("preselect-enquiry", { detail: "Development Management" }))
+      window.dispatchEvent(new CustomEvent("preselect-enquiry", { detail: "Source & Develop" }))
       scrollToSection("contact")
     } else {
-      router.push("/contact?enquiry=Development%20Management")
+      router.push("/contact?enquiry=Source%20%26%20Develop")
     }
   }
 

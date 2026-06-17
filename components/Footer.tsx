@@ -103,7 +103,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/development-management" className="transition-colors hover:text-gold">
-                  Development Management
+                  Source &amp; Develop
                 </Link>
               </li>
               <li>
