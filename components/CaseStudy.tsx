@@ -67,7 +67,7 @@ export function CaseStudy() {
 
             <div className="relative">
               {/* Top: brief + property photo side by side */}
-              <div className="grid items-stretch gap-7 md:grid-cols-[1.45fr_1fr]">
+              <div className="grid items-stretch gap-7 md:grid-cols-[1.85fr_0.85fr]">
                 <div>
                   <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
                     <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
