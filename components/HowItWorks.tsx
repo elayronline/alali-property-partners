@@ -16,7 +16,7 @@ const steps = [
     step: "02",
     title: "Secure your deal",
     description:
-      "Sourced deals: sign the sourcing agreement and pay £500 to unlock the deal pack — balance settled when you decide to proceed. Bespoke sourcing: £1,000 retainer to start your search.",
+      "Sourced deals: sign the sourcing agreement and pay £500 to unlock the deal pack — balance settled when you decide to proceed. Bespoke sourcing: a quick call to confirm your brief, then a £1,000 retainer starts your dedicated search.",
   },
   {
     step: "03",

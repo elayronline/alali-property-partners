@@ -27,7 +27,7 @@ const pricingCards: PricingCard[] = [
     subtitle: "Sourced to your exact brief — fully hands-off sourcing",
     fee: "£1,000",
     feeDetail: "retainer + sourcing fee on completion",
-    payment: "Retainer upfront secures your dedicated 14-day search. Sourcing fee on completion.",
+    payment: "Start with a quick call to confirm your brief. The £1,000 retainer then secures your dedicated 14-day search; sourcing fee on completion.",
     includes: "Dedicated bespoke search + full deal pack + viewings facilitated",
     reassurance: "Retainer refundable if no suitable deal in 14 days, or on valid reasons not to proceed (subject to terms).",
     popular: true,
@@ -223,8 +223,9 @@ export function Pricing() {
                         <div className="mt-4 space-y-3">
                           <ExpandableSection trigger="How does bespoke sourcing work?">
                             <p className="text-sm leading-relaxed text-muted-light">
-                              The £1,000 retainer locks our dedicated 14-day search to your brief —
-                              location, budget, strategy, and target returns. If we don&apos;t
+                              Get in touch and we&apos;ll arrange a quick call to confirm your brief —
+                              location, budget, strategy, and target returns. Once it&apos;s a fit, the
+                              £1,000 retainer locks in your dedicated 14-day search. If we don&apos;t
                               present a suitable deal in 14 days, the retainer is refundable
                               (subject to terms). On presentation you have a 48-hour decision SLA,
                               with extensions on fair, justified reasoning. If you decline with
@@ -238,7 +239,7 @@ export function Pricing() {
                             href="/contact?enquiry=Bespoke%20Sourcing"
                             className="block w-full rounded-lg bg-gold px-4 py-2.5 text-center text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
                           >
-                            Get Started &rarr;
+                            Get in Touch &rarr;
                           </Link>
                         </div>
                       )}
