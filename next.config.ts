@@ -22,6 +22,13 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        // Bespoke sourcing no longer takes payment through the website —
+        // route the old pay/sign flow to the contact form instead.
+        source: "/bespoke",
+        destination: "/contact?enquiry=Bespoke%20Sourcing",
+        permanent: false,
+      },
     ];
   },
 };

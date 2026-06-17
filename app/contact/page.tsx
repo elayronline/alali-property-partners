@@ -96,6 +96,9 @@ export default function Page() {
       />
       <Navbar />
       <main className="pt-20">
+        <h1 className="sr-only">
+          Contact Alali Property Partners — HMO &amp; conversion-ready BRR sourcing enquiries
+        </h1>
         <ContactForm />
       </main>
       <Footer />

@@ -127,7 +127,7 @@ const faqSchema = {
       name: "What types of property deals do you source?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We specialise in high-yield HMOs (Houses in Multiple Occupation) and conversion-ready BRR (Buy, Refurbish, Refinance) deals — properties with HMO conversion and change-of-use potential (permitted development, non-Article 4 areas) — across Greater London and the South East. We source pre-auction, off-market and direct-to-vendor via a network of compliant agents, and also source standard buy-to-let or bespoke briefs on request.",
+        text: "We specialise in high-yield HMOs (Houses in Multiple Occupation) and conversion-ready BRR (Buy, Refurbish, Refinance) deals — properties with HMO conversion and change-of-use potential (permitted development, non-Article 4 areas) — across Greater London and the South East. We source pre-auction, off-market and direct-to-vendor via a network of compliant agents, and take bespoke briefs on request.",
       },
     },
     {

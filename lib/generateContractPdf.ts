@@ -228,7 +228,7 @@ export function generateContractPdf(data: ContractData): jsPDF {
   body("3.2 The Retainer Deposit is NON-REFUNDABLE except as provided in Clause 4 below.")
   y += 2
   body(
-    "3.3 The Retainer Deposit shall be deducted from the final Sourcing Fee upon successful completion.",
+    "3.3 The Retainer Deposit is in addition to, and shall NOT be credited against or deducted from, the Sourcing Fee. It covers the Sourcer's search effort during the Search Period; the Sourcing Fee is a separate fee payable on a decision to proceed with a transaction.",
   )
   y += 2
   body(
@@ -240,7 +240,7 @@ export function generateContractPdf(data: ContractData): jsPDF {
   subheading("4. CANCELLATION AND REFUNDS")
   importantBox(
     "14-DAY COOLING OFF PERIOD AND REFUND POLICY",
-    "4.1 The Client has a 14-day cooling off period from the date of this Agreement during which they may cancel and receive a full refund of the Retainer Deposit.\n\n4.2 AFTER THE 14-DAY COOLING OFF PERIOD: (a) NO REFUNDS shall be given under any circumstances; (b) The Retainer Deposit is fully earned and non-refundable; (c) Cancellation does not entitle the Client to any monies paid.\n\n4.3 EXTENSION OPTION: If no suitable property is found within the Search Period, the Client may: (a) Extend the search for an additional period (terms to be agreed); OR (b) Accept that the deposit is forfeited with no further obligation on either party.\n\n4.4 The Sourcer is NOT obligated to offer any refund if a property is presented but the Client chooses not to proceed.",
+    "4.1 The Client has a 14-day cooling off period from the date of this Agreement, during which they may cancel and receive a full refund of the Retainer Deposit, less the cost of any services already provided at the Client's express request.\n\n4.2 NO SUITABLE DEAL PRESENTED: If the Sourcer does not present a deal matching the Client's stated criteria within the 14-day Search Period, the Retainer Deposit is refundable on written request, subject to deduction of reasonable administrative costs where significant work has been undertaken.\n\n4.3 DECISION SLA: Once a deal is presented, the Client has a 48-hour decision SLA (extensions at the Sourcer's discretion on fair, justified reasoning where the vendor agrees). If the Client decides not to proceed and there are valid reasons for that decision (for example, material findings on independent due diligence, a change in personal circumstances, or the deal materially diverging from the brief), the Retainer Deposit is refundable on written request within the decision SLA, subject to deduction of reasonable administrative costs.\n\n4.4 NO REFUND applies where: the decision SLA (or any agreed extension) has expired; the Client has proceeded with the transaction (for example by instructing solicitors or applying for a mortgage on the property); or the Client cannot evidence valid reasons not to proceed.",
   )
 
   checkPage(50)

@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   ExternalLink,
-  Building2,
   Home,
   CheckCircle2,
   ArrowLeft,
@@ -93,15 +92,10 @@ function ContractBox({ title, children }: { title: string; children: React.React
 
 // ── Options ────────────────────────────────────────────────────────────
 const residentialDealTypes = [
-  "Buy-to-Let (Standard Single Let)",
   "HMO (House in Multiple Occupation)",
-  "Serviced Accommodation / Holiday Let",
-  "Rent-to-Rent (R2R)",
-  "Rent-to-SA (Rent to Serviced Accommodation)",
-  "BRRR (Buy, Refurbish, Refinance, Rent)",
-  "Flip / Refurbishment for Sale",
-  "Development / Conversion",
-  "Lease Option",
+  "Conversion-ready BRR (Buy, Refurbish, Refinance)",
+  "HMO conversion / change of use",
+  "Other (tell us in your brief)",
 ] as const
 
 const residentialFinanceMethods = [
@@ -154,90 +148,6 @@ const residentialDealBreakers = [
   "Conservation area restrictions",
   "Article 4 area (HMO)",
   "Flood risk area",
-] as const
-
-const commercialPurpose = [
-  "Investment (let to tenants)",
-  "Owner-occupation",
-  "Development / Conversion",
-  "Mixed Use",
-] as const
-
-const commercialSectors = [
-  "Office",
-  "Retail (High Street)",
-  "Retail (Out of Town / Retail Park)",
-  "Industrial / Warehouse",
-  "Light Industrial",
-  "Trade Counter",
-  "Leisure / Hospitality",
-  "Healthcare / Medical",
-  "Care Home / Assisted Living",
-  "Student Accommodation",
-  "Car Park / Parking",
-  "Land (with planning)",
-  "Land (without planning)",
-  "Mixed Use",
-] as const
-
-const commercialFinanceMethods = [
-  "Cash Purchase",
-  "Commercial Mortgage",
-  "Bridging Finance",
-  "Development Finance",
-  "SIPP/SSAS Purchase",
-  "JV / Private Finance",
-] as const
-
-const commercialTenure = [
-  "Freehold only",
-  "Long Leasehold (125+ years)",
-  "Medium Leasehold (50-125 years)",
-  "Virtual Freehold (999 years)",
-] as const
-
-const commercialCondition = [
-  "Ready to occupy / Let",
-  "Refurbishment required",
-  "Redevelopment opportunity",
-  "Shell / New build",
-] as const
-
-const commercialTenancy = [
-  "Vacant possession essential",
-  "Income producing (tenanted)",
-  "Either acceptable",
-] as const
-
-const commercialCovenant = [
-  "National / Blue Chip only",
-  "Regional multiples",
-  "Strong local covenants",
-  "Any trading tenant",
-  "Vacant acceptable",
-] as const
-
-const commercialEssentialFeatures = [
-  "Dedicated parking",
-  "Loading bay / Dock levellers",
-  "Yard space",
-  "3-phase power",
-  "Air conditioning",
-  "Lift access",
-  "Disabled access / DDA compliant",
-  "EPC rating B or above",
-  "Sprinkler system",
-] as const
-
-const commercialDealBreakers = [
-  "Listed building",
-  "Conservation area",
-  "Flood risk zone",
-  "Contaminated land",
-  "Asbestos present",
-  "Short lease (< 50 years)",
-  "Tenant in administration",
-  "Break clause in next 3 years",
 ] as const
 
 // ── Main page ──────────────────────────────────────────────────────────
@@ -392,7 +302,7 @@ export default function BespokeSourcing() {
       formData.append("access_key", "4e50844e-651a-4107-9928-0fb0edd47d94")
       formData.append(
         "subject",
-        `Bespoke Sourcing: ${contractData.fullName} — ${propertyType === "residential" ? "Residential" : "Commercial"} — Signed Agreement + Requirements`,
+        `Bespoke Sourcing: ${contractData.fullName} — HMO / BRR — Signed Agreement + Requirements`,
       )
       formData.append("from_name", "Alali Property Partners")
       formData.append("replyto", contractData.email)
@@ -406,10 +316,7 @@ export default function BespokeSourcing() {
       formData.append("Deal Type", contractData.dealType)
       formData.append("Target Locations", contractData.targetLocations)
       formData.append("Budget Range", contractData.budgetRange)
-      formData.append(
-        "Property Type",
-        propertyType === "residential" ? "Residential" : "Commercial",
-      )
+      formData.append("Property Type", "HMO / BRR (residential)")
       formData.append("Agreement Signed", "Yes")
       formData.append("Agreement Date", today)
       formData.append("Signed Agreement PDF", pdfDownloadUrl)
@@ -677,6 +584,19 @@ export default function BespokeSourcing() {
                         Secure payment opens in a new tab. Your agreement will be ready when
                         you return.
                       </p>
+
+                      <div className="mt-6 border-t border-white/10 pt-5">
+                        <p className="text-sm leading-relaxed text-white/65">
+                          Not ready to commit, or want to talk your brief through first?
+                          No payment needed to start a conversation.
+                        </p>
+                        <Link
+                          href="/contact"
+                          className="mt-1.5 inline-flex items-center gap-1.5 text-sm font-semibold text-gold underline-offset-4 transition-colors hover:text-gold-light hover:underline"
+                        >
+                          Tell us what you&apos;re after &rarr;
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -803,7 +723,7 @@ export default function BespokeSourcing() {
                               Deal Type Required <span className="text-gold">*</span>
                             </label>
                             <FormInput
-                              placeholder="e.g. BTL, HMO, BRRR, Commercial"
+                              placeholder="e.g. HMO, conversion-ready BRR"
                               {...contractForm.register("dealType", { required: true })}
                             />
                             {contractForm.formState.errors.dealType && (
@@ -935,24 +855,32 @@ export default function BespokeSourcing() {
                         <ContractBox title="14-DAY COOLING OFF PERIOD AND REFUND POLICY">
                           <p>
                             4.1 The Client has a 14-day cooling off period from the date of this
-                            Agreement during which they may cancel and receive a full refund of the
-                            Retainer Deposit.
+                            Agreement, during which they may cancel and receive a full refund of the
+                            Retainer Deposit, less the cost of any services already provided at the
+                            Client&apos;s express request.
                           </p>
                           <p>
-                            4.2 AFTER THE 14-DAY COOLING OFF PERIOD: (a) NO REFUNDS shall be given
-                            under any circumstances; (b) The Retainer Deposit is fully earned and
-                            non-refundable; (c) Cancellation does not entitle the Client to any
-                            monies paid.
+                            4.2 NO SUITABLE DEAL PRESENTED: If the Sourcer does not present a deal
+                            matching the Client&apos;s stated criteria within the 14-day Search
+                            Period, the Retainer Deposit is refundable on written request, subject to
+                            deduction of reasonable administrative costs where significant work has
+                            been undertaken.
                           </p>
                           <p>
-                            4.3 EXTENSION OPTION: If no suitable property is found within the Search
-                            Period, the Client may: (a) Extend the search for an additional period
-                            (terms to be agreed); OR (b) Accept that the deposit is forfeited with
-                            no further obligation on either party.
+                            4.3 DECISION SLA: Once a deal is presented, the Client has a 48-hour
+                            decision SLA (extensions at the Sourcer&apos;s discretion on fair,
+                            justified reasoning where the vendor agrees). If the Client decides not to
+                            proceed and there are valid reasons for that decision (for example,
+                            material findings on independent due diligence, a change in personal
+                            circumstances, or the deal materially diverging from the brief), the
+                            Retainer Deposit is refundable on written request within the decision SLA,
+                            subject to deduction of reasonable administrative costs.
                           </p>
                           <p>
-                            4.4 The Sourcer is NOT obligated to offer any refund if a property is
-                            presented but the Client chooses not to proceed.
+                            4.4 NO REFUND applies where: the decision SLA (or any agreed extension)
+                            has expired; the Client has proceeded with the transaction (for example
+                            by instructing solicitors or applying for a mortgage on the property); or
+                            the Client cannot evidence valid reasons not to proceed.
                           </p>
                         </ContractBox>
                       </ContractClause>
@@ -1328,12 +1256,13 @@ export default function BespokeSourcing() {
                     03 — Requirements
                   </p>
                   <h2 className="font-display mt-2 text-2xl tracking-tight text-white sm:text-3xl">
-                    What type of property are you looking for?
+                    Your HMO &amp; BRR brief
                   </h2>
                   <p className="mt-2 text-sm leading-relaxed text-white/55">
-                    Choose your property type so we can tailor the brief.
+                    We source high-yield HMOs and conversion-ready BRR deals. Open your brief
+                    below and tell us exactly what you&apos;re after.
                   </p>
-                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  <div className="mt-6">
                     <button
                       type="button"
                       onClick={() => {
@@ -1348,7 +1277,7 @@ export default function BespokeSourcing() {
                         }
                         setPropertyType("residential")
                       }}
-                      className={`group flex cursor-pointer items-center gap-3.5 rounded-xl border p-5 text-left transition-all duration-200 ${
+                      className={`group flex w-full cursor-pointer items-center gap-3.5 rounded-xl border p-5 text-left transition-all duration-200 ${
                         propertyType === "residential"
                           ? "border-gold bg-gold/10 text-white shadow-[0_8px_24px_-8px_rgba(201,160,61,0.4)]"
                           : "border-white/10 text-white/60 hover:border-gold/40 hover:bg-white/[0.02] hover:text-white"
@@ -1356,36 +1285,8 @@ export default function BespokeSourcing() {
                     >
                       <Home className="h-6 w-6 shrink-0 text-gold transition-transform duration-200 group-hover:scale-110" strokeWidth={1.5} />
                       <div>
-                        <p className="font-display text-lg tracking-tight">Residential</p>
-                        <p className="mt-0.5 text-xs text-white/45">BTL, HMO, SA, BRRR, Flips</p>
-                      </div>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        if (propertyType !== "commercial") {
-                          requirementsForm.reset()
-                          const vals = contractForm.getValues()
-                          requirementsForm.setValue("fullName", vals.fullName)
-                          requirementsForm.setValue("email", vals.email)
-                          requirementsForm.setValue("phone", vals.phone)
-                          requirementsForm.setValue("companyName", vals.companyName)
-                          requirementsForm.setValue("address", vals.address)
-                        }
-                        setPropertyType("commercial")
-                      }}
-                      className={`group flex cursor-pointer items-center gap-3.5 rounded-xl border p-5 text-left transition-all duration-200 ${
-                        propertyType === "commercial"
-                          ? "border-gold bg-gold/10 text-white shadow-[0_8px_24px_-8px_rgba(201,160,61,0.4)]"
-                          : "border-white/10 text-white/60 hover:border-gold/40 hover:bg-white/[0.02] hover:text-white"
-                      }`}
-                    >
-                      <Building2 className="h-6 w-6 shrink-0 text-gold transition-transform duration-200 group-hover:scale-110" strokeWidth={1.5} />
-                      <div>
-                        <p className="font-display text-lg tracking-tight">Commercial</p>
-                        <p className="mt-0.5 text-xs text-white/45">
-                          Office, Retail, Industrial, Mixed Use
-                        </p>
+                        <p className="font-display text-lg tracking-tight">Open my brief</p>
+                        <p className="mt-0.5 text-xs text-white/45">HMO · conversion-ready BRR · change of use</p>
                       </div>
                     </button>
                   </div>
@@ -1403,8 +1304,7 @@ export default function BespokeSourcing() {
                     >
                       <div className="rounded-2xl border border-white/10 bg-dark-bg-light/80 p-6 backdrop-blur-sm sm:p-8">
                         <h2 className="font-display text-2xl tracking-tight text-white sm:text-3xl">
-                          {propertyType === "residential" ? "Residential" : "Commercial"}{" "}
-                          requirements
+                          Your requirements
                         </h2>
                         <p className="mt-2 text-sm leading-relaxed text-white/55">
                           Tell us about your brief. Fields marked with <span className="text-gold">*</span> are required.
@@ -1456,9 +1356,7 @@ export default function BespokeSourcing() {
                               </div>
                               <div>
                                 <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                  {propertyType === "commercial"
-                                    ? "Company Name"
-                                    : "Company Name (if applicable)"}
+                                  Company Name (if applicable)
                                 </label>
                                 <FormInput
                                   placeholder="Company name"
@@ -1466,60 +1364,19 @@ export default function BespokeSourcing() {
                                 />
                               </div>
                             </div>
-                            {propertyType === "commercial" && (
-                              <div className="grid gap-4 sm:grid-cols-2">
-                                <div>
-                                  <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                    Company Registration Number
-                                  </label>
-                                  <FormInput
-                                    placeholder="e.g. 12345678"
-                                    {...requirementsForm.register("companyRegNumber")}
-                                  />
-                                </div>
-                                <div>
-                                  <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                    Key Contact Name
-                                  </label>
-                                  <FormInput
-                                    placeholder="Key contact"
-                                    {...requirementsForm.register("keyContactName")}
-                                  />
-                                </div>
-                              </div>
-                            )}
                             <div>
                               <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                {propertyType === "commercial"
-                                  ? "Registered Address"
-                                  : "Address"}
+                                Address
                               </label>
                               <FormInput
                                 placeholder="Your address"
                                 {...requirementsForm.register("address")}
                               />
                             </div>
-                            {propertyType === "commercial" && (
-                              <div>
-                                <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                  Trading Address (if different)
-                                </label>
-                                <FormInput
-                                  placeholder="Trading address"
-                                  {...requirementsForm.register("tradingAddress")}
-                                />
-                              </div>
-                            )}
                           </Section>
 
                           {/* Investment Strategy */}
-                          <Section
-                            title={
-                              propertyType === "residential"
-                                ? "Investment Strategy"
-                                : "Investment / Occupation Strategy"
-                            }
-                          >
+                          <Section title="Investment Strategy">
                             {propertyType === "residential" ? (
                               <>
                                 <CheckboxGroup
@@ -1556,43 +1413,7 @@ export default function BespokeSourcing() {
                                 </div>
                               </>
                             ) : (
-                              <>
-                                <CheckboxGroup
-                                  label="Purpose (tick all that apply)"
-                                  options={commercialPurpose}
-                                  name="purpose"
-                                  register={requirementsForm.register}
-                                />
-                                <CheckboxGroup
-                                  label="Property Sector (tick all that apply)"
-                                  options={commercialSectors}
-                                  name="propertySectors"
-                                  register={requirementsForm.register}
-                                />
-                                <div className="grid gap-4 sm:grid-cols-2">
-                                  <div>
-                                    <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                      Specific Use Class Required
-                                    </label>
-                                    <FormInput
-                                      placeholder="e.g. E, B2, B8, C1"
-                                      {...requirementsForm.register("useClassRequired")}
-                                    />
-                                  </div>
-                                  <div>
-                                    <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                      Investment Timeframe{" "}
-                                      <span className="text-gold">*</span>
-                                    </label>
-                                    <FormInput
-                                      placeholder="e.g. 5 years, 10+ years"
-                                      {...requirementsForm.register("investmentTimeframe", {
-                                        required: true,
-                                      })}
-                                    />
-                                  </div>
-                                </div>
-                              </>
+                              <></>
                             )}
                           </Section>
 
@@ -1636,9 +1457,7 @@ export default function BespokeSourcing() {
                               </div>
                               <div>
                                 <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                  {propertyType === "residential"
-                                    ? "Refurbishment Budget (if applicable)"
-                                    : "Works / Fit-out Budget"}
+                                  Refurbishment Budget (if applicable)
                                 </label>
                                 <FormInput
                                   placeholder="£"
@@ -1648,11 +1467,7 @@ export default function BespokeSourcing() {
                             </div>
                             <CheckboxGroup
                               label="Finance Method (tick all that apply)"
-                              options={
-                                propertyType === "residential"
-                                  ? residentialFinanceMethods
-                                  : commercialFinanceMethods
-                              }
+                              options={residentialFinanceMethods}
                               name="financeMethods"
                               register={requirementsForm.register}
                             />
@@ -1692,17 +1507,6 @@ export default function BespokeSourcing() {
                                 })}
                               />
                             </div>
-                            {propertyType === "commercial" && (
-                              <div>
-                                <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                  Preferred Towns / Cities
-                                </label>
-                                <FormInput
-                                  placeholder="Specific towns or cities"
-                                  {...requirementsForm.register("preferredTowns")}
-                                />
-                              </div>
-                            )}
                             <div className="grid gap-4 sm:grid-cols-2">
                               <div>
                                 <label className="mb-1.5 block text-xs font-medium text-white/50">
@@ -1807,66 +1611,7 @@ export default function BespokeSourcing() {
                                 />
                               </>
                             ) : (
-                              <>
-                                <div className="grid gap-4 sm:grid-cols-2">
-                                  <div>
-                                    <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                      Min Floor Area (sq ft)
-                                    </label>
-                                    <FormInput
-                                      placeholder="sq ft"
-                                      {...requirementsForm.register("minFloorArea")}
-                                    />
-                                  </div>
-                                  <div>
-                                    <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                      Max Floor Area (sq ft)
-                                    </label>
-                                    <FormInput
-                                      placeholder="sq ft"
-                                      {...requirementsForm.register("maxFloorArea")}
-                                    />
-                                  </div>
-                                </div>
-                                <div className="grid gap-4 sm:grid-cols-2">
-                                  <div>
-                                    <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                      Min Site Area (acres)
-                                    </label>
-                                    <FormInput
-                                      placeholder="acres"
-                                      {...requirementsForm.register("minSiteArea")}
-                                    />
-                                  </div>
-                                  <div>
-                                    <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                      Eaves Height (if industrial)
-                                    </label>
-                                    <FormInput
-                                      placeholder="e.g. 6m"
-                                      {...requirementsForm.register("eavesHeight")}
-                                    />
-                                  </div>
-                                </div>
-                                <CheckboxGroup
-                                  label="Tenure (tick acceptable)"
-                                  options={commercialTenure}
-                                  name="tenure"
-                                  register={requirementsForm.register}
-                                />
-                                <CheckboxGroup
-                                  label="Condition (tick all acceptable)"
-                                  options={commercialCondition}
-                                  name="condition"
-                                  register={requirementsForm.register}
-                                />
-                                <CheckboxGroup
-                                  label="Tenancy Status (tick preference)"
-                                  options={commercialTenancy}
-                                  name="tenancyStatus"
-                                  register={requirementsForm.register}
-                                />
-                              </>
+                              <></>
                             )}
                           </Section>
 
@@ -1938,66 +1683,7 @@ export default function BespokeSourcing() {
                                 </div>
                               </>
                             ) : (
-                              <>
-                                <div className="grid gap-4 sm:grid-cols-2">
-                                  <div>
-                                    <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                      Min Net Initial Yield{" "}
-                                      <span className="text-gold">*</span>
-                                    </label>
-                                    <FormInput
-                                      placeholder="e.g. 6%"
-                                      {...requirementsForm.register("minNetInitialYield", {
-                                        required: true,
-                                      })}
-                                    />
-                                  </div>
-                                  <div>
-                                    <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                      Target Yield Range
-                                    </label>
-                                    <FormInput
-                                      placeholder="e.g. 6-8%"
-                                      {...requirementsForm.register("targetYieldRange")}
-                                    />
-                                  </div>
-                                </div>
-                                <div className="grid gap-4 sm:grid-cols-2">
-                                  <div>
-                                    <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                      Min Rent per sq ft
-                                    </label>
-                                    <FormInput
-                                      placeholder="£ per sq ft"
-                                      {...requirementsForm.register("minRentPerSqft")}
-                                    />
-                                  </div>
-                                  <div>
-                                    <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                      Min WAULT (years)
-                                    </label>
-                                    <FormInput
-                                      placeholder="e.g. 5 years"
-                                      {...requirementsForm.register("minWAULT")}
-                                    />
-                                  </div>
-                                </div>
-                                <div>
-                                  <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                    Target Capital Value Growth
-                                  </label>
-                                  <FormInput
-                                    placeholder="e.g. 10% over 5 years"
-                                    {...requirementsForm.register("targetCapitalGrowth")}
-                                  />
-                                </div>
-                                <CheckboxGroup
-                                  label="Tenant Covenant Strength (tick all acceptable)"
-                                  options={commercialCovenant}
-                                  name="covenantStrength"
-                                  register={requirementsForm.register}
-                                />
-                              </>
+                              <></>
                             )}
                           </Section>
 
@@ -2005,35 +1691,16 @@ export default function BespokeSourcing() {
                           <Section title="Additional Requirements">
                             <CheckboxGroup
                               label="Essential Features (tick all required)"
-                              options={
-                                propertyType === "residential"
-                                  ? residentialEssentialFeatures
-                                  : commercialEssentialFeatures
-                              }
+                              options={residentialEssentialFeatures}
                               name="essentialFeatures"
                               register={requirementsForm.register}
                             />
                             <CheckboxGroup
                               label="Deal Breakers (what would you NOT accept?)"
-                              options={
-                                propertyType === "residential"
-                                  ? residentialDealBreakers
-                                  : commercialDealBreakers
-                              }
+                              options={residentialDealBreakers}
                               name="dealBreakers"
                               register={requirementsForm.register}
                             />
-                            {propertyType === "commercial" && (
-                              <div>
-                                <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                  VAT Preference
-                                </label>
-                                <FormInput
-                                  placeholder="e.g. VAT elected, non-VAT preferred"
-                                  {...requirementsForm.register("vatPreference")}
-                                />
-                              </div>
-                            )}
                             <div>
                               <label className="mb-1.5 block text-xs font-medium text-white/50">
                                 Any Other Requirements
@@ -2050,15 +1717,11 @@ export default function BespokeSourcing() {
                             <div className="grid gap-4 sm:grid-cols-2">
                               <div>
                                 <label className="mb-1.5 block text-xs font-medium text-white/50">
-                                  {propertyType === "commercial"
-                                    ? "Primary Decision Maker"
-                                    : "Are you the sole decision maker?"}{" "}
+                                  Are you the sole decision maker?{" "}
                                   <span className="text-gold">*</span>
                                 </label>
                                 <FormInput
-                                  placeholder={
-                                    propertyType === "commercial" ? "Name and role" : "Yes / No"
-                                  }
+                                  placeholder="Yes / No"
                                   {...requirementsForm.register("soleDecisionMaker", {
                                     required: true,
                                   })}
@@ -2109,11 +1772,6 @@ export default function BespokeSourcing() {
                                 "I am ready, willing, and able to proceed with a suitable property",
                                 "I will respond to property opportunities within 48 hours",
                                 "I understand Alali Property Partners Ltd is an introducer only and I am responsible for my own due diligence",
-                                ...(propertyType === "commercial"
-                                  ? [
-                                      "I am authorised to sign on behalf of the company named above",
-                                    ]
-                                  : []),
                                 "I confirm I have paid the £1,000 bespoke sourcing retainer",
                               ].map((ack) => (
                                 <label

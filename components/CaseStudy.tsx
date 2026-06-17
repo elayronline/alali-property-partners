@@ -25,7 +25,7 @@ export function CaseStudy() {
             ✦
           </span>
           <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
-          Recent Deal
+          Case Study
         </motion.p>
 
         <motion.h2
@@ -44,7 +44,7 @@ export function CaseStudy() {
           transition={{ delay: 0.05 }}
           className="mx-auto mt-4 max-w-xl text-center text-sm text-white/60 sm:text-base"
         >
-          One of the deals we&apos;ve sourced — every brief is different and sourced to your numbers.
+          A recent example, secured to one client&apos;s numbers — yours will look different.
         </motion.p>
 
         {/* Deal card */}
@@ -68,7 +68,7 @@ export function CaseStudy() {
               <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
                 <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                  Recent Deal, Hampshire
+                  Hampshire
                 </span>
               </div>
 

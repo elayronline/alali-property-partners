@@ -10,13 +10,13 @@ const steps = [
     step: "01",
     title: "Choose how you want to invest",
     description:
-      "Get sourced deals — off-market from our private contacts and on-market from our compliant agent network — or commission bespoke sourcing to your exact brief.",
+      "Take a ready deal from our pipeline, or commission bespoke sourcing to your exact brief.",
   },
   {
     step: "02",
     title: "Secure your deal",
     description:
-      "Sourced deals: sign the sourcing agreement and pay £500 to unlock the deal pack — balance settled when you decide to proceed. Bespoke sourcing: £1,000 retainer to start your search.",
+      "Sourced deals: sign the sourcing agreement and pay £500 to unlock the deal pack — balance settled when you decide to proceed. Bespoke sourcing: a quick call to confirm your brief, then a £1,000 retainer starts your dedicated search.",
   },
   {
     step: "03",
@@ -44,7 +44,7 @@ const dealPackItems = [
   "Observed local market rents from public lettings data (informational, not guaranteed)",
   "Indicative gross yield based on observed rents (not a return projection)",
   "Indicative refurbishment scope where applicable — to be verified by your contractor or surveyor",
-  "Indicative resale comparables for flips and developments (not a valuation)",
+  "Indicative resale or refinance comparables where an exit applies (not a valuation)",
   "Local area summary: demand drivers, planning context, transport links",
   "Strategy options to consider (HMO, BRR conversion, etc.) — informational, not financial advice",
   "Introductions to FCA-regulated brokers, qualified solicitors, surveyors, and vetted contractors",
@@ -207,7 +207,7 @@ export function HowItWorks() {
           </div>
           <div className="flex shrink-0 items-center gap-3">
             <Link
-              href="/bespoke"
+              href="/contact?enquiry=Bespoke%20Sourcing"
               className="rounded-full bg-gold px-4 py-2 text-xs font-semibold text-dark-bg transition-colors hover:bg-gold-light"
             >
               Bespoke Sourcing
