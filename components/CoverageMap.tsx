@@ -6,16 +6,17 @@ import { SectionDivider } from "@/components/ui/SectionDivider"
 
 // County label positions as a % of the rendered map image (computed from the
 // real Ordnance Survey county geometry in public/coverage-map.png).
-const labels: { name: string; x: number; y: number; small?: boolean }[] = [
-  { name: "Oxfordshire", x: 20.2, y: 24.8 },
-  { name: "Buckinghamshire", x: 34.1, y: 23.2 },
-  { name: "Berkshire", x: 27.4, y: 45.4 },
-  { name: "London", x: 54.6, y: 43.5 },
-  { name: "Surrey", x: 45.9, y: 55.7 },
-  { name: "Kent", x: 78.9, y: 60 },
-  { name: "Hampshire", x: 18.8, y: 68.7 },
-  { name: "West Sussex", x: 44.1, y: 76.9 },
-  { name: "East Sussex", x: 66.1, y: 75.1 },
+const labels: { name: string; x: number; y: number }[] = [
+  { name: "Oxfordshire", x: 38.4, y: 25 },
+  { name: "Buckinghamshire", x: 48.8, y: 23.4 },
+  { name: "Berkshire", x: 43.9, y: 44.6 },
+  { name: "London", x: 64.3, y: 42.7 },
+  { name: "Surrey", x: 57.7, y: 54.6 },
+  { name: "Kent", x: 82.2, y: 58.1 },
+  { name: "Hampshire", x: 37.4, y: 66.9 },
+  { name: "West Sussex", x: 56.4, y: 72.5 },
+  { name: "East Sussex", x: 72.9, y: 72.7 },
+  { name: "Dorset", x: 16.4, y: 80.5 },
 ]
 
 export function CoverageMap() {
@@ -44,7 +45,7 @@ export function CoverageMap() {
           viewport={{ once: true }}
           className="font-display mt-3 text-center text-3xl text-white sm:text-5xl"
         >
-          London &amp; the South East
+          London &amp; the South of England
         </motion.h2>
 
         <motion.p
@@ -66,9 +67,9 @@ export function CoverageMap() {
         >
           <Image
             src="/coverage-map.png"
-            alt="Map of the counties we cover — Greater London, Surrey, Kent, East and West Sussex, Hampshire, Berkshire, Oxfordshire and Buckinghamshire"
-            width={1200}
-            height={961}
+            alt="Map of the counties we cover — Greater London, Surrey, Kent, East and West Sussex, Hampshire, Dorset, Berkshire, Oxfordshire and Buckinghamshire"
+            width={1300}
+            height={867}
             className="h-auto w-full"
             priority={false}
           />
@@ -93,8 +94,8 @@ export function CoverageMap() {
           viewport={{ once: true }}
           className="mx-auto mt-12 max-w-xl text-center text-sm leading-relaxed text-white/55"
         >
-          If your brief sits outside Greater London or the South East, we&apos;ll tell you upfront —
-          before you commit anything.
+          If your brief sits outside Greater London or the South of England, we&apos;ll tell you
+          upfront — before you commit anything.
         </motion.p>
       </div>
     </section>
