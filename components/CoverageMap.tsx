@@ -88,8 +88,7 @@ export function CoverageMap() {
           viewport={{ once: true }}
           className="mx-auto mt-4 max-w-xl text-center text-sm text-white/60 sm:text-base"
         >
-          Focused coverage across Greater London and the South of England. We go deep in the
-          areas we know, rather than spread thin across the country.
+          We go deep in the areas we know, rather than spread thin across the country.
         </motion.p>
 
         <div className="mt-14 grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
@@ -217,10 +216,8 @@ export function CoverageMap() {
               ))}
             </div>
             <p className="mt-8 text-sm leading-relaxed text-white/60">
-              Focused coverage isn&apos;t a limitation — it&apos;s the reason our private
-              contacts and compliant agent network produce real deals. If your brief sits
-              outside Greater London or the South, we&apos;ll tell you upfront before you
-              commit anything.
+              If your brief sits outside Greater London or the South, we&apos;ll tell you
+              upfront — before you commit anything.
             </p>
           </div>
         </div>
