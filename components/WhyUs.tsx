@@ -49,7 +49,7 @@ const secondaryCards = [
 
 export function WhyUs() {
   return (
-    <section id="why-us" className="bg-white px-4 py-20 sm:px-6 sm:py-28">
+    <section id="why-us" className="bg-cream px-4 py-20 sm:px-6 sm:py-28">
       {/* Gold divider */}
       <SectionDivider variant="light" className="mb-16" />
 

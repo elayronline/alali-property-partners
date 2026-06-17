@@ -67,7 +67,7 @@ export function Pricing() {
   }
 
   return (
-    <section id="pricing" className="overflow-x-hidden bg-white px-5 py-20 sm:px-6 sm:py-28">
+    <section id="pricing" className="overflow-x-hidden bg-cream px-5 py-20 sm:px-6 sm:py-28">
       {/* Divider */}
       <SectionDivider variant="light" className="mb-16" />
 

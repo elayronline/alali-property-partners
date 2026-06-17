@@ -1,6 +1,6 @@
-import Image from "next/image"
 import Link from "next/link"
 import { Instagram, Mail, Phone, MapPin } from "lucide-react"
+import { Logo } from "@/components/ui/Logo"
 
 export function Footer() {
   return (
@@ -18,7 +18,7 @@ export function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]">
           {/* Brand + intro */}
           <div>
-            <Image src="/logo.png" alt="Alali Property Partners" width={150} height={48} />
+            <Logo markSize={42} />
             <p className="mt-7 max-w-sm text-sm leading-relaxed text-white/55">
               Specialist sourcing of high-yield HMO and conversion-ready BRR deals across Greater
               London and the South East. We connect investors with verified deals and the regulated

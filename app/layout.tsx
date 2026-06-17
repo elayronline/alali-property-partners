@@ -1,11 +1,19 @@
 import type { Metadata } from "next"
-import { Raleway } from "next/font/google"
+import { Raleway, Playfair_Display } from "next/font/google"
 import "./globals.css"
 
 const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+})
+
+// Serif display face for the luxury-editorial headlines in the refreshed design.
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
 })
 
@@ -152,7 +160,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={`${raleway.variable} antialiased`}>{children}</body>
+      <body className={`${raleway.variable} ${playfair.variable} antialiased`}>{children}</body>
     </html>
   )
 }
