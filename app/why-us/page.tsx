@@ -107,6 +107,9 @@ export default function Page() {
       />
       <Navbar />
       <main className="pt-20">
+        <h1 className="sr-only">
+          Why investors choose Alali Property Partners for HMO &amp; conversion-ready BRR sourcing
+        </h1>
         <WhyUs />
       </main>
       <Footer />

@@ -88,8 +88,8 @@ export function CoverageMap() {
           viewport={{ once: true }}
           className="mx-auto mt-4 max-w-xl text-center text-sm text-white/60 sm:text-base"
         >
-          Focused coverage across Greater London and the South of England. Off-market via our
-          private contacts, on-market via our compliant agent network.
+          Focused coverage across Greater London and the South of England. We go deep in the
+          areas we know, rather than spread thin across the country.
         </motion.p>
 
         <div className="mt-14 grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">

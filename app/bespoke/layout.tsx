@@ -3,27 +3,24 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Bespoke Property Sourcing — Source to Your Brief",
   description:
-    "Bespoke HMO, BRR and wider property sourcing across Greater London & the South East — to your brief. £1,000 retainer, then 2.4% (min £3,600 VAT inc.). Residential & commercial.",
+    "Bespoke high-yield HMO and conversion-ready BRR sourcing across Greater London & the South East — to your exact brief. £1,000 retainer, then 2.4% (min £3,600 VAT inc.).",
   keywords: [
     "bespoke property sourcing",
+    "bespoke HMO sourcing",
+    "bespoke BRR sourcing",
     "custom property sourcing UK",
     "property sourcing to brief",
-    "tailored property deals",
+    "tailored HMO deals",
     "investor brief sourcing",
-    "commercial property sourcing UK",
-    "residential property sourcing UK",
-    "property sourcing retainer",
-    "HMO bespoke sourcing",
-    "BTL bespoke sourcing",
-    "BRR bespoke sourcing",
-    "England property sourcing",
-    "Wales property sourcing",
+    "conversion-ready property sourcing",
+    "HMO sourcing to brief London",
+    "property sourcing South East",
   ],
   alternates: { canonical: "/bespoke" },
   openGraph: {
     title: "Bespoke Property Sourcing | Alali Property Partners",
     description:
-      "Source property deals to your exact brief — strategy, budget, and location. £1,000 retainer, then 2.4% sourcing fee on completion. Residential and commercial.",
+      "HMO and conversion-ready BRR deals sourced to your exact brief — strategy, budget, and location. £1,000 retainer, then 2.4% sourcing fee on completion.",
     url: "/bespoke",
     type: "article",
     images: ["/opengraph-image"],
@@ -32,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bespoke Property Sourcing | Alali Property Partners",
     description:
-      "Source property deals to your exact brief — strategy, budget, and location. £1,000 retainer, then 2.4% sourcing fee on completion.",
+      "HMO and conversion-ready BRR deals sourced to your exact brief — strategy, budget, and location. £1,000 retainer, then 2.4% sourcing fee on completion.",
     images: ["/opengraph-image"],
   },
 }
@@ -43,7 +40,7 @@ const bespokeServiceSchema = {
   "@id": "https://www.alalipropertypartners.com/bespoke#service",
   name: "Bespoke Property Sourcing",
   description:
-    "Bespoke property deal sourcing — we go to market and source deals to your exact brief (strategy, budget, location, target returns). Covers residential strategies (BTL, BRR, BRRR, HMO, R2R, R2SA, SA, flips, lease options, development) and commercial sectors (office, retail, industrial, leisure, healthcare, student, mixed use, land).",
+    "Bespoke property deal sourcing — we go to market and source high-yield HMO and conversion-ready BRR deals to your exact brief (budget, target locations, condition, finance method, target returns), with HMO conversion and change-of-use potential (permitted development, non-Article 4) across Greater London and the South of England.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -83,7 +80,7 @@ const bespokeFaqSchema = {
       name: "What is bespoke property sourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Bespoke property sourcing is where we actively go to market and source deals tailored to your specific brief — your preferred strategy (e.g. BTL, BRR, HMO, flip, commercial), budget, target locations, condition, finance method, and target returns. Unlike receiving deals from our existing pipeline, bespoke sourcing is hands-off and targeted to your exact criteria.",
+        text: "Bespoke property sourcing is where we actively go to market and source deals tailored to your specific brief — your target HMO or conversion-ready BRR profile, budget, target locations, condition, finance method, and target returns. Unlike receiving deals from our existing pipeline, bespoke sourcing is targeted to your exact criteria.",
       },
     },
     {
@@ -96,10 +93,10 @@ const bespokeFaqSchema = {
     },
     {
       "@type": "Question",
-      name: "Does bespoke sourcing cover commercial property?",
+      name: "Do you only source HMO and BRR deals?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Bespoke sourcing covers both residential and commercial property across Greater London and the South of England (the South East and Dorset). Commercial sectors include office, retail (high street, retail park), industrial and warehouse, light industrial, leisure and hospitality, healthcare, care homes and assisted living, student accommodation, mixed use, and land with or without planning.",
+        text: "Our specialism is high-yield HMOs and conversion-ready BRR (Buy, Refurbish, Refinance) deals across Greater London and the South of England — properties with HMO conversion and change-of-use potential (permitted development, non-Article 4 areas). We focus there because that is where our access — pre-auction, off-market and direct-to-vendor via a network of compliant agents — produces the strongest deals. Other strategies may be considered on request, but HMO and conversion-ready BRR is what we do best.",
       },
     },
     {
@@ -112,10 +109,10 @@ const bespokeFaqSchema = {
     },
     {
       "@type": "Question",
-      name: "What investment strategies do you source to?",
+      name: "What strategies and finance methods do you source to?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We source to Buy-to-Let (BTL), HMO, Serviced Accommodation, Rent-to-Rent (R2R), Rent-to-SA, BRRR (Buy Refurb Refinance Rent), flips, development and conversion, lease options, and commercial investment briefs. We also source to specific finance methods including cash, BTL mortgage, HMO mortgage, bridging, commercial mortgage, SIPP/SSAS, and JV/private finance.",
+        text: "We specialise in HMO and conversion-ready BRR (Buy, Refurbish, Refinance) deals — properties with HMO conversion and change-of-use potential (permitted development, non-Article 4 areas). We source to common finance methods including cash, HMO and buy-to-let mortgages, bridging, and JV/private finance.",
       },
     },
   ],

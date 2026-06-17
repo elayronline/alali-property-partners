@@ -77,6 +77,11 @@ export function Footer() {
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Site</p>
             <ul className="mt-6 space-y-3 text-sm text-white/65">
               <li>
+                <Link href="/hmo-sourcing" className="transition-colors hover:text-gold">
+                  HMO &amp; BRR Sourcing
+                </Link>
+              </li>
+              <li>
                 <Link href="/how-it-works" className="transition-colors hover:text-gold">
                   How It Works
                 </Link>
@@ -89,6 +94,16 @@ export function Footer() {
               <li>
                 <Link href="/pricing" className="transition-colors hover:text-gold">
                   Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/case-studies" className="transition-colors hover:text-gold">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link href="/development-management" className="transition-colors hover:text-gold">
+                  Development Management
                 </Link>
               </li>
               <li>

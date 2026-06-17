@@ -10,7 +10,7 @@ const steps = [
     step: "01",
     title: "Choose how you want to invest",
     description:
-      "Get sourced deals — off-market from our private contacts and on-market from our compliant agent network — or commission bespoke sourcing to your exact brief.",
+      "Take a ready deal from our pipeline, or commission bespoke sourcing to your exact brief.",
   },
   {
     step: "02",
@@ -44,7 +44,7 @@ const dealPackItems = [
   "Observed local market rents from public lettings data (informational, not guaranteed)",
   "Indicative gross yield based on observed rents (not a return projection)",
   "Indicative refurbishment scope where applicable — to be verified by your contractor or surveyor",
-  "Indicative resale comparables for flips and developments (not a valuation)",
+  "Indicative resale or refinance comparables where an exit applies (not a valuation)",
   "Local area summary: demand drivers, planning context, transport links",
   "Strategy options to consider (HMO, BRR conversion, etc.) — informational, not financial advice",
   "Introductions to FCA-regulated brokers, qualified solicitors, surveyors, and vetted contractors",

@@ -611,7 +611,7 @@ export function ContactForm() {
                     n: "01",
                     title: "We reply within one working day",
                     detail:
-                      "Usually faster. You'll hear from one of us directly — not a call centre or bot.",
+                      "Usually faster. You'll hear from one of us directly.",
                   },
                   {
                     n: "02",

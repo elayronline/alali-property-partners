@@ -79,9 +79,8 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/80 sm:mt-6 sm:text-lg"
         >
-          We source verified HMO and BRR deals across Greater London and the South East —
-          pre-auction, off-market and direct-to-vendor — delivered ready to go with a complete
-          deal pack.
+          We source HMO and BRR deals the open market never sees — pre-auction, off-market
+          and direct-to-vendor — and hand them over ready to move on.
         </motion.p>
 
         <motion.div
@@ -94,7 +93,7 @@ export function Hero() {
             onClick={handleInvestorClick}
             className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-gold px-8 py-4 text-base font-semibold text-dark-bg transition-colors hover:bg-gold-light focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-dark-bg"
           >
-            Tell Us Your Brief
+            Tell Us What You&apos;re After
           </button>
           <Button variant="secondary" size="large" onClick={handleSellerClick}>
             I Have a Property to Move
