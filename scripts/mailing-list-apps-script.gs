@@ -3,23 +3,16 @@
  * =======================================================================
  * Bound to the deal mailing-list Google Sheet. Receives POSTs from the
  * website (/api/mailing-list) and appends a row. Columns: Timestamp, Email,
- * Name, Source. De-dupes on Email (column B). Uses openById so it works
- * whether or not the script is container-bound.
+ * Name, Source. De-dupes on Email (column B).
  *
- * Deployed as a Web app: Execute as = Me, Who has access = Anyone.
- * The owner must run authorize() once (▶ Run in the editor) to grant the
- * Sheets scope before doPost can write.
- *
- * Live web app URL is stored in Vercel as MAILING_LIST_WEBHOOK_URL.
+ * Deploy: Web app, Execute as = Me, Who has access = Anyone.
+ * One-time: after first deploy the owner must authorize the Sheets scope
+ * (run any function that calls SpreadsheetApp once from the editor and Allow).
+ * The live web app URL is stored in Vercel as MAILING_LIST_WEBHOOK_URL.
  */
 
 var SPREADSHEET_ID = '1eAF_YdDVuJqzEZ2W5_IrbtKVNMNjY0es9y6x39aiZfo'
 var HEADERS = ['Timestamp', 'Email', 'Name', 'Source']
-
-// Run ONCE from the editor (▶ Run) to grant the Sheets permission.
-function authorize() {
-  return SpreadsheetApp.openById(SPREADSHEET_ID).getName()
-}
 
 function doPost(e) {
   var lock = LockService.getScriptLock()
