@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { motion } from "framer-motion"
 import { MapPin } from "lucide-react"
 import { SectionDivider } from "@/components/ui/SectionDivider"
@@ -20,9 +19,11 @@ export function CaseStudy() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-center justify-center text-xs font-semibold uppercase tracking-luxe text-gold"
+          className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gold"
         >
-          Success Story
+          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">
+            ✦
+          </span>
           <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
           Case Study
         </motion.p>
@@ -54,39 +55,24 @@ export function CaseStudy() {
           transition={{ delay: 0.1 }}
           className="relative mt-12 overflow-hidden rounded-3xl bg-gradient-to-br from-gold/30 via-gold/10 to-gold/30 p-[1.5px] shadow-[0_20px_60px_-20px_rgba(201,160,61,0.35)]"
         >
-          <div className="relative overflow-hidden rounded-[calc(1.5rem-1.5px)] bg-dark-bg-light/95">
-            {/* The Hampshire property */}
-            <div className="relative">
-              <Image
-                src="/hampshire-deal.jpg"
-                alt="The four-bed semi-detached property sourced pre-auction in Hampshire"
-                width={1400}
-                height={431}
-                className="h-56 w-full object-cover sm:h-72"
-              />
-              {/* fade into the card */}
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-dark-bg-light/95 to-transparent" />
+          <div className="relative rounded-[calc(1.5rem-1.5px)] bg-dark-bg-light/95 px-6 py-10 backdrop-blur-sm sm:px-12 sm:py-12">
+            {/* Soft gold glow inside the card */}
+            <div
+              className="pointer-events-none absolute -top-32 -right-32 h-80 w-80 rounded-full opacity-60"
+              style={{
+                background: "radial-gradient(circle, rgba(201,160,61,0.16), transparent 60%)",
+              }}
+            />
 
-              {/* Location badge */}
-              <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-black/50 px-3.5 py-1.5 backdrop-blur-sm">
+            <div className="relative">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
                 <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
                   Hampshire
                 </span>
               </div>
 
-              {/* Secured badge */}
-              <div className="absolute bottom-4 left-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-black/50 px-3.5 py-1.5 backdrop-blur-sm">
-                <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                <span className="text-xs font-semibold uppercase tracking-[0.15em] text-white/85">
-                  Secured by client
-                </span>
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="relative px-6 py-9 sm:px-12 sm:py-10">
-              <p className="max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
                 Sourced a 4-bed pre-auction property in Hampshire in under 14 days, 10% below our
                 client&apos;s budget. Being converted into a 6-bed HMO under permitted development
                 in a non-Article 4 area, projected{" "}
