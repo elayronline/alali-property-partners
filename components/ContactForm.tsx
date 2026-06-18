@@ -15,6 +15,7 @@ import {
 } from "@/lib/formSchema"
 import { FormInput, FormSelect, FormTextarea } from "@/components/ui/FormField"
 import { SectionDivider } from "@/components/ui/SectionDivider"
+import { buildEnquirySubject } from "@/lib/enquiryEmail"
 
 export function ContactForm() {
   const {
@@ -87,8 +88,7 @@ export function ContactForm() {
 
     const formData = new FormData()
     formData.append("access_key", "4e50844e-651a-4107-9928-0fb0edd47d94")
-    const subjectTag = data.enquiryType ? ` — ${data.enquiryType}` : ""
-    formData.append("subject", `New Enquiry: ${data.fullName} (${data.role})${subjectTag}`)
+    formData.append("subject", buildEnquirySubject(data))
     formData.append("from_name", "Alali Property Partners")
     formData.append("replyto", data.email)
 
