@@ -78,7 +78,17 @@ export function Footer() {
             <ul className="mt-6 space-y-3 text-sm text-white/65">
               <li>
                 <Link href="/hmo-sourcing" className="transition-colors hover:text-gold">
-                  HMO &amp; BRR Sourcing
+                  HMO Sourcing
+                </Link>
+              </li>
+              <li>
+                <Link href="/brr-sourcing" className="transition-colors hover:text-gold">
+                  BRR &amp; BMV Sourcing
+                </Link>
+              </li>
+              <li>
+                <Link href="/property-sourcing-south-east" className="transition-colors hover:text-gold">
+                  Sourcing in the South East
                 </Link>
               </li>
               <li>
