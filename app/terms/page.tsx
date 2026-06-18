@@ -120,7 +120,7 @@ export default function Terms() {
 
         <section>
           <h2 className="text-lg font-bold text-charcoal">4. Fees and Payment</h2>
-          <p className="mt-3 font-semibold text-charcoal">Sourced Deals (Off-Market and On-Market):</p>
+          <p className="mt-3 font-semibold text-charcoal">The Deal List (Off-Market and On-Market):</p>
           <p className="mt-1">
             Our sourcing fee is 2.4% of the purchase price (minimum £3,600, VAT inclusive). This
             applies to deals sourced through our private contacts (off-market) and through our
@@ -176,7 +176,7 @@ export default function Terms() {
           <p className="mt-2">
             Once a deal is presented within the 14-day sourcing window, you have a 48-hour
             decision SLA from the date of presentation to decide whether to proceed — the same
-            standard window that applies to Sourced Deals. Extensions can be granted on fair,
+            standard window that applies to the Deal List. Extensions can be granted on fair,
             justified reasoning (for example, awaiting a survey or mortgage decision in
             principle) where the vendor agrees, and will be confirmed in writing.
           </p>

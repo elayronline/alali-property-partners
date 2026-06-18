@@ -82,7 +82,7 @@ const serviceSchema = {
     itemListElement: [
       {
         "@type": "Offer",
-        name: "Sourced Deals",
+        name: "The Deal List",
         description:
           "Verified HMO and conversion-ready BRR deals sourced pre-auction, off-market and direct-to-vendor via our network of compliant agents. 2.4% sourcing fee of purchase price (min £3,600, VAT inc.). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. We facilitate viewings and introductions on the investor's behalf. 48-hour decision SLA from deal-pack release, with extensions on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
         priceCurrency: "GBP",

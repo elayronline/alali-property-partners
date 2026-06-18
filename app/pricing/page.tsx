@@ -58,7 +58,7 @@ const serviceSchema = {
   offers: [
     {
       "@type": "Offer",
-      name: "Sourced Deals",
+      name: "The Deal List",
       description:
         "Off-market deals from our private contacts and on-market deals from our compliant agent network. 2.4% sourcing fee of purchase price (minimum £3,600, VAT inclusive). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. Viewings and introductions facilitated by us — vendor and agent contact details remain with us. 48-hour decision SLA from deal-pack release, with extensions available on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
       priceCurrency: "GBP",
@@ -119,7 +119,7 @@ const faqSchema = {
       name: "Is the property sourcing fee refundable?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, subject to terms. The £500 unlock fee (Sourced Deals) or £1,000 retainer (Bespoke Sourcing) is refundable where there are valid reasons not to proceed within the 48-hour decision SLA after the deal pack is released or the bespoke deal is presented. The balance of the sourcing fee is only ever charged once you have decided to proceed, so it is never paid in scenarios where a refund would apply. Extensions to the 48-hour SLA may be granted on fair, justified reasoning where the vendor agrees. Refunds are not issued once the window has expired or where significant work has been undertaken on your behalf.",
+        text: "Yes, subject to terms. The £500 unlock fee (the Deal List) or £1,000 retainer (Bespoke Sourcing) is refundable where there are valid reasons not to proceed within the 48-hour decision SLA after the deal pack is released or the bespoke deal is presented. The balance of the sourcing fee is only ever charged once you have decided to proceed, so it is never paid in scenarios where a refund would apply. Extensions to the 48-hour SLA may be granted on fair, justified reasoning where the vendor agrees. Refunds are not issued once the window has expired or where significant work has been undertaken on your behalf.",
       },
     },
     {

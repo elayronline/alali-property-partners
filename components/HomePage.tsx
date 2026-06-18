@@ -10,7 +10,6 @@ import { CaseStudy } from "@/components/CaseStudy"
 import { GotADeal } from "@/components/GotADeal"
 import { Pricing } from "@/components/Pricing"
 import { ContactForm } from "@/components/ContactForm"
-import { MailingList } from "@/components/MailingList"
 import { Footer } from "@/components/Footer"
 
 export function HomePage() {
@@ -26,7 +25,6 @@ export function HomePage() {
       <Pricing />
       <GotADeal />
       <ContactForm />
-      <MailingList />
       <Footer />
     </main>
   )
