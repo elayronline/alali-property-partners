@@ -7,19 +7,19 @@ export const metadata: Metadata = {
     "Terms of service for Alali Property Partners — sourcing fees, 48-hour decision SLA, refund policy, and introducer terms. Covering London & the South of England.",
   alternates: { canonical: "/terms" },
   openGraph: {
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "Terms of Service | Alali Property Partners",
     description:
       "Terms governing our property deal sourcing services, fees, and 48-hour decision SLA policy.",
     url: "/terms",
     type: "article",
-    images: ["/opengraph-image"],
   },
   twitter: {
+    images: ["/opengraph-image"],
     card: "summary_large_image",
     title: "Terms of Service | Alali Property Partners",
     description:
       "Terms governing our property deal sourcing services, fees, and 48-hour decision SLA policy.",
-    images: ["/opengraph-image"],
   },
 }
 

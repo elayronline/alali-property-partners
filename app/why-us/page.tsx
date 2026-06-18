@@ -21,19 +21,19 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/why-us" },
   openGraph: {
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "Why Us | Alali Property Partners",
     description:
       "Verified deals, transparent fees, and complete deal packs — what sets us apart as a property sourcing partner.",
     url: "/why-us",
     type: "article",
-    images: ["/opengraph-image"],
   },
   twitter: {
+    images: ["/opengraph-image"],
     card: "summary_large_image",
     title: "Why Us | Alali Property Partners",
     description:
       "Verified deals, transparent fees, and complete deal packs — what sets us apart as a property sourcing partner.",
-    images: ["/opengraph-image"],
   },
 }
 

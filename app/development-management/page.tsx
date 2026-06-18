@@ -20,19 +20,19 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/development-management" },
   openGraph: {
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "Source & Develop | Alali Property Partners",
     description:
       "Sourced to your brief, then converted — design, planning, build and handover, end to end. By application, selective.",
     url: "/development-management",
     type: "article",
-    images: ["/opengraph-image"],
   },
   twitter: {
+    images: ["/opengraph-image"],
     card: "summary_large_image",
     title: "Source & Develop | Alali Property Partners",
     description:
       "Sourced to your brief, then converted — design, planning, build and handover, end to end. By application, selective.",
-    images: ["/opengraph-image"],
   },
 }
 

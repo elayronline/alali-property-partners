@@ -22,19 +22,19 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/brr-sourcing" },
   openGraph: {
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "BRR & Below-Market-Value Sourcing | Alali Property Partners",
     description:
       "Buy, refurbish, refinance and below-market-value deals across London & the South East — pre-auction, off-market and direct-to-vendor.",
     url: "/brr-sourcing",
     type: "article",
-    images: ["/opengraph-image"],
   },
   twitter: {
+    images: ["/opengraph-image"],
     card: "summary_large_image",
     title: "BRR & Below-Market-Value Sourcing | Alali Property Partners",
     description:
       "Buy, refurbish, refinance and below-market-value deals across London & the South East.",
-    images: ["/opengraph-image"],
   },
 }
 

@@ -48,9 +48,18 @@ export const metadata: Metadata = {
     siteName: "Alali Property Partners",
     locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/opengraph-image"],
   },
   icons: {
     icon: [
