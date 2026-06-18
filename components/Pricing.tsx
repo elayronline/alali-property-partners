@@ -26,8 +26,8 @@ type PricingCard = {
 
 const pricingCards: PricingCard[] = [
   {
-    title: "Sourced Deals",
-    subtitle: "Live off-market, pre-auction & direct-to-vendor deals — sent to the deal list first.",
+    title: "The Deal List",
+    subtitle: "Live off-market, pre-auction & direct-to-vendor deals — straight to your inbox.",
     fee: "2.4%",
     feeDetail: "of purchase price · min £3,600",
     dealList: true,

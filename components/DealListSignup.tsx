@@ -4,7 +4,7 @@ import { useState } from "react"
 
 type Status = "idle" | "loading" | "success" | "error"
 
-/** Compact deal-list email capture, embedded in the Sourced Deals pricing card.
+/** Compact deal-list email capture, embedded in the Deal List pricing card.
     Posts to the same /api/mailing-list endpoint (source tagged for provenance). */
 export function DealListSignup() {
   const [email, setEmail] = useState("")
