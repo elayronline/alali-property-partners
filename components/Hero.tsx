@@ -17,14 +17,14 @@ export function Hero() {
     <section id="hero" className="relative min-h-[90dvh] overflow-hidden bg-ink">
       {/* Photography — full-bleed on mobile, right ~58% on desktop.
           Swap public/hero-street.jpg with the exact London-street shot. */}
-      <div className="absolute inset-0 lg:left-[42%]">
+      <div className="absolute inset-0 overflow-hidden lg:left-[42%]">
         <Image
           src="/hero-street.jpg"
           alt="Period terraced houses at dusk across London and the South East"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="hero-kenburns object-cover"
         />
         {/* Fade the photo into the ink panel */}
         <div className="absolute inset-0 bg-ink/60 lg:hidden" />
