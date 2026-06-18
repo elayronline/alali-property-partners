@@ -8,13 +8,13 @@ const cards = [
     icon: Building2,
     title: "HMO Investments",
     detail:
-      "Licensed HMOs and conversion opportunities with strong cashflow potential and long-term demand.",
+      "Houses in multiple occupation (HMOs) — let by the room — with strong cashflow potential and long-term tenant demand.",
   },
   {
     icon: Home,
     title: "BRR Investments",
     detail:
-      "Projects with clear refurbishment and refinancing potential to recycle capital and scale your portfolio.",
+      "Buy, Refurbish, Refinance (BRR) — refurbish to add value and rooms, then refinance to recycle your capital and scale the portfolio.",
   },
 ]
 

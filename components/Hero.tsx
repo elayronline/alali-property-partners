@@ -52,7 +52,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mt-6 max-w-md text-base leading-relaxed text-white/75 sm:text-lg"
           >
-            Verified HMO and BRR opportunities across London and the South East.
+            We find and vet high-yield investment property — HMOs and conversion projects across
+            London &amp; the South East. You own the asset; we do the legwork.
           </motion.p>
 
           <motion.div
