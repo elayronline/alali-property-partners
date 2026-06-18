@@ -1,17 +1,18 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { Logo } from "@/components/ui/Logo"
 import { scrollToSection } from "@/lib/smoothScroll"
 
 const navLinks = [
   { label: "How It Works", href: "/how-it-works", section: "how-it-works" },
   { label: "Why Us", href: "/why-us", section: "why-us" },
   { label: "Pricing", href: "/pricing", section: "pricing" },
+  { label: "Contact", href: "/contact", section: "contact" },
 ]
 
 export function Navbar() {
@@ -56,27 +57,27 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-dark-bg/95 backdrop-blur-sm shadow-lg" : "bg-dark-bg"
+        scrolled ? "bg-ink/95 backdrop-blur-sm shadow-lg shadow-black/30" : "bg-ink"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
         <Link
           href="/"
           onClick={handleLogoClick}
           className="cursor-pointer"
-          aria-label="Back to top"
+          aria-label="Alali Property Partners — back to top"
         >
-          <Image src="/logo.png" alt="Alali Property Partners" width={140} height={44} priority />
+          <Logo height={54} />
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={handleSectionClick(link.section)}
-              className="group relative cursor-pointer text-sm font-normal tracking-wide text-white/75 transition-colors hover:text-white"
+              className="group relative cursor-pointer text-sm font-normal tracking-wide text-white/80 transition-colors hover:text-white"
             >
               {link.label}
               <span className="pointer-events-none absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100" />
@@ -85,9 +86,9 @@ export function Navbar() {
           <Link
             href="/contact"
             onClick={handleSectionClick("contact")}
-            className="cursor-pointer rounded-full bg-gold px-5 py-2 text-xs font-semibold tracking-wide text-dark-bg shadow-[0_4px_18px_-6px_rgba(201,160,61,0.6)] transition-all hover:bg-gold-light hover:shadow-[0_6px_22px_-4px_rgba(201,160,61,0.7)]"
+            className="btn-gold-outline cursor-pointer px-5 py-2.5 text-[0.7rem]"
           >
-            Get in Touch
+            Tell Us Your Brief
           </Link>
         </div>
 
@@ -114,7 +115,7 @@ export function Navbar() {
             id="mobile-menu"
             role="region"
             aria-label="Mobile navigation"
-            className="overflow-hidden border-t border-white/10 bg-dark-bg lg:hidden"
+            className="overflow-hidden border-t border-white/10 bg-ink lg:hidden"
           >
             <div className="px-4 pb-6 pt-2">
               {navLinks.map((link, i) => (
@@ -141,9 +142,9 @@ export function Navbar() {
                 <Link
                   href="/contact"
                   onClick={handleSectionClick("contact")}
-                  className="mt-3 block w-full cursor-pointer rounded-lg bg-gold px-5 py-3 text-center text-base font-semibold text-dark-bg transition-colors hover:bg-gold-light"
+                  className="btn-gold mt-3 block w-full cursor-pointer px-5 py-3.5 text-center text-sm"
                 >
-                  Get in Touch
+                  Tell Us Your Brief
                 </Link>
               </motion.div>
             </div>

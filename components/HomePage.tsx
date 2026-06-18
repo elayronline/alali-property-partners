@@ -19,10 +19,10 @@ export function HomePage() {
       <Navbar />
       <Hero />
       <WhatWeSource />
-      <CoverageMap />
+      <CaseStudy />
       <HowItWorks />
       <WhyUs />
-      <CaseStudy />
+      <CoverageMap />
       <Pricing />
       <GotADeal />
       <ContactForm />

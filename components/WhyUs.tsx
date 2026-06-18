@@ -49,7 +49,7 @@ const secondaryCards = [
 
 export function WhyUs() {
   return (
-    <section id="why-us" className="bg-white px-4 py-20 sm:px-6 sm:py-28">
+    <section id="why-us" className="bg-ink px-4 py-20 sm:px-6 sm:py-28">
       {/* Gold divider */}
       <SectionDivider variant="light" className="mb-16" />
 
@@ -60,15 +60,13 @@ export function WhyUs() {
           viewport={{ once: true }}
           className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gold"
         >
-          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">04</span>
-          <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
           The Advantage
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display mt-3 text-center text-3xl text-charcoal sm:text-5xl"
+          className="font-display mt-3 text-center text-3xl text-white sm:text-5xl"
         >
           Why Work With Us
         </motion.h2>

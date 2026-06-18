@@ -1,174 +1,57 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { SectionDivider } from "@/components/ui/SectionDivider"
+import { Building2, Home } from "lucide-react"
 
-const methods: Array<{ label: string; detail: string }> = [
-  { label: "Off-Market", detail: "Direct from our private contacts" },
-  { label: "On-Market (Agent Network)", detail: "Compliant agents we work with" },
-  { label: "Below Market Value", detail: "Below typical area pricing" },
-  { label: "Pre-Market", detail: "Before listings go public" },
-  { label: "Auction", detail: "Pre- and post-auction lots" },
-  { label: "Direct to Seller", detail: "No agent in the chain" },
-  { label: "Probate", detail: "Motivated executors, quick sale" },
-]
-
-// We lead with HMO + conversion-ready BRR — the two strategies the brand
-// specialises in. BTL stays as a secondary option; R2R, SA, commercial
-// conversion, and flips are no longer headline strategies.
-const primaryStrategies: Array<{ label: string; detail: string }> = [
+const cards = [
   {
-    label: "HMO (Houses in Multiple Occupation)",
-    detail: "Per-room let, 8–12% gross yield",
-  },
-  {
-    label: "BRR / Conversion-Ready",
+    icon: Building2,
+    title: "HMO Investments",
     detail:
-      "HMO conversion & change-of-use potential (permitted development, non-Article 4) — recycle your capital",
+      "Houses in multiple occupation (HMOs) — let by the room — with strong cashflow potential and long-term tenant demand.",
+  },
+  {
+    icon: Home,
+    title: "BRR Investments",
+    detail:
+      "Buy, Refurbish, Refinance (BRR) — refurbish to add value and rooms, then refinance to recycle your capital and scale the portfolio.",
   },
 ]
-
-const otherStrategies: Array<{ label: string; detail: string }> = [
-  { label: "Bespoke Briefs", detail: "We source to your exact criteria" },
-  { label: "Buy-to-Let (BTL)", detail: "Single-family let, ~5–8% gross yield" },
-]
-
-const sellerSituations: Array<{ label: string; detail: string }> = [
-  { label: "Stuck Properties", detail: "Won't shift on portals — we have buyers" },
-  { label: "Quick Sales", detail: "Funded, ready-to-move investors" },
-  { label: "Inherited Properties", detail: "Probate, no chain, fast turnaround" },
-  { label: "Tenant Issues", detail: "Vacant or problem tenancies welcomed" },
-  { label: "Portfolio Disposals", detail: "Multi-property briefs handled" },
-  { label: "Distressed Sales", detail: "Confidential, discreet, fast" },
-]
-
-function DarkPill({ label, detail }: { label: string; detail: string }) {
-  return (
-    <span
-      className="group/pill relative inline-flex cursor-default items-center rounded-full border border-white/15 px-3.5 py-2 text-xs text-white/70 transition-all duration-300 sm:px-4 sm:text-sm md:hover:border-gold md:hover:bg-gold md:hover:text-dark-bg md:hover:shadow-[0_8px_24px_-12px_rgba(201,160,61,0.4)]"
-      tabIndex={0}
-    >
-      {label}
-      {/* Tooltip — desktop only */}
-      <span className="pointer-events-none absolute top-full left-1/2 z-20 mt-2 hidden -translate-x-1/2 whitespace-nowrap rounded-md bg-dark-bg-light/95 px-3 py-1.5 text-[0.7rem] font-medium text-white/85 opacity-0 shadow-lg shadow-black/40 backdrop-blur-sm transition-all duration-200 group-hover/pill:opacity-100 group-focus/pill:opacity-100 md:block">
-        <span className="absolute -top-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 bg-dark-bg-light/95" />
-        {detail}
-      </span>
-    </span>
-  )
-}
 
 export function WhatWeSource() {
   return (
-    <section
-      id="what-we-source"
-      className="section-glow relative overflow-hidden bg-dark-bg px-4 py-20 sm:px-6 sm:py-28"
-    >
-      {/* Animated drifting grid */}
-      <div className="animated-grid absolute inset-0" />
-
-      {/* Gold divider */}
-      <SectionDivider variant="dark" className="relative mb-16" />
-
-      <div className="relative mx-auto max-w-4xl text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-xs font-semibold uppercase tracking-[0.25em] text-gold"
-        >
-          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">
-            01
-          </span>
-          <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
-          What We Source
-        </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="font-display mt-3 text-3xl text-white sm:text-5xl"
-        >
-          We Source to Your Numbers
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.05 }}
-          className="mx-auto mt-4 max-w-xl text-sm text-white/60 sm:text-base"
-        >
-          Tell us what you&apos;re looking for — or what you need to move. We do the rest.{" "}
-          <span className="hidden text-white/40 md:inline">Hover any pill for detail.</span>
-        </motion.p>
-
-        {/* For investors */}
+    <section id="what-we-source" className="bg-ink px-4 py-24 sm:px-6 sm:py-28">
+      <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[0.9fr_1.4fr] lg:gap-16">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="mt-12"
         >
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-gold/80">
-            How we find deals
-          </p>
-          <div className="flex flex-wrap justify-center gap-2.5">
-            {methods.map((item) => (
-              <DarkPill key={item.label} label={item.label} detail={item.detail} />
-            ))}
-          </div>
+          <p className="text-xs font-semibold uppercase tracking-luxe text-gold">What We Source</p>
+          <h2 className="font-display mt-5 text-3xl leading-[1.12] text-white sm:text-4xl">
+            We source the right opportunities. You build the portfolio.
+          </h2>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="mt-10"
-        >
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-gold/80">
-            What we specialise in
-          </p>
-          {/* Primary strategies — featured */}
-          <div className="mx-auto grid max-w-2xl gap-3 sm:grid-cols-2">
-            {primaryStrategies.map((item) => (
-              <div
-                key={item.label}
-                className="rounded-xl border border-gold/30 bg-gradient-to-br from-gold/10 via-gold/[0.04] to-transparent p-4 text-left transition-all duration-300 md:hover:border-gold/60 md:hover:shadow-[0_10px_30px_-14px_rgba(201,160,61,0.4)]"
-              >
-                <p className="text-sm font-semibold text-white sm:text-base">{item.label}</p>
-                <p className="mt-1 text-xs leading-relaxed text-white/55 sm:text-sm">
-                  {item.detail}
-                </p>
-              </div>
-            ))}
-          </div>
-          {/* Secondary strategies */}
-          <div className="mt-4 flex flex-wrap justify-center gap-2.5">
-            {otherStrategies.map((item) => (
-              <DarkPill key={item.label} label={item.label} detail={item.detail} />
-            ))}
-          </div>
-        </motion.div>
-
-        {/* For sellers */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-10"
-        >
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-gold/80">
-            Got a property to move?
-          </p>
-          <div className="flex flex-wrap justify-center gap-2.5">
-            {sellerSituations.map((item) => (
-              <DarkPill key={item.label} label={item.label} detail={item.detail} />
-            ))}
-          </div>
-        </motion.div>
+        {/* Cards */}
+        <div className="grid gap-6 sm:grid-cols-2">
+          {cards.map((card, i) => (
+            <motion.div
+              key={card.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="group rounded-sm border border-white/10 bg-ink-raised p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_20px_50px_-24px_rgba(201,160,61,0.4)] sm:p-8"
+            >
+              <card.icon className="h-9 w-9 text-gold" strokeWidth={1.25} />
+              <h3 className="font-display mt-6 text-xl text-white">{card.title}</h3>
+              <div className="mt-3 h-px w-10 bg-gold/60" />
+              <p className="mt-4 text-sm leading-relaxed text-white/60">{card.detail}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )

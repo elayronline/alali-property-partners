@@ -23,17 +23,6 @@ type PricingCard = {
 
 const pricingCards: PricingCard[] = [
   {
-    title: "Bespoke Sourcing",
-    subtitle: "Sourced to your exact brief — fully hands-off sourcing",
-    fee: "£1,000",
-    feeDetail: "retainer + sourcing fee on completion",
-    payment: "Start with a quick call to confirm your brief. The £1,000 retainer then secures your dedicated 14-day search; sourcing fee on completion.",
-    includes: "Dedicated bespoke search + full deal pack + viewings facilitated",
-    reassurance: "Retainer refundable if no suitable deal in 14 days, or on valid reasons not to proceed (subject to terms).",
-    popular: true,
-    expandable: true,
-  },
-  {
     title: "Sourced Deals",
     subtitle: "Pre-auction, off-market and direct-to-vendor via our agent network",
     fee: "2.4%",
@@ -44,8 +33,19 @@ const pricingCards: PricingCard[] = [
     popular: false,
   },
   {
-    title: "Development Management",
-    subtitle: "Fully managed HMO conversion, end to end",
+    title: "Bespoke Sourcing",
+    subtitle: "Sourced to your exact brief — fully hands-off sourcing",
+    fee: "£1,000 + 2.4%",
+    feeDetail: "retainer + sourcing fee · min £3,600",
+    payment: "Start with a quick call to confirm your brief. The £1,000 retainer then secures your dedicated 14-day search; sourcing fee on completion.",
+    includes: "Dedicated bespoke search + full deal pack + viewings facilitated",
+    reassurance: "Retainer refundable if no suitable deal in 14 days, or on valid reasons not to proceed (subject to terms).",
+    popular: true,
+    expandable: true,
+  },
+  {
+    title: "Source & Develop",
+    subtitle: "From sourcing to finished HMO",
     byApplication: true,
   },
 ]
@@ -55,19 +55,19 @@ export function Pricing() {
   const pathname = usePathname()
   const router = useRouter()
 
-  // Pre-tags the contact enquiry as Development Management. Same-page uses an
+  // Pre-tags the contact enquiry as Source & Develop. Same-page uses an
   // event + scroll; cross-page carries the tag via a query param.
   const handleDevEnquiry = () => {
     if (pathname === "/") {
-      window.dispatchEvent(new CustomEvent("preselect-enquiry", { detail: "Development Management" }))
+      window.dispatchEvent(new CustomEvent("preselect-enquiry", { detail: "Source & Develop" }))
       scrollToSection("contact")
     } else {
-      router.push("/contact?enquiry=Development%20Management")
+      router.push("/contact?enquiry=Source%20%26%20Develop")
     }
   }
 
   return (
-    <section id="pricing" className="overflow-x-hidden bg-white px-5 py-20 sm:px-6 sm:py-28">
+    <section id="pricing" className="overflow-x-hidden bg-ink px-5 py-20 sm:px-6 sm:py-28">
       {/* Divider */}
       <SectionDivider variant="light" className="mb-16" />
 
@@ -78,15 +78,13 @@ export function Pricing() {
           viewport={{ once: true }}
           className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gold"
         >
-          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">05</span>
-          <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
           Transparent Pricing
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display mt-3 text-center text-3xl text-charcoal sm:text-5xl"
+          className="font-display mt-3 text-center text-3xl text-white sm:text-5xl"
         >
           Our Fees
         </motion.h2>
@@ -118,10 +116,10 @@ export function Pricing() {
                       ? "bg-gradient-to-br from-gold via-gold-light to-gold-dark shadow-[0_8px_40px_-12px_rgba(201,160,61,0.45)] md:group-hover:shadow-[0_20px_60px_-15px_rgba(201,160,61,0.6)]"
                       : card.byApplication
                         ? "bg-gradient-to-br from-charcoal via-charcoal/85 to-charcoal shadow-[0_8px_40px_-14px_rgba(38,40,44,0.5)] md:group-hover:shadow-[0_20px_60px_-15px_rgba(38,40,44,0.55)]"
-                        : "bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 shadow-sm md:group-hover:shadow-xl"
+                        : "bg-gradient-to-br from-white/15 via-white/5 to-white/15 shadow-sm md:group-hover:shadow-xl"
                   }`}
                 >
-                <div className="relative h-full rounded-[calc(1rem-1.5px)] bg-white p-5 sm:p-6">
+                <div className="relative h-full rounded-[calc(1rem-1.5px)] bg-ink-raised p-5 sm:p-6">
                   {/* Hover glow */}
                   <div className="pointer-events-none absolute -inset-px rounded-[calc(1rem-1.5px)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                     style={{
@@ -131,14 +129,14 @@ export function Pricing() {
                   />
 
                 <div className="pt-2">
-                  <h3 className="font-display text-2xl text-charcoal">{card.title}</h3>
+                  <h3 className="font-display text-2xl text-white">{card.title}</h3>
                   <p className="mt-1 text-xs text-muted-light">{card.subtitle}</p>
 
                   {card.byApplication ? (
                     <>
                       {/* By-application headline (no price) */}
                       <div className="mt-5">
-                        <p className="font-display text-4xl text-charcoal" style={{ fontWeight: 400 }}>
+                        <p className="font-display text-4xl text-white" style={{ fontWeight: 400 }}>
                           By Application
                         </p>
                         <p className="mt-1 text-xs text-muted-light">
@@ -149,16 +147,16 @@ export function Pricing() {
                       {/* Details */}
                       <div className="mt-4 space-y-2.5">
                         <div>
-                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-white/40">
                             What it is
                           </p>
                           <p className="mt-0.5 text-sm text-muted-light">
-                            Fully managed HMO conversion — design, planning, build and handover,
-                            project-managed end to end.
+                            We source the property to your brief, then manage the full HMO
+                            conversion — design, planning, build and handover. End to end.
                           </p>
                         </div>
                         <div>
-                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-white/40">
                             Availability
                           </p>
                           <p className="mt-0.5 text-sm text-muted-light">
@@ -177,8 +175,8 @@ export function Pricing() {
                   ) : (
                     <>
                       {/* Fee */}
-                      <div className="mt-5 flex items-baseline gap-2.5">
-                        <p className="font-display text-5xl text-charcoal" style={{ fontWeight: 400 }}>
+                      <div className="mt-5 flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+                        <p className="font-display text-4xl text-white" style={{ fontWeight: 400 }}>
                           {card.fee}
                         </p>
                         <span className="rounded-full bg-gold/10 px-2 py-0.5 text-[0.65rem] font-semibold tracking-wide text-gold">
@@ -190,13 +188,13 @@ export function Pricing() {
                       {/* Details */}
                       <div className="mt-4 space-y-2.5">
                         <div>
-                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-white/40">
                             When you pay
                           </p>
                           <p className="mt-0.5 text-sm text-muted-light">{card.payment}</p>
                         </div>
                         <div>
-                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-charcoal/40">
+                          <p className="text-[0.7rem] font-semibold uppercase tracking-wider text-white/40">
                             What&apos;s included
                           </p>
                           <p className="mt-0.5 text-sm text-muted-light">{card.includes}</p>
@@ -204,7 +202,7 @@ export function Pricing() {
                       </div>
 
                       {/* Reassurance */}
-                      <div className="mt-4 rounded-lg bg-warm-grey px-3 py-2">
+                      <div className="mt-4 rounded-lg bg-white/5 px-3 py-2">
                         <p className="text-xs font-medium text-muted-light">{card.reassurance}</p>
                       </div>
 
@@ -251,7 +249,7 @@ export function Pricing() {
 
                 {card.popular && (
                   <span className="pointer-events-none absolute -top-3 right-5 z-20 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-gold to-gold-light px-3 py-1 text-[0.7rem] font-bold tracking-wide text-dark-bg shadow-[0_4px_14px_-2px_rgba(201,160,61,0.6)]">
-                    ✦ Recommended
+                    Most Popular
                   </span>
                 )}
 

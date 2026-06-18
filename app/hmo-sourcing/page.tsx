@@ -54,6 +54,7 @@ const serviceSchema = {
     { "@type": "AdministrativeArea", name: "Greater London" },
     { "@type": "AdministrativeArea", name: "South East England" },
     { "@type": "AdministrativeArea", name: "Dorset" },
+    { "@type": "AdministrativeArea", name: "Somerset" },
   ],
   serviceType: "HMO Property Sourcing",
 }
@@ -162,10 +163,10 @@ export default function Page() {
         </section>
 
         {/* Two pillars */}
-        <section className="bg-white px-4 py-20 sm:px-6 sm:py-28">
+        <section className="bg-ink px-4 py-20 sm:px-6 sm:py-28">
           <SectionDivider variant="light" className="mb-16" />
           <div className="mx-auto max-w-5xl">
-            <h2 className="font-display text-center text-3xl text-charcoal sm:text-4xl">
+            <h2 className="font-display text-center text-3xl text-white sm:text-4xl">
               What we specialise in
             </h2>
             <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -174,7 +175,7 @@ export default function Page() {
                   key={p.title}
                   className="rounded-2xl border border-gold/20 bg-gradient-to-br from-gold/[0.06] to-transparent p-7"
                 >
-                  <h3 className="font-display text-2xl tracking-tight text-charcoal">{p.title}</h3>
+                  <h3 className="font-display text-2xl tracking-tight text-white">{p.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-light">{p.detail}</p>
                 </div>
               ))}

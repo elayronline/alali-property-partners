@@ -5,9 +5,9 @@ import { Footer } from "@/components/Footer"
 import { SectionDivider } from "@/components/ui/SectionDivider"
 
 export const metadata: Metadata = {
-  title: "Development Management — Fully Managed HMO Conversion",
+  title: "Source & Develop — HMO Sourcing & Development, End to End",
   description:
-    "Fully managed HMO conversion across Greater London & the South East — design, planning, build and handover, project-managed end to end. A selective service offered by application. Price on application.",
+    "Our complete service: we source the property to your brief, then manage the full HMO conversion — design, planning, build and handover, end to end. Across Greater London & the South East. By application; price on application.",
   keywords: [
     "HMO development management",
     "managed HMO conversion",
@@ -19,18 +19,18 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/development-management" },
   openGraph: {
-    title: "Development Management | Alali Property Partners",
+    title: "Source & Develop | Alali Property Partners",
     description:
-      "Fully managed HMO conversion — design, planning, build and handover, project-managed end to end. By application, selective.",
+      "Sourced to your brief, then converted — design, planning, build and handover, end to end. By application, selective.",
     url: "/development-management",
     type: "article",
     images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Development Management | Alali Property Partners",
+    title: "Source & Develop | Alali Property Partners",
     description:
-      "Fully managed HMO conversion — design, planning, build and handover, project-managed end to end. By application, selective.",
+      "Sourced to your brief, then converted — design, planning, build and handover, end to end. By application, selective.",
     images: ["/opengraph-image"],
   },
 }
@@ -41,7 +41,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/development-management#service",
   name: "HMO Development Management",
   description:
-    "Fully managed HMO conversion — design, planning, build and handover, project-managed end to end across Greater London and the South of England. A selective service offered by application; we take on a limited number of projects per quarter. Price on application.",
+    "We source the property to your brief, then project-manage the full HMO conversion — design, planning, build and handover, end to end — across Greater London and the South of England. A selective service offered by application; we take on a limited number of projects per quarter. Price on application.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -51,13 +51,14 @@ const serviceSchema = {
     { "@type": "AdministrativeArea", name: "Greater London" },
     { "@type": "AdministrativeArea", name: "South East England" },
     { "@type": "AdministrativeArea", name: "Dorset" },
+    { "@type": "AdministrativeArea", name: "Somerset" },
   ],
   serviceType: "HMO Development Management",
   offers: {
     "@type": "Offer",
-    name: "Development Management",
+    name: "Source & Develop",
     description:
-      "Fully managed HMO conversion — design, planning, build and handover, project-managed end to end. A selective service offered by application; we take on a limited number of projects per quarter. Price on application.",
+      "Our complete service: we source the property to your brief, then manage the full HMO conversion — design, planning, build and handover, end to end. A selective service offered by application; we take on a limited number of projects per quarter. Price on application.",
     availability: "https://schema.org/LimitedAvailability",
     areaServed: "GB",
   },
@@ -72,7 +73,7 @@ const faqSchema = {
       name: "What is HMO development management?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Development management is our fully managed HMO conversion service. We project-manage the conversion of a property into a high-yield HMO end to end — design, planning, build, and handover — so the investor does not have to coordinate architects, contractors, and lettings themselves. It is delivered alongside the FCA-regulated brokers, qualified solicitors, and vetted contractors we introduce.",
+        text: "Development management is our complete, end-to-end service. We source the property to your brief, then project-manage the full conversion into a high-yield HMO — design, planning, build, and handover — so the investor does not have to find the deal or coordinate architects, contractors, and lettings themselves. It is delivered alongside the FCA-regulated brokers, qualified solicitors, and vetted contractors we introduce.",
       },
     },
     {
@@ -102,7 +103,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Development Management",
+      name: "Source & Develop",
       item: "https://www.alalipropertypartners.com/development-management",
     },
   ],
@@ -111,24 +112,30 @@ const breadcrumbSchema = {
 const stages = [
   {
     step: "01",
+    title: "Source to your brief",
+    detail:
+      "We find and verify a property that fits your strategy, budget and target returns — pre-auction, off-market or direct-to-vendor.",
+  },
+  {
+    step: "02",
     title: "Design & feasibility",
     detail:
       "We assess the conversion potential — layout, room count, HMO standards, and the planning route (permitted development or full application, non-Article 4).",
   },
   {
-    step: "02",
+    step: "03",
     title: "Planning & compliance",
     detail:
       "Drawings, applications, building control, and HMO licensing handled by the right professionals, coordinated by us.",
   },
   {
-    step: "03",
+    step: "04",
     title: "Build & project management",
     detail:
       "Vetted contractors deliver the works to programme and budget. We manage the schedule, quality, and reporting so you don't have to.",
   },
   {
-    step: "04",
+    step: "05",
     title: "Handover",
     detail:
       "A finished, compliant, tenant-ready HMO — handed back to you, with introductions to lettings where you want them.",
@@ -155,16 +162,16 @@ export default function Page() {
               By Application
             </p>
             <h1 className="font-display mt-4 text-4xl tracking-tight text-white sm:text-6xl">
-              Development Management
+              Source &amp; Develop
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">
-              Fully managed HMO conversion — design, planning, build and handover, project-managed
-              end to end. A selective service for investors who want the finished asset without
-              running the build themselves.
+              The complete service: we source the property to your brief, then manage the full HMO
+              conversion — design, planning, build and handover, end to end. For investors who want
+              the finished asset without sourcing or running the build themselves.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
-                href="/contact?enquiry=Development%20Management"
+                href="/contact?enquiry=Source%20%26%20Develop"
                 className="rounded-lg bg-gold px-7 py-3.5 text-sm font-bold text-dark-bg transition-colors hover:bg-gold-light"
               >
                 Apply / Enquire &rarr;
@@ -185,26 +192,26 @@ export default function Page() {
 
         {/* Stages */}
         <section className="bg-warm-grey px-4 py-20 sm:px-6 sm:py-28">
-          <SectionDivider variant="light" className="mb-16" />
+          <SectionDivider variant="dark" className="mb-16" />
           <div className="mx-auto max-w-5xl">
-            <h2 className="font-display text-center text-3xl text-charcoal sm:text-4xl">
-              End to end, project-managed
+            <h2 className="font-display text-center text-3xl text-white sm:text-4xl">
+              From brief to finished HMO
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-center text-sm text-muted-light">
-              The build is delivered by vetted professionals and coordinated by us — so a conversion
-              runs to programme without you managing the trades.
+              From sourcing the right property to handing back a finished HMO — every stage delivered
+              by the right professionals and coordinated by us.
             </p>
             <div className="mt-14 grid gap-6 sm:grid-cols-2">
               {stages.map((s) => (
-                <div key={s.step} className="rounded-2xl border border-gold/15 bg-white p-6 shadow-sm">
+                <div key={s.step} className="rounded-2xl border border-gold/15 bg-ink-raised p-6 shadow-sm">
                   <span className="font-display text-3xl text-gold/30">{s.step}</span>
-                  <h3 className="font-display mt-2 text-xl tracking-tight text-charcoal">{s.title}</h3>
+                  <h3 className="font-display mt-2 text-xl tracking-tight text-white">{s.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-light">{s.detail}</p>
                 </div>
               ))}
             </div>
             <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-light/85">
-              Development management is a project-management service. Regulated work (mortgage, legal,
+              Development management is a sourcing and project-management service. Regulated work (mortgage, legal,
               structural) is delivered by the independent FCA-regulated brokers, qualified solicitors,
               and other appropriately authorised professionals we introduce. Nothing here is financial,
               tax, or legal advice.

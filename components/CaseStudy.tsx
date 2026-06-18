@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { MapPin } from "lucide-react"
 import { SectionDivider } from "@/components/ui/SectionDivider"
@@ -21,10 +22,6 @@ export function CaseStudy() {
           viewport={{ once: true }}
           className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gold"
         >
-          <span className="font-display text-base italic font-medium tracking-normal text-gold/70 normal-case">
-            ✦
-          </span>
-          <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
           Case Study
         </motion.p>
 
@@ -65,20 +62,36 @@ export function CaseStudy() {
             />
 
             <div className="relative">
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
-                <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                  Hampshire
-                </span>
-              </div>
+              {/* Top: brief + property photo side by side */}
+              <div className="grid items-start gap-6 md:grid-cols-[1fr_10rem]">
+                <div>
+                  <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
+                    <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
+                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                      Hampshire
+                    </span>
+                  </div>
 
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
-                Sourced a 4-bed pre-auction property in Hampshire in under 14 days, 10% below our
-                client&apos;s budget. Being converted into a 6-bed HMO under permitted development
-                in a non-Article 4 area, projected{" "}
-                <span className="font-semibold text-gold">£700–900 per room, per month</span>, with
-                capital pulled back out for the next build.
-              </p>
+                  <p className="mt-5 text-lg leading-relaxed text-white/85 sm:text-xl">
+                    Sourced a 4-bed pre-auction property in Hampshire in under 14 days, 10% below our
+                    client&apos;s budget. Being converted into a 6-bed HMO under permitted development
+                    in a non-Article 4 area, projected{" "}
+                    <span className="font-semibold text-gold">£700–900 per room, per month</span>,
+                    with capital pulled back out for the next build.
+                  </p>
+                </div>
+
+                {/* The sourced property */}
+                <div className="relative mx-auto aspect-square w-40 shrink-0 overflow-hidden rounded-2xl border border-white/10 shadow-lg shadow-black/40 md:mx-0 md:w-full">
+                  <Image
+                    src="/hampshire-deal.jpg"
+                    alt="The four-bed property sourced pre-auction in Hampshire"
+                    fill
+                    sizes="160px"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
 
               {/* Stat strip */}
               <div className="mt-8 grid gap-px overflow-hidden rounded-xl border border-white/10 bg-white/5 sm:grid-cols-3">

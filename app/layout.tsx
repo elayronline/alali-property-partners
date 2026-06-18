@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Raleway } from "next/font/google"
+import { Raleway, Montserrat } from "next/font/google"
 import "./globals.css"
 
 const raleway = Raleway({
@@ -7,6 +7,13 @@ const raleway = Raleway({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
+})
+
+// Bold geometric sans for display headings — matches the Alali brand collateral.
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
 })
 
 export const metadata: Metadata = {
@@ -85,6 +92,7 @@ const businessSchema = {
     { "@type": "AdministrativeArea", name: "Greater London" },
     { "@type": "AdministrativeArea", name: "South East England" },
     { "@type": "AdministrativeArea", name: "Dorset" },
+    { "@type": "AdministrativeArea", name: "Somerset" },
   ],
   foundingDate: "2025",
   sameAs: [
@@ -152,7 +160,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={`${raleway.variable} antialiased`}>{children}</body>
+      <body className={`${raleway.variable} ${montserrat.variable} antialiased`}>{children}</body>
     </html>
   )
 }

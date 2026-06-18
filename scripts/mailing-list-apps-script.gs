@@ -1,18 +1,30 @@
 /**
- * Alali Property Partners — Deal mailing-list collector (DEPLOYED VERSION)
- * =======================================================================
- * Bound to the deal mailing-list Google Sheet. Receives POSTs from the
- * website (/api/mailing-list) and appends a row. Columns: Timestamp, Email,
- * Name, Source. De-dupes on Email (column B).
+ * Alali Property Partners — website mailing-list collector (DEPLOYED VERSION)
+ * ==========================================================================
+ * Bound to the "Investor List" Google Sheet. Receives POSTs from the website
+ * (/api/mailing-list — both the mailing-list band and the contact-form opt-in)
+ * and appends each signup as an investor-list row, de-duped on the real Email
+ * column (F).
  *
- * Deploy: Web app, Execute as = Me, Who has access = Anyone.
- * One-time: after first deploy the owner must authorize the Sheets scope
- * (run any function that calls SpreadsheetApp once from the editor and Allow).
- * The live web app URL is stored in Vercel as MAILING_LIST_WEBHOOK_URL.
+ * Investor List columns:
+ *   A Name | B Source | C Role | D Location | E Strategy | F Email | G Phone | H Notes
+ *
+ * A website signup maps to:
+ *   Name   = submitted name (blank if none)
+ *   Source = "Website"
+ *   Email  = submitted email (column F — this is what de-dupe checks)
+ *   Notes  = "Joined mailing list <timestamp> via website (<source tag>)"
+ *   Role / Location / Strategy / Phone = left blank for the sourcer to qualify
+ *
+ * Deploy: Web app, Execute as = Me (USER_DEPLOYING), Who has access = Anyone.
+ * Managed via clasp; the live web app URL is stored in Vercel as
+ * MAILING_LIST_WEBHOOK_URL. Updating the script: `clasp push` then
+ * `clasp deploy --deploymentId <id>` for each live deployment (the URL/ID is
+ * preserved, so no Vercel env change is needed).
  */
-
 var SPREADSHEET_ID = '1eAF_YdDVuJqzEZ2W5_IrbtKVNMNjY0es9y6x39aiZfo'
-var HEADERS = ['Timestamp', 'Email', 'Name', 'Source']
+var HEADERS = ['Name', 'Source', 'Role', 'Location', 'Strategy', 'Email', 'Phone', 'Notes']
+var EMAIL_COL = 6 // column F
 
 function doPost(e) {
   var lock = LockService.getScriptLock()
@@ -29,17 +41,28 @@ function doPost(e) {
     if (sheet.getLastRow() === 0) sheet.appendRow(HEADERS)
 
     var name = (data.name || '').toString().trim()
-    var source = (data.source || 'website').toString().trim()
-    var timestamp = data.submittedAt || new Date().toISOString()
+    var rawSource = (data.source || 'website').toString().trim()
 
-    var existing = sheet.getRange(2, 2, Math.max(sheet.getLastRow() - 1, 0), 1).getValues()
-    for (var i = 0; i < existing.length; i++) {
-      if (existing[i][0] && existing[i][0].toString().trim().toLowerCase() === email.toLowerCase()) {
-        return _json({ success: true, duplicate: true })
+    // When did they join — readable, in the sheet's timezone.
+    var when = data.submittedAt ? new Date(data.submittedAt) : new Date()
+    var stamp = Utilities.formatDate(when, 'Europe/London', 'yyyy-MM-dd HH:mm')
+
+    // De-dupe on the real Email column (F).
+    var lastRow = sheet.getLastRow()
+    if (lastRow >= 2) {
+      var emails = sheet.getRange(2, EMAIL_COL, lastRow - 1, 1).getValues()
+      for (var i = 0; i < emails.length; i++) {
+        var v = emails[i][0]
+        if (v && v.toString().trim().toLowerCase() === email.toLowerCase()) {
+          return _json({ success: true, duplicate: true })
+        }
       }
     }
 
-    sheet.appendRow([timestamp, email, name, source])
+    // Append aligned to the Investor List schema. Role/Location/Strategy/Phone
+    // are left blank for the sourcer to qualify; provenance goes in Notes.
+    var notes = 'Joined mailing list ' + stamp + ' via website (' + rawSource + ')'
+    sheet.appendRow([name, 'Website', '', '', '', email, '', notes])
     return _json({ success: true })
   } finally {
     lock.releaseLock()
