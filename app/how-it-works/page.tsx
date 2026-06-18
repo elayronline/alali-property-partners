@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
 import { Navbar } from "@/components/Navbar"
 import { HowItWorks } from "@/components/HowItWorks"
+import { Faq } from "@/components/Faq"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "How It Works — HMO & BRR Deal Sourcing Process",
+  title: "How HMO & BRR Sourcing Works",
   description:
     "Our 4-step HMO and conversion-ready BRR sourcing process — pick a deal, secure it, get a full deal pack, move with confidence. Greater London & the South East.",
   keywords: [
@@ -35,56 +36,6 @@ export const metadata: Metadata = {
       "Our 4-step process for sourcing and securing verified property deals across London & the South of England.",
     images: ["/opengraph-image"],
   },
-}
-
-// HowTo schema — describes the 4-step sourcing process for AI answer engines
-const howToSchema = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  name: "How property deal sourcing works with Alali Property Partners",
-  description:
-    "A 4-step process for investors to commission property deal sourcing across Greater London and the South of England, receive a full deal pack, and complete due diligence.",
-  totalTime: "P14D",
-  estimatedCost: {
-    "@type": "MonetaryAmount",
-    currency: "GBP",
-    value: "3600",
-  },
-  supply: [
-    { "@type": "HowToSupply", name: "Investor brief (strategy, budget, target areas)" },
-    { "@type": "HowToSupply", name: "Proof of funds (cash, mortgage in principle, or facility)" },
-  ],
-  tool: [{ "@type": "HowToTool", name: "Deal pack: comparables, yield analysis, exit strategy" }],
-  step: [
-    {
-      "@type": "HowToStep",
-      position: 1,
-      name: "Choose how you want to invest",
-      text: "Get sourced deals — off-market from our private contacts and on-market from our compliant agent network — or commission bespoke sourcing to your exact brief.",
-      url: "https://www.alalipropertypartners.com/how-it-works#step-1",
-    },
-    {
-      "@type": "HowToStep",
-      position: 2,
-      name: "Secure your deal",
-      text: "Sourced deals: sign the sourcing agreement and pay £500 upfront to release the full deal pack. The balance (2.4% of purchase price, min £3,600 total, VAT inc.) is settled once you decide to proceed. Bespoke sourcing: £1,000 retainer to start your search.",
-      url: "https://www.alalipropertypartners.com/how-it-works#step-2",
-    },
-    {
-      "@type": "HowToStep",
-      position: 3,
-      name: "Receive your full deal pack",
-      text: "Every deal pack includes the full property address, photos, comparables, yield analysis, refurb costs, target resale value, area demand, and recommended exit strategy.",
-      url: "https://www.alalipropertypartners.com/how-it-works#step-3",
-    },
-    {
-      "@type": "HowToStep",
-      position: 4,
-      name: "48 hours to decide",
-      text: "We facilitate viewings and introductions on your behalf — vendor and agent contact details remain with us. You have a 48-hour decision SLA from deal-pack release to decide whether to proceed, with extensions available on fair, justified reasoning. If there are valid reasons not to proceed, the £500 unlock fee is refundable subject to our terms.",
-      url: "https://www.alalipropertypartners.com/how-it-works#step-4",
-    },
-  ],
 }
 
 const faqSchema = {
@@ -158,10 +109,6 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
@@ -174,6 +121,7 @@ export default function Page() {
           How HMO &amp; conversion-ready BRR deal sourcing works — Greater London &amp; the South East
         </h1>
         <HowItWorks />
+        <Faq items={faqSchema.mainEntity} heading="How property sourcing works — FAQs" />
       </main>
       <Footer />
     </>

@@ -2,12 +2,13 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
+import { Faq } from "@/components/Faq"
 import { SectionDivider } from "@/components/ui/SectionDivider"
 
 export const metadata: Metadata = {
-  title: "Source & Develop — HMO Sourcing & Development, End to End",
+  title: "Managed HMO Conversion, End to End",
   description:
-    "Our complete service: we source the property to your brief, then manage the full HMO conversion — design, planning, build and handover, end to end. Across Greater London & the South East. By application; price on application.",
+    "We source the property to your brief, then manage the full HMO conversion — design, planning, build and handover, end to end. London & the South East. By application.",
   keywords: [
     "HMO development management",
     "managed HMO conversion",
@@ -218,6 +219,8 @@ export default function Page() {
             </p>
           </div>
         </section>
+
+        <Faq items={faqSchema.mainEntity} heading="Development management — FAQs" />
       </main>
       <Footer />
     </>

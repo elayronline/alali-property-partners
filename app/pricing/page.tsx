@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { Navbar } from "@/components/Navbar"
 import { Pricing } from "@/components/Pricing"
+import { Faq } from "@/components/Faq"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
   title: "HMO & BRR Sourcing Fees & Pricing",
   description:
-    "HMO and conversion-ready BRR sourcing fees: 2.4% (min £3,600, VAT inc.) on sourced deals; £1,000 retainer on bespoke; development management by application. No hidden costs. Refundable where the deal isn't right.",
+    "HMO & BRR sourcing fees: 2.4% (min £3,600, VAT inc.) on sourced deals; £1,000 retainer on bespoke; development by application. No hidden costs. See our fees.",
   keywords: [
     "property sourcing fees",
     "property sourcing cost UK",
@@ -207,6 +208,7 @@ export default function Page() {
           </div>
         </section>
         <Pricing />
+        <Faq items={faqSchema.mainEntity} heading="Property sourcing fees — FAQs" />
       </main>
       <Footer />
     </>

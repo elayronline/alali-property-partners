@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
 import { Navbar } from "@/components/Navbar"
 import { WhyUs } from "@/components/WhyUs"
+import { Faq } from "@/components/Faq"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "Why Investors Choose Us for HMO & BRR Sourcing",
+  title: "Why Choose Us — HMO & BRR Sourcing",
   description:
     "Why investors choose us — verified high-yield HMO and conversion-ready BRR deals, transparent fees, FCA-regulated team, complete deal packs. Greater London & the South East.",
   keywords: [
@@ -111,6 +112,7 @@ export default function Page() {
           Why investors choose Alali Property Partners for HMO &amp; conversion-ready BRR sourcing
         </h1>
         <WhyUs />
+        <Faq items={faqSchema.mainEntity} heading="Choosing a property sourcer — FAQs" />
       </main>
       <Footer />
     </>

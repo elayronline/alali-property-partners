@@ -9,10 +9,16 @@ import { WhyUs } from "@/components/WhyUs"
 import { CaseStudy } from "@/components/CaseStudy"
 import { GotADeal } from "@/components/GotADeal"
 import { Pricing } from "@/components/Pricing"
+import { Faq } from "@/components/Faq"
 import { ContactForm } from "@/components/ContactForm"
 import { Footer } from "@/components/Footer"
 
-export function HomePage() {
+interface FaqItem {
+  name: string
+  acceptedAnswer: { text: string }
+}
+
+export function HomePage({ faqItems }: { faqItems?: FaqItem[] }) {
   return (
     <main>
       <Navbar />
@@ -24,6 +30,9 @@ export function HomePage() {
       <CoverageMap />
       <Pricing />
       <GotADeal />
+      {faqItems && faqItems.length > 0 && (
+        <Faq items={faqItems} heading="Property deal sourcing — FAQs" />
+      )}
       <ContactForm />
       <Footer />
     </main>
