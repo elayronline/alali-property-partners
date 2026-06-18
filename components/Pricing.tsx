@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
+import { DealListSignup } from "@/components/DealListSignup"
 import { ExpandableSection } from "@/components/ui/ExpandableSection"
 import { SectionDivider } from "@/components/ui/SectionDivider"
 import { useSmartNav } from "@/lib/smartNav"
@@ -16,20 +17,25 @@ type PricingCard = {
   payment?: string
   includes?: string
   reassurance?: string
+  steps?: string[]
   popular?: boolean
   expandable?: boolean
   byApplication?: boolean
+  dealList?: boolean
 }
 
 const pricingCards: PricingCard[] = [
   {
     title: "Sourced Deals",
-    subtitle: "Pre-auction, off-market and direct-to-vendor via our agent network",
+    subtitle: "Live off-market, pre-auction & direct-to-vendor deals — sent to the deal list first.",
     fee: "2.4%",
-    feeDetail: "of purchase price, paid in two stages",
-    payment: "£500 to unlock the deal pack. Balance only on a decision to proceed.",
-    includes: "Full deal pack + viewings and introductions facilitated",
-    reassurance: "Unlock fee refundable on valid reasons not to proceed (subject to terms).",
+    feeDetail: "of purchase price · min £3,600",
+    dealList: true,
+    steps: [
+      "Join the deal list — free, takes seconds.",
+      "We send live, vetted HMO & BRR deals as they land.",
+      "£500 unlocks the deal pack; 2.4% only if you proceed.",
+    ],
     popular: false,
   },
   {
@@ -170,6 +176,44 @@ export function Pricing() {
                         className="mt-5 block w-full rounded-lg bg-charcoal px-4 py-2.5 text-center text-sm font-bold text-white transition-colors hover:bg-charcoal/90"
                       >
                         Apply / Enquire &rarr;
+                      </button>
+                    </>
+                  ) : card.dealList ? (
+                    <>
+                      {/* Fee */}
+                      <div className="mt-5 flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+                        <p className="font-display text-4xl text-white" style={{ fontWeight: 400 }}>
+                          {card.fee}
+                        </p>
+                        <span className="rounded-full bg-gold/10 px-2 py-0.5 text-[0.65rem] font-semibold tracking-wide text-gold">
+                          VAT inc.
+                        </span>
+                      </div>
+                      <p className="mt-1 text-xs text-muted-light">{card.feeDetail}</p>
+
+                      {/* How it works — 1·2·3 */}
+                      <ol className="mt-4 space-y-2.5">
+                        {card.steps?.map((step, idx) => (
+                          <li key={idx} className="flex items-start gap-2.5">
+                            <span className="mt-px flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/15 text-[0.7rem] font-bold text-gold">
+                              {idx + 1}
+                            </span>
+                            <p className="text-sm leading-snug text-muted-light">{step}</p>
+                          </li>
+                        ))}
+                      </ol>
+
+                      {/* Inline signup — the action for this tier */}
+                      <div className="mt-5">
+                        <DealListSignup />
+                      </div>
+
+                      {/* Secondary path for high-intent visitors */}
+                      <button
+                        onClick={() => navigate("contact")}
+                        className="mt-3 block w-full cursor-pointer text-center text-xs text-muted-light transition-colors hover:text-gold"
+                      >
+                        Prefer to talk first? Speak to us
                       </button>
                     </>
                   ) : (
