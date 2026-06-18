@@ -17,19 +17,19 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/contact" },
   openGraph: {
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "Contact Us | Alali Property Partners",
     description:
       "Tell us what you're looking for — or what you need to move. We'll come back within one working day.",
     url: "/contact",
     type: "article",
-    images: ["/opengraph-image"],
   },
   twitter: {
+    images: ["/opengraph-image"],
     card: "summary_large_image",
     title: "Contact Us | Alali Property Partners",
     description:
       "Tell us what you're looking for — or what you need to move. We'll come back within one working day.",
-    images: ["/opengraph-image"],
   },
 }
 

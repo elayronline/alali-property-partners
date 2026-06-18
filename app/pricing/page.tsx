@@ -21,19 +21,19 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/pricing" },
   openGraph: {
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "Pricing | Alali Property Partners",
     description:
       "2.4% sourcing fee on sourced deals, £1,000 retainer on bespoke sourcing. Transparent fees with no hidden costs.",
     url: "/pricing",
     type: "article",
-    images: ["/opengraph-image"],
   },
   twitter: {
+    images: ["/opengraph-image"],
     card: "summary_large_image",
     title: "Pricing | Alali Property Partners",
     description:
       "2.4% sourcing fee on sourced deals, £1,000 retainer on bespoke sourcing. Transparent fees with no hidden costs.",
-    images: ["/opengraph-image"],
   },
 }
 

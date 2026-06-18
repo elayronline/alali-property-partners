@@ -45,14 +45,12 @@ export const metadata: Metadata = {
       "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East — pre-auction, off-market and direct-to-vendor, with HMO conversion and change-of-use potential.",
     url: "/",
     type: "website",
-    images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Alali Property Partners | HMO & Conversion-Ready BRR Deal Sourcing",
     description:
       "High-yield HMOs and conversion-ready BRR deals across Greater London and the South East. Pre-auction, off-market and direct-to-vendor.",
-    images: ["/opengraph-image"],
   },
 }
 

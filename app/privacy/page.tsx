@@ -8,19 +8,19 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
   robots: { index: true, follow: true },
   openGraph: {
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "Privacy Policy | Alali Property Partners",
     description:
       "How we collect, use, and protect your personal data. UK GDPR compliant.",
     url: "/privacy",
     type: "article",
-    images: ["/opengraph-image"],
   },
   twitter: {
+    images: ["/opengraph-image"],
     card: "summary_large_image",
     title: "Privacy Policy | Alali Property Partners",
     description:
       "How we collect, use, and protect your personal data. UK GDPR compliant.",
-    images: ["/opengraph-image"],
   },
 }
 

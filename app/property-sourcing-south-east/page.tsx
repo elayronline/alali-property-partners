@@ -23,19 +23,19 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/property-sourcing-south-east" },
   openGraph: {
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "Property Sourcing — South East England | Alali Property Partners",
     description:
       "High-yield HMO & BRR deal sourcing across the South East — Surrey, Kent, Sussex, Hampshire, Berkshire and beyond. Off-market and direct-to-vendor.",
     url: "/property-sourcing-south-east",
     type: "article",
-    images: ["/opengraph-image"],
   },
   twitter: {
+    images: ["/opengraph-image"],
     card: "summary_large_image",
     title: "Property Sourcing — South East England | Alali Property Partners",
     description:
       "High-yield HMO & BRR deal sourcing across the South East — off-market and direct-to-vendor.",
-    images: ["/opengraph-image"],
   },
 }
 

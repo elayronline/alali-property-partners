@@ -18,19 +18,19 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/case-studies" },
   openGraph: {
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "Case Studies | Alali Property Partners",
     description:
       "Real HMO and conversion-ready BRR deals we've sourced across Greater London & the South East. Every brief is different — here's one example.",
     url: "/case-studies",
     type: "article",
-    images: ["/opengraph-image"],
   },
   twitter: {
+    images: ["/opengraph-image"],
     card: "summary_large_image",
     title: "Case Studies | Alali Property Partners",
     description:
       "Real HMO and conversion-ready BRR deals we've sourced across Greater London & the South East.",
-    images: ["/opengraph-image"],
   },
 }
 
