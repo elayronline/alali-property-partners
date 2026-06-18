@@ -13,16 +13,39 @@ import { useSmartNav } from "@/lib/smartNav"
 export function StickyMobileCta() {
   const pathname = usePathname()
   const navigate = useSmartNav()
-  const [show, setShow] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [nearEnd, setNearEnd] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > 600)
+    const onScroll = () => setScrolled(window.scrollY > 600)
     onScroll()
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
+  // Get out of the way once the visitor reaches the contact form or footer, so
+  // the bar never covers them.
+  useEffect(() => {
+    const targets = [
+      document.getElementById("contact"),
+      document.querySelector("footer"),
+    ].filter(Boolean) as Element[]
+    if (!targets.length) return
+    const visible = new Set<Element>()
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) visible.add(e.target)
+        else visible.delete(e.target)
+      }
+      setNearEnd(visible.size > 0)
+    })
+    targets.forEach((t) => io.observe(t))
+    return () => io.disconnect()
+  }, [pathname])
+
   if (pathname === "/contact") return null
+
+  const show = scrolled && !nearEnd
 
   return (
     <div
