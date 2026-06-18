@@ -18,6 +18,14 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        // Consolidate the apex domain onto www (the canonical host in
+        // metadataBase) so there is only one indexable copy of the site.
+        source: "/:path*",
+        has: [{ type: "host", value: "alalipropertypartners.com" }],
+        destination: "https://www.alalipropertypartners.com/:path*",
+        permanent: true,
+      },
+      {
         source: "/index",
         destination: "/",
         permanent: true,

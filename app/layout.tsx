@@ -94,7 +94,7 @@ const businessSchema = {
     { "@type": "AdministrativeArea", name: "Dorset" },
     { "@type": "AdministrativeArea", name: "Somerset" },
   ],
-  foundingDate: "2025",
+  foundingDate: "2025-01-01",
   sameAs: [
     "https://www.instagram.com/alalipropertypartners",
     "https://www.facebook.com/alalipropertypartners",
@@ -133,13 +133,13 @@ const businessSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://www.alalipropertypartners.com/#website",
   name: "Alali Property Partners",
   url: "https://www.alalipropertypartners.com",
   description:
     "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East. Pre-auction, off-market and direct-to-vendor, with HMO conversion and change-of-use potential.",
   publisher: {
-    "@type": "Organization",
-    name: "Alali Property Partners",
+    "@id": "https://www.alalipropertypartners.com/#organization",
   },
 }
 

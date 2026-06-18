@@ -2,12 +2,13 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
+import { Faq } from "@/components/Faq"
 import { SectionDivider } from "@/components/ui/SectionDivider"
 
 export const metadata: Metadata = {
-  title: "HMO & Conversion-Ready BRR Sourcing — London & the South East",
+  title: "HMO Sourcing — London & South East",
   description:
-    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London & the South East. Pre-auction, off-market and direct-to-vendor, with HMO conversion and change-of-use potential (permitted development, non-Article 4).",
+    "Specialist HMO & conversion-ready BRR sourcing across London & the South East — pre-auction, off-market and direct-to-vendor, with realistic HMO conversion potential. Tell us your brief.",
   keywords: [
     "HMO sourcing",
     "high yield HMO deals",
@@ -219,6 +220,8 @@ export default function Page() {
             </p>
           </div>
         </section>
+
+        <Faq items={faqSchema.mainEntity} heading="HMO &amp; conversion-ready BRR sourcing — FAQs" />
       </main>
       <Footer />
     </>

@@ -3,10 +3,10 @@ import { HomePage } from "@/components/HomePage"
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Alali Property Partners | HMO & Conversion-Ready BRR Deal Sourcing — London & the South East",
+    absolute: "Property Sourcing London & South East | Alali Property Partners",
   },
   description:
-    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London and the South East — pre-auction, off-market and direct-to-vendor, with HMO conversion potential. Transparent fees.",
+    "High-yield HMO & conversion-ready BRR deal sourcing across London & the South East — pre-auction, off-market and direct-to-vendor. Join the deal list.",
   keywords: [
     "HMO deal sourcing",
     "HMO property sourcing",
@@ -66,8 +66,8 @@ const serviceSchema = {
     "We source high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East — properties with HMO conversion and change-of-use potential (permitted development, non-Article 4). Pre-auction, off-market and direct-to-vendor via a network of compliant agents, and bespoke sourcing to your brief — all with complete deal packs.",
   provider: {
     "@type": "Organization",
+    "@id": "https://www.alalipropertypartners.com/#organization",
     name: "Alali Property Partners",
-    url: "https://www.alalipropertypartners.com",
   },
   areaServed: [
     { "@type": "AdministrativeArea", name: "Greater London" },
@@ -178,7 +178,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <HomePage />
+      <HomePage faqItems={faqSchema.mainEntity} />
     </>
   )
 }
