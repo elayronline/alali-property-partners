@@ -99,6 +99,7 @@ const businessSchema = {
     "https://www.instagram.com/alalipropertypartners",
     "https://www.facebook.com/alalipropertypartners",
     "https://find-and-update.company-information.service.gov.uk/company/17057401",
+    "https://www.google.com/maps?cid=4253008671490656259",
   ],
   founder: [
     { "@type": "Person", name: "Alayi MacPepple-Jaja" },
