@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Raleway, Montserrat } from "next/font/google"
+import { StickyMobileCta } from "@/components/StickyMobileCta"
 import "./globals.css"
 
 const raleway = Raleway({
@@ -170,7 +171,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={`${raleway.variable} ${montserrat.variable} antialiased`}>{children}</body>
+      <body className={`${raleway.variable} ${montserrat.variable} antialiased`}>
+        {children}
+        <StickyMobileCta />
+      </body>
     </html>
   )
 }
