@@ -75,9 +75,9 @@ export function Hero() {
           >
             <div className="mt-10 h-px w-16 bg-gold/60" />
             <p className="mt-5 text-sm leading-relaxed text-white/55">
-              Off-market. Direct-to-vendor. Pre-auction.
+              Less searching. More investing.
               <br />
-              Every opportunity reviewed before introduction.
+              We line up the deals — you build the portfolio.
             </p>
           </motion.div>
         </div>
