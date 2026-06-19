@@ -119,7 +119,7 @@ const faqSchema = {
       name: "What is property deal sourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Property deal sourcing is a service where we find and introduce verified, high-yield property investment opportunities to investors. We handle the research, analysis, and negotiation, delivering complete deal packs with comparables, yield analysis, and exit strategies.",
+        text: "Property deal sourcing is a service where we find and introduce verified, high-yield property investment opportunities to investors. We handle the research and analysis, delivering complete deal packs with comparables, yield analysis, and exit strategies.",
       },
     },
     {

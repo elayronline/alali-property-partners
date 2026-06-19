@@ -76,7 +76,7 @@ const faqSchema = {
       name: "What does below market value (BMV) actually mean?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Below market value means an agreed purchase price beneath the property's realistic open-market value — usually because the seller is motivated (speed, probate, portfolio exit, a chain break) or because the deal is off-market and never exposed to competitive bidding. We evidence value with Land Registry comparables from public records; any BMV margin is indicative and must be confirmed by your own valuation and survey. We do not promise a fixed discount.",
+        text: "Below market value means an agreed purchase price beneath the property's realistic open-market value — usually because the seller is motivated (speed, probate, portfolio exit, a chain break) or because the deal is sourced off-market rather than through open competition. We evidence value with Land Registry comparables from public records; any BMV margin is indicative and must be confirmed by your own valuation and survey. We do not promise a fixed discount.",
       },
     },
     {
