@@ -122,7 +122,7 @@ const access = [
   { label: "Pre-auction", detail: "Lots reached before they go under the hammer." },
   { label: "Off-market", detail: "Sourced direct from our private contacts." },
   { label: "Direct-to-vendor", detail: "No agent in the chain, motivated sellers." },
-  { label: "Compliant agent network", detail: "On-market deals, numbers already verified." },
+  { label: "On-market", detail: "Listed deals where the numbers already stack up." },
 ]
 
 export default function Page() {

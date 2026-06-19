@@ -43,7 +43,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/pricing#service",
   name: "Property Deal Sourcing Service",
   description:
-    "Property deal sourcing for investors across Greater London and the South of England (the South East, Dorset and Somerset). Off-market deals via private contacts, on-market deals via compliant agent network, and bespoke sourcing to investor brief. Every deal includes a full deal pack and a 48-hour decision SLA after release/presentation, with extensions on fair, justified reasoning.",
+    "Property deal sourcing for investors across Greater London and the South of England (the South East, Dorset and Somerset). Off-market and on-market deals through our network, and bespoke sourcing to investor brief. Every deal includes a full deal pack and a 48-hour decision SLA after release/presentation, with extensions on fair, justified reasoning.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -61,7 +61,7 @@ const serviceSchema = {
       "@type": "Offer",
       name: "The Deal List",
       description:
-        "Off-market deals from our private contacts and on-market deals from our compliant agent network. 2.4% sourcing fee of purchase price (minimum £3,600, VAT inclusive). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. Viewings and introductions facilitated by us — vendor and agent contact details remain with us. 48-hour decision SLA from deal-pack release, with extensions available on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
+        "Off-market and on-market deals sourced through our network. 2.4% sourcing fee of purchase price (minimum £3,600, VAT inclusive). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. Viewings and introductions facilitated by us — vendor and agent contact details remain with us. 48-hour decision SLA from deal-pack release, with extensions available on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
       priceCurrency: "GBP",
       price: "500",
       priceSpecification: {

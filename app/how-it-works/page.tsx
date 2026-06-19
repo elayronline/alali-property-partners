@@ -79,7 +79,7 @@ const faqSchema = {
       name: "How are off-market deals different from on-market deals?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Off-market deals come through our private contacts — landlords, property owners, and direct relationships — and are not advertised publicly. On-market deals come from our compliant agent network and are listed publicly, but we have already verified the numbers before presenting them to investors.",
+        text: "Off-market deals come through our private contacts — landlords, property owners, and direct relationships — and are not advertised publicly. On-market deals are listed publicly, but we have already verified the numbers before presenting them to investors.",
       },
     },
   ],
