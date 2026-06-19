@@ -8,7 +8,7 @@ import { SectionDivider } from "@/components/ui/SectionDivider"
 export const metadata: Metadata = {
   title: "Property Sourcing Agent — South East England",
   description:
-    "Property sourcing across the South East — Surrey, Kent, Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Dorset & Somerset. High-yield HMO & BRR deals, off-market and direct-to-vendor.",
+    "Property sourcing across the South East — Surrey, Kent, Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Dorset & Somerset. High-yield HMO & BRR deals sourced through our network — including off-market and direct-to-vendor.",
   keywords: [
     "property sourcing agent South East",
     "property sourcing South East England",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "Property Sourcing — South East England | Alali Property Partners",
     description:
-      "High-yield HMO & BRR deal sourcing across the South East — Surrey, Kent, Sussex, Hampshire, Berkshire and beyond. Off-market and direct-to-vendor.",
+      "High-yield HMO & BRR deal sourcing across the South East — Surrey, Kent, Sussex, Hampshire, Berkshire and beyond. Sourced through our network — including off-market and direct-to-vendor.",
     url: "/property-sourcing-south-east",
     type: "article",
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Property Sourcing — South East England | Alali Property Partners",
     description:
-      "High-yield HMO & BRR deal sourcing across the South East — off-market and direct-to-vendor.",
+      "High-yield HMO & BRR deal sourcing across the South East, sourced through our network — including off-market and direct-to-vendor.",
   },
 }
 
@@ -45,7 +45,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/property-sourcing-south-east#service",
   name: "Property Sourcing — South East England",
   description:
-    "Property deal sourcing across the South East of England — Surrey, Kent, East and West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Dorset and Somerset — specialising in high-yield HMOs and conversion-ready BRR deals, sourced pre-auction, off-market and direct-to-vendor.",
+    "Property deal sourcing across the South East of England — Surrey, Kent, East and West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Dorset and Somerset — specialising in high-yield HMOs and conversion-ready BRR deals, sourced through our network — including pre-auction, off-market and direct-to-vendor.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -156,7 +156,7 @@ export default function Page() {
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">
               A specialist property sourcing agent for the South East of England — high-yield HMOs and
               conversion-ready BRR deals from Surrey and Kent to Hampshire, Berkshire and beyond.
-              Sourced pre-auction, off-market and direct-to-vendor.
+              Sourced through our network — including pre-auction, off-market and direct-to-vendor.
             </p>
             <div className="mt-8">
               <Link

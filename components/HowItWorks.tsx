@@ -13,7 +13,7 @@ const steps = [
   {
     step: "02",
     title: "We Source Opportunities",
-    description: "We access our network to find off-market and pre-auction deals.",
+    description: "We work our network to find deals that fit your criteria.",
   },
   {
     step: "03",
