@@ -61,7 +61,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/#sourcing-service",
   name: "HMO & Conversion-Ready BRR Deal Sourcing",
   description:
-    "We source high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Pre-auction, off-market and direct-to-vendor via a network of compliant agents, and bespoke sourcing to your brief — all with complete deal packs.",
+    "We source high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Pre-auction, off-market and direct-to-vendor through our network, and bespoke sourcing to your brief — all with complete deal packs.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -82,7 +82,7 @@ const serviceSchema = {
         "@type": "Offer",
         name: "The Deal List",
         description:
-          "Verified HMO and conversion-ready BRR deals sourced pre-auction, off-market and direct-to-vendor via our network of compliant agents. 2.4% sourcing fee of purchase price (min £3,600, VAT inc.). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. We facilitate viewings and introductions on the investor's behalf. 48-hour decision SLA from deal-pack release, with extensions on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
+          "Verified HMO and conversion-ready BRR deals sourced pre-auction, off-market and direct-to-vendor through our network. 2.4% sourcing fee of purchase price (min £3,600, VAT inc.). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. We facilitate viewings and introductions on the investor's behalf. 48-hour decision SLA from deal-pack release, with extensions on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
         priceCurrency: "GBP",
         price: "500",
       },
@@ -127,7 +127,7 @@ const faqSchema = {
       name: "What types of property deals do you source?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We specialise in high-yield HMOs (Houses in Multiple Occupation) and conversion-ready BRR (Buy, Refurbish, Refinance) deals — properties with HMO conversion and change-of-use potential (under permitted development or full planning) — across Greater London and the South East. We source pre-auction, off-market and direct-to-vendor via a network of compliant agents, and take bespoke briefs on request.",
+        text: "We specialise in high-yield HMOs (Houses in Multiple Occupation) and conversion-ready BRR (Buy, Refurbish, Refinance) deals — properties with HMO conversion and change-of-use potential (under permitted development or full planning) — across Greater London and the South East. We source pre-auction, off-market and direct-to-vendor through our network, and take bespoke briefs on request.",
       },
     },
     {

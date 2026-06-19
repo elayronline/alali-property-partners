@@ -45,7 +45,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/hmo-sourcing#service",
   name: "HMO & Conversion-Ready BRR Sourcing",
   description:
-    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London and the South of England — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Pre-auction, off-market and direct-to-vendor via a network of compliant agents.",
+    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London and the South of England — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Pre-auction, off-market and direct-to-vendor through our network.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",

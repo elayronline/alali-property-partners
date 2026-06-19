@@ -80,7 +80,7 @@ const businessSchema = {
   name: "Alali Property Partners",
   legalName: "Alali Property Partners Ltd",
   description:
-    "Specialist property deal sourcing covering Greater London and the South East. We source high-yield HMOs and conversion-ready BRR deals — properties with HMO conversion and change-of-use potential (under permitted development or full planning) — pre-auction, off-market and direct-to-vendor via a network of compliant agents, and connect investors with the regulated professionals they need.",
+    "Specialist property deal sourcing covering Greater London and the South East. We source high-yield HMOs and conversion-ready BRR deals — properties with HMO conversion and change-of-use potential (under permitted development or full planning) — pre-auction, off-market and direct-to-vendor through our network, and connect investors with the regulated professionals they need.",
   url: "https://www.alalipropertypartners.com",
   telephone: "+442045158438",
   email: "contact@alalipropertypartners.com",

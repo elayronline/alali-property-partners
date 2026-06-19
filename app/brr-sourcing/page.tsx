@@ -44,7 +44,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/brr-sourcing#service",
   name: "BRR & Below-Market-Value Property Sourcing",
   description:
-    "Sourcing of BRR (buy, refurbish, refinance) and below-market-value property deals across Greater London and the South of England — pre-auction, off-market and direct-to-vendor via a network of compliant agents — with realistic potential to add value and recycle capital.",
+    "Sourcing of BRR (buy, refurbish, refinance) and below-market-value property deals across Greater London and the South of England — pre-auction, off-market and direct-to-vendor through our network — with realistic potential to add value and recycle capital.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
