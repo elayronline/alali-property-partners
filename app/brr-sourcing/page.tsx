@@ -76,7 +76,7 @@ const faqSchema = {
       name: "What does below market value (BMV) actually mean?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Below market value means an agreed purchase price beneath the property's realistic open-market value — usually because the seller is motivated (speed, probate, portfolio exit, a chain break) or because the deal is off-market and never exposed to competitive bidding. We evidence value with Land Registry comparables from public records; any BMV margin is indicative and must be confirmed by your own valuation and survey. We do not promise a fixed discount.",
+        text: "Below market value means an agreed purchase price beneath the property's realistic open-market value — usually because the seller is motivated (speed, probate, portfolio exit, a chain break) or because the deal is sourced off-market rather than through open competition. We evidence value with Land Registry comparables from public records; any BMV margin is indicative and must be confirmed by your own valuation and survey. We do not promise a fixed discount.",
       },
     },
     {
@@ -84,7 +84,7 @@ const faqSchema = {
       name: "How do you find below-market-value and BRR deals?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Through access, not portals. We work pre-auction (lots reached before they go under the hammer), off-market (direct from our private contacts — never advertised), and direct-to-vendor (no agent in the chain, motivated sellers), alongside a compliant agent network for on-market deals where the numbers already stack up. The deals that make BRR work are usually the ones never advertised publicly.",
+        text: "Through access, not portals. We work pre-auction (lots reached before they go under the hammer), off-market (sourced direct from our private contacts), and direct-to-vendor (no agent in the chain, motivated sellers), alongside a compliant agent network for on-market deals where the numbers already stack up. The deals that make BRR work are usually the ones sourced before they reach the open market.",
       },
     },
     {
@@ -92,7 +92,7 @@ const faqSchema = {
       name: "Can a BRR deal also be converted into an HMO?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Often, yes — and that is our core niche. Many of the conversion-ready BRR properties we source can be refurbished and converted into a high-yield HMO, ideally under permitted development in a non-Article 4 area. That combines the capital recycling of BRR with the stronger gross yield of an HMO. The planning route always needs to be verified independently for your specific property. See our HMO sourcing page for the conversion side.",
+        text: "Often, yes — and that is our core niche. Many of the conversion-ready BRR properties we source can be refurbished and converted into a high-yield HMO, whether under permitted development or via a full planning application. That combines the capital recycling of BRR with the stronger gross yield of an HMO. The planning route always needs to be verified independently for your specific property. See our HMO sourcing page for the conversion side.",
       },
     },
   ],
@@ -188,7 +188,7 @@ export default function Page() {
           <SectionDivider variant="dark" className="relative mb-16" />
           <div className="relative mx-auto max-w-3xl text-center">
             <h2 className="font-display text-3xl text-white sm:text-4xl">
-              Below market value is found, not advertised
+              Below market value is found through access, not portals
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/65 sm:text-base">
               A genuine BMV deal usually comes from a motivated seller or an off-market introduction —

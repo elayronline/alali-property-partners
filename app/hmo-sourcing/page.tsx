@@ -45,7 +45,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/hmo-sourcing#service",
   name: "HMO & Conversion-Ready BRR Sourcing",
   description:
-    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London and the South of England — properties with HMO conversion and change-of-use potential (permitted development, non-Article 4). Pre-auction, off-market and direct-to-vendor via a network of compliant agents.",
+    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London and the South of England — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Pre-auction, off-market and direct-to-vendor via a network of compliant agents.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -77,15 +77,15 @@ const faqSchema = {
       name: "What does conversion-ready BRR mean?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Conversion-ready BRR (Buy, Refurbish, Refinance) describes a property with the potential to be converted into an HMO or to have its use changed — ideally under permitted development in a non-Article 4 area. You buy, refurbish to add value and rooms, refinance to recycle your capital, and rent. We source properties where that conversion potential is realistic, not speculative.",
+        text: "Conversion-ready BRR (Buy, Refurbish, Refinance) describes a property with the potential to be converted into an HMO or to have its use changed — whether under permitted development or via a full planning application. You buy, refurbish to add value and rooms, refinance to recycle your capital, and rent. We source properties where that conversion potential is realistic, not speculative.",
       },
     },
     {
       "@type": "Question",
-      name: "Why does non-Article 4 matter for HMO conversion?",
+      name: "Do you only source HMOs in non-Article 4 areas?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "In non-Article 4 areas, converting a family home to a small HMO can often be done under permitted development rights without a full planning application. In Article 4 areas that permitted development right is removed, so planning permission is required. We prioritise stock where the planning route is cleaner — but the planning position must always be verified independently for your specific property.",
+        text: "No — we source HMO opportunities in both. In non-Article 4 areas, converting a family home to a small HMO can often be done under permitted development rights without a full planning application. In Article 4 areas that permitted development right is removed, so a full planning application is required — we source those too, factoring the planning route into the deal. The planning position must always be verified independently for your specific property.",
       },
     },
   ],
@@ -114,13 +114,13 @@ const pillars = [
   {
     title: "Conversion-ready BRR",
     detail:
-      "Properties with realistic HMO conversion and change-of-use potential — permitted development, non-Article 4 — so you can refurbish, add rooms, and refinance to recycle your capital into the next deal.",
+      "Properties with realistic HMO conversion and change-of-use potential — whether under permitted development or full planning — so you can refurbish, add rooms, and refinance to recycle your capital into the next deal.",
   },
 ]
 
 const access = [
   { label: "Pre-auction", detail: "Lots reached before they go under the hammer." },
-  { label: "Off-market", detail: "Direct from our private contacts — never advertised." },
+  { label: "Off-market", detail: "Sourced direct from our private contacts." },
   { label: "Direct-to-vendor", detail: "No agent in the chain, motivated sellers." },
   { label: "Compliant agent network", detail: "On-market deals, numbers already verified." },
 ]
@@ -193,8 +193,8 @@ export default function Page() {
               The edge is access
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-center text-sm text-white/60">
-              Anyone can refresh a portal. The deals that make the numbers work are the ones you never
-              see advertised — that&apos;s where we operate.
+              Anyone can refresh a portal. We work the relationships and off-market channels behind
+              the deals that make the numbers work — that&apos;s where we operate.
             </p>
             <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {access.map((a) => (

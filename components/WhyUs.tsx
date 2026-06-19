@@ -16,7 +16,7 @@ const cards = [
     icon: Users,
     title: "Fresh deals from real relationships",
     description:
-      "We build direct connections with agents, landlords, and vendors — not just portals. That's how we find off-market and pre-market deals before they go public.",
+      "We build direct connections with agents, landlords, and vendors — not just portals. That's how we source off-market and pre-market deals direct from our contacts.",
   },
   {
     icon: Phone,
