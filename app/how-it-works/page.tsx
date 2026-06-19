@@ -76,10 +76,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "How are off-market deals different from on-market deals?",
+      name: "How do you make sure a deal actually stacks before sending it?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Off-market deals come through our private contacts — landlords, property owners, and direct relationships — and are not advertised publicly. On-market deals are listed publicly, but we have already verified the numbers before presenting them to investors.",
+        text: "Before any deal reaches you, we research it and confirm the numbers — purchase price against comparables, observed local rents, and the planning position where relevant — and only send it when it stands up. Off-market opportunities come through our private contacts and direct relationships; wherever a deal comes from, it's packaged the same way so you can move quickly.",
       },
     },
   ],

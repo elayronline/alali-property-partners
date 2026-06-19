@@ -84,7 +84,7 @@ const faqSchema = {
       name: "How do you find below-market-value and BRR deals?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Through access, not portals. We work pre-auction (lots reached before they go under the hammer), off-market (sourced direct from our private contacts), and direct-to-vendor (no agent in the chain, motivated sellers), alongside on-market deals where the numbers already stack up. The deals that make BRR work are usually the ones sourced before they reach the open market.",
+        text: "Through access, not portals. We work pre-auction (lots reached before they go under the hammer), off-market (sourced direct from our private contacts), and direct-to-vendor (no agent in the chain, motivated sellers). The deals that make BRR work are usually the ones sourced before they reach the open market.",
       },
     },
     {
