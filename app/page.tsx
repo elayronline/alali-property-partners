@@ -61,7 +61,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/#sourcing-service",
   name: "HMO & Conversion-Ready BRR Deal Sourcing",
   description:
-    "We source high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Pre-auction, off-market and direct-to-vendor via a network of compliant agents, and bespoke sourcing to your brief — all with complete deal packs.",
+    "We source high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Pre-auction, off-market and direct-to-vendor through our network, and bespoke sourcing to your brief — all with complete deal packs.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -82,7 +82,7 @@ const serviceSchema = {
         "@type": "Offer",
         name: "The Deal List",
         description:
-          "Verified HMO and conversion-ready BRR deals sourced pre-auction, off-market and direct-to-vendor via our network of compliant agents. 2.4% sourcing fee of purchase price (min £3,600, VAT inc.). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. We facilitate viewings and introductions on the investor's behalf. 48-hour decision SLA from deal-pack release, with extensions on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
+          "Verified HMO and conversion-ready BRR deals sourced pre-auction, off-market and direct-to-vendor through our network. 2.4% sourcing fee of purchase price (min £3,600, VAT inc.). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. We facilitate viewings and introductions on the investor's behalf. 48-hour decision SLA from deal-pack release, with extensions on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
         priceCurrency: "GBP",
         price: "500",
       },
@@ -127,7 +127,7 @@ const faqSchema = {
       name: "What types of property deals do you source?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We specialise in high-yield HMOs (Houses in Multiple Occupation) and conversion-ready BRR (Buy, Refurbish, Refinance) deals — properties with HMO conversion and change-of-use potential (under permitted development or full planning) — across Greater London and the South East. We source pre-auction, off-market and direct-to-vendor via a network of compliant agents, and take bespoke briefs on request.",
+        text: "We specialise in high-yield HMOs (Houses in Multiple Occupation) and conversion-ready BRR (Buy, Refurbish, Refinance) deals — properties with HMO conversion and change-of-use potential (under permitted development or full planning) — across Greater London and the South East. We source pre-auction, off-market and direct-to-vendor through our network, and take bespoke briefs on request.",
       },
     },
     {
@@ -135,7 +135,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sourced investment purchases (off-market or on-market) are 2.4% of purchase price (minimum £3,600, VAT inclusive). You sign a sourcing agreement and pay £500 upfront to release the deal pack; the balance is settled once you decide to proceed. The £500 is refundable where there are valid reasons not to proceed, subject to terms. Bespoke sourcing requires a £1,000 retainer plus 2.4% sourcing fee on completion. All fees are VAT inclusive with no hidden costs.",
+        text: "Sourced investment purchases are 2.4% of purchase price (minimum £3,600, VAT inclusive). You sign a sourcing agreement and pay £500 upfront to release the deal pack; the balance is settled once you decide to proceed. The £500 is refundable where there are valid reasons not to proceed, subject to terms. Bespoke sourcing requires a £1,000 retainer plus 2.4% sourcing fee on completion. All fees are VAT inclusive with no hidden costs.",
       },
     },
     {
@@ -151,7 +151,7 @@ const faqSchema = {
       name: "What areas do you cover for property deal sourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We cover Greater London and the South of England — Surrey, Kent, East and West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Dorset, and Somerset. We source off-market deals through our private contacts and on-market deals through our compliant agent network — or tell us what you're looking for and we'll source to your brief.",
+        text: "We cover Greater London and the South of England — Surrey, Kent, East and West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Dorset, and Somerset. We source deals through our network — or tell us what you're looking for and we'll source to your brief.",
       },
     },
     {

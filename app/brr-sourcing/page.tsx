@@ -44,7 +44,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/brr-sourcing#service",
   name: "BRR & Below-Market-Value Property Sourcing",
   description:
-    "Sourcing of BRR (buy, refurbish, refinance) and below-market-value property deals across Greater London and the South of England — pre-auction, off-market and direct-to-vendor via a network of compliant agents — with realistic potential to add value and recycle capital.",
+    "Sourcing of BRR (buy, refurbish, refinance) and below-market-value property deals across Greater London and the South of England — pre-auction, off-market and direct-to-vendor through our network — with realistic potential to add value and recycle capital.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -84,7 +84,7 @@ const faqSchema = {
       name: "How do you find below-market-value and BRR deals?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Through access, not portals. We work pre-auction (lots reached before they go under the hammer), off-market (sourced direct from our private contacts), and direct-to-vendor (no agent in the chain, motivated sellers), alongside a compliant agent network for on-market deals where the numbers already stack up. The deals that make BRR work are usually the ones sourced before they reach the open market.",
+        text: "Through access, not portals. We work pre-auction (lots reached before they go under the hammer), off-market (sourced direct from our private contacts), and direct-to-vendor (no agent in the chain, motivated sellers). The deals that make BRR work are usually the ones sourced before they reach the open market.",
       },
     },
     {
