@@ -87,7 +87,7 @@ export default function Terms() {
             <li>Sourcing below-market-value, off-market, and high-yield property deals</li>
             <li>Preparing deal packs with comparables, yield analysis, and exit strategies</li>
             <li>Connecting property owners and agents with our investor network</li>
-            <li>Sharing exclusive off-market deals within our private investor network</li>
+            <li>Sharing off-market deals within our private investor network</li>
             <li>Bespoke sourcing to specific investor briefs</li>
           </ul>
         </section>

@@ -84,7 +84,7 @@ const faqSchema = {
       name: "How do you find below-market-value and BRR deals?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Through access, not portals. We work pre-auction (lots reached before they go under the hammer), off-market (direct from our private contacts — never advertised), and direct-to-vendor (no agent in the chain, motivated sellers), alongside a compliant agent network for on-market deals where the numbers already stack up. The deals that make BRR work are usually the ones never advertised publicly.",
+        text: "Through access, not portals. We work pre-auction (lots reached before they go under the hammer), off-market (sourced direct from our private contacts), and direct-to-vendor (no agent in the chain, motivated sellers), alongside a compliant agent network for on-market deals where the numbers already stack up. The deals that make BRR work are usually the ones sourced before they reach the open market.",
       },
     },
     {
@@ -188,7 +188,7 @@ export default function Page() {
           <SectionDivider variant="dark" className="relative mb-16" />
           <div className="relative mx-auto max-w-3xl text-center">
             <h2 className="font-display text-3xl text-white sm:text-4xl">
-              Below market value is found, not advertised
+              Below market value is found through access, not portals
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/65 sm:text-base">
               A genuine BMV deal usually comes from a motivated seller or an off-market introduction —

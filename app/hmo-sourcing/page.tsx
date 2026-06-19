@@ -120,7 +120,7 @@ const pillars = [
 
 const access = [
   { label: "Pre-auction", detail: "Lots reached before they go under the hammer." },
-  { label: "Off-market", detail: "Direct from our private contacts — never advertised." },
+  { label: "Off-market", detail: "Sourced direct from our private contacts." },
   { label: "Direct-to-vendor", detail: "No agent in the chain, motivated sellers." },
   { label: "Compliant agent network", detail: "On-market deals, numbers already verified." },
 ]
@@ -193,8 +193,8 @@ export default function Page() {
               The edge is access
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-center text-sm text-white/60">
-              Anyone can refresh a portal. The deals that make the numbers work are the ones you never
-              see advertised — that&apos;s where we operate.
+              Anyone can refresh a portal. We work the relationships and off-market channels behind
+              the deals that make the numbers work — that&apos;s where we operate.
             </p>
             <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {access.map((a) => (
