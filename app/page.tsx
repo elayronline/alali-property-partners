@@ -61,7 +61,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/#sourcing-service",
   name: "HMO & Conversion-Ready BRR Deal Sourcing",
   description:
-    "We source high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East — properties with HMO conversion and change-of-use potential (permitted development, non-Article 4). Pre-auction, off-market and direct-to-vendor via a network of compliant agents, and bespoke sourcing to your brief — all with complete deal packs.",
+    "We source high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Pre-auction, off-market and direct-to-vendor via a network of compliant agents, and bespoke sourcing to your brief — all with complete deal packs.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -127,7 +127,7 @@ const faqSchema = {
       name: "What types of property deals do you source?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We specialise in high-yield HMOs (Houses in Multiple Occupation) and conversion-ready BRR (Buy, Refurbish, Refinance) deals — properties with HMO conversion and change-of-use potential (permitted development, non-Article 4 areas) — across Greater London and the South East. We source pre-auction, off-market and direct-to-vendor via a network of compliant agents, and take bespoke briefs on request.",
+        text: "We specialise in high-yield HMOs (Houses in Multiple Occupation) and conversion-ready BRR (Buy, Refurbish, Refinance) deals — properties with HMO conversion and change-of-use potential (under permitted development or full planning) — across Greater London and the South East. We source pre-auction, off-market and direct-to-vendor via a network of compliant agents, and take bespoke briefs on request.",
       },
     },
     {

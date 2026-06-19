@@ -100,7 +100,7 @@ const faqSchema = {
       name: "Do you handle Article 4 and planning differences across South East councils?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We prioritise stock where the planning route is cleaner — typically non-Article 4 areas where a small HMO conversion can often proceed under permitted development. Article 4 directions and HMO licensing rules vary council by council across the South East, so the planning position for any specific property must always be verified independently before you commit.",
+        text: "Yes — we source HMO stock across both. In non-Article 4 areas a small HMO conversion can often proceed under permitted development; in Article 4 areas a full planning application is required, and we source those too. Article 4 directions and HMO licensing rules vary council by council across the South East, so the planning position for any specific property must always be verified independently before you commit.",
       },
     },
   ],

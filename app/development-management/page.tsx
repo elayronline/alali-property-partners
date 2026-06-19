@@ -121,7 +121,7 @@ const stages = [
     step: "02",
     title: "Design & feasibility",
     detail:
-      "We assess the conversion potential — layout, room count, HMO standards, and the planning route (permitted development or full application, non-Article 4).",
+      "We assess the conversion potential — layout, room count, HMO standards, and the planning route (permitted development or full planning application).",
   },
   {
     step: "03",

@@ -92,7 +92,7 @@ const faqSchema = {
       name: "Can a BRR deal also be converted into an HMO?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Often, yes — and that is our core niche. Many of the conversion-ready BRR properties we source can be refurbished and converted into a high-yield HMO, ideally under permitted development in a non-Article 4 area. That combines the capital recycling of BRR with the stronger gross yield of an HMO. The planning route always needs to be verified independently for your specific property. See our HMO sourcing page for the conversion side.",
+        text: "Often, yes — and that is our core niche. Many of the conversion-ready BRR properties we source can be refurbished and converted into a high-yield HMO, whether under permitted development or via a full planning application. That combines the capital recycling of BRR with the stronger gross yield of an HMO. The planning route always needs to be verified independently for your specific property. See our HMO sourcing page for the conversion side.",
       },
     },
   ],
