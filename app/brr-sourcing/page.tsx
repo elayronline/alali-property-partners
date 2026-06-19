@@ -8,7 +8,7 @@ import { SectionDivider } from "@/components/ui/SectionDivider"
 export const metadata: Metadata = {
   title: "BRR & Below-Market-Value Sourcing",
   description:
-    "BRR (buy, refurbish, refinance) and below-market-value property sourcing across London & the South East — pre-auction, off-market and direct-to-vendor, with realistic add-value potential. Tell us your brief.",
+    "BRR (buy, refurbish, refinance) and below-market-value property sourcing across London & the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor — with realistic add-value potential. Tell us your brief.",
   keywords: [
     "BRR property sourcing",
     "buy refurbish refinance deals",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "BRR & Below-Market-Value Sourcing | Alali Property Partners",
     description:
-      "Buy, refurbish, refinance and below-market-value deals across London & the South East — pre-auction, off-market and direct-to-vendor.",
+      "Buy, refurbish, refinance and below-market-value deals across London & the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor.",
     url: "/brr-sourcing",
     type: "article",
   },
@@ -44,7 +44,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/brr-sourcing#service",
   name: "BRR & Below-Market-Value Property Sourcing",
   description:
-    "Sourcing of BRR (buy, refurbish, refinance) and below-market-value property deals across Greater London and the South of England — pre-auction, off-market and direct-to-vendor through our network — with realistic potential to add value and recycle capital.",
+    "Sourcing of BRR (buy, refurbish, refinance) and below-market-value property deals across Greater London and the South of England, sourced through our network — including pre-auction, off-market and direct-to-vendor — with realistic potential to add value and recycle capital.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -113,7 +113,7 @@ const breadcrumbSchema = {
 }
 
 const stages = [
-  { label: "Buy", detail: "We source below market value — pre-auction, off-market and direct-to-vendor — with the comparables run before a deal reaches you." },
+  { label: "Buy", detail: "We source below market value through our network — including pre-auction, off-market and direct-to-vendor — with the comparables run before a deal reaches you." },
   { label: "Refurbish", detail: "Add value and, where it stacks, add rooms or change use. We can manage the full conversion end to end if you'd rather not." },
   { label: "Refinance", detail: "Refinance against the higher post-works value to recycle most of your capital back out for the next deal." },
   { label: "Rent", detail: "A cash-flowing asset left behind — strongest when the property works as a high-yield HMO." },
@@ -143,8 +143,8 @@ export default function Page() {
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">
               Buy below market value, refurbish to add value, refinance to recycle your capital. We
-              source BRR and BMV deals across Greater London and the South East — pre-auction,
-              off-market and direct-to-vendor — where the uplift is realistic, not wishful.
+              source BRR and BMV deals across Greater London and the South East through our network — including
+              pre-auction, off-market and direct-to-vendor — where the uplift is realistic, not wishful.
             </p>
             <div className="mt-8">
               <Link

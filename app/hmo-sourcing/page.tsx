@@ -8,7 +8,7 @@ import { SectionDivider } from "@/components/ui/SectionDivider"
 export const metadata: Metadata = {
   title: "HMO Sourcing — London & South East",
   description:
-    "Specialist HMO & conversion-ready BRR sourcing across London & the South East — pre-auction, off-market and direct-to-vendor, with realistic HMO conversion potential. Tell us your brief.",
+    "Specialist HMO & conversion-ready BRR sourcing across London & the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor — with realistic HMO conversion potential. Tell us your brief.",
   keywords: [
     "HMO sourcing",
     "high yield HMO deals",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "HMO & Conversion-Ready BRR Sourcing | Alali Property Partners",
     description:
-      "High-yield HMOs and conversion-ready BRR deals across Greater London & the South East — pre-auction, off-market and direct-to-vendor.",
+      "High-yield HMOs and conversion-ready BRR deals across Greater London & the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor.",
     url: "/hmo-sourcing",
     type: "article",
   },
@@ -45,7 +45,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/hmo-sourcing#service",
   name: "HMO & Conversion-Ready BRR Sourcing",
   description:
-    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London and the South of England — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Pre-auction, off-market and direct-to-vendor through our network.",
+    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London and the South of England — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Sourced through our network — including pre-auction, off-market and direct-to-vendor.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -149,8 +149,8 @@ export default function Page() {
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">
               We source two things, and we source them well: high-yield HMOs, and the conversion-ready
-              properties that become them. Across Greater London and the South East — pre-auction,
-              off-market and direct-to-vendor.
+              properties that become them. Across Greater London and the South East, sourced through our network — including
+              pre-auction, off-market and direct-to-vendor.
             </p>
             <div className="mt-8">
               <Link

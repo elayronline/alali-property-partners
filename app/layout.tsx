@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Alali Property Partners",
   },
   description:
-    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London and the South East. Pre-auction, off-market and direct-to-vendor, with HMO conversion and change-of-use potential — delivered with a complete deal pack.",
+    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London and the South East. Sourced through our network — including pre-auction, off-market and direct-to-vendor — with HMO conversion and change-of-use potential, delivered with a complete deal pack.",
   applicationName: "Alali Property Partners",
   authors: [{ name: "Alali Property Partners Ltd" }],
   creator: "Alali Property Partners Ltd",
@@ -80,7 +80,7 @@ const businessSchema = {
   name: "Alali Property Partners",
   legalName: "Alali Property Partners Ltd",
   description:
-    "Specialist property deal sourcing covering Greater London and the South East. We source high-yield HMOs and conversion-ready BRR deals — properties with HMO conversion and change-of-use potential (under permitted development or full planning) — pre-auction, off-market and direct-to-vendor through our network, and connect investors with the regulated professionals they need.",
+    "Specialist property deal sourcing covering Greater London and the South East. We source high-yield HMOs and conversion-ready BRR deals — properties with HMO conversion and change-of-use potential (under permitted development or full planning) — sourced through our network, including pre-auction, off-market and direct-to-vendor, and connect investors with the regulated professionals they need.",
   url: "https://www.alalipropertypartners.com",
   telephone: "+442045158438",
   email: "contact@alalipropertypartners.com",
@@ -148,7 +148,7 @@ const websiteSchema = {
   name: "Alali Property Partners",
   url: "https://www.alalipropertypartners.com",
   description:
-    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East. Pre-auction, off-market and direct-to-vendor, with HMO conversion and change-of-use potential.",
+    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East. Sourced through our network — including pre-auction, off-market and direct-to-vendor — with HMO conversion and change-of-use potential.",
   publisher: {
     "@id": "https://www.alalipropertypartners.com/#organization",
   },
