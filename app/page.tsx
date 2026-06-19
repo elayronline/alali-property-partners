@@ -135,7 +135,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sourced investment purchases (off-market or on-market) are 2.4% of purchase price (minimum £3,600, VAT inclusive). You sign a sourcing agreement and pay £500 upfront to release the deal pack; the balance is settled once you decide to proceed. The £500 is refundable where there are valid reasons not to proceed, subject to terms. Bespoke sourcing requires a £1,000 retainer plus 2.4% sourcing fee on completion. All fees are VAT inclusive with no hidden costs.",
+        text: "Sourced investment purchases are 2.4% of purchase price (minimum £3,600, VAT inclusive). You sign a sourcing agreement and pay £500 upfront to release the deal pack; the balance is settled once you decide to proceed. The £500 is refundable where there are valid reasons not to proceed, subject to terms. Bespoke sourcing requires a £1,000 retainer plus 2.4% sourcing fee on completion. All fees are VAT inclusive with no hidden costs.",
       },
     },
     {
