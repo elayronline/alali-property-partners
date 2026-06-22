@@ -174,7 +174,7 @@ export function ContactForm() {
               Thanks — we&apos;ll be in touch soon.
             </h2>
             <p className="mt-4 text-white/60">
-              We reply within one working day, usually faster. Keep an eye on your inbox.
+              We&apos;ve got your enquiry and we&apos;ll be in touch. Keep an eye on your inbox.
             </p>
             <button
               onClick={() => reset()}
@@ -579,9 +579,9 @@ export function ContactForm() {
                 {[
                   {
                     n: "01",
-                    title: "We reply within one working day",
+                    title: "We review your brief",
                     detail:
-                      "Usually faster. You'll hear from one of us directly.",
+                      "One of us will be in touch directly to talk it through.",
                   },
                   {
                     n: "02",

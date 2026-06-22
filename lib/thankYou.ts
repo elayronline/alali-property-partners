@@ -48,7 +48,7 @@ function contactEmail(name: string, onMailingList: boolean): { subject: string; 
     : ""
   const inner =
     `<h2 style="color:#c9a84c;margin-top:0;">Thanks for getting in touch, ${greeting}!</h2>` +
-    '<p style="color:#fff;">We\'ve received your enquiry and will be in touch within one working day — usually faster.</p>' +
+    '<p style="color:#fff;">We\'ve received your enquiry and one of us will be in touch directly.</p>' +
     '<p style="color:#fff;">In the meantime, if you have any urgent questions, feel free to reply to this email.</p>' +
     listBlock
   return { subject: "Thanks for your enquiry — Alali Property Partners", html: shell(inner) }
