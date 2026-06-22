@@ -1,12 +1,25 @@
 import type { Metadata } from "next"
 import { Raleway, Montserrat } from "next/font/google"
-import Script from "next/script"
 import { MetaPixelPageView } from "@/components/MetaPixelPageView"
 import { StickyMobileCta } from "@/components/StickyMobileCta"
 import "./globals.css"
 
-// Meta (Facebook) Pixel
+// Meta (Facebook) Pixel.
+// Rendered as a literal inline <script> in <head> (NOT next/script) so the base
+// code is present in the page source and executes on load — this is what Meta's
+// Pixel Helper / verifier looks for. next/script's afterInteractive defers the
+// code into Next's client loader, which left it undetectable in the page source.
 const META_PIXEL_ID = "871859325471356"
+const META_PIXEL_CODE = `!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '${META_PIXEL_ID}');
+fbq('track', 'PageView');`
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -176,18 +189,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         {/* Meta Pixel Code */}
-        <Script id="meta-pixel" strategy="afterInteractive">
-          {`!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '${META_PIXEL_ID}');
-fbq('track', 'PageView');`}
-        </Script>
+        <script dangerouslySetInnerHTML={{ __html: META_PIXEL_CODE }} />
         {/* End Meta Pixel Code */}
       </head>
       <body className={`${raleway.variable} ${montserrat.variable} antialiased`}>
