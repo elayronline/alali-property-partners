@@ -2,9 +2,12 @@
  * Alali Property Partners — website mailing-list collector (DEPLOYED VERSION)
  * ==========================================================================
  * Bound to the "Investor List" Google Sheet. Receives POSTs from the website
- * (/api/mailing-list — both the mailing-list band and the contact-form opt-in)
- * and appends each signup as an investor-list row, de-duped on the real Email
- * column (F).
+ * (/api/mailing-list) and appends each signup as an investor-list row, de-duped
+ * on the real Email column (F).
+ *
+ * NOTE: thank-you emails are NOT sent from here. They go out over SMTP from the
+ * @alalipropertypartners.com domain in the Next.js API route (see lib/thankYou.ts).
+ * This script's sole job is recording signups to the sheet.
  *
  * Investor List columns:
  *   A Name | B Source | C Role | D Location | E Strategy | F Email | G Phone | H Notes
