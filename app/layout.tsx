@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Raleway, Montserrat } from "next/font/google"
 import Script from "next/script"
+import { MetaPixelPageView } from "@/components/MetaPixelPageView"
 import { StickyMobileCta } from "@/components/StickyMobileCta"
 import "./globals.css"
 
@@ -202,6 +203,7 @@ fbq('track', 'PageView');`}
           />
         </noscript>
         {children}
+        <MetaPixelPageView />
         <StickyMobileCta />
       </body>
     </html>
