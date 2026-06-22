@@ -138,48 +138,22 @@ export function ContactForm() {
         return
       }
 
-      // Add to the deal mailing list if opted in (non-blocking).
-      if (data.mailingList) {
-        fetch("/api/mailing-list", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email: data.email, name: data.fullName, source: "contact-form" }),
-        }).catch(() => {})
-      }
-
-      // Send auto-reply thank you email
-      const autoReply = new FormData()
-      autoReply.append("access_key", "4e50844e-651a-4107-9928-0fb0edd47d94")
-      autoReply.append("email_to", data.email)
-      autoReply.append("from_name", "Alali Property Partners")
-      autoReply.append("subject", "Thanks for your enquiry — Alali Property Partners")
-      autoReply.append(
-        "message",
-        `
-        <div style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;">
-          <div style="background:#1a1a1a;padding:32px;border-radius:12px;">
-            <h2 style="color:#c9a84c;margin-top:0;">Thanks for getting in touch, ${data.fullName}!</h2>
-            <p style="color:#fff;">We've received your enquiry and will be in touch within one working day — usually faster.</p>
-            <p style="color:#fff;">In the meantime, if you have any urgent questions, feel free to reply to this email.</p>
-            ${
-              data.mailingList
-                ? `
-              <div style="margin-top:24px;padding:16px;background:#26282c;border:1px solid rgba(201,160,61,0.4);border-radius:8px;">
-                <p style="color:#c9a84c;margin:0 0 6px 0;font-weight:bold;">You're on the deal mailing list</p>
-                <p style="color:#fff;margin:0;font-size:14px;">We'll send occasional verified HMO and BRR opportunities across London and the South East. No spam — unsubscribe anytime.</p>
-              </div>
-            `
-                : ""
-            }
-            <p style="color:#999;font-size:12px;margin-top:24px;">Alali Property Partners — Specialist HMO &amp; conversion-ready BRR sourcing across Greater London &amp; the South East</p>
-          </div>
-        </div>
-        `,
-      )
-
-      await fetch("https://api.web3forms.com/submit", {
+      // Record to the deal mailing list (only if opted in) and send the
+      // branded thank-you email. Both run through the Apps Script web app via
+      // /api/mailing-list — Web3Forms' free tier can't send a custom reply to
+      // the prospect, so the thank-you is generated there with MailApp.
+      // Non-blocking: the success screen shouldn't wait on email delivery.
+      fetch("/api/mailing-list", {
         method: "POST",
-        body: autoReply,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: data.email,
+          name: data.fullName,
+          source: "contact-form",
+          record: data.mailingList,
+          emailType: "contact",
+          onMailingList: data.mailingList,
+        }),
       }).catch(() => {})
     } catch {
       setError("root", { message: "Something went wrong. Please try again or email us directly." })
@@ -200,7 +174,7 @@ export function ContactForm() {
               Thanks — we&apos;ll be in touch soon.
             </h2>
             <p className="mt-4 text-white/60">
-              We reply within one working day, usually faster. Keep an eye on your inbox.
+              We&apos;ve got your enquiry and we&apos;ll be in touch. Keep an eye on your inbox.
             </p>
             <button
               onClick={() => reset()}
@@ -605,9 +579,9 @@ export function ContactForm() {
                 {[
                   {
                     n: "01",
-                    title: "We reply within one working day",
+                    title: "We review your brief",
                     detail:
-                      "Usually faster. You'll hear from one of us directly.",
+                      "One of us will be in touch directly to talk it through.",
                   },
                   {
                     n: "02",

@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "Tell Us Your Brief — HMO & BRR Sourcing Enquiries",
   description:
-    "Tell us your brief — specialist HMO and conversion-ready BRR sourcing across Greater London & the South East. Know what you want or not sure yet, either works. Response within one working day.",
+    "Tell us your brief — specialist HMO and conversion-ready BRR sourcing across Greater London & the South East. Know what you want or not sure yet, either works. We'll review your brief and be in touch.",
   keywords: [
     "contact property sourcer UK",
     "property sourcing contact",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
     title: "Contact Us | Alali Property Partners",
     description:
-      "Tell us what you're looking for — or what you need to move. We'll come back within one working day.",
+      "Tell us what you're looking for — or what you need to move. We'll be in touch.",
     url: "/contact",
     type: "article",
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Us | Alali Property Partners",
     description:
-      "Tell us what you're looking for — or what you need to move. We'll come back within one working day.",
+      "Tell us what you're looking for — or what you need to move. We'll be in touch.",
   },
 }
 

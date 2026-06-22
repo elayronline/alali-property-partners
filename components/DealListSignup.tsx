@@ -7,10 +7,11 @@ type Status = "idle" | "loading" | "success" | "error"
 
 const WEB3FORMS_KEY = "4e50844e-651a-4107-9928-0fb0edd47d94"
 
-/** Notifies the Outlook inbox of a Deal List signup and sends the subscriber a
-    thank-you. Both are best-effort — the sheet write is the source of truth. */
-function notifyAndThank(email: string, name: string) {
-  // Inbox notification — clearly tagged so it sorts alongside other queries.
+/** Notifies the Outlook inbox of a Deal List signup. Best-effort — the sheet
+    write is the source of truth. The subscriber's thank-you email is sent
+    server-side via the Apps Script (see /api/mailing-list), not from here:
+    Web3Forms' free tier can't deliver a custom email to the prospect. */
+function notifyInbox(email: string, name: string) {
   const notify = new FormData()
   notify.append("access_key", WEB3FORMS_KEY)
   notify.append("subject", buildDealListSubject(email, name))
@@ -20,27 +21,6 @@ function notifyAndThank(email: string, name: string) {
   notify.append("Email", email)
   notify.append("Source", "Deal List card")
   fetch("https://api.web3forms.com/submit", { method: "POST", body: notify }).catch(() => {})
-
-  // Thank-you to the subscriber.
-  const thanks = new FormData()
-  thanks.append("access_key", WEB3FORMS_KEY)
-  thanks.append("email_to", email)
-  thanks.append("from_name", "Alali Property Partners")
-  thanks.append("subject", "You're on the Deal List — Alali Property Partners")
-  thanks.append(
-    "message",
-    `
-    <div style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;">
-      <div style="background:#1a1a1a;padding:32px;border-radius:12px;">
-        <h2 style="color:#c9a84c;margin-top:0;">You're on the Deal List${name ? `, ${name}` : ""}.</h2>
-        <p style="color:#fff;">Thanks for joining — you'll now receive verified HMO and conversion-ready BRR opportunities across Greater London &amp; the South East as they land.</p>
-        <p style="color:#fff;">No spam, and you can unsubscribe anytime by replying to any deal email.</p>
-        <p style="color:#999;font-size:12px;margin-top:24px;">Alali Property Partners — Specialist HMO &amp; conversion-ready BRR sourcing across Greater London &amp; the South East</p>
-      </div>
-    </div>
-    `,
-  )
-  fetch("https://api.web3forms.com/submit", { method: "POST", body: thanks }).catch(() => {})
 }
 
 /** Compact deal-list email capture, embedded in the Deal List pricing card.
@@ -74,10 +54,15 @@ export function DealListSignup() {
       const res = await fetch("/api/mailing-list", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed, name: trimmedName, source: "deal-list-card" }),
+        body: JSON.stringify({
+          email: trimmed,
+          name: trimmedName,
+          source: "deal-list-card",
+          emailType: "deal-list",
+        }),
       })
       if (!res.ok) throw new Error("Request failed")
-      notifyAndThank(trimmed, trimmedName)
+      notifyInbox(trimmed, trimmedName)
       setStatus("success")
       setMessage("You're on the deal list — we'll send live deals as they land.")
       setName("")
