@@ -75,9 +75,8 @@ export function CaseStudy() {
                   <p className="mt-5 text-lg leading-relaxed text-white/85 sm:text-xl">
                     Sourced a 4-bed pre-auction property in Hampshire in under 14 days, 10% below our
                     client&apos;s budget. Being converted into a 6-bed HMO under permitted development
-                    in a non-Article 4 area, projected{" "}
-                    <span className="font-semibold text-gold">£700–900 per room, per month</span>,
-                    with capital pulled back out for the next build.
+                    in a non-Article 4 area, with observed local rents of{" "}
+                    <span className="font-semibold text-gold">£700–900 per room, per month</span>.
                   </p>
                 </div>
 
@@ -108,7 +107,8 @@ export function CaseStudy() {
               </div>
 
               <p className="mt-6 text-xs leading-relaxed text-white/40">
-                Client projection, not a guaranteed return. Figures require independent verification.
+                Observed market rents shown as indicative reference points, not a guaranteed return.
+                Figures require independent verification.
               </p>
             </div>
           </div>

@@ -74,11 +74,18 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.45 }}
           >
             <div className="mt-10 h-px w-16 bg-gold/60" />
-            <p className="mt-5 text-sm leading-relaxed text-white/55">
+            <p className="mt-5 text-sm leading-relaxed text-white/70">
               Less searching. More investing.
               <br />
               We line up the deals — you build the portfolio.
             </p>
+            <div className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium tracking-wide text-white/55">
+              <span>HMO &amp; conversion specialists</span>
+              <span className="h-1 w-1 rounded-full bg-gold/70" />
+              <span>Greater London &amp; the South East</span>
+              <span className="h-1 w-1 rounded-full bg-gold/70" />
+              <span>Paid on completion</span>
+            </div>
           </motion.div>
         </div>
       </div>

@@ -43,9 +43,9 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.alalipropertypartners.com/hmo-sourcing#service",
-  name: "Specialist HMO Sourcing",
+  name: "HMO Property Sourcing",
   description:
-    "Specialist sourcing of high-yield HMOs across Greater London and the South of England — including properties with HMO conversion and change-of-use potential (under permitted development or full planning). Sourced through our network — including pre-auction, off-market and direct-to-vendor.",
+    "Specialist sourcing of high-yield HMOs and HMO conversion opportunities across Greater London and the South of England — including properties with HMO conversion and change-of-use potential (under permitted development or full planning). Sourced through our network — including pre-auction, off-market and direct-to-vendor.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -109,7 +109,7 @@ const pillars = [
   {
     title: "High-yield HMOs",
     detail:
-      "Let by the room for stronger cashflow than a single let. We run the comparables and observed local room rents before a deal ever reaches you — if the numbers don't stack up, we don't send it.",
+      "Let by the room for stronger cashflow than a single let. Each deal pack puts the comparables and observed local room rents in front of you from the start — the numbers are there before you spend a minute on it.",
   },
   {
     title: "Conversion-ready properties",

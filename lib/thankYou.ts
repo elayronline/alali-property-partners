@@ -58,7 +58,13 @@ function dealListEmail(name: string): { subject: string; html: string } {
   const inner =
     `<h2 style="color:#c9a84c;margin-top:0;">You're on the Deal List${name ? `, ${esc(name)}` : ""}.</h2>` +
     '<p style="color:#fff;">Thanks for joining — you\'ll now receive verified HMO and conversion-ready opportunities across Greater London &amp; the South East as they land.</p>' +
-    '<p style="color:#fff;">No spam, and you can unsubscribe anytime by replying to any deal email.</p>'
+    '<p style="color:#fff;">No spam, and you can unsubscribe anytime by replying to any deal email.</p>' +
+    '<div style="margin-top:24px;padding:16px;background:#26282c;border:1px solid rgba(201,160,61,0.4);border-radius:8px;">' +
+    '<p style="color:#c9a84c;margin:0 0 6px 0;font-weight:bold;">How our fees work</p>' +
+    '<p style="color:#fff;margin:0;font-size:14px;">Joining is free. If you choose to act on a deal, our fixed sourcing fees apply — The Deal List is £5,000 per deal (a £500 refundable deposit unlocks the full pack and viewing; £4,500 on completion). Bespoke Sourcing is £8,000. Full details: ' +
+    '<a href="https://www.alalipropertypartners.com/pricing" style="color:#c9a84c;">pricing</a> and ' +
+    '<a href="https://www.alalipropertypartners.com/terms" style="color:#c9a84c;">terms of service</a>.</p>' +
+    "</div>"
   return { subject: "You're on the Deal List — Alali Property Partners", html: shell(inner) }
 }
 

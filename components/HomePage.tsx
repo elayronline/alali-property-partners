@@ -6,6 +6,7 @@ import { WhatWeSource } from "@/components/WhatWeSource"
 import { CoverageMap } from "@/components/CoverageMap"
 import { HowItWorks } from "@/components/HowItWorks"
 import { WhyUs } from "@/components/WhyUs"
+import { Assurances } from "@/components/Assurances"
 import { CaseStudy } from "@/components/CaseStudy"
 import { GotADeal } from "@/components/GotADeal"
 import { Pricing } from "@/components/Pricing"
@@ -24,16 +25,17 @@ export function HomePage({ faqItems }: { faqItems?: FaqItem[] }) {
       <Navbar />
       <Hero />
       <WhatWeSource />
-      <CaseStudy />
-      <HowItWorks />
-      <WhyUs />
       <CoverageMap />
+      <HowItWorks />
+      <CaseStudy />
+      <WhyUs />
+      <Assurances />
       <Pricing />
-      <GotADeal />
       {faqItems && faqItems.length > 0 && (
         <Faq items={faqItems} heading="Property deal sourcing — FAQs" />
       )}
       <ContactForm />
+      <GotADeal />
       <Footer />
     </main>
   )

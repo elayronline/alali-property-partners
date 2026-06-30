@@ -20,8 +20,9 @@ export function Footer() {
           <div>
             <Logo height={50} />
             <p className="mt-7 max-w-sm text-sm leading-relaxed text-white/55">
-              Specialist sourcing of high-yield HMO deals across Greater London and the South East.
-              We connect investors with verified deals and the regulated professionals they need.
+              Specialist sourcing of high-yield HMO and HMO conversion opportunities across Greater
+              London and the South East. We connect investors with verified deals and the regulated
+              professionals they need.
             </p>
             <div className="mt-8 flex gap-3">
               <a

@@ -17,28 +17,28 @@ const steps = [
   },
   {
     step: "03",
-    title: "We Review The Numbers",
-    description: "Every opportunity is analysed and stress-tested.",
+    title: "We Prepare The Deal Pack",
+    description: "We compile comparables, rents and indicative figures from public data.",
   },
   {
     step: "04",
     title: "We Make The Introduction",
-    description: "You receive the full deal pack and decide next steps.",
+    description: "You get the full pack, we facilitate viewings, and you decide next steps.",
   },
 ]
 
 // Deal pack contents — informational/observed framing (public data), not advice.
 const dealPackItems = [
   "Full property address, location details, and tenure",
-  "Photos provided by the vendor or agent (where available)",
+  "Photos where available — some off-market deals come without them, so you can book a viewing",
   "Asking or agreed purchase price",
   "Land Registry comparable evidence (public records, informational)",
   "Observed local market rents from public lettings data (informational, not guaranteed)",
   "Indicative gross yield based on observed rents (not a return projection)",
-  "Indicative refurbishment scope where applicable — to be verified by your contractor or surveyor",
-  "Indicative resale or refinance comparables where an exit applies (not a valuation)",
+  "Indicative refurbishment scope, where applicable",
+  "Indicative resale comparables where an exit applies (not a valuation)",
   "Local area summary: demand drivers, planning context, transport links",
-  "HMO strategy options to consider (ready-to-let HMO or conversion-ready) — informational, not financial advice",
+  "Strategy options to consider (HMO conversion) — informational, not financial advice",
   "Introductions to FCA-regulated brokers, qualified solicitors, surveyors, and vetted contractors",
 ]
 

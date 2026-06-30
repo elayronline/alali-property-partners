@@ -7,13 +7,13 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "HMO Sourcing Fees & Pricing",
   description:
-    "HMO sourcing fees: 2.4% (min £3,600, VAT inc.) on sourced deals; £1,000 retainer on bespoke; development by application. No hidden costs. See our fees.",
+    "HMO sourcing fees: Portfolio Builder membership £249/mo; The Deal List £5,000 fixed; Bespoke Sourcing £8,000 fixed; Source & Develop by application. VAT inc., no hidden costs.",
   keywords: [
     "property sourcing fees",
     "property sourcing cost UK",
     "deal sourcing pricing",
-    "sourcing fee 2.4%",
-    "bespoke sourcing retainer",
+    "fixed fee property sourcing",
+    "property sourcing membership",
     "property investment fees England Wales",
     "property sourcer cost UK",
     "how much does property sourcing cost",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO Sourcing, London & the South East" }],
     title: "Pricing | Alali Property Partners",
     description:
-      "2.4% sourcing fee on sourced deals, £1,000 retainer on bespoke sourcing. Transparent fees with no hidden costs.",
+      "Portfolio Builder membership £249/mo, The Deal List £5,000, Bespoke Sourcing £8,000, Source & Develop by application. Transparent fixed fees, VAT inc.",
     url: "/pricing",
     type: "article",
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pricing | Alali Property Partners",
     description:
-      "2.4% sourcing fee on sourced deals, £1,000 retainer on bespoke sourcing. Transparent fees with no hidden costs.",
+      "Portfolio Builder membership £249/mo, The Deal List £5,000, Bespoke Sourcing £8,000, Source & Develop by application. Transparent fixed fees, VAT inc.",
   },
 }
 
@@ -59,17 +59,34 @@ const serviceSchema = {
   offers: [
     {
       "@type": "Offer",
+      name: "Portfolio Builder Membership",
+      description:
+        "Rolling monthly membership for active investors, cancel anytime. Includes 48-hour priority access to every new deal before the general list, £850 credit on The Deal List or Bespoke Sourcing per completed deal, one free feasibility report per deal, priority access to limited Source & Develop project slots, monthly market intelligence for your target areas, a quarterly portfolio review call, and priority warm introductions to our regulated power team.",
+      priceCurrency: "GBP",
+      price: "249",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        priceCurrency: "GBP",
+        price: "249",
+        unitText: "MON",
+        billingDuration: "P1M",
+        valueAddedTaxIncluded: true,
+      },
+      availability: "https://schema.org/InStock",
+      areaServed: "GB",
+    },
+    {
+      "@type": "Offer",
       name: "The Deal List",
       description:
-        "Deals sourced through our network. 2.4% sourcing fee of purchase price (minimum £3,600, VAT inclusive). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. Viewings and introductions facilitated by us — vendor and agent contact details remain with us. 48-hour decision SLA from deal-pack release, with extensions available on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
+        "Browse our pipeline and pick what fits. Live off-market, pre-auction and direct-to-vendor deals with a full deal pack (tenure, comparables, rents) and indicative refurbishment scope. £5,000 fixed fee (VAT inclusive): a £500 refundable deposit (taken after the sourcing agreement is signed) unlocks the full pack and viewing, with the £4,500 balance on completion. Deposit refunded if the deal is already gone or on a genuine no after viewing, and credited against the fee if you proceed.",
       priceCurrency: "GBP",
-      price: "500",
+      price: "5000",
       priceSpecification: {
         "@type": "PriceSpecification",
         priceCurrency: "GBP",
-        price: "500",
-        minPrice: "3600",
-        description: "£500 unlock fee upfront, balance to total 2.4% of purchase price (minimum £3,600 total, VAT inclusive)",
+        price: "5000",
+        description: "£5,000 fixed fee per deal (VAT inclusive): £500 refundable deposit unlocks the pack and viewing, £4,500 balance on completion.",
         valueAddedTaxIncluded: true,
       },
       availability: "https://schema.org/InStock",
@@ -79,17 +96,25 @@ const serviceSchema = {
       "@type": "Offer",
       name: "Bespoke Sourcing",
       description:
-        "We go to market and source deals tailored to your exact brief — location, budget, strategy, target returns. £1,000 upfront retainer (refundable if no deal sourced within 14 days, subject to terms) covers our bespoke search effort. 2.4% sourcing fee (minimum £3,600, VAT inclusive) is charged additionally on completion — the retainer is not credited against the sourcing fee.",
+        "Commission your own search, sourced exclusively for you to your exact brief — area, strategy and budget — and not shared with the list. £8,000 fixed fee (VAT inclusive) paid in three stages: £2,667 on signing secures a dedicated 14-day search (refundable if no suitable deal is presented in the window), £2,667 on presentation of a matching deal, and £2,666 on completion.",
       priceCurrency: "GBP",
-      price: "1000",
+      price: "8000",
       priceSpecification: {
         "@type": "PriceSpecification",
         priceCurrency: "GBP",
-        price: "1000",
-        description: "£1,000 retainer plus 2.4% sourcing fee (minimum £3,600, VAT inclusive)",
+        price: "8000",
+        description: "£8,000 fixed fee (VAT inclusive) in three stages: £2,667 on signing, £2,667 on presentation, £2,666 on completion.",
         valueAddedTaxIncluded: true,
       },
       availability: "https://schema.org/InStock",
+      areaServed: "GB",
+    },
+    {
+      "@type": "Offer",
+      name: "Source & Develop",
+      description:
+        "From sourcing to finished HMO. We source the property to your brief, then manage the full HMO conversion — design, planning, build and handover — delivered as a finished, tenanted HMO. By application; a limited number of projects per quarter. Fees are quoted per project and staged against project milestones (search, secured, planning, build, handover).",
+      availability: "https://schema.org/LimitedAvailability",
       areaServed: "GB",
     },
   ],
@@ -104,47 +129,47 @@ const faqSchema = {
       name: "How much does property deal sourcing cost in the UK?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Alali Property Partners charges 2.4% of the purchase price (minimum £3,600, VAT inclusive) for sourced deals. You sign a sourcing agreement and pay £500 upfront to release the deal pack; the balance is settled once you decide to proceed. Bespoke sourcing requires a £1,000 upfront retainer plus the same 2.4% sourcing fee on completion. All fees include VAT and there are no hidden costs.",
+        text: "Alali Property Partners uses fixed fees, all VAT inclusive. The Deal List is a £5,000 fixed fee per deal. Bespoke Sourcing is an £8,000 fixed fee. Source & Develop (full HMO conversion managed end to end) is by application, with fees quoted per project. There is also an optional Portfolio Builder membership at £249 per month (rolling, cancel anytime) which gives priority access and a £850 credit on the Deal List or Bespoke Sourcing per completed deal. There are no hidden costs.",
       },
     },
     {
       "@type": "Question",
-      name: "When do I pay the sourcing fee?",
+      name: "When do I pay — and how are the fees staged?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For sourced deals, £500 is paid upfront on the signed sourcing agreement to release the deal pack. The remaining balance of the 2.4% sourcing fee (to a total minimum of £3,600, VAT inclusive) is settled once you decide to proceed. For bespoke sourcing, the £1,000 retainer is paid upfront on brief, then the balance is settled on instruction once a deal is presented and accepted.",
+        text: "The Deal List £5,000 fee is staged as a £500 refundable deposit (taken after the sourcing agreement is signed) to unlock the full deal pack and viewing, with the £4,500 balance on completion. Bespoke Sourcing's £8,000 fee is paid in three stages: £2,667 on signing to secure a dedicated 14-day search, £2,667 on presentation of a matching deal, and £2,666 on completion. Source & Develop fees are staged against project milestones — search, secured, planning, build and handover.",
       },
     },
     {
       "@type": "Question",
-      name: "Is the property sourcing fee refundable?",
+      name: "Is the deposit or any fee refundable?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, subject to terms. The £500 unlock fee (the Deal List) or £1,000 retainer (Bespoke Sourcing) is refundable where there are valid reasons not to proceed within the 48-hour decision SLA after the deal pack is released or the bespoke deal is presented. The balance of the sourcing fee is only ever charged once you have decided to proceed, so it is never paid in scenarios where a refund would apply. Extensions to the 48-hour SLA may be granted on fair, justified reasoning where the vendor agrees. Refunds are not issued once the window has expired or where significant work has been undertaken on your behalf.",
+        text: "Yes, subject to terms. On the Deal List, the £500 deposit is refunded if the deal is already gone, or on a genuine decision not to proceed after viewing; if you proceed it is credited against the £5,000 fee. On Bespoke Sourcing, the £2,667 signing payment is refundable if we do not present a suitable deal within the dedicated 14-day search window. Balances are only ever charged once a deal proceeds.",
       },
     },
     {
       "@type": "Question",
-      name: "What does the bespoke sourcing retainer cover?",
+      name: "What is Portfolio Builder membership?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The £1,000 upfront retainer commits us to actively go to market and source deals tailored to your exact criteria (location, budget, strategy, target returns) within a 14-day window in which we find and present a deal. If we do not present a suitable deal within those 14 days, the retainer is refundable subject to terms. Once a deal is presented, the standard 48-hour decision SLA applies — if you decide not to proceed and there are valid reasons, the £1,000 is also refundable subject to terms. If you proceed, the 2.4% sourcing fee (minimum £3,600, VAT inclusive) is charged in addition to the £1,000 retainer — the retainer covers our bespoke search effort and is not credited against the sourcing fee.",
+        text: "Portfolio Builder is an optional rolling monthly membership for active investors at £249 per month, cancellable anytime. It includes 48-hour priority access to every new deal before the general list, a £850 credit on the Deal List or Bespoke Sourcing per completed deal, one free feasibility report per deal, priority access to limited Source & Develop project slots, monthly market intelligence for your target areas, a quarterly portfolio review call, and priority warm introductions to our regulated power team.",
       },
     },
     {
       "@type": "Question",
-      name: "Are there any ongoing fees or contracts?",
+      name: "Are there ongoing contracts or lock-ins?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. There are no ongoing contracts, retainers, or lock-ins. You pay per deal. The deal mailing list is free.",
+        text: "The fixed per-deal fees (the Deal List, Bespoke Sourcing, Source & Develop) involve no ongoing contract or lock-in — you pay per deal. The Portfolio Builder membership is rolling monthly and can be cancelled anytime. The deal mailing list is free.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you charge VAT on top of the sourcing fee?",
+      name: "Do you charge VAT on top of the fees?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. All fees quoted are VAT inclusive. The 2.4% sourcing fee, the £3,600 minimum, and the £1,000 bespoke retainer all already include VAT.",
+        text: "No. All fees quoted are VAT inclusive — the £5,000 Deal List fee, the £8,000 Bespoke Sourcing fee, the by-application Source & Develop fees, and the £249 monthly membership all already include VAT.",
       },
     },
   ],
@@ -201,9 +226,9 @@ export default function Page() {
               Property sourcing pricing
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">
-              No hidden costs, no ongoing contracts. Three ways to work with us — sourced deals,
-              bespoke sourcing, and development management by application — each with transparent
-              fees and a clear decision window.
+              No hidden costs. Three ways to work with us directly — Portfolio Builder membership,
+              bespoke sourcing, and Source &amp; Develop by application — or join the deal list free to
+              see deals as they land.
             </p>
           </div>
         </section>

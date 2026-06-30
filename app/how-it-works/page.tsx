@@ -47,7 +47,7 @@ const faqSchema = {
       name: "How long does property deal sourcing take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For sourced deals from our pipeline, you receive the deal pack within days of signing the sourcing agreement and paying the £500 unlock fee. For bespoke sourcing, we work to a 14-day sourcing window from receipt of your £1,000 retainer in which we find and present a deal. Once a deal pack is released (or a bespoke deal is presented), you have a 48-hour decision SLA before any commitment is final — extensions are available on fair, justified reasoning where the vendor allows.",
+        text: "For sourced deals from our pipeline (the Deal List), you receive the deal pack within days of signing the sourcing agreement and paying the £500 refundable deposit. For bespoke sourcing, the £2,667 signing payment secures a dedicated 14-day search window in which we find and present a deal. Once a deal pack is released (or a bespoke deal is presented), you have a 48-hour decision SLA before any commitment is final — extensions are available on fair, justified reasoning where the vendor allows.",
       },
     },
     {
@@ -55,7 +55,7 @@ const faqSchema = {
       name: "What is included in a property deal pack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every deal pack includes the full property address and tenure, photos provided by the vendor or agent (where available), asking or agreed purchase price, Land Registry comparable evidence from public records (informational), observed local market rents from public lettings data (informational, not guaranteed), indicative gross yield based on those observed rents (not a return projection), indicative refurbishment and HMO conversion scope where applicable to be verified by your contractor or surveyor, indicative resale or refinance comparables where applicable (not a valuation), a local area summary covering demand drivers, planning and HMO licensing context, and transport links, and HMO strategy options to consider (ready-to-let HMO or conversion-ready) presented as information not advice. Vendor and agent contact details are held by us — we facilitate viewings and introductions on your behalf. Deal packs are informational only and do not constitute financial, mortgage, tax, or legal advice.",
+        text: "Every deal pack includes the full property address and tenure, photos where available (some off-market deals come without them — book a viewing to see it in person), asking or agreed purchase price, Land Registry comparable evidence from public records (informational), observed local market rents from public lettings data (informational, not guaranteed), indicative gross yield based on those observed rents (not a return projection), indicative refurbishment and HMO conversion scope where applicable to be verified by your contractor or surveyor, indicative resale comparables where applicable (not a valuation), a local area summary covering demand drivers, planning and HMO licensing context, and transport links, and HMO strategy options to consider (HMO conversion) presented as information not advice. Vendor and agent contact details are held by us — we facilitate viewings and introductions on your behalf. Deal packs are informational only and do not constitute financial, mortgage, tax, or legal advice.",
       },
     },
     {
@@ -63,7 +63,7 @@ const faqSchema = {
       name: "How does the 48-hour decision SLA work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "From the moment the deal pack is released (the Deal List) or the deal is presented (Bespoke), you have 48 hours to review it, get initial input from your solicitor, surveyor, or mortgage broker, and decide whether to proceed. Most off-market deals are time-sensitive, which is why the standard window is short — but extensions can be granted on fair, justified reasoning (for example, awaiting a survey or mortgage decision in principle) where the vendor agrees. If you decide to proceed, the balance of the sourcing fee is settled. If you decide not to proceed and there are valid reasons, the £500 unlock fee (the Deal List) or £1,000 retainer (Bespoke) is refundable subject to our terms of service.",
+        text: "From the moment the deal pack is released (the Deal List) or the deal is presented (Bespoke), you have 48 hours to review it, get initial input from your solicitor, surveyor, or mortgage broker, and decide whether to proceed. Most off-market deals are time-sensitive, which is why the standard window is short — but extensions can be granted on fair, justified reasoning (for example, awaiting a survey or mortgage decision in principle) where the vendor agrees. If you decide to proceed, the balance of the fixed fee is settled on completion. If you decide not to proceed and there are valid reasons, the £500 Deal List deposit (otherwise credited against the fee) or the £2,667 Bespoke signing payment is refundable subject to our terms of service.",
       },
     },
     {
@@ -79,7 +79,7 @@ const faqSchema = {
       name: "How do you make sure a deal actually stacks before sending it?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Before any deal reaches you, we research it and confirm the numbers — purchase price against comparables, observed local rents, and the planning position where relevant — and only send it when it stands up. Off-market opportunities come through our private contacts and direct relationships; wherever a deal comes from, it's packaged the same way so you can move quickly.",
+        text: "Before a deal reaches you, we do the searching and pull the evidence together — purchase price against comparables, observed local rents, and the planning position where relevant — and package it so you can move quickly. Off-market opportunities come through our private contacts and direct relationships; wherever a deal comes from, it's packaged the same way.",
       },
     },
   ],

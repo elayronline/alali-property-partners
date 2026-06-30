@@ -8,9 +8,9 @@ import { SectionDivider } from "@/components/ui/SectionDivider"
 const cards = [
   {
     icon: CheckCircle,
-    title: "We do the maths, so you don't have to",
+    title: "Every deal, fully packaged",
     description:
-      "We run the comparables, yields, and numbers. If a deal doesn't genuinely stack up, we don't send it. Simple.",
+      "Each introduction comes with a complete deal pack — comparables, observed local rents and the key numbers gathered for you — so you can size up a deal in minutes, not weeks.",
   },
   {
     icon: Users,
@@ -41,9 +41,9 @@ const secondaryCards = [
   },
   {
     icon: Link,
-    title: "Backed by a compliant power team",
+    title: "Access to our power team",
     description:
-      "We work alongside FCA-regulated mortgage brokers, qualified solicitors, vetted contractors, and lettings agents — so every part of your transaction is handled by the right professionals.",
+      "We have a trusted power team of independent professionals on hand — so every part of the process is in capable hands.",
   },
 ]
 
@@ -78,7 +78,7 @@ export function WhyUs() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
             >
               <Card {...card} />
             </motion.div>
@@ -92,7 +92,7 @@ export function WhyUs() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4 + i * 0.1 }}
+              transition={{ duration: 0.4, delay: 0.1 + i * 0.05 }}
             >
               <Card {...card} />
             </motion.div>

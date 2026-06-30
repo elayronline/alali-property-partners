@@ -153,7 +153,7 @@ const businessSchema = {
     "Article 4 Areas",
     "Pre-Auction Property",
     "Off-Market Property Sourcing",
-    "Below Market Value Properties",
+    "Property Deal Introductions",
   ],
 }
 

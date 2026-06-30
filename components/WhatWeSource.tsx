@@ -42,7 +42,7 @@ export function WhatWeSource() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
               className="group rounded-sm border border-white/10 bg-ink-raised p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_20px_50px_-24px_rgba(201,160,61,0.4)] sm:p-8"
             >
               <card.icon className="h-9 w-9 text-gold" strokeWidth={1.25} />

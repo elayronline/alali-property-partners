@@ -59,7 +59,7 @@ export default function Terms() {
       <h1 className="font-display mt-3 text-4xl tracking-tight text-charcoal sm:text-5xl">
         Terms of Service
       </h1>
-      <p className="mt-3 text-sm text-muted-light">Last updated: February 2026</p>
+      <p className="mt-3 text-sm text-muted-light">Last updated: June 2026</p>
 
       <div className="mt-8 space-y-8 text-sm leading-relaxed text-muted-light">
         <section>
@@ -119,85 +119,120 @@ export default function Terms() {
         </section>
 
         <section>
+          {/* DRAFT — fees rewritten 2026-06 to the fixed-fee model. REQUIRES
+              SOLICITOR REVIEW before publishing: deposits, a monthly subscription,
+              and the feasibility add-on all involve client money. */}
           <h2 className="text-lg font-bold text-charcoal">4. Fees and Payment</h2>
-          <p className="mt-3 font-semibold text-charcoal">The Deal List (Off-Market and On-Market):</p>
+          <p className="mt-2">
+            All fees are VAT inclusive and there are no hidden costs. The fee that applies depends on
+            how you choose to work with us, as set out below. Our main sourcing fee is payable on
+            completion.
+          </p>
+
+          <p className="mt-3 font-semibold text-charcoal">Portfolio Builder (membership):</p>
           <p className="mt-1">
-            Our sourcing fee is 2.4% of the purchase price (minimum £3,600, VAT inclusive). This
-            applies to deals sourced through our private contacts (off-market) and through our
-            compliant agent network (on-market). The fee is paid in two stages:
+            Portfolio Builder is an optional rolling monthly membership charged at £249 per month
+            (VAT inclusive). It may be cancelled at any time; cancellation takes effect at the end of
+            the current monthly billing period and fees already paid are non-refundable. Membership
+            includes 48-hour priority access to new deals, an £850 credit applied to the sourcing fee
+            on each completed Deal List or Bespoke Sourcing transaction, one free feasibility report
+            per deal, priority access to limited Source &amp; Develop project slots, monthly market
+            intelligence, a quarterly portfolio review call, and priority introductions to the
+            independent professionals we work with.
+          </p>
+
+          <p className="mt-3 font-semibold text-charcoal">The Deal List:</p>
+          <p className="mt-1">
+            The sourcing fee for a deal taken from the Deal List is a fixed £5,000 per deal (VAT
+            inclusive), covering deals sourced through our private contacts (off-market) and through
+            our compliant agent network (on-market). It is paid in two stages:
           </p>
           <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
             <li>
-              <span className="font-semibold text-charcoal">£500 upfront</span> on the signed
-              sourcing agreement, paid to release the full deal pack.
+              <span className="font-semibold text-charcoal">£500 refundable deposit</span>, paid
+              after the sourcing agreement is signed, to unlock the full deal pack and arrange a
+              viewing.
             </li>
             <li>
-              <span className="font-semibold text-charcoal">Balance</span> of the 2.4% sourcing
-              fee (so that the total reaches a minimum of £3,600 VAT inc.) settled once you have
-              decided to proceed with the deal.
+              <span className="font-semibold text-charcoal">£4,500 balance</span>, payable on
+              completion of the purchase.
             </li>
           </ul>
           <p className="mt-2">
-            Vendor and agent contact details are not included in the deal pack. We facilitate
-            viewings and introductions on your behalf throughout the decision and transaction
-            process.
+            The £500 deposit is refundable where the deal is no longer available, or on a genuine
+            decision not to proceed after viewing (subject to the conditions below). Where you do
+            proceed, the deposit is credited against the £5,000 fee. Vendor and agent contact details
+            are not included in the deal pack; we facilitate viewings and introductions on your
+            behalf throughout the decision and transaction process.
           </p>
-          <p className="mt-3 font-semibold text-charcoal">48-Hour Decision SLA and Refund Policy:</p>
-          <p className="mt-1">
-            You have a 48-hour decision SLA from the time the deal pack is released to review
-            the pack, take initial input from your solicitor, surveyor, and mortgage broker, and
-            decide whether to proceed. Most off-market deals are time-sensitive, so this short
-            standard window reflects the urgency typical of these transactions. We may, at our
-            discretion, grant extensions to the 48-hour SLA where the investor demonstrates
-            fair and justified reasoning (for example, awaiting a survey or a mortgage decision
-            in principle) and the vendor agrees to the extended timeframe. Any extension will
-            be confirmed in writing.
-          </p>
-          <p className="mt-2">
-            If you decide not to proceed and there are valid reasons for that decision (for
-            example, material findings on independent due diligence, change in personal
-            circumstances, or the deal materially diverging from the pack), the £500 unlock fee
-            is refundable on written request within the decision SLA. The balance of the
-            sourcing fee is only ever charged once you have decided to proceed, so it is never
-            paid in scenarios where a refund would apply. Refunds of the £500 will not be issued
-            once the decision SLA (or any agreed extension) has expired, where you have
-            proceeded with the transaction (for example by instructing solicitors or applying for
-            a mortgage on the property), or where you cannot evidence valid reasons not to
-            proceed. We reserve the right to deduct reasonable administrative costs from any
-            refund where significant work has been undertaken on your behalf.
-          </p>
+
           <p className="mt-3 font-semibold text-charcoal">Bespoke Sourcing:</p>
           <p className="mt-1">
-            A £1,000 retainer is payable upfront on brief. We then have 14 days from receipt of
-            the retainer to find and present a deal that matches your criteria. The retainer
-            covers our bespoke search effort during that 14-day window. If we do not present a
-            suitable deal within 14 days, the retainer is refundable (subject to terms).
+            Bespoke Sourcing is a fixed fee of £8,000 (VAT inclusive) for a dedicated search to your
+            brief, sourced exclusively for you. It is paid in three stages:
+          </p>
+          <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
+            <li>
+              <span className="font-semibold text-charcoal">£2,667 on signing</span>, which secures a
+              dedicated 14-day search. This is refundable if we do not present a suitable deal
+              matching your brief within that window (subject to terms).
+            </li>
+            <li>
+              <span className="font-semibold text-charcoal">£2,667 on presentation</span> of a
+              matching deal.
+            </li>
+            <li>
+              <span className="font-semibold text-charcoal">£2,666 on completion</span> of the
+              purchase.
+            </li>
+          </ul>
+
+          <p className="mt-3 font-semibold text-charcoal">Source &amp; Develop:</p>
+          <p className="mt-1">
+            Source &amp; Develop is offered by application, with a limited number of projects taken on
+            each quarter. Fees are quoted per project and paid in stages against project milestones
+            (search, secured, planning, build and handover), as set out in the individual project
+            agreement.
+          </p>
+
+          <p className="mt-3 font-semibold text-charcoal">Feasibility reports:</p>
+          <p className="mt-1">
+            A feasibility report is available as a paid add-on, priced and agreed on request.
+            Portfolio Builder members receive one free feasibility report per deal.
+          </p>
+
+          <p className="mt-3 font-semibold text-charcoal">48-Hour Decision SLA and Refund Policy:</p>
+          <p className="mt-1">
+            For both the Deal List and Bespoke Sourcing, you have a 48-hour decision SLA — from the
+            time the deal pack is released (Deal List) or the deal is presented (Bespoke Sourcing) —
+            to review the pack, take initial input from your solicitor, surveyor, and mortgage
+            broker, and decide whether to proceed. Most off-market deals are time-sensitive, so this
+            short standard window reflects the urgency typical of these transactions. We may, at our
+            discretion, grant extensions where you demonstrate fair and justified reasoning (for
+            example, awaiting a survey or a mortgage decision in principle) and the vendor agrees. Any
+            extension will be confirmed in writing.
           </p>
           <p className="mt-2">
-            Once a deal is presented within the 14-day sourcing window, you have a 48-hour
-            decision SLA from the date of presentation to decide whether to proceed — the same
-            standard window that applies to the Deal List. Extensions can be granted on fair,
-            justified reasoning (for example, awaiting a survey or mortgage decision in
-            principle) where the vendor agrees, and will be confirmed in writing.
+            If you decide not to proceed and there are valid reasons for that decision (for example,
+            material findings on independent due diligence, a change in personal circumstances, or the
+            deal materially diverging from the pack or brief), the £500 Deal List deposit, or the
+            £2,667 Bespoke Sourcing signing payment, is refundable on written request within the
+            decision SLA. Balances are only ever charged once you have decided to proceed, so they are
+            never paid in scenarios where a refund would apply. Refunds will not be issued once the
+            decision SLA (or any agreed extension) has expired, where you have proceeded with the
+            transaction (for example by instructing solicitors or applying for a mortgage on the
+            property), or where you cannot evidence valid reasons not to proceed. We reserve the right
+            to deduct reasonable administrative costs from any refund where significant work has been
+            undertaken on your behalf.
           </p>
-          <p className="mt-2">
-            If you decide to proceed, the 2.4% sourcing fee (minimum £3,600 VAT inclusive) is
-            charged in addition to the £1,000 retainer. The retainer is not credited against or
-            deducted from the sourcing fee. If you decide not to proceed and there are valid
-            reasons for that decision (for example, material findings on independent due
-            diligence, change in personal circumstances, or the deal materially diverging from
-            the brief), the £1,000 retainer is refundable on written request within the decision
-            SLA, subject to terms and to deduction of reasonable administrative costs where
-            significant work has been undertaken on your behalf.
-          </p>
+
           <p className="mt-3 font-semibold text-charcoal">Referral Fees:</p>
           <p className="mt-1">
             We pay referral fees to property owners, agents, and introducers on deals that complete.
             Referral fee amounts are agreed on a case-by-case basis.
           </p>
-          <p className="mt-3">
-            All fees are VAT inclusive.
-          </p>
+
+          <p className="mt-3">All fees are VAT inclusive.</p>
         </section>
 
         <section>
