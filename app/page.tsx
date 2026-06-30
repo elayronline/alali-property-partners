@@ -6,14 +6,13 @@ export const metadata: Metadata = {
     absolute: "Property Sourcing London & South East | Alali Property Partners",
   },
   description:
-    "High-yield HMO & conversion-ready BRR deal sourcing across London & the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor. Join the deal list.",
+    "High-yield HMO deal sourcing across London & the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor. Join the deal list.",
   keywords: [
     "HMO deal sourcing",
     "HMO property sourcing",
     "high yield HMO deals",
     "HMO conversion property",
-    "BRR property sourcing",
-    "buy refurbish refinance deals",
+    "HMO investment property",
     "conversion-ready property",
     "change of use property",
     "permitted development HMO",
@@ -40,17 +39,17 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Alali Property Partners | HMO & Conversion-Ready BRR Deal Sourcing",
+    title: "Alali Property Partners | Specialist HMO Deal Sourcing",
     description:
-      "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor — with HMO conversion and change-of-use potential.",
+      "Specialist sourcing of high-yield HMOs for investors across Greater London and the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor — with HMO conversion and change-of-use potential.",
     url: "/",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alali Property Partners | HMO & Conversion-Ready BRR Deal Sourcing",
+    title: "Alali Property Partners | Specialist HMO Deal Sourcing",
     description:
-      "High-yield HMOs and conversion-ready BRR deals across Greater London and the South East. Sourced through our network — including pre-auction, off-market and direct-to-vendor.",
+      "High-yield HMOs across Greater London and the South East. Sourced through our network — including pre-auction, off-market and direct-to-vendor.",
   },
 }
 
@@ -59,9 +58,9 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.alalipropertypartners.com/#sourcing-service",
-  name: "HMO & Conversion-Ready BRR Deal Sourcing",
+  name: "HMO Deal Sourcing",
   description:
-    "We source high-yield HMOs and conversion-ready BRR deals for investors across Greater London and the South East — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Sourced through our network — including pre-auction, off-market and direct-to-vendor — and bespoke sourcing to your brief, all with complete deal packs.",
+    "We source high-yield HMOs for investors across Greater London and the South East — including properties with HMO conversion and change-of-use potential (under permitted development or full planning). Sourced through our network — including pre-auction, off-market and direct-to-vendor — and bespoke sourcing to your brief, all with complete deal packs.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -82,7 +81,7 @@ const serviceSchema = {
         "@type": "Offer",
         name: "The Deal List",
         description:
-          "Verified HMO and conversion-ready BRR deals sourced through our network — including pre-auction, off-market and direct-to-vendor. 2.4% sourcing fee of purchase price (min £3,600, VAT inc.). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. We facilitate viewings and introductions on the investor's behalf. 48-hour decision SLA from deal-pack release, with extensions on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
+          "Verified HMO deals sourced through our network — including pre-auction, off-market and direct-to-vendor. 2.4% sourcing fee of purchase price (min £3,600, VAT inc.). £500 paid upfront on signed sourcing agreement to release the deal pack; balance settled once the investor decides to proceed. We facilitate viewings and introductions on the investor's behalf. 48-hour decision SLA from deal-pack release, with extensions on fair, justified reasoning. £500 refundable where there are valid reasons not to proceed (subject to terms).",
         priceCurrency: "GBP",
         price: "500",
       },
@@ -90,7 +89,7 @@ const serviceSchema = {
         "@type": "Offer",
         name: "Bespoke Sourcing",
         description:
-          "We go to market and source HMO and conversion-ready BRR deals tailored to the investor's exact criteria. £1,000 upfront retainer covers our 14-day bespoke search effort. 2.4% sourcing fee (min £3,600, VAT inc.) charged additionally on completion — the retainer is not credited against the sourcing fee. 14-day sourcing window.",
+          "We go to market and source HMO deals tailored to the investor's exact criteria. £1,000 upfront retainer covers our 14-day bespoke search effort. 2.4% sourcing fee (min £3,600, VAT inc.) charged additionally on completion — the retainer is not credited against the sourcing fee. 14-day sourcing window.",
         priceCurrency: "GBP",
         price: "1000",
       },
@@ -127,7 +126,7 @@ const faqSchema = {
       name: "What types of property deals do you source?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We specialise in high-yield HMOs (Houses in Multiple Occupation) and conversion-ready BRR (Buy, Refurbish, Refinance) deals — properties with HMO conversion and change-of-use potential (under permitted development or full planning) — across Greater London and the South East. We source through our network — including pre-auction, off-market and direct-to-vendor — and take bespoke briefs on request.",
+        text: "We specialise exclusively in high-yield HMOs (Houses in Multiple Occupation) — including ready-to-let HMOs and properties with HMO conversion and change-of-use potential (under permitted development or full planning) — across Greater London and the South East. We source through our network — including pre-auction, off-market and direct-to-vendor — and take bespoke HMO briefs on request.",
       },
     },
     {

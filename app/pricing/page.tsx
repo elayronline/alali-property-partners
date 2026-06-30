@@ -5,9 +5,9 @@ import { Faq } from "@/components/Faq"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "HMO & BRR Sourcing Fees & Pricing",
+  title: "HMO Sourcing Fees & Pricing",
   description:
-    "HMO & BRR sourcing fees: 2.4% (min £3,600, VAT inc.) on sourced deals; £1,000 retainer on bespoke; development by application. No hidden costs. See our fees.",
+    "HMO sourcing fees: 2.4% (min £3,600, VAT inc.) on sourced deals; £1,000 retainer on bespoke; development by application. No hidden costs. See our fees.",
   keywords: [
     "property sourcing fees",
     "property sourcing cost UK",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/pricing" },
   openGraph: {
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO Sourcing, London & the South East" }],
     title: "Pricing | Alali Property Partners",
     description:
       "2.4% sourcing fee on sourced deals, £1,000 retainer on bespoke sourcing. Transparent fees with no hidden costs.",

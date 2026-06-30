@@ -3,7 +3,7 @@
 // brand asset rather than generating one, reading the co-located file via the
 // import.meta.url pattern so it's bundled for the edge runtime.
 export const runtime = "edge"
-export const alt = "Alali Property Partners — HMO & BRR Sourcing, London & the South East"
+export const alt = "Alali Property Partners — HMO Sourcing, London & the South East"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/jpeg"
 

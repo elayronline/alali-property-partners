@@ -5,9 +5,9 @@ import { Faq } from "@/components/Faq"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "Why Choose Us — HMO & BRR Sourcing",
+  title: "Why Choose Us — HMO Sourcing",
   description:
-    "Why investors choose us — verified high-yield HMO and conversion-ready BRR deals, transparent fees, FCA-regulated team, complete deal packs. Greater London & the South East.",
+    "Why investors choose us — verified high-yield HMO deals, transparent fees, FCA-regulated team, complete deal packs. Greater London & the South East.",
   keywords: [
     "best property sourcer UK",
     "property sourcing company reviews",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/why-us" },
   openGraph: {
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO Sourcing, London & the South East" }],
     title: "Why Us | Alali Property Partners",
     description:
       "Verified deals, transparent fees, and complete deal packs — what sets us apart as a property sourcing partner.",
@@ -109,7 +109,7 @@ export default function Page() {
       <Navbar />
       <main className="pt-20">
         <h1 className="sr-only">
-          Why investors choose Alali Property Partners for HMO &amp; conversion-ready BRR sourcing
+          Why investors choose Alali Property Partners for HMO sourcing
         </h1>
         <WhyUs />
         <Faq items={faqSchema.mainEntity} heading="Choosing a property sourcer — FAQs" />

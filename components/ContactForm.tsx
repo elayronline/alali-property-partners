@@ -358,7 +358,7 @@ export function ContactForm() {
                                 <FormSelect
                                   id="strategy"
                                   options={strategyOptions}
-                                  placeholderText="HMO, BRR / conversion, other"
+                                  placeholderText="HMO, conversion-ready, other"
                                   {...register("strategy")}
                                 />
                               </div>

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
   robots: { index: true, follow: true },
   openGraph: {
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO Sourcing, London & the South East" }],
     title: "Privacy Policy | Alali Property Partners",
     description:
       "How we collect, use, and protect your personal data. UK GDPR compliant.",

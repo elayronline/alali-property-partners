@@ -33,7 +33,7 @@ const pricingCards: PricingCard[] = [
     dealList: true,
     steps: [
       "Join the deal list — free, takes seconds.",
-      "We send live, vetted HMO & BRR deals as they land.",
+      "We send live, vetted HMO deals as they land.",
       "£500 unlocks the deal pack; 2.4% only if you proceed.",
     ],
     popular: false,

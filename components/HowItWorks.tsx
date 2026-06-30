@@ -38,7 +38,7 @@ const dealPackItems = [
   "Indicative refurbishment scope where applicable — to be verified by your contractor or surveyor",
   "Indicative resale or refinance comparables where an exit applies (not a valuation)",
   "Local area summary: demand drivers, planning context, transport links",
-  "Strategy options to consider (HMO, BRR conversion) — informational, not financial advice",
+  "HMO strategy options to consider (ready-to-let HMO or conversion-ready) — informational, not financial advice",
   "Introductions to FCA-regulated brokers, qualified solicitors, surveyors, and vetted contractors",
 ]
 

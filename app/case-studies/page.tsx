@@ -5,12 +5,12 @@ import { CaseStudy } from "@/components/CaseStudy"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "Case Studies — HMO & BRR Deals We've Sourced",
+  title: "Case Studies — HMO Deals We've Sourced",
   description:
-    "Real HMO and conversion-ready BRR deals sourced across Greater London & the South East. One example: a 4-bed Hampshire property sourced pre-auction in under 14 days, 10% under budget, converting to a 6-bed HMO under permitted development.",
+    "Real HMO and conversion-ready deals sourced across London & the South East — including a 4-bed Hampshire home bought pre-auction, 10% under budget.",
   keywords: [
     "HMO sourcing case study",
-    "BRR deal example",
+    "HMO conversion deal example",
     "pre-auction HMO conversion",
     "permitted development HMO case study",
     "property sourcing results UK",
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/case-studies" },
   openGraph: {
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO Sourcing, London & the South East" }],
     title: "Case Studies | Alali Property Partners",
     description:
-      "Real HMO and conversion-ready BRR deals we've sourced across Greater London & the South East. Every brief is different — here's one example.",
+      "Real HMO and conversion-ready deals we've sourced across Greater London & the South East. Every brief is different — here's one example.",
     url: "/case-studies",
     type: "article",
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Case Studies | Alali Property Partners",
     description:
-      "Real HMO and conversion-ready BRR deals we've sourced across Greater London & the South East.",
+      "Real HMO and conversion-ready deals we've sourced across Greater London & the South East.",
   },
 }
 
@@ -70,7 +70,7 @@ export default function Page() {
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">
               Every brief is different and sourced to your numbers. Here is one example of the kind
-              of HMO and conversion-ready BRR deal we source — verified, off-market, and built to a
+              of HMO and conversion-ready deal we source — verified, off-market, and built to a
               client&apos;s strategy.
             </p>
           </div>

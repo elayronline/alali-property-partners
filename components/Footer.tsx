@@ -20,9 +20,8 @@ export function Footer() {
           <div>
             <Logo height={50} />
             <p className="mt-7 max-w-sm text-sm leading-relaxed text-white/55">
-              Specialist sourcing of high-yield HMO and conversion-ready BRR deals across Greater
-              London and the South East. We connect investors with verified deals and the regulated
-              professionals they need.
+              Specialist sourcing of high-yield HMO deals across Greater London and the South East.
+              We connect investors with verified deals and the regulated professionals they need.
             </p>
             <div className="mt-8 flex gap-3">
               <a
@@ -79,11 +78,6 @@ export function Footer() {
               <li>
                 <Link href="/hmo-sourcing" className="transition-colors hover:text-gold">
                   HMO Sourcing
-                </Link>
-              </li>
-              <li>
-                <Link href="/brr-sourcing" className="transition-colors hover:text-gold">
-                  BRR &amp; BMV Sourcing
                 </Link>
               </li>
               <li>

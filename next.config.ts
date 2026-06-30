@@ -31,6 +31,14 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        // The dedicated BRR/BMV page was retired — the offering is now
+        // exclusively HMO sourcing. Redirect the indexed URL to the HMO page
+        // so its link equity consolidates there instead of 404ing.
+        source: "/brr-sourcing",
+        destination: "/hmo-sourcing",
+        permanent: true,
+      },
+      {
         // Bespoke sourcing no longer takes payment through the website —
         // route the old pay/sign flow to the contact form instead.
         source: "/bespoke",

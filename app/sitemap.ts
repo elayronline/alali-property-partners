@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: baseUrl, lastModified, changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/hmo-sourcing`, lastModified, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/brr-sourcing`, lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/property-sourcing-south-east`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/how-it-works`, lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/why-us`, lastModified, changeFrequency: "monthly", priority: 0.8 },

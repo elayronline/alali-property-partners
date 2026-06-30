@@ -12,9 +12,9 @@ const cards = [
   },
   {
     icon: Home,
-    title: "BRR Investments",
+    title: "Conversion-Ready HMOs",
     detail:
-      "Buy, Refurbish, Refinance (BRR) — refurbish to add value and rooms, then refinance to recycle your capital and scale the portfolio.",
+      "Properties with realistic HMO conversion and change-of-use potential — refurbish to add rooms and value, then let a finished high-yield HMO.",
   },
 ]
 

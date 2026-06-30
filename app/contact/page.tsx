@@ -4,9 +4,9 @@ import { ContactForm } from "@/components/ContactForm"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "Tell Us Your Brief — HMO & BRR Sourcing Enquiries",
+  title: "Tell Us Your Brief — HMO Sourcing Enquiries",
   description:
-    "Tell us your brief — specialist HMO and conversion-ready BRR sourcing across Greater London & the South East. Know what you want or not sure yet, either works. We'll review your brief and be in touch.",
+    "Tell us your brief — specialist HMO sourcing across Greater London & the South East. Know what you want or not sure yet, either works. We'll review your brief and be in touch.",
   keywords: [
     "contact property sourcer UK",
     "property sourcing contact",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/contact" },
   openGraph: {
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO Sourcing, London & the South East" }],
     title: "Contact Us | Alali Property Partners",
     description:
       "Tell us what you're looking for — or what you need to move. We'll be in touch.",
@@ -97,7 +97,7 @@ export default function Page() {
       <Navbar />
       <main className="pt-20">
         <h1 className="sr-only">
-          Contact Alali Property Partners — HMO &amp; conversion-ready BRR sourcing enquiries
+          Contact Alali Property Partners — HMO sourcing enquiries
         </h1>
         <ContactForm />
       </main>

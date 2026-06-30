@@ -5,13 +5,13 @@ import { Faq } from "@/components/Faq"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "How HMO & BRR Sourcing Works",
+  title: "How HMO Sourcing Works",
   description:
-    "Our 4-step HMO and conversion-ready BRR sourcing process — pick a deal, secure it, get a full deal pack, move with confidence. Greater London & the South East.",
+    "Our 4-step HMO sourcing process — pick a deal, secure it, get a full deal pack, move with confidence. Greater London & the South East.",
   keywords: [
     "how HMO deal sourcing works",
     "HMO sourcing process",
-    "BRR sourcing process",
+    "HMO conversion sourcing process",
     "conversion-ready property sourcing",
     "deal pack contents",
     "48 hour decision SLA property sourcing",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/how-it-works" },
   openGraph: {
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO Sourcing, London & the South East" }],
     title: "How It Works | Alali Property Partners",
     description:
       "Our 4-step process for sourcing and securing verified property deals across London & the South of England.",
@@ -55,7 +55,7 @@ const faqSchema = {
       name: "What is included in a property deal pack?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every deal pack includes the full property address and tenure, photos provided by the vendor or agent (where available), asking or agreed purchase price, Land Registry comparable evidence from public records (informational), observed local market rents from public lettings data (informational, not guaranteed), indicative gross yield based on those observed rents (not a return projection), indicative refurbishment scope where applicable to be verified by your contractor or surveyor, indicative resale comparables for flips and developments (not a valuation), a local area summary covering demand drivers, planning context, and transport links, and strategy options to consider (HMO, conversion-ready BRR) presented as information not advice. Vendor and agent contact details are held by us — we facilitate viewings and introductions on your behalf. Deal packs are informational only and do not constitute financial, mortgage, tax, or legal advice.",
+        text: "Every deal pack includes the full property address and tenure, photos provided by the vendor or agent (where available), asking or agreed purchase price, Land Registry comparable evidence from public records (informational), observed local market rents from public lettings data (informational, not guaranteed), indicative gross yield based on those observed rents (not a return projection), indicative refurbishment and HMO conversion scope where applicable to be verified by your contractor or surveyor, indicative resale or refinance comparables where applicable (not a valuation), a local area summary covering demand drivers, planning and HMO licensing context, and transport links, and HMO strategy options to consider (ready-to-let HMO or conversion-ready) presented as information not advice. Vendor and agent contact details are held by us — we facilitate viewings and introductions on your behalf. Deal packs are informational only and do not constitute financial, mortgage, tax, or legal advice.",
       },
     },
     {
@@ -118,7 +118,7 @@ export default function Page() {
       <Navbar />
       <main className="pt-20">
         <h1 className="sr-only">
-          How HMO &amp; conversion-ready BRR deal sourcing works — Greater London &amp; the South East
+          How HMO deal sourcing works — Greater London &amp; the South East
         </h1>
         <HowItWorks />
         <Faq items={faqSchema.mainEntity} heading="How property sourcing works — FAQs" />

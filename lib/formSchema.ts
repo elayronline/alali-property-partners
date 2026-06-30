@@ -8,12 +8,12 @@ export const roleOptions = [
   "Other",
 ] as const
 
-// Brand leads with HMO + conversion-ready BRR. "Other" keeps the door open
-// without putting demoted strategies (R2R, SA, commercial conversion, flips)
-// front and centre.
+// HMO-only offering: ready-to-let HMOs and conversion-ready properties.
+// "Other" keeps the door open without putting non-HMO strategies front
+// and centre.
 export const strategyOptions = [
-  "HMO",
-  "BRR / Conversion",
+  "HMO (ready-to-let)",
+  "Conversion-ready HMO",
   "Other",
 ] as const
 

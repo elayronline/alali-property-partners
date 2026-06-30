@@ -8,7 +8,7 @@ import { SectionDivider } from "@/components/ui/SectionDivider"
 export const metadata: Metadata = {
   title: "Property Sourcing Agent — South East England",
   description:
-    "Property sourcing across the South East — Surrey, Kent, Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Dorset & Somerset. High-yield HMO & BRR deals sourced through our network — including off-market and direct-to-vendor.",
+    "HMO sourcing across the South East — Surrey, Kent, Sussex, Hampshire, Berkshire and beyond. High-yield off-market and direct-to-vendor deals.",
   keywords: [
     "property sourcing agent South East",
     "property sourcing South East England",
@@ -23,10 +23,10 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/property-sourcing-south-east" },
   openGraph: {
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO Sourcing, London & the South East" }],
     title: "Property Sourcing — South East England | Alali Property Partners",
     description:
-      "High-yield HMO & BRR deal sourcing across the South East — Surrey, Kent, Sussex, Hampshire, Berkshire and beyond. Sourced through our network — including off-market and direct-to-vendor.",
+      "High-yield HMO deal sourcing across the South East — Surrey, Kent, Sussex, Hampshire, Berkshire and beyond. Sourced through our network — including off-market and direct-to-vendor.",
     url: "/property-sourcing-south-east",
     type: "article",
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Property Sourcing — South East England | Alali Property Partners",
     description:
-      "High-yield HMO & BRR deal sourcing across the South East, sourced through our network — including off-market and direct-to-vendor.",
+      "High-yield HMO deal sourcing across the South East, sourced through our network — including off-market and direct-to-vendor.",
   },
 }
 
@@ -45,7 +45,7 @@ const serviceSchema = {
   "@id": "https://www.alalipropertypartners.com/property-sourcing-south-east#service",
   name: "Property Sourcing — South East England",
   description:
-    "Property deal sourcing across the South East of England — Surrey, Kent, East and West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Dorset and Somerset — specialising in high-yield HMOs and conversion-ready BRR deals, sourced through our network — including pre-auction, off-market and direct-to-vendor.",
+    "HMO deal sourcing across the South East of England — Surrey, Kent, East and West Sussex, Hampshire, Berkshire, Oxfordshire, Buckinghamshire, Dorset and Somerset — specialising in high-yield HMOs and conversion-ready properties, sourced through our network — including pre-auction, off-market and direct-to-vendor.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -84,7 +84,7 @@ const faqSchema = {
       name: "Why source property in the South East rather than only London?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Many South East commuter towns offer stronger gross yields and more conversion-ready stock than central London, while keeping the tenant demand that comes with good transport links and employment. For HMO and BRR strategies in particular, the numbers often work better just outside London — which is why our coverage spans the whole region, not just the capital.",
+        text: "Many South East commuter towns offer stronger gross yields and more conversion-ready stock than central London, while keeping the tenant demand that comes with good transport links and employment. For HMO strategies in particular, the numbers often work better just outside London — which is why our coverage spans the whole region, not just the capital.",
       },
     },
     {
@@ -154,8 +154,8 @@ export default function Page() {
               Property sourcing across the South East
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">
-              A specialist property sourcing agent for the South East of England — high-yield HMOs and
-              conversion-ready BRR deals from Surrey and Kent to Hampshire, Berkshire and beyond.
+              A specialist HMO sourcing agent for the South East of England — high-yield HMOs and
+              conversion-ready properties from Surrey and Kent to Hampshire, Berkshire and beyond.
               Sourced through our network — including pre-auction, off-market and direct-to-vendor.
             </p>
             <div className="mt-8">
@@ -208,7 +208,7 @@ export default function Page() {
               What we source in the South East
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/65 sm:text-base">
-              Two things, sourced well: high-yield HMOs, and the conversion-ready BRR properties that
+              Two things, sourced well: high-yield HMOs, and the conversion-ready properties that
               become them. The South East&apos;s commuter towns often deliver stronger yields and more
               conversion-ready stock than central London, with the tenant demand that comes from good
               transport and employment.
@@ -218,13 +218,7 @@ export default function Page() {
                 href="/hmo-sourcing"
                 className="text-sm font-semibold text-gold underline-offset-4 transition-colors hover:text-gold-light hover:underline"
               >
-                HMO sourcing &rarr;
-              </Link>
-              <Link
-                href="/brr-sourcing"
-                className="text-sm font-semibold text-gold underline-offset-4 transition-colors hover:text-gold-light hover:underline"
-              >
-                BRR &amp; below-market-value sourcing &rarr;
+                More on our HMO sourcing &rarr;
               </Link>
             </div>
             <p className="mx-auto mt-10 max-w-2xl text-[0.7rem] leading-relaxed text-white/40">

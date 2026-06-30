@@ -8,13 +8,13 @@ import { SectionDivider } from "@/components/ui/SectionDivider"
 export const metadata: Metadata = {
   title: "HMO Sourcing — London & South East",
   description:
-    "Specialist HMO & conversion-ready BRR sourcing across London & the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor — with realistic HMO conversion potential. Tell us your brief.",
+    "Specialist HMO sourcing across London & the South East — pre-auction, off-market and direct-to-vendor deals with realistic HMO conversion potential.",
   keywords: [
     "HMO sourcing",
     "high yield HMO deals",
     "HMO conversion property",
-    "conversion-ready BRR",
-    "buy refurbish refinance HMO",
+    "conversion-ready HMO property",
+    "HMO conversion sourcing",
     "permitted development HMO",
     "non Article 4 HMO areas",
     "change of use HMO",
@@ -23,19 +23,19 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/hmo-sourcing" },
   openGraph: {
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO & BRR Sourcing, London & the South East" }],
-    title: "HMO & Conversion-Ready BRR Sourcing | Alali Property Partners",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO Sourcing, London & the South East" }],
+    title: "Specialist HMO Sourcing | Alali Property Partners",
     description:
-      "High-yield HMOs and conversion-ready BRR deals across Greater London & the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor.",
+      "High-yield HMOs across Greater London & the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor.",
     url: "/hmo-sourcing",
     type: "article",
   },
   twitter: {
     images: ["/opengraph-image"],
     card: "summary_large_image",
-    title: "HMO & Conversion-Ready BRR Sourcing | Alali Property Partners",
+    title: "Specialist HMO Sourcing | Alali Property Partners",
     description:
-      "High-yield HMOs and conversion-ready BRR deals across Greater London & the South East.",
+      "High-yield HMOs across Greater London & the South East.",
   },
 }
 
@@ -43,9 +43,9 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.alalipropertypartners.com/hmo-sourcing#service",
-  name: "HMO & Conversion-Ready BRR Sourcing",
+  name: "Specialist HMO Sourcing",
   description:
-    "Specialist sourcing of high-yield HMOs and conversion-ready BRR deals across Greater London and the South of England — properties with HMO conversion and change-of-use potential (under permitted development or full planning). Sourced through our network — including pre-auction, off-market and direct-to-vendor.",
+    "Specialist sourcing of high-yield HMOs across Greater London and the South of England — including properties with HMO conversion and change-of-use potential (under permitted development or full planning). Sourced through our network — including pre-auction, off-market and direct-to-vendor.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.alalipropertypartners.com/#organization",
@@ -74,10 +74,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What does conversion-ready BRR mean?",
+      name: "What does conversion-ready mean?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Conversion-ready BRR (Buy, Refurbish, Refinance) describes a property with the potential to be converted into an HMO or to have its use changed — whether under permitted development or via a full planning application. You buy, refurbish to add value and rooms, refinance to recycle your capital, and rent. We source properties where that conversion potential is realistic, not speculative.",
+        text: "A conversion-ready property is one with realistic potential to be converted into an HMO or to have its use changed — whether under permitted development or via a full planning application. You refurbish to add value and rooms, then let the finished HMO by the room. We source properties where that HMO conversion potential is realistic, not speculative — the planning position must always be verified independently for your specific property.",
       },
     },
     {
@@ -99,7 +99,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "HMO & BRR Sourcing",
+      name: "HMO Sourcing",
       item: "https://www.alalipropertypartners.com/hmo-sourcing",
     },
   ],
@@ -112,9 +112,9 @@ const pillars = [
       "Let by the room for stronger cashflow than a single let. We run the comparables and observed local room rents before a deal ever reaches you — if the numbers don't stack up, we don't send it.",
   },
   {
-    title: "Conversion-ready BRR",
+    title: "Conversion-ready properties",
     detail:
-      "Properties with realistic HMO conversion and change-of-use potential — whether under permitted development or full planning — so you can refurbish, add rooms, and refinance to recycle your capital into the next deal.",
+      "Properties with realistic HMO conversion and change-of-use potential — whether under permitted development or full planning — so you can refurbish, add rooms, and let a finished high-yield HMO.",
   },
 ]
 
@@ -142,10 +142,10 @@ export default function Page() {
                 Our Niche
               </span>
               <span className="mx-3 inline-block h-px w-6 align-middle bg-gold/40" />
-              HMO &amp; Conversion-Ready BRR
+              HMO &amp; Conversion-Ready
             </p>
             <h1 className="font-display mt-4 text-4xl tracking-tight text-white sm:text-6xl">
-              HMO &amp; conversion-ready BRR sourcing
+              HMO &amp; conversion-ready sourcing
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">
               We source two things, and we source them well: high-yield HMOs, and the conversion-ready
@@ -221,7 +221,7 @@ export default function Page() {
           </div>
         </section>
 
-        <Faq items={faqSchema.mainEntity} heading="HMO &amp; conversion-ready BRR sourcing — FAQs" />
+        <Faq items={faqSchema.mainEntity} heading="HMO &amp; conversion-ready sourcing — FAQs" />
       </main>
       <Footer />
     </>

@@ -17,7 +17,7 @@ export type ThankYouType = "contact" | "deal-list"
 
 const FOOTER =
   '<p style="color:#999;font-size:12px;margin-top:24px;">Alali Property Partners — ' +
-  "Specialist HMO &amp; conversion-ready BRR sourcing across Greater London &amp; the South East</p>"
+  "Specialist HMO sourcing across Greater London &amp; the South East</p>"
 
 function shell(inner: string): string {
   return (
@@ -43,7 +43,7 @@ function contactEmail(name: string, onMailingList: boolean): { subject: string; 
   const listBlock = onMailingList
     ? '<div style="margin-top:24px;padding:16px;background:#26282c;border:1px solid rgba(201,160,61,0.4);border-radius:8px;">' +
       '<p style="color:#c9a84c;margin:0 0 6px 0;font-weight:bold;">You\'re on the deal mailing list</p>' +
-      '<p style="color:#fff;margin:0;font-size:14px;">We\'ll send occasional verified HMO and BRR opportunities across London and the South East. No spam — unsubscribe anytime.</p>' +
+      '<p style="color:#fff;margin:0;font-size:14px;">We\'ll send occasional verified HMO opportunities across London and the South East. No spam — unsubscribe anytime.</p>' +
       "</div>"
     : ""
   const inner =
@@ -57,7 +57,7 @@ function contactEmail(name: string, onMailingList: boolean): { subject: string; 
 function dealListEmail(name: string): { subject: string; html: string } {
   const inner =
     `<h2 style="color:#c9a84c;margin-top:0;">You're on the Deal List${name ? `, ${esc(name)}` : ""}.</h2>` +
-    '<p style="color:#fff;">Thanks for joining — you\'ll now receive verified HMO and conversion-ready BRR opportunities across Greater London &amp; the South East as they land.</p>' +
+    '<p style="color:#fff;">Thanks for joining — you\'ll now receive verified HMO and conversion-ready opportunities across Greater London &amp; the South East as they land.</p>' +
     '<p style="color:#fff;">No spam, and you can unsubscribe anytime by replying to any deal email.</p>'
   return { subject: "You're on the Deal List — Alali Property Partners", html: shell(inner) }
 }
