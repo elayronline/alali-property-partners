@@ -34,17 +34,17 @@ const pricingCards: PricingCard[] = [
     subtitle: "First access to every deal, every month.",
     fee: "£249",
     priceSuffix: "/month",
-    feeDetail: "Rolling · cancel anytime",
+    feeDetail: "Annual membership · 12-month term",
     subscription: true,
     cta: "member",
     highlights: [
       "48-hour priority access to every new deal",
       "£850 credit per completed deal",
-      "One free feasibility report per deal",
+      "One free feasibility report every month",
     ],
     paymentLabel: "Everything included",
     payment:
-      "Also includes priority access to limited Source & Develop slots, monthly market intelligence for your target areas, a quarterly portfolio review call, and priority warm introductions to our regulated power team. Billed £249/month — rolling, cancel anytime.",
+      "Also includes priority access to limited Source & Develop slots, monthly market intelligence for your target areas, a quarterly portfolio review call, and priority warm introductions to our regulated power team. An annual commitment, billed £249/month over a 12-month term.",
   },
   {
     title: "Bespoke Sourcing",

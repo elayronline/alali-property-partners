@@ -61,7 +61,7 @@ const serviceSchema = {
       "@type": "Offer",
       name: "Portfolio Builder Membership",
       description:
-        "Rolling monthly membership for active investors, cancel anytime. Includes 48-hour priority access to every new deal before the general list, £850 credit on The Deal List or Bespoke Sourcing per completed deal, one free feasibility report per deal, priority access to limited Source & Develop project slots, monthly market intelligence for your target areas, a quarterly portfolio review call, and priority warm introductions to our regulated power team.",
+        "Annual membership for active investors — a 12-month commitment, billed £249/month. Includes 48-hour priority access to every new deal before the general list, £850 credit on The Deal List or Bespoke Sourcing per completed deal, one free feasibility report every month, priority access to limited Source & Develop project slots, monthly market intelligence for your target areas, a quarterly portfolio review call, and priority warm introductions to our regulated power team.",
       priceCurrency: "GBP",
       price: "249",
       priceSpecification: {
@@ -129,7 +129,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost in the UK?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Alali Property Partners uses fixed fees, all VAT inclusive. The Deal List is a £5,000 fixed fee per deal. Bespoke Sourcing is an £8,000 fixed fee. Source & Develop (full HMO conversion managed end to end) is by application, with fees quoted per project. There is also an optional Portfolio Builder membership at £249 per month (rolling, cancel anytime) which gives priority access and a £850 credit on the Deal List or Bespoke Sourcing per completed deal. There are no hidden costs.",
+        text: "Alali Property Partners uses fixed fees, all VAT inclusive. The Deal List is a £5,000 fixed fee per deal. Bespoke Sourcing is an £8,000 fixed fee. Source & Develop (full HMO conversion managed end to end) is by application, with fees quoted per project. There is also an optional Portfolio Builder membership at £249 per month on a 12-month commitment, which gives priority access and a £850 credit on the Deal List or Bespoke Sourcing per completed deal. There are no hidden costs.",
       },
     },
     {
@@ -153,7 +153,7 @@ const faqSchema = {
       name: "What is Portfolio Builder membership?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Portfolio Builder is an optional rolling monthly membership for active investors at £249 per month, cancellable anytime. It includes 48-hour priority access to every new deal before the general list, a £850 credit on the Deal List or Bespoke Sourcing per completed deal, one free feasibility report per deal, priority access to limited Source & Develop project slots, monthly market intelligence for your target areas, a quarterly portfolio review call, and priority warm introductions to our regulated power team.",
+        text: "Portfolio Builder is an optional annual membership for active investors at £249 per month, on a 12-month commitment (billed monthly). It includes 48-hour priority access to every new deal before the general list, a £850 credit on the Deal List or Bespoke Sourcing per completed deal, one free feasibility report every month, priority access to limited Source & Develop project slots, monthly market intelligence for your target areas, a quarterly portfolio review call, and priority warm introductions to our regulated power team.",
       },
     },
     {
@@ -161,7 +161,7 @@ const faqSchema = {
       name: "Are there ongoing contracts or lock-ins?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The fixed per-deal fees (the Deal List, Bespoke Sourcing, Source & Develop) involve no ongoing contract or lock-in — you pay per deal. The Portfolio Builder membership is rolling monthly and can be cancelled anytime. The deal mailing list is free.",
+        text: "The fixed per-deal fees (the Deal List, Bespoke Sourcing, Source & Develop) involve no ongoing contract or lock-in — you pay per deal. The Portfolio Builder membership is the one exception: it's an annual commitment (a 12-month term, billed monthly). The deal mailing list is free.",
       },
     },
     {

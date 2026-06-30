@@ -131,14 +131,13 @@ export default function Terms() {
 
           <p className="mt-3 font-semibold text-charcoal">Portfolio Builder (membership):</p>
           <p className="mt-1">
-            Portfolio Builder is an optional rolling monthly membership charged at £249 per month
-            (VAT inclusive). It may be cancelled at any time; cancellation takes effect at the end of
-            the current monthly billing period and fees already paid are non-refundable. Membership
-            includes 48-hour priority access to new deals, an £850 credit applied to the sourcing fee
-            on each completed Deal List or Bespoke Sourcing transaction, one free feasibility report
-            per deal, priority access to limited Source &amp; Develop project slots, monthly market
-            intelligence, a quarterly portfolio review call, and priority introductions to the
-            independent professionals we work with.
+            Portfolio Builder is an optional membership charged at £249 per month (VAT inclusive) on a
+            12-month minimum term — an annual commitment, billed monthly. Fees already paid are
+            non-refundable. Membership includes 48-hour priority access to new deals, an £850 credit
+            applied to the sourcing fee on each completed Deal List or Bespoke Sourcing transaction,
+            one free feasibility report each month, priority access to limited Source &amp; Develop
+            project slots, monthly market intelligence, a quarterly portfolio review call, and priority
+            introductions to the independent professionals we work with.
           </p>
 
           <p className="mt-3 font-semibold text-charcoal">The Deal List:</p>
@@ -198,7 +197,7 @@ export default function Terms() {
           <p className="mt-3 font-semibold text-charcoal">Feasibility reports:</p>
           <p className="mt-1">
             A feasibility report is available as a paid add-on, priced and agreed on request.
-            Portfolio Builder members receive one free feasibility report per deal.
+            Portfolio Builder members receive one free feasibility report each month.
           </p>
 
           <p className="mt-3 font-semibold text-charcoal">48-Hour Decision SLA and Refund Policy:</p>

@@ -80,7 +80,7 @@ const serviceSchema = {
         "@type": "Offer",
         name: "Portfolio Builder Membership",
         description:
-          "Rolling monthly membership for active investors, cancel anytime. 48-hour priority access to every new deal before the general list, £850 credit on the Deal List or Bespoke Sourcing per completed deal, one free feasibility report per deal, priority access to limited Source & Develop slots, monthly market intelligence, a quarterly portfolio review call, and priority warm introductions to our regulated power team.",
+          "Annual membership for active investors — a 12-month commitment, billed £249/month. 48-hour priority access to every new deal before the general list, £850 credit on the Deal List or Bespoke Sourcing per completed deal, one free feasibility report every month, priority access to limited Source & Develop slots, monthly market intelligence, a quarterly portfolio review call, and priority warm introductions to our regulated power team.",
         priceCurrency: "GBP",
         price: "249",
         priceSpecification: {
@@ -149,7 +149,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We use fixed fees, all VAT inclusive. The Deal List is £5,000 per deal — a £500 refundable deposit unlocks the full pack and viewing, with the £4,500 balance on completion. Bespoke Sourcing is £8,000, paid in three stages (£2,667 on signing, £2,667 on presentation, £2,666 on completion). Source & Develop is by application. An optional Portfolio Builder membership is £249/month (rolling, cancel anytime) and includes a £850 credit per completed deal. No hidden costs.",
+        text: "We use fixed fees, all VAT inclusive. The Deal List is £5,000 per deal — a £500 refundable deposit unlocks the full pack and viewing, with the £4,500 balance on completion. Bespoke Sourcing is £8,000, paid in three stages (£2,667 on signing, £2,667 on presentation, £2,666 on completion). Source & Develop is by application. An optional Portfolio Builder membership is £249/month on a 12-month commitment and includes a £850 credit per completed deal. No hidden costs.",
       },
     },
     {
