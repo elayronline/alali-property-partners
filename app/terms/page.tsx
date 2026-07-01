@@ -119,9 +119,6 @@ export default function Terms() {
         </section>
 
         <section>
-          {/* DRAFT — fees rewritten 2026-06 to the fixed-fee model. REQUIRES
-              SOLICITOR REVIEW before publishing: deposits, a monthly subscription,
-              and the feasibility add-on all involve client money. */}
           <h2 className="text-lg font-bold text-charcoal">4. Fees and Payment</h2>
           <p className="mt-2">
             All fees are VAT inclusive and there are no hidden costs. The fee that applies depends on
