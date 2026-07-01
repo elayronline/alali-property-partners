@@ -26,9 +26,9 @@ const cards = [
   },
   {
     icon: Wallet,
-    title: "Clear fees. No surprises. No lock-in.",
+    title: "Clear fees. No surprises.",
     description:
-      "You see our pricing upfront. No hidden costs, no ongoing contracts. Transparent stage-based fees — refundable where it's not the right deal for you (subject to terms).",
+      "You see our pricing upfront. No hidden costs. Pay-per-deal sourcing with transparent, stage-based fees — refundable where it's not the right deal for you (subject to terms).",
   },
 ]
 

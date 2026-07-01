@@ -169,7 +169,7 @@ const faqSchema = {
       name: "Do you charge VAT on top of the fees?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. All fees quoted are VAT inclusive — the £5,000 Deal List fee, the £8,000 Bespoke Sourcing fee, the by-application Source & Develop fees, and the £249 monthly membership all already include VAT.",
+        text: "No. All fees quoted are VAT inclusive — the £5,000 Deal List fee, the £8,000 Bespoke Sourcing fee, the by-application Source & Develop fees, and the £249/month Portfolio Builder membership all already include VAT.",
       },
     },
   ],

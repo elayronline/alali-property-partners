@@ -46,7 +46,7 @@ const faqSchema = {
       name: "What makes a good property sourcer in the UK?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A good property sourcer verifies every figure before presenting a deal, has direct relationships with agents and vendors (not just portals), works with FCA-regulated mortgage brokers and qualified solicitors, publishes transparent fees with no lock-in, and gives investors a meaningful due diligence window. Property sourcing itself is not FCA-regulated, so the quality of the introducer matters.",
+        text: "A good property sourcer verifies every figure before presenting a deal, has direct relationships with agents and vendors (not just portals), works with FCA-regulated mortgage brokers and qualified solicitors, publishes transparent fees upfront, and gives investors a meaningful due diligence window. Property sourcing itself is not FCA-regulated, so the quality of the introducer matters.",
       },
     },
     {
