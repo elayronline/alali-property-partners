@@ -86,18 +86,24 @@ export function Pricing() {
   const router = useRouter()
 
   // Deep-link support: a shared `#deal-list` link should land on the signup.
-  // Next.js doesn't reliably scroll to a hash on initial load (the page's
-  // scroll-in animations shift layout under it), so we scroll manually once
-  // the section has settled.
+  // The page's <html> has scroll-behavior:smooth, which makes scrollIntoView/
+  // scrollTo animate — so we scroll with explicit `instant` and offset for the
+  // fixed nav. Re-run after a beat and on full load, since images shift layout.
   useEffect(() => {
     if (typeof window === "undefined" || window.location.hash !== "#deal-list") return
-    const scrollToForm = () => document.getElementById("deal-list")?.scrollIntoView({ behavior: "smooth" })
-    const t = setTimeout(scrollToForm, 500)
-    // Re-align after late-loading images/fonts finish shifting the layout.
-    window.addEventListener("load", scrollToForm)
+    const jump = () => {
+      const el = document.getElementById("deal-list")
+      if (!el) return
+      const top = Math.max(0, el.getBoundingClientRect().top + window.scrollY - 96)
+      window.scrollTo({ top, behavior: "instant" as ScrollBehavior })
+    }
+    const t1 = window.setTimeout(jump, 250)
+    const t2 = window.setTimeout(jump, 900)
+    window.addEventListener("load", jump)
     return () => {
-      clearTimeout(t)
-      window.removeEventListener("load", scrollToForm)
+      window.clearTimeout(t1)
+      window.clearTimeout(t2)
+      window.removeEventListener("load", jump)
     }
   }, [])
 
@@ -269,12 +275,12 @@ export function Pricing() {
           </div>
         </div>
 
-        {/* The Deal List — free to join, its own thing; fees in a dropdown */}
-        <motion.div
+        {/* The Deal List — free to join, its own thing; fees in a dropdown.
+            No scroll-in animation here: this is a shareable deep-link target
+            (#deal-list), and a fade-in gated on viewport would leave the form
+            invisible when a shared link jumps straight to it. */}
+        <div
           id="deal-list"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           className="mx-auto mt-10 max-w-2xl scroll-mt-24 rounded-2xl border border-gold/25 bg-white/[0.03] p-6 text-center sm:p-8"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">The Deal List</p>
@@ -309,7 +315,7 @@ export function Pricing() {
               </p>
             </ExpandableSection>
           </div>
-        </motion.div>
+        </div>
 
         {/* Footnote */}
         <motion.p
