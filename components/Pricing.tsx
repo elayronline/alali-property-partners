@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
@@ -83,6 +84,22 @@ const pricingCards: PricingCard[] = [
 export function Pricing() {
   const pathname = usePathname()
   const router = useRouter()
+
+  // Deep-link support: a shared `#deal-list` link should land on the signup.
+  // Next.js doesn't reliably scroll to a hash on initial load (the page's
+  // scroll-in animations shift layout under it), so we scroll manually once
+  // the section has settled.
+  useEffect(() => {
+    if (typeof window === "undefined" || window.location.hash !== "#deal-list") return
+    const scrollToForm = () => document.getElementById("deal-list")?.scrollIntoView({ behavior: "smooth" })
+    const t = setTimeout(scrollToForm, 500)
+    // Re-align after late-loading images/fonts finish shifting the layout.
+    window.addEventListener("load", scrollToForm)
+    return () => {
+      clearTimeout(t)
+      window.removeEventListener("load", scrollToForm)
+    }
+  }, [])
 
   // Pre-tags the contact enquiry as Source & Develop. Same-page uses an
   // event + scroll; cross-page carries the tag via a query param.
