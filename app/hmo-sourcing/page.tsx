@@ -207,12 +207,12 @@ export default function Page() {
             <div className="mt-12 text-center">
               <Link
                 href="/case-studies"
-                className="text-sm font-semibold text-gold underline-offset-4 transition-colors hover:text-gold-light hover:underline"
+                className="inline-block py-2 text-sm font-semibold text-gold underline-offset-4 transition-colors hover:text-gold-light hover:underline"
               >
                 See a real sourced deal &rarr;
               </Link>
             </div>
-            <p className="mx-auto mt-10 max-w-2xl text-center text-[0.7rem] leading-relaxed text-white/40">
+            <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-white/40">
               Yields and conversion potential are indicative and based on publicly available data;
               the planning position and numbers for any specific property require your own independent
               verification. Property deal sourcing is not a regulated activity and nothing here is

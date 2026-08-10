@@ -75,49 +75,52 @@ export function Footer() {
           {/* Sitemap */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Site</p>
-            <ul className="mt-6 space-y-3 text-sm text-white/65">
+            {/* space-y-1 + py-1.5 on each link rather than space-y-3 on the list:
+                same visual rhythm, but each tap target is ~28px tall instead of
+                16px (WCAG 2.5.8 asks for 24px minimum) */}
+            <ul className="mt-6 space-y-1 text-sm text-white/65">
               <li>
-                <Link href="/hmo-sourcing" className="transition-colors hover:text-gold">
+                <Link href="/hmo-sourcing" className="inline-block py-1.5 transition-colors hover:text-gold">
                   HMO Sourcing
                 </Link>
               </li>
               <li>
-                <Link href="/property-sourcing-south-east" className="transition-colors hover:text-gold">
+                <Link href="/property-sourcing-south-east" className="inline-block py-1.5 transition-colors hover:text-gold">
                   Sourcing in the South East
                 </Link>
               </li>
               <li>
-                <Link href="/how-it-works" className="transition-colors hover:text-gold">
+                <Link href="/how-it-works" className="inline-block py-1.5 transition-colors hover:text-gold">
                   How It Works
                 </Link>
               </li>
               <li>
-                <Link href="/why-us" className="transition-colors hover:text-gold">
+                <Link href="/why-us" className="inline-block py-1.5 transition-colors hover:text-gold">
                   Why Us
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="transition-colors hover:text-gold">
+                <Link href="/pricing" className="inline-block py-1.5 transition-colors hover:text-gold">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="transition-colors hover:text-gold">
+                <Link href="/case-studies" className="inline-block py-1.5 transition-colors hover:text-gold">
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link href="/development-management" className="transition-colors hover:text-gold">
+                <Link href="/development-management" className="inline-block py-1.5 transition-colors hover:text-gold">
                   Source &amp; Develop
                 </Link>
               </li>
               <li>
-                <Link href="/contact?enquiry=Bespoke%20Sourcing" className="transition-colors hover:text-gold">
+                <Link href="/contact?enquiry=Bespoke%20Sourcing" className="inline-block py-1.5 transition-colors hover:text-gold">
                   Bespoke Sourcing
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="transition-colors hover:text-gold">
+                <Link href="/contact" className="inline-block py-1.5 transition-colors hover:text-gold">
                   Contact
                 </Link>
               </li>
@@ -139,17 +142,17 @@ export function Footer() {
 
         {/* Bottom row */}
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-          <p className="text-center text-[0.65rem] leading-relaxed text-white/40 sm:text-left sm:text-xs">
+          <p className="text-center text-xs leading-relaxed text-white/40 sm:text-left">
             &copy; 2026 Alali Property Partners Ltd. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-white/55">
-            <Link href="/privacy" className="transition-colors hover:text-gold">
+            <Link href="/privacy" className="inline-block py-1.5 transition-colors hover:text-gold">
               Privacy
             </Link>
-            <Link href="/terms" className="transition-colors hover:text-gold">
+            <Link href="/terms" className="inline-block py-1.5 transition-colors hover:text-gold">
               Terms
             </Link>
-            <Link href="/sitemap.xml" className="transition-colors hover:text-gold">
+            <Link href="/sitemap.xml" className="inline-block py-1.5 transition-colors hover:text-gold">
               Sitemap
             </Link>
           </div>

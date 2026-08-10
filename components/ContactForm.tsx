@@ -512,7 +512,7 @@ export function ContactForm() {
               <input
                 type="checkbox"
                 id="mailing-list"
-                className="h-4 w-4 shrink-0 cursor-pointer accent-gold"
+                className="h-5 w-5 shrink-0 cursor-pointer accent-gold"
                 {...register("mailingList")}
               />
               <label htmlFor="mailing-list" className="text-sm leading-snug text-white/50">
@@ -619,7 +619,7 @@ export function ContactForm() {
                 ))}
               </ol>
 
-              <div className="mt-8 flex flex-wrap gap-x-4 gap-y-1.5 border-t border-white/10 pt-5 text-[0.7rem] text-white/45">
+              <div className="mt-8 flex flex-wrap gap-x-4 gap-y-1.5 border-t border-white/10 pt-5 text-xs text-white/45">
                 <span className="inline-flex items-center gap-1.5">
                   <span className="h-1 w-1 rounded-full bg-gold/60" />
                   No obligation

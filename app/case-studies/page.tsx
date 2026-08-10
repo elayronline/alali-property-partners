@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "Case Studies — HMO Deals We've Sourced",
   description:
-    "Real HMO and conversion-ready deals sourced across London & the South East — including a 4-bed Hampshire home bought pre-auction, 10% under budget.",
+    "Real HMO and conversion-ready deals sourced across London & the South East — including a 4-bed Hampshire home bought pre-auction, 10% under budget. See the rooms as found alongside the conversion spec.",
   keywords: [
     "HMO sourcing case study",
     "HMO conversion deal example",

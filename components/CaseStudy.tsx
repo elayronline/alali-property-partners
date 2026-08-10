@@ -5,6 +5,48 @@ import { motion } from "framer-motion"
 import { MapPin } from "lucide-react"
 import { SectionDivider } from "@/components/ui/SectionDivider"
 
+// Two matched pairs from the same property. `before` is photography of the
+// house as found; `after` is the conversion spec visualised, NOT a photograph
+// of completed work — the caption under the pair says so. When the refurb
+// completes and real photos exist, swap the `after` src and drop the
+// "visualised" wording in the caption + footnote below.
+const ROOM_PAIRS = [
+  {
+    room: "Reception room",
+    before: {
+      src: "/case-study/living-room-before.jpg",
+      alt: "The reception room as found — patterned carpet, dated fireplace surround and inherited furniture",
+    },
+    after: {
+      src: "/case-study/living-room-after.jpg",
+      alt: "Visualisation of the same reception room opened into a shared kitchen and dining space for HMO use",
+    },
+  },
+  {
+    room: "Master bedroom",
+    before: {
+      src: "/case-study/bedroom-before.jpg",
+      alt: "The master bedroom as found — blue carpet, floral wallpaper and a textured ceiling",
+    },
+    after: {
+      src: "/case-study/bedroom-after.jpg",
+      alt: "Visualisation of the same master bedroom as an en-suite letting room with kitchenette and shower room",
+    },
+  },
+] as const
+
+function Frame({ src, alt, label }: { src: string; alt: string; label: string }) {
+  return (
+    <div className="relative aspect-[3/4] overflow-hidden rounded-lg border border-white/10 bg-dark-bg">
+      <Image src={src} alt={alt} fill sizes="(min-width: 640px) 190px, 42vw" className="object-cover" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-black/60 to-transparent" />
+      <span className="absolute top-2 left-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/90">
+        {label}
+      </span>
+    </div>
+  )
+}
+
 export function CaseStudy() {
   return (
     <section
@@ -65,11 +107,25 @@ export function CaseStudy() {
               {/* Top: brief + property photo side by side */}
               <div className="grid items-start gap-6 md:grid-cols-[1fr_10rem]">
                 <div>
-                  <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
-                    <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
-                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                      Hampshire
-                    </span>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/[0.06] px-3.5 py-1.5">
+                      <MapPin className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
+                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                        Hampshire
+                      </span>
+                    </div>
+
+                    {/* Live status — makes clear the refurb isn't finished, which
+                        is why the "after" images are visualisations */}
+                    <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-3.5 py-1.5">
+                      <span className="relative flex h-1.5 w-1.5">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold/70" />
+                        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold" />
+                      </span>
+                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+                        Build underway
+                      </span>
+                    </div>
                   </div>
 
                   <p className="mt-5 text-lg leading-relaxed text-white/85 sm:text-xl">
@@ -106,9 +162,26 @@ export function CaseStudy() {
                 ))}
               </div>
 
+              {/* Before / after — two rooms, as found next to the conversion spec */}
+              <div className="mt-8 border-t border-white/10 pt-8">
+                <div className="grid gap-6 sm:grid-cols-2">
+                  {ROOM_PAIRS.map((pair) => (
+                    <div key={pair.room}>
+                      <div className="grid grid-cols-2 gap-2">
+                        <Frame {...pair.before} label="Before" />
+                        <Frame {...pair.after} label="Planned" />
+                      </div>
+                      <p className="mt-2.5 text-xs text-white/50">
+                        {pair.room} — as found, and the planned spec.
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <p className="mt-6 text-xs leading-relaxed text-white/40">
-                Observed market rents shown as indicative reference points, not a guaranteed return.
-                Figures require independent verification.
+                Visualisations of the planned spec, not completed work — build underway. Rents
+                observed locally: indicative only, verify independently.
               </p>
             </div>
           </div>

@@ -102,7 +102,7 @@ export function HowItWorks() {
               </li>
             ))}
           </ul>
-          <p className="mx-auto mt-8 max-w-3xl text-center text-[0.7rem] leading-relaxed text-white/40">
+          <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-relaxed text-white/40">
             Deal packs are informational only and do not constitute financial, mortgage, tax, or
             legal advice. All figures are based on publicly available data and require your own
             independent verification (solicitor, surveyor, broker) before any commitment.
