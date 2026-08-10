@@ -55,6 +55,14 @@ const serviceSchema = {
     { "@type": "AdministrativeArea", name: "Somerset" },
   ],
   serviceType: "HMO Development Management",
+  // Names the buyer this service actually serves. The page already describes a
+  // hands-off, end-to-end proposition; this states it in the vocabulary those
+  // investors (and AI answer engines) use to search for it.
+  audience: {
+    "@type": "Audience",
+    audienceType:
+      "Time-poor professionals, hands-off and armchair investors, and overseas or expat investors building UK HMO portfolios",
+  },
   offers: {
     "@type": "Offer",
     name: "Source & Develop",
