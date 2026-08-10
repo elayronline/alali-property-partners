@@ -4,6 +4,8 @@ import type { MetadataRoute } from "next"
 // meaningfully change its content — do NOT use `new Date()`, which would set
 // lastmod to every build time and train crawlers to ignore the signal.
 const lastModified = "2026-06-18"
+// Audience landing pages added 2026-08-10.
+const lastModifiedAudience = "2026-08-10"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.alalipropertypartners.com"
@@ -12,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl, lastModified, changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/hmo-sourcing`, lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/property-sourcing-south-east`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/hands-off-hmo-investment`, lastModified: lastModifiedAudience, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/overseas-hmo-investment`, lastModified: lastModifiedAudience, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/how-it-works`, lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/why-us`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/pricing`, lastModified, changeFrequency: "monthly", priority: 0.9 },

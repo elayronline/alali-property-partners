@@ -90,6 +90,16 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/hands-off-hmo-investment" className="inline-block py-1.5 transition-colors hover:text-gold">
+                  Hands-Off Investing
+                </Link>
+              </li>
+              <li>
+                <Link href="/overseas-hmo-investment" className="inline-block py-1.5 transition-colors hover:text-gold">
+                  Overseas Investors
+                </Link>
+              </li>
+              <li>
                 <Link href="/how-it-works" className="inline-block py-1.5 transition-colors hover:text-gold">
                   How It Works
                 </Link>
