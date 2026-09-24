@@ -63,7 +63,7 @@ const faqSchema = {
       name: "How does the 48-hour decision SLA work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "From the moment the deal pack is released (the Deal List) or the deal is presented (Bespoke), you have 48 hours to review it, get initial input from your solicitor, surveyor, or mortgage broker, and decide whether to proceed. Most off-market deals are time-sensitive, which is why the standard window is short — but extensions can be granted on fair, justified reasoning (for example, awaiting a survey or mortgage decision in principle) where the vendor agrees. If you decide to proceed, the balance of the fixed fee is settled on completion. If you decide not to proceed and there are valid reasons, the £500 Deal List deposit (otherwise credited against the fee) or the £2,667 Bespoke signing payment is refundable subject to our terms of service.",
+        text: "From the moment the deal pack is released (the Deal List) or the deal is presented (Bespoke), you have 48 hours to review it, get initial input from your solicitor, surveyor, or mortgage broker, and decide whether to proceed. Most off-market deals are time-sensitive, which is why the standard window is short — but extensions can be granted on fair, justified reasoning (for example, awaiting a survey or mortgage decision in principle) where the vendor agrees. If you decide to proceed, the balance of the sourcing fee is settled on completion. If you decide not to proceed and there are valid reasons, the £500 Deal List deposit (otherwise credited against the fee) or the £2,667 Bespoke signing payment is refundable subject to our terms of service.",
       },
     },
     {

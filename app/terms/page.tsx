@@ -139,9 +139,11 @@ export default function Terms() {
 
           <p className="mt-3 font-semibold text-charcoal">The Deal List:</p>
           <p className="mt-1">
-            The sourcing fee for a deal taken from the Deal List is a fixed £5,000 per deal (VAT
+            The sourcing fee for a deal taken from the Deal List is from £5,000 per deal (VAT
             inclusive), covering deals sourced through our private contacts (off-market) and through
-            our compliant agent network (on-market). It is paid in two stages:
+            our compliant agent network (on-market). The fee for each deal is stated in the deal pack
+            and confirmed in your sourcing agreement. It is paid in two stages (amounts shown are for
+            the base fee of £5,000):
           </p>
           <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
             <li>
@@ -150,14 +152,14 @@ export default function Terms() {
               viewing.
             </li>
             <li>
-              <span className="font-semibold text-charcoal">£4,500 balance</span>, payable on
-              completion of the purchase.
+              <span className="font-semibold text-charcoal">Balance</span> (£4,500 for the base
+              fee), payable on completion of the purchase.
             </li>
           </ul>
           <p className="mt-2">
             The £500 deposit is refundable where the deal is no longer available, or on a genuine
             decision not to proceed after viewing (subject to the conditions below). Where you do
-            proceed, the deposit is credited against the £5,000 fee. Vendor and agent contact details
+            proceed, the deposit is credited against the fee. Vendor and agent contact details
             are not included in the deal pack; we facilitate viewings and introductions on your
             behalf throughout the decision and transaction process.
           </p>

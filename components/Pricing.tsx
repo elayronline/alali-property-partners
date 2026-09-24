@@ -159,7 +159,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-gold"
         >
-          Membership &amp; Fixed Fees
+          Membership &amp; Fees
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -305,9 +305,10 @@ export function Pricing() {
           <div className="mx-auto mt-4 max-w-md text-left">
             <ExpandableSection trigger="Fees & terms">
               <p className="text-sm leading-relaxed text-muted-light">
-                Joining is free. You only pay if you choose to take a deal — a £5,000 fixed fee per
-                deal (VAT inc.): a £500 refundable deposit unlocks the full pack and viewing, with the
-                £4,500 balance on completion. The deposit is refunded if the deal is already gone or on
+                Joining is free. You only pay if you choose to take a deal — sourcing fees from £5,000
+                per deal (VAT inc.), confirmed in the deal pack and your sourcing agreement. A £500
+                refundable deposit unlocks the full pack and viewing, with the balance (£4,500 for the
+                base fee) on completion. The deposit is refunded if the deal is already gone or on
                 a genuine decision not to proceed after viewing, and credited against the fee if you
                 proceed. Full detail in our{" "}
                 <a
