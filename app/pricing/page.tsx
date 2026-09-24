@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "HMO Sourcing Fees & Pricing",
   description:
-    "HMO sourcing fees: Portfolio Builder membership £249/mo; The Deal List £5,000 fixed; Bespoke Sourcing £8,000 fixed; Source & Develop by application. VAT inc., no hidden costs.",
+    "HMO sourcing fees: Portfolio Builder membership £249/mo; The Deal List £5,000 fixed; Bespoke Sourcing from £8,000; Source & Develop by application. VAT inc., no hidden costs.",
   keywords: [
     "property sourcing fees",
     "property sourcing cost UK",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alali Property Partners — HMO Sourcing, London & the South East" }],
     title: "Pricing | Alali Property Partners",
     description:
-      "Portfolio Builder membership £249/mo, The Deal List £5,000, Bespoke Sourcing £8,000, Source & Develop by application. Transparent fixed fees, VAT inc.",
+      "Portfolio Builder membership £249/mo, The Deal List £5,000, Bespoke Sourcing from £8,000, Source & Develop by application. Transparent fees, VAT inc.",
     url: "/pricing",
     type: "article",
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pricing | Alali Property Partners",
     description:
-      "Portfolio Builder membership £249/mo, The Deal List £5,000, Bespoke Sourcing £8,000, Source & Develop by application. Transparent fixed fees, VAT inc.",
+      "Portfolio Builder membership £249/mo, The Deal List £5,000, Bespoke Sourcing from £8,000, Source & Develop by application. Transparent fees, VAT inc.",
   },
 }
 
@@ -96,14 +96,13 @@ const serviceSchema = {
       "@type": "Offer",
       name: "Bespoke Sourcing",
       description:
-        "Commission your own search, sourced exclusively for you to your exact brief — area, strategy and budget — and not shared with the list. £8,000 fixed fee (VAT inclusive) paid in three stages: £2,667 on signing secures a dedicated 14-day search (refundable if no suitable deal is presented in the window), £2,667 on presentation of a matching deal, and £2,666 on completion.",
+        "Commission your own search, sourced exclusively for you to your exact brief — area, strategy and budget — and not shared with the list. From £8,000 (VAT inclusive) for properties with a purchase price under £1 million (over £1 million, talk to the team for a quote), confirmed in your sourcing agreement, paid in three stages — for the base fee: £2,667 on signing secures a dedicated 14-day search (refundable if no suitable deal is presented in the window), £2,667 on presentation of a matching deal, and £2,666 on completion.",
       priceCurrency: "GBP",
-      price: "8000",
       priceSpecification: {
         "@type": "PriceSpecification",
         priceCurrency: "GBP",
-        price: "8000",
-        description: "£8,000 fixed fee (VAT inclusive) in three stages: £2,667 on signing, £2,667 on presentation, £2,666 on completion.",
+        minPrice: "8000",
+        description: "From £8,000 (VAT inclusive) for purchase prices under £1 million; over £1 million quoted by the team. Confirmed per brief in the sourcing agreement; paid in three stages — for the base fee, £2,667 on signing, £2,667 on presentation, £2,666 on completion.",
         valueAddedTaxIncluded: true,
       },
       availability: "https://schema.org/InStock",
@@ -129,7 +128,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost in the UK?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Alali Property Partners uses fixed fees, all VAT inclusive. The Deal List is a £5,000 fixed fee per deal. Bespoke Sourcing is an £8,000 fixed fee. Source & Develop (full HMO conversion managed end to end) is by application, with fees quoted per project. There is also an optional Portfolio Builder membership at £249 per month on a 12-month commitment, which gives priority access and a £850 credit on the Deal List or Bespoke Sourcing per completed deal. There are no hidden costs.",
+        text: "Alali Property Partners uses fixed fees, all VAT inclusive. The Deal List is a £5,000 fixed fee per deal. Bespoke Sourcing is priced from £8,000 for properties with a purchase price under £1 million, with the fee for your brief confirmed in your sourcing agreement; for purchases over £1 million, talk to the team for a quote. Source & Develop (full HMO conversion managed end to end) is by application, with fees quoted per project. There is also an optional Portfolio Builder membership at £249 per month on a 12-month commitment, which gives priority access and a £850 credit on the Deal List or Bespoke Sourcing per completed deal. There are no hidden costs.",
       },
     },
     {
@@ -137,7 +136,7 @@ const faqSchema = {
       name: "When do I pay — and how are the fees staged?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Deal List £5,000 fee is staged as a £500 refundable deposit (taken after the sourcing agreement is signed) to unlock the full deal pack and viewing, with the £4,500 balance on completion. Bespoke Sourcing's £8,000 fee is paid in three stages: £2,667 on signing to secure a dedicated 14-day search, £2,667 on presentation of a matching deal, and £2,666 on completion. Source & Develop fees are staged against project milestones — search, secured, planning, build and handover.",
+        text: "The Deal List £5,000 fee is staged as a £500 refundable deposit (taken after the sourcing agreement is signed) to unlock the full deal pack and viewing, with the £4,500 balance on completion. Bespoke Sourcing (from £8,000 for purchase prices under £1 million; over £1 million, talk to the team) is paid in three stages — for the base fee: £2,667 on signing to secure a dedicated 14-day search, £2,667 on presentation of a matching deal, and £2,666 on completion. Source & Develop fees are staged against project milestones — search, secured, planning, build and handover.",
       },
     },
     {
@@ -169,7 +168,7 @@ const faqSchema = {
       name: "Do you charge VAT on top of the fees?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. All fees quoted are VAT inclusive — the £5,000 Deal List fee, the £8,000 Bespoke Sourcing fee, the by-application Source & Develop fees, and the £249/month Portfolio Builder membership all already include VAT.",
+        text: "No. All fees quoted are VAT inclusive — the £5,000 Deal List fee, the from-£8,000 Bespoke Sourcing fee, the by-application Source & Develop fees, and the £249/month Portfolio Builder membership all already include VAT.",
       },
     },
   ],

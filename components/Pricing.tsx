@@ -16,6 +16,7 @@ type PricingCard = {
   subtitle: string
   fee: string
   priceSuffix?: string
+  feePrefix?: string
   feeDetail: string
   highlights: string[]
   paymentLabel: string
@@ -51,7 +52,8 @@ const pricingCards: PricingCard[] = [
     title: "Bespoke Sourcing",
     subtitle: "Commission your own search — sourced exclusively for you.",
     fee: "£8,000",
-    feeDetail: "fixed fee · VAT inc.",
+    feePrefix: "from",
+    feeDetail: "Purchases under £1m · over £1m, talk to the team",
     popular: true,
     cta: "bespoke",
     highlights: [
@@ -61,7 +63,7 @@ const pricingCards: PricingCard[] = [
     ],
     paymentLabel: "How payment works",
     payment:
-      "£2,667 on signing secures a dedicated 14-day search (refundable if no suitable deal is presented in the window); £2,667 on presentation of a matching deal; £2,666 on completion.",
+      "Fees start from £8,000 for properties with a purchase price under £1 million and are confirmed in your sourcing agreement; for purchases over £1 million, talk to the team for a quote. Paid in three stages — for the base fee, £2,667 on signing secures a dedicated 14-day search (refundable if no suitable deal is presented in the window); £2,667 on presentation of a matching deal; £2,666 on completion.",
   },
   {
     title: "Source & Develop",
@@ -215,6 +217,9 @@ export function Pricing() {
 
                       {/* Price */}
                       <div className="mt-4 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                        {card.feePrefix && (
+                          <span className="text-sm text-muted-light">{card.feePrefix}</span>
+                        )}
                         <p
                           className={`font-display text-white ${card.byApplication ? "text-2xl" : "text-4xl"}`}
                           style={{ fontWeight: 400 }}

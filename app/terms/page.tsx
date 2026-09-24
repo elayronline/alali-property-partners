@@ -164,8 +164,11 @@ export default function Terms() {
 
           <p className="mt-3 font-semibold text-charcoal">Bespoke Sourcing:</p>
           <p className="mt-1">
-            Bespoke Sourcing is a fixed fee of £8,000 (VAT inclusive) for a dedicated search to your
-            brief, sourced exclusively for you. It is paid in three stages:
+            Bespoke Sourcing is priced from £8,000 (VAT inclusive) for a dedicated search to your
+            brief, sourced exclusively for you, where the target purchase price is under £1,000,000.
+            For purchases of £1,000,000 or more, the fee is quoted individually by the team. The fee
+            for your brief is confirmed in your sourcing agreement and is paid in three stages (amounts shown are for the base fee of £8,000 and
+            are apportioned pro rata where a higher fee is agreed):
           </p>
           <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
             <li>

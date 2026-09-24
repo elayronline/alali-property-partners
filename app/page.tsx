@@ -104,9 +104,15 @@ const serviceSchema = {
         "@type": "Offer",
         name: "Bespoke Sourcing",
         description:
-          "Commission your own search, sourced exclusively to your exact brief and not shared with the list. £8,000 fixed fee (VAT inc.) in three stages: £2,667 on signing secures a dedicated 14-day search (refundable if no suitable deal is presented in the window), £2,667 on presentation of a matching deal, £2,666 on completion.",
+          "Commission your own search, sourced exclusively to your exact brief and not shared with the list. From £8,000 (VAT inc.) for properties with a purchase price under £1 million (over £1 million, talk to the team for a quote), confirmed in your sourcing agreement, paid in three stages — for the base fee: £2,667 on signing secures a dedicated 14-day search (refundable if no suitable deal is presented in the window), £2,667 on presentation of a matching deal, £2,666 on completion.",
         priceCurrency: "GBP",
-        price: "8000",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "GBP",
+          minPrice: "8000",
+          description: "From £8,000 (VAT inclusive) for purchase prices under £1 million; over £1 million quoted by the team. Confirmed per brief in the sourcing agreement; paid in three stages.",
+          valueAddedTaxIncluded: true,
+        },
       },
       {
         "@type": "Offer",
@@ -149,7 +155,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We use fixed fees, all VAT inclusive. The Deal List is £5,000 per deal — a £500 refundable deposit unlocks the full pack and viewing, with the £4,500 balance on completion. Bespoke Sourcing is £8,000, paid in three stages (£2,667 on signing, £2,667 on presentation, £2,666 on completion). Source & Develop is by application. An optional Portfolio Builder membership is £249/month on a 12-month commitment and includes a £850 credit per completed deal. No hidden costs.",
+        text: "We use fixed fees, all VAT inclusive. The Deal List is £5,000 per deal — a £500 refundable deposit unlocks the full pack and viewing, with the £4,500 balance on completion. Bespoke Sourcing is from £8,000 for properties with a purchase price under £1 million (over £1 million, talk to the team for a quote), confirmed in your sourcing agreement and paid in three stages (for the base fee: £2,667 on signing, £2,667 on presentation, £2,666 on completion). Source & Develop is by application. An optional Portfolio Builder membership is £249/month on a 12-month commitment and includes a £850 credit per completed deal. No hidden costs.",
       },
     },
     {
@@ -157,7 +163,7 @@ const faqSchema = {
       name: "How does bespoke sourcing work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Bespoke Sourcing is an £8,000 fixed fee (VAT inc.) for a dedicated search to your exact brief, sourced exclusively for you and not shared with the list. It's paid in three stages: £2,667 on signing secures a dedicated 14-day search; £2,667 on presentation of a matching deal; £2,666 on completion. If we don't present a suitable deal within the 14-day window, the £2,667 signing payment is refundable (subject to terms). Once a deal is presented you have a 48-hour decision SLA, with extensions on fair, justified reasoning.",
+        text: "Bespoke Sourcing is priced from £8,000 (VAT inc.) for a dedicated search to your exact brief, sourced exclusively for you and not shared with the list. The from-£8,000 fee applies to properties with a purchase price under £1 million; for purchases over £1 million, talk to the team for a quote. The fee for your brief is confirmed in your sourcing agreement and paid in three stages — for the base fee: £2,667 on signing secures a dedicated 14-day search; £2,667 on presentation of a matching deal; £2,666 on completion. If we don't present a suitable deal within the 14-day window, the £2,667 signing payment is refundable (subject to terms). Once a deal is presented you have a 48-hour decision SLA, with extensions on fair, justified reasoning.",
       },
     },
     {
