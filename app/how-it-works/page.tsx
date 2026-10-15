@@ -47,7 +47,7 @@ const faqSchema = {
       name: "How long does property deal sourcing take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For sourced deals from our pipeline (the Deal List), you receive the deal pack within days of signing the sourcing agreement and paying the £500 refundable deposit. For bespoke sourcing, the £2,000 search payment secures a dedicated 14-day search window in which we find and present a deal. Once a deal pack is released (or a bespoke deal is presented), you have a 48-hour decision SLA before any commitment is final — extensions are available on fair, justified reasoning where the vendor allows.",
+        text: "For sourced deals from our pipeline (the Deal List), you receive the deal pack within days of signing the sourcing agreement and paying the 10% reservation fee. For bespoke sourcing, the £2,000 search payment secures a dedicated 14-day search window in which we find and present a deal. Once a deal pack is released (or a bespoke deal is presented), you have a 48-hour decision SLA before any commitment is final — extensions are available on fair, justified reasoning where the vendor allows.",
       },
     },
     {
@@ -63,7 +63,7 @@ const faqSchema = {
       name: "How does the 48-hour decision SLA work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "From the moment the deal pack is released (the Deal List) or the deal is presented (Bespoke), you have 48 hours to review it, get initial input from your solicitor, surveyor, or mortgage broker, and decide whether to proceed. Most off-market deals are time-sensitive, which is why the standard window is short — but extensions can be granted on fair, justified reasoning (for example, awaiting a survey or mortgage decision in principle) where the vendor agrees. If you decide to proceed, the balance of the sourcing fee is settled on completion (Deal List) or once your offer has been accepted by the vendor (Bespoke). If you decide not to proceed and there are valid reasons, the £500 Deal List deposit (otherwise credited against the fee) or the £2,000 Bespoke search payment is refundable subject to our terms of service.",
+        text: "From the moment the deal pack is released (the Deal List) or the deal is presented (Bespoke), you have 48 hours to review it, get initial input from your solicitor, surveyor, or mortgage broker, and decide whether to proceed. Most off-market deals are time-sensitive, which is why the standard window is short — but extensions can be granted on fair, justified reasoning (for example, awaiting a survey or mortgage decision in principle) where the vendor agrees. If you decide to proceed, the balance of the sourcing fee is settled on completion (Deal List) or once your offer has been accepted by the vendor (Bespoke). If you decide not to proceed and there are valid reasons, the Deal List reservation fee (otherwise credited against the balance) or the £2,000 Bespoke search payment is refundable subject to our terms of service.",
       },
     },
     {

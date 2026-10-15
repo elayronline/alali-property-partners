@@ -70,7 +70,7 @@ const faqSchema = {
       name: "What protection do investors have if a sourced deal is wrong?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The sourcing fee is split into a £500 unlock fee on signed sourcing agreement and a balance settled only once you have decided to proceed. After the deal pack is released, you have a 48-hour decision SLA — extensions are available on fair, justified reasoning where the vendor agrees. If there are valid reasons not to proceed, the £500 is refundable subject to our terms of service. You are also free to instruct your own solicitor, surveyor, and broker for independent verification before deciding.",
+        text: "The sourcing fee is split into a 10% reservation fee on signed sourcing agreement (credited against the balance) and a balance settled only once you have decided to proceed. After the deal pack is released, you have a 48-hour decision SLA — extensions are available on fair, justified reasoning where the vendor agrees. If there are valid reasons not to proceed, the £500 is refundable subject to our terms of service. You are also free to instruct your own solicitor, surveyor, and broker for independent verification before deciding.",
       },
     },
   ],

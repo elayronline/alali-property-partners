@@ -96,13 +96,13 @@ const serviceSchema = {
         "@type": "Offer",
         name: "The Deal List",
         description:
-          "Browse our pipeline and pick what fits. Verified HMO deals sourced through our network — pre-auction, off-market and direct-to-vendor — with a full deal pack and indicative refurbishment scope. From £5,000 per deal, confirmed in the deal pack and sourcing agreement: a £500 refundable deposit (taken after the sourcing agreement is signed) unlocks the full pack and viewing, with the balance (£4,500 for the base fee) on completion. Deposit refunded if the deal is already gone or on a genuine no after viewing, and credited against the fee if you proceed.",
+          "Browse our pipeline and pick what fits. Verified HMO deals sourced through our network — pre-auction, off-market and direct-to-vendor — with a full deal pack and indicative refurbishment scope. From £5,000 per deal, confirmed in the deal pack and sourcing agreement: a 10% reservation fee (taken after the sourcing agreement is signed) unlocks the full pack and viewing and is credited against the balance, paid on completion. Refundable if the deal is already gone or on a genuine no after viewing.",
         priceCurrency: "GBP",
         priceSpecification: {
           "@type": "PriceSpecification",
           priceCurrency: "GBP",
           minPrice: "5000",
-          description: "From £5,000 per deal, confirmed in the deal pack and sourcing agreement; £500 refundable deposit, balance on completion.",
+          description: "From £5,000 per deal, confirmed in the deal pack and sourcing agreement; 10% reservation fee credited against the balance on completion.",
           valueAddedTaxIncluded: true,
         },
       },
@@ -161,7 +161,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We use transparent fees, with no VAT charged, confirmed before you commit. The Deal List is from £5,000 per deal — a £500 refundable deposit unlocks the full pack and viewing, with the balance on completion. Bespoke Sourcing is from £8,000 (£2,000 to start your search, £3,000 when a deal is agreed, and the balance when your offer is accepted), with a 1% overage on single deals over £1m or portfolios over £500k. Source & Develop is by application. An optional Portfolio Builder membership is £249/month on a 12-month commitment and includes a £850 credit per completed deal. No hidden costs.",
+        text: "We use transparent fees, with no VAT charged, confirmed before you commit. The Deal List is from £5,000 per deal — a 10% reservation fee unlocks the full pack and viewing and is credited against the balance, paid on completion. Bespoke Sourcing is from £8,000 (£2,000 to start your search, £3,000 when a deal is agreed, and the balance when your offer is accepted), with a 1% overage on single deals over £1m or portfolios over £500k. Source & Develop is by application. An optional Portfolio Builder membership is £249/month on a 12-month commitment and includes a £850 credit per completed deal. No hidden costs.",
       },
     },
     {

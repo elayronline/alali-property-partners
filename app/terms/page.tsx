@@ -141,24 +141,22 @@ export default function Terms() {
           <p className="mt-1">
             The sourcing fee for a deal taken from the Deal List is from £5,000 per deal, covering deals sourced through our private contacts (off-market) and through
             our compliant agent network (on-market). The fee for each deal is stated in the deal pack
-            and confirmed in your sourcing agreement. It is paid in two stages (amounts shown are for
-            the base fee of £5,000):
+            and confirmed in your sourcing agreement. It is paid in two stages:
           </p>
           <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
             <li>
-              <span className="font-semibold text-charcoal">£500 refundable deposit</span>, paid
+              <span className="font-semibold text-charcoal">10% reservation fee</span>, paid
               after the sourcing agreement is signed, to unlock the full deal pack and arrange a
               viewing.
             </li>
             <li>
-              <span className="font-semibold text-charcoal">Balance</span> (£4,500 for the base
-              fee), payable on completion of the purchase.
+              <span className="font-semibold text-charcoal">Balance</span>, payable on completion of
+              the purchase, with the reservation fee credited against it.
             </li>
           </ul>
           <p className="mt-2">
-            The £500 deposit is refundable where the deal is no longer available, or on a genuine
-            decision not to proceed after viewing (subject to the conditions below). Where you do
-            proceed, the deposit is credited against the fee. Vendor and agent contact details
+            The reservation fee is refundable where the deal is no longer available, or on a genuine
+            decision not to proceed after viewing (subject to the conditions below). Vendor and agent contact details
             are not included in the deal pack; we facilitate viewings and introductions on your
             behalf throughout the decision and transaction process.
           </p>
@@ -218,7 +216,7 @@ export default function Terms() {
           <p className="mt-2">
             If you decide not to proceed and there are valid reasons for that decision (for example,
             material findings on independent due diligence, a change in personal circumstances, or the
-            deal materially diverging from the pack or brief), the £500 Deal List deposit, or the
+            deal materially diverging from the pack or brief), the Deal List reservation fee, or the
             £2,000 Bespoke Sourcing search payment, is refundable on written request within the
             decision SLA. Balances are only ever charged once you have decided to proceed, so they are
             never paid in scenarios where a refund would apply. Refunds will not be issued once the

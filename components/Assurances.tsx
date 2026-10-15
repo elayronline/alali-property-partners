@@ -17,7 +17,7 @@ const assurances = [
     icon: BadgePoundSterling,
     title: "Paid on completion",
     detail:
-      "Our main sourcing fee is payable on completion — so we're only paid when a deal is real enough for you to transact on. Deposits are refundable on a genuine no after viewing, or credited if you proceed.",
+      "The balance of our fee is only due once a deal proceeds. The Deal List reservation fee is refundable on a genuine no after viewing, or credited against the balance if you proceed.",
   },
   {
     icon: FileSearch,

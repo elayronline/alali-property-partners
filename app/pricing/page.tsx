@@ -79,13 +79,13 @@ const serviceSchema = {
       "@type": "Offer",
       name: "The Deal List",
       description:
-        "Browse our pipeline and pick what fits. Live off-market, pre-auction and direct-to-vendor deals with a full deal pack (tenure, comparables, rents) and indicative refurbishment scope. From £5,000 per deal, confirmed in the deal pack and sourcing agreement: a £500 refundable deposit (taken after the sourcing agreement is signed) unlocks the full pack and viewing, with the balance (£4,500 for the base fee) on completion. Deposit refunded if the deal is already gone or on a genuine no after viewing, and credited against the fee if you proceed.",
+        "Browse our pipeline and pick what fits. Live off-market, pre-auction and direct-to-vendor deals with a full deal pack (tenure, comparables, rents) and indicative refurbishment scope. From £5,000 per deal, confirmed in the deal pack and sourcing agreement: a 10% reservation fee (taken after the sourcing agreement is signed) unlocks the full pack and viewing and is credited against the balance, paid on completion. Refundable if the deal is already gone or on a genuine no after viewing.",
       priceCurrency: "GBP",
       priceSpecification: {
         "@type": "PriceSpecification",
         priceCurrency: "GBP",
         minPrice: "5000",
-        description: "From £5,000 per deal, confirmed in the deal pack and sourcing agreement: £500 refundable deposit unlocks the pack and viewing, balance (£4,500 for the base fee) on completion.",
+        description: "From £5,000 per deal, confirmed in the deal pack and sourcing agreement: 10% reservation fee unlocks the pack and viewing, credited against the balance on completion.",
         valueAddedTaxIncluded: true,
       },
       availability: "https://schema.org/InStock",
@@ -135,15 +135,15 @@ const faqSchema = {
       name: "When do I pay — and how are the fees staged?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Deal List fee (from £5,000) is staged as a £500 refundable deposit (taken after the sourcing agreement is signed) to unlock the full deal pack and viewing, with the balance on completion. Bespoke Sourcing (from £8,000) is £2,000 to start your search, £3,000 when a deal is agreed, and the balance when your offer is accepted. Source & Develop fees are staged against project milestones — search, secured, planning, build and handover.",
+        text: "The Deal List fee (from £5,000) is a 10% reservation fee (taken after the sourcing agreement is signed) to unlock the full deal pack and viewing, credited against the balance on completion. Bespoke Sourcing (from £8,000) is £2,000 to start your search, £3,000 when a deal is agreed, and the balance when your offer is accepted. Source & Develop fees are staged against project milestones — search, secured, planning, build and handover.",
       },
     },
     {
       "@type": "Question",
-      name: "Is the deposit or any fee refundable?",
+      name: "Is the reservation fee or any fee refundable?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, subject to terms. On the Deal List, the £500 deposit is refunded if the deal is already gone, or on a genuine decision not to proceed after viewing; if you proceed it is credited against the fee. On Bespoke Sourcing, the £2,000 is refundable if we don't present a suitable deal within the 14-day search window, and if the vendor pulls out we go back to market for you free of charge, or refund the sourcing fee. Balances are only ever charged once a deal proceeds.",
+        text: "Yes, subject to terms. On the Deal List, the 10% reservation fee is refunded if the deal is already gone, or on a genuine decision not to proceed after viewing; if you proceed it is credited against the balance. On Bespoke Sourcing, the £2,000 is refundable if we don't present a suitable deal within the 14-day search window, and if the vendor pulls out we go back to market for you free of charge, or refund the sourcing fee. Balances are only ever charged once a deal proceeds.",
       },
     },
     {

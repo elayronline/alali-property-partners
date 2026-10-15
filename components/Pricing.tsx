@@ -306,11 +306,10 @@ export function Pricing() {
             <ExpandableSection trigger="Fees & terms">
               <p className="text-sm leading-relaxed text-muted-light">
                 Joining is free. You only pay if you choose to take a deal — sourcing fees from £5,000
-                per deal, confirmed in the deal pack and your sourcing agreement. A £500
-                refundable deposit unlocks the full pack and viewing, with the balance (£4,500 for the
-                base fee) on completion. The deposit is refunded if the deal is already gone or on
-                a genuine decision not to proceed after viewing, and credited against the fee if you
-                proceed. Full detail in our{" "}
+                per deal, confirmed in the deal pack and your sourcing agreement. A 10%
+                reservation fee unlocks the full pack and viewing and is credited against the
+                balance, paid on completion. It is refunded if the deal is already gone or on a
+                genuine decision not to proceed after viewing. Full detail in our{" "}
                 <a
                   href="/terms"
                   className="text-gold underline decoration-gold/30 underline-offset-2 hover:text-gold-dark"
