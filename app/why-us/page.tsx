@@ -70,7 +70,7 @@ const faqSchema = {
       name: "What protection do investors have if a sourced deal is wrong?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Fees are staged as your deal progresses. On the Deal List, a 10% reservation fee is taken once the sourcing agreement is signed and credited against the balance, paid on completion. On Bespoke Sourcing, it's £2,000 to start the search, £3,000 when a deal is agreed, and the balance when your offer is accepted. After a deal pack is released, you have a 48-hour decision SLA — extensions are available on fair, justified reasoning where the vendor agrees. If there are valid reasons not to proceed, the reservation fee is refundable subject to our terms of service. You are also free to instruct your own solicitor, surveyor, and broker for independent verification before deciding.",
+        text: "Fees are staged as your deal progresses. On the Deal List, a 10% reservation fee is taken once the sourcing agreement is signed and credited against the sourcing fee, with the balance due once your offer is accepted. On Bespoke Sourcing, it's £2,000 to start the search, £3,000 when a deal is agreed, and the balance when your offer is accepted. After a deal pack is released, you have a 48-hour decision SLA — extensions are available on fair, justified reasoning where the vendor agrees. The reservation fee is refunded if the vendor withdraws or the paperwork does not match the pack, subject to our terms of service. You are also free to instruct your own solicitor, surveyor, and broker for independent verification before deciding.",
       },
     },
   ],

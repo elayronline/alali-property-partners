@@ -307,9 +307,9 @@ export function Pricing() {
               <p className="text-sm leading-relaxed text-muted-light">
                 Joining is free. You only pay if you choose to take a deal — sourcing fees from £5,000
                 per deal, confirmed in the deal pack and your sourcing agreement. A 10%
-                reservation fee unlocks the full pack and viewing and is credited against the
-                balance, paid on completion. It is refunded if the deal is already gone or on a
-                genuine decision not to proceed after viewing. Full detail in our{" "}
+                reservation fee secures the deal and is credited against the sourcing fee, with the
+                balance due once your offer is accepted. It is refunded if the vendor withdraws or
+                the paperwork does not match the pack. Full detail in our{" "}
                 <a
                   href="/terms"
                   className="text-gold underline decoration-gold/30 underline-offset-2 hover:text-gold-dark"

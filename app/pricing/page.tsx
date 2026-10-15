@@ -79,13 +79,13 @@ const serviceSchema = {
       "@type": "Offer",
       name: "The Deal List",
       description:
-        "Browse our pipeline and pick what fits. Live off-market, pre-auction and direct-to-vendor deals with a full deal pack (tenure, comparables, rents) and indicative refurbishment scope. From £5,000 per deal, confirmed in the deal pack and sourcing agreement: a 10% reservation fee (taken after the sourcing agreement is signed) unlocks the full pack and viewing and is credited against the balance, paid on completion. Refundable if the deal is already gone or on a genuine no after viewing.",
+        "Browse our pipeline and pick what fits. Live off-market, pre-auction and direct-to-vendor deals with a full deal pack (tenure, comparables, rents) and indicative refurbishment scope. From £5,000 per deal, confirmed in the deal pack and sourcing agreement: a 10% reservation fee (taken after the sourcing agreement is signed) secures the deal and unlocks the full pack, with the address and an introduction to the vendor, and is credited against the sourcing fee. The balance is due once your offer is accepted. The reservation is refunded if the vendor withdraws or the paperwork does not match the pack.",
       priceCurrency: "GBP",
       priceSpecification: {
         "@type": "PriceSpecification",
         priceCurrency: "GBP",
         minPrice: "5000",
-        description: "From £5,000 per deal, confirmed in the deal pack and sourcing agreement: 10% reservation fee unlocks the pack and viewing, credited against the balance on completion.",
+        description: "From £5,000 per deal, confirmed in the deal pack and sourcing agreement: 10% reservation fee secures the deal and is credited against the sourcing fee; balance due once your offer is accepted.",
         valueAddedTaxIncluded: true,
       },
       availability: "https://schema.org/InStock",
@@ -135,7 +135,7 @@ const faqSchema = {
       name: "When do I pay — and how are the fees staged?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Deal List fee (from £5,000) is a 10% reservation fee (taken after the sourcing agreement is signed) to unlock the full deal pack and viewing, credited against the balance on completion. Bespoke Sourcing (from £8,000) is £2,000 to start your search, £3,000 when a deal is agreed, and the balance when your offer is accepted. Source & Develop fees are staged against project milestones — search, secured, planning, build and handover.",
+        text: "The Deal List fee (from £5,000) starts with a 10% reservation fee (taken after the sourcing agreement is signed), which secures the deal, unlocks the full deal pack and is credited against the sourcing fee; the balance is due once your offer is accepted. Bespoke Sourcing (from £8,000) is £2,000 to start your search, £3,000 when a deal is agreed, and the balance when your offer is accepted. Source & Develop fees are staged against project milestones — search, secured, planning, build and handover.",
       },
     },
     {
@@ -143,7 +143,7 @@ const faqSchema = {
       name: "Is the reservation fee or any fee refundable?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, subject to terms. On the Deal List, the 10% reservation fee is refunded if the deal is already gone, or on a genuine decision not to proceed after viewing; if you proceed it is credited against the balance. On Bespoke Sourcing, the £2,000 is refundable if we don't present a suitable deal within the 14-day search window, and if the vendor pulls out we go back to market for you free of charge, or refund the sourcing fee. Later payments are only taken as your deal progresses.",
+        text: "Yes, subject to terms. On the Deal List, the 10% reservation fee is refunded if the vendor withdraws or the paperwork does not match the pack. It is not refundable for a change of mind, and if you proceed it is credited against the sourcing fee. On Bespoke Sourcing, the £2,000 is refundable if we don't present a suitable deal within the 14-day search window, and if the vendor pulls out we go back to market for you free of charge, or refund the sourcing fee. Later payments are only taken as your deal progresses.",
       },
     },
     {

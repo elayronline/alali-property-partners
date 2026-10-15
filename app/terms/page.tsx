@@ -146,17 +146,18 @@ export default function Terms() {
           <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
             <li>
               <span className="font-semibold text-charcoal">10% reservation fee</span>, paid
-              after the sourcing agreement is signed, to unlock the full deal pack and arrange a
-              viewing.
+              after the sourcing agreement is signed, which secures the deal and releases the full
+              deal pack, including the address and an introduction to the vendor.
             </li>
             <li>
-              <span className="font-semibold text-charcoal">Balance</span>, payable on completion of
-              the purchase, with the reservation fee credited against it.
+              <span className="font-semibold text-charcoal">Balance</span>, payable once your offer
+              has been accepted by the vendor, with the reservation fee credited against the sourcing fee.
             </li>
           </ul>
           <p className="mt-2">
-            The reservation fee is refundable where the deal is no longer available, or on a genuine
-            decision not to proceed after viewing (subject to the conditions below). Vendor and agent contact details
+            The reservation fee is refunded in full if the vendor withdraws or the paperwork (such as
+            tenancy agreements and statements) does not match the deal pack. It is not refundable for a
+            change of mind. Deals are non-exclusive and are shared with all of our investors. Vendor and agent contact details
             are not included in the deal pack; we facilitate viewings and introductions on your
             behalf throughout the decision and transaction process.
           </p>
@@ -214,15 +215,12 @@ export default function Terms() {
             extension will be confirmed in writing.
           </p>
           <p className="mt-2">
-            If you decide not to proceed and there are valid reasons for that decision (for example,
-            material findings on independent due diligence, a change in personal circumstances, or the
-            deal materially diverging from the pack or brief), the Deal List reservation fee, or the
-            £2,000 Bespoke Sourcing search payment, is refundable on written request within the
-            decision SLA. Later stage payments are only charged once you have decided to proceed. Other
-            than where a vendor pulls out of a Bespoke Sourcing deal (see above), refunds will not be issued once the
-            decision SLA (or any agreed extension) has expired, where you have proceeded with the
-            transaction (for example by instructing solicitors or applying for a mortgage on the
-            property), or where you cannot evidence valid reasons not to proceed. We reserve the right
+            Refunds are limited to the cases set out above: the Deal List reservation fee where the
+            vendor withdraws or the paperwork does not match the deal pack; the £2,000 Bespoke Sourcing
+            search payment where we do not present a suitable deal within the 14-day search window; and
+            the Bespoke Sourcing fee where a vendor pulls out and you do not wish us to continue. Fees are
+            not refundable for a change of mind. Later stage payments are only charged once you have
+            decided to proceed. We reserve the right
             to deduct reasonable administrative costs from any refund where significant work has been
             undertaken on your behalf.
           </p>
