@@ -15,9 +15,9 @@ const assurances = [
   },
   {
     icon: BadgePoundSterling,
-    title: "Paid on completion",
+    title: "Pay as your deal progresses",
     detail:
-      "The balance of our fee is only due once a deal proceeds. The Deal List reservation fee is refundable on a genuine no after viewing, or credited against the balance if you proceed.",
+      "Fees are staged against real progress — a reservation or search fee to start, the rest only as your deal moves forward. If a vendor pulls out of a Bespoke deal, we go back to market for you free of charge, or refund the sourcing fee.",
   },
   {
     icon: FileSearch,

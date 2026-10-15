@@ -84,7 +84,7 @@ export function Hero() {
               <span className="h-1 w-1 rounded-full bg-gold/70" />
               <span>Greater London &amp; the South East</span>
               <span className="h-1 w-1 rounded-full bg-gold/70" />
-              <span>Paid on completion</span>
+              <span>Pay as your deal progresses</span>
             </div>
           </motion.div>
         </div>

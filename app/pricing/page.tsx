@@ -143,7 +143,7 @@ const faqSchema = {
       name: "Is the reservation fee or any fee refundable?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, subject to terms. On the Deal List, the 10% reservation fee is refunded if the deal is already gone, or on a genuine decision not to proceed after viewing; if you proceed it is credited against the balance. On Bespoke Sourcing, the £2,000 is refundable if we don't present a suitable deal within the 14-day search window, and if the vendor pulls out we go back to market for you free of charge, or refund the sourcing fee. Balances are only ever charged once a deal proceeds.",
+        text: "Yes, subject to terms. On the Deal List, the 10% reservation fee is refunded if the deal is already gone, or on a genuine decision not to proceed after viewing; if you proceed it is credited against the balance. On Bespoke Sourcing, the £2,000 is refundable if we don't present a suitable deal within the 14-day search window, and if the vendor pulls out we go back to market for you free of charge, or refund the sourcing fee. Later payments are only taken as your deal progresses.",
       },
     },
     {
@@ -159,7 +159,7 @@ const faqSchema = {
       name: "Are there ongoing contracts or lock-ins?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The fixed per-deal fees (the Deal List, Bespoke Sourcing, Source & Develop) involve no ongoing contract or lock-in — you pay per deal. The Portfolio Builder membership is the one exception: it's an annual commitment (a 12-month term, billed monthly). The deal mailing list is free.",
+        text: "The per-deal fees (the Deal List, Bespoke Sourcing, Source & Develop) involve no ongoing contract or lock-in — you pay per deal. The Portfolio Builder membership is the one exception: it's an annual commitment (a 12-month term, billed monthly). The deal mailing list is free.",
       },
     },
     {

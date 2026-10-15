@@ -218,8 +218,8 @@ export default function Terms() {
             material findings on independent due diligence, a change in personal circumstances, or the
             deal materially diverging from the pack or brief), the Deal List reservation fee, or the
             £2,000 Bespoke Sourcing search payment, is refundable on written request within the
-            decision SLA. Balances are only ever charged once you have decided to proceed, so they are
-            never paid in scenarios where a refund would apply. Refunds will not be issued once the
+            decision SLA. Later stage payments are only charged once you have decided to proceed. Other
+            than where a vendor pulls out of a Bespoke Sourcing deal (see above), refunds will not be issued once the
             decision SLA (or any agreed extension) has expired, where you have proceeded with the
             transaction (for example by instructing solicitors or applying for a mortgage on the
             property), or where you cannot evidence valid reasons not to proceed. We reserve the right
