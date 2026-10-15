@@ -121,14 +121,14 @@ export default function Terms() {
         <section>
           <h2 className="text-lg font-bold text-charcoal">4. Fees and Payment</h2>
           <p className="mt-2">
-            All fees are VAT inclusive and there are no hidden costs. The fee that applies depends on
-            how you choose to work with us, as set out below. Our main sourcing fee is payable on
-            completion.
+            No VAT is charged on our fees and there are no hidden costs. The fee that applies depends on
+            how you choose to work with us, and when each payment is due is set out below for each
+            service.
           </p>
 
           <p className="mt-3 font-semibold text-charcoal">Portfolio Builder (membership):</p>
           <p className="mt-1">
-            Portfolio Builder is an optional membership charged at £249 per month (VAT inclusive) on a
+            Portfolio Builder is an optional membership charged at £249 per month on a
             12-month minimum term — an annual commitment, billed monthly. Fees already paid are
             non-refundable. Membership includes 48-hour priority access to new deals, an £850 credit
             applied to the sourcing fee on each completed Deal List or Bespoke Sourcing transaction,
@@ -139,8 +139,7 @@ export default function Terms() {
 
           <p className="mt-3 font-semibold text-charcoal">The Deal List:</p>
           <p className="mt-1">
-            The sourcing fee for a deal taken from the Deal List is from £5,000 per deal (VAT
-            inclusive), covering deals sourced through our private contacts (off-market) and through
+            The sourcing fee for a deal taken from the Deal List is from £5,000 per deal, covering deals sourced through our private contacts (off-market) and through
             our compliant agent network (on-market). The fee for each deal is stated in the deal pack
             and confirmed in your sourcing agreement. It is paid in two stages (amounts shown are for
             the base fee of £5,000):
@@ -166,27 +165,30 @@ export default function Terms() {
 
           <p className="mt-3 font-semibold text-charcoal">Bespoke Sourcing:</p>
           <p className="mt-1">
-            Bespoke Sourcing is priced from £8,000 (VAT inclusive) for a dedicated search to your
-            brief, sourced exclusively for you, where the target purchase price is under £1,000,000.
-            For purchases of £1,000,000 or more, the fee is quoted individually by the team. The fee
-            for your brief is confirmed in your sourcing agreement and is paid in three stages (amounts shown are for the base fee of £8,000 and
-            are apportioned pro rata where a higher fee is agreed):
+            Bespoke Sourcing is priced from £8,000 for a dedicated search to your
+            brief, sourced exclusively for you. The fee for your brief is confirmed in your sourcing
+            agreement and is paid in three stages (amounts shown are for the base fee of £8,000):
           </p>
           <ul className="mt-2 list-inside list-disc space-y-1 pl-2">
             <li>
-              <span className="font-semibold text-charcoal">£2,667 on signing</span>, which secures a
+              <span className="font-semibold text-charcoal">£2,000 to begin the search</span>, which secures a
               dedicated 14-day search. This is refundable if we do not present a suitable deal
               matching your brief within that window (subject to terms).
             </li>
             <li>
-              <span className="font-semibold text-charcoal">£2,667 on presentation</span> of a
-              matching deal.
+              <span className="font-semibold text-charcoal">£3,000 sourcing fee</span> once a deal
+              is introduced and agreed.
             </li>
             <li>
-              <span className="font-semibold text-charcoal">£2,666 on completion</span> of the
-              purchase.
+              <span className="font-semibold text-charcoal">The balance (£3,000)</span> once your
+              offer has been accepted by the vendor.
             </li>
           </ul>
+          <p className="mt-2">
+            A 1% overage applies to single deals over £1,000,000 and portfolio deals over £500,000.
+            If the vendor pulls out, we will go back to market for you free of charge, or refund the
+            sourcing fee. Full terms are set out in your proposal.
+          </p>
 
           <p className="mt-3 font-semibold text-charcoal">Source &amp; Develop:</p>
           <p className="mt-1">
@@ -217,7 +219,7 @@ export default function Terms() {
             If you decide not to proceed and there are valid reasons for that decision (for example,
             material findings on independent due diligence, a change in personal circumstances, or the
             deal materially diverging from the pack or brief), the £500 Deal List deposit, or the
-            £2,667 Bespoke Sourcing signing payment, is refundable on written request within the
+            £2,000 Bespoke Sourcing search payment, is refundable on written request within the
             decision SLA. Balances are only ever charged once you have decided to proceed, so they are
             never paid in scenarios where a refund would apply. Refunds will not be issued once the
             decision SLA (or any agreed extension) has expired, where you have proceeded with the
@@ -233,7 +235,7 @@ export default function Terms() {
             Referral fee amounts are agreed on a case-by-case basis.
           </p>
 
-          <p className="mt-3">All fees are VAT inclusive.</p>
+          <p className="mt-3">No VAT is charged on our fees.</p>
         </section>
 
         <section>

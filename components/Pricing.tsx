@@ -53,7 +53,7 @@ const pricingCards: PricingCard[] = [
     subtitle: "Commission your own search — sourced exclusively for you.",
     fee: "£8,000",
     feePrefix: "from",
-    feeDetail: "Purchases under £1m · over £1m, talk to the team",
+    feeDetail: "+1% overage: single deals over £1m · portfolios over £500k",
     popular: true,
     cta: "bespoke",
     highlights: [
@@ -63,7 +63,7 @@ const pricingCards: PricingCard[] = [
     ],
     paymentLabel: "How payment works",
     payment:
-      "Fees start from £8,000 for properties with a purchase price under £1 million and are confirmed in your sourcing agreement; for purchases over £1 million, talk to the team for a quote. Paid in three stages — for the base fee, £2,667 on signing secures a dedicated 14-day search (refundable if no suitable deal is presented in the window); £2,667 on presentation of a matching deal; £2,666 on completion.",
+      "£2,000 to start your search, £3,000 when a deal is agreed, and the balance when your offer is accepted. If the vendor pulls out, we go back to market for you free of charge, or refund the sourcing fee. Full terms are set out in your proposal after a discovery call.",
   },
   {
     title: "Source & Develop",
@@ -175,7 +175,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mx-auto mt-4 max-w-xl text-center text-sm text-muted-light"
         >
-          Simple, upfront, no hidden costs — VAT inclusive. Three ways to work with us directly, or
+          Simple, upfront, no hidden costs — no VAT charged. Three ways to work with us directly, or
           join the deal list free below.
         </motion.p>
 
@@ -231,7 +231,7 @@ export function Pricing() {
                         )}
                         {!card.byApplication && (
                           <span className="rounded-full bg-gold/10 px-2 py-0.5 text-[0.65rem] font-semibold tracking-wide text-gold">
-                            VAT inc.
+                            No VAT
                           </span>
                         )}
                       </div>
@@ -306,7 +306,7 @@ export function Pricing() {
             <ExpandableSection trigger="Fees & terms">
               <p className="text-sm leading-relaxed text-muted-light">
                 Joining is free. You only pay if you choose to take a deal — sourcing fees from £5,000
-                per deal (VAT inc.), confirmed in the deal pack and your sourcing agreement. A £500
+                per deal, confirmed in the deal pack and your sourcing agreement. A £500
                 refundable deposit unlocks the full pack and viewing, with the balance (£4,500 for the
                 base fee) on completion. The deposit is refunded if the deal is already gone or on
                 a genuine decision not to proceed after viewing, and credited against the fee if you
@@ -330,7 +330,7 @@ export function Pricing() {
           viewport={{ once: true }}
           className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-light/85"
         >
-          All fees VAT inclusive. No hidden costs. Stage payments and refund conditions are confirmed
+          No VAT charged. No hidden costs. Stage payments and refund conditions are confirmed
           on the call and set out in our{" "}
           <a
             href="/terms"

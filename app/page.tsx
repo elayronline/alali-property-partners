@@ -96,13 +96,13 @@ const serviceSchema = {
         "@type": "Offer",
         name: "The Deal List",
         description:
-          "Browse our pipeline and pick what fits. Verified HMO deals sourced through our network — pre-auction, off-market and direct-to-vendor — with a full deal pack and indicative refurbishment scope. From £5,000 per deal (VAT inc.), confirmed in the deal pack and sourcing agreement: a £500 refundable deposit (taken after the sourcing agreement is signed) unlocks the full pack and viewing, with the balance (£4,500 for the base fee) on completion. Deposit refunded if the deal is already gone or on a genuine no after viewing, and credited against the fee if you proceed.",
+          "Browse our pipeline and pick what fits. Verified HMO deals sourced through our network — pre-auction, off-market and direct-to-vendor — with a full deal pack and indicative refurbishment scope. From £5,000 per deal, confirmed in the deal pack and sourcing agreement: a £500 refundable deposit (taken after the sourcing agreement is signed) unlocks the full pack and viewing, with the balance (£4,500 for the base fee) on completion. Deposit refunded if the deal is already gone or on a genuine no after viewing, and credited against the fee if you proceed.",
         priceCurrency: "GBP",
         priceSpecification: {
           "@type": "PriceSpecification",
           priceCurrency: "GBP",
           minPrice: "5000",
-          description: "From £5,000 per deal (VAT inclusive), confirmed in the deal pack and sourcing agreement; £500 refundable deposit, balance on completion.",
+          description: "From £5,000 per deal, confirmed in the deal pack and sourcing agreement; £500 refundable deposit, balance on completion.",
           valueAddedTaxIncluded: true,
         },
       },
@@ -110,13 +110,13 @@ const serviceSchema = {
         "@type": "Offer",
         name: "Bespoke Sourcing",
         description:
-          "Commission your own search, sourced exclusively to your exact brief and not shared with the list. From £8,000 (VAT inc.) for properties with a purchase price under £1 million (over £1 million, talk to the team for a quote), confirmed in your sourcing agreement, paid in three stages — for the base fee: £2,667 on signing secures a dedicated 14-day search (refundable if no suitable deal is presented in the window), £2,667 on presentation of a matching deal, £2,666 on completion.",
+          "Commission your own search, sourced exclusively to your brief and not shared with the list. From £8,000: £2,000 to start your search, £3,000 when a deal is agreed, and the balance when your offer is accepted. 1% overage on single deals over £1m or portfolios over £500k. If the vendor pulls out, we go back to market for you free of charge, or refund the sourcing fee.",
         priceCurrency: "GBP",
         priceSpecification: {
           "@type": "PriceSpecification",
           priceCurrency: "GBP",
           minPrice: "8000",
-          description: "From £8,000 (VAT inclusive) for purchase prices under £1 million; over £1 million quoted by the team. Confirmed per brief in the sourcing agreement; paid in three stages.",
+          description: "From £8,000, confirmed per brief in the sourcing agreement; paid in three stages. A 1% overage applies on the purchase price above £1 million (single-project deals) or above £500,000 (portfolio deals).",
           valueAddedTaxIncluded: true,
         },
       },
@@ -161,7 +161,7 @@ const faqSchema = {
       name: "How much does property deal sourcing cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We use transparent fees, all VAT inclusive and confirmed before you commit. The Deal List is from £5,000 per deal — a £500 refundable deposit unlocks the full pack and viewing, with the balance (£4,500 for the base fee) on completion. Bespoke Sourcing is from £8,000 for properties with a purchase price under £1 million (over £1 million, talk to the team for a quote), confirmed in your sourcing agreement and paid in three stages (for the base fee: £2,667 on signing, £2,667 on presentation, £2,666 on completion). Source & Develop is by application. An optional Portfolio Builder membership is £249/month on a 12-month commitment and includes a £850 credit per completed deal. No hidden costs.",
+        text: "We use transparent fees, with no VAT charged, confirmed before you commit. The Deal List is from £5,000 per deal — a £500 refundable deposit unlocks the full pack and viewing, with the balance on completion. Bespoke Sourcing is from £8,000 (£2,000 to start your search, £3,000 when a deal is agreed, and the balance when your offer is accepted), with a 1% overage on single deals over £1m or portfolios over £500k. Source & Develop is by application. An optional Portfolio Builder membership is £249/month on a 12-month commitment and includes a £850 credit per completed deal. No hidden costs.",
       },
     },
     {
@@ -169,7 +169,7 @@ const faqSchema = {
       name: "How does bespoke sourcing work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Bespoke Sourcing is priced from £8,000 (VAT inc.) for a dedicated search to your exact brief, sourced exclusively for you and not shared with the list. The from-£8,000 fee applies to properties with a purchase price under £1 million; for purchases over £1 million, talk to the team for a quote. The fee for your brief is confirmed in your sourcing agreement and paid in three stages — for the base fee: £2,667 on signing secures a dedicated 14-day search; £2,667 on presentation of a matching deal; £2,666 on completion. If we don't present a suitable deal within the 14-day window, the £2,667 signing payment is refundable (subject to terms). Once a deal is presented you have a 48-hour decision SLA, with extensions on fair, justified reasoning.",
+        text: "Bespoke Sourcing is a dedicated search to your exact brief, sourced exclusively for you. It is from £8,000: £2,000 to start your search, £3,000 when a deal is agreed, and the balance when your offer is accepted. A 1% overage on single deals over £1m or portfolios over £500k applies. If the vendor pulls out, we go back to market for you free of charge, or refund the sourcing fee. Full terms are set out in your proposal after a discovery call.",
       },
     },
     {
