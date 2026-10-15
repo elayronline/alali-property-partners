@@ -17,7 +17,7 @@ const assurances = [
     icon: BadgePoundSterling,
     title: "Pay as your deal progresses",
     detail:
-      "Fees are staged against real progress — a reservation or search fee to start, the rest only as your deal moves forward. If a vendor pulls out of a Bespoke deal, we go back to market for you free of charge, or refund the sourcing fee.",
+      "Fees are staged against real progress — a reservation or search fee to start, the rest only as your deal moves forward. If a vendor pulls out of a Bespoke deal, we go back to market for you free of charge.",
   },
   {
     icon: FileSearch,
