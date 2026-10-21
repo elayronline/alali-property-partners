@@ -71,6 +71,7 @@ export function CoverageMap() {
             alt="Map of the counties we cover — Greater London, Surrey, Kent, East and West Sussex, Hampshire, Dorset, Somerset, Berkshire, Oxfordshire and Buckinghamshire"
             width={1400}
             height={785}
+            sizes="(min-width: 704px) 672px, 100vw"
             className="h-auto w-full [filter:drop-shadow(0_0_6px_rgba(201,160,61,0.45))]"
             priority={false}
           />

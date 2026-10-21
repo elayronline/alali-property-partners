@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     absolute: "Property Sourcing London & South East | Alali Property Partners",
   },
   description:
-    "High-yield HMO deal sourcing across London & the South East, sourced through our network — including pre-auction, off-market and direct-to-vendor. Join the deal list.",
+    "High-yield HMO deal sourcing across London & the South East, through our network: pre-auction, off-market and direct-to-vendor. Join the deal list.",
   keywords: [
     "HMO deal sourcing",
     "HMO property sourcing",

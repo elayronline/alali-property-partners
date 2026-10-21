@@ -6,7 +6,7 @@ import { Faq } from "@/components/Faq"
 import { SectionDivider } from "@/components/ui/SectionDivider"
 
 export const metadata: Metadata = {
-  title: "Hands-Off HMO Investment for Time-Poor Investors",
+  title: "Hands-Off HMO Investment",
   description:
     "Hands-off HMO investment for busy professionals and armchair investors. We find, verify and — through Source & Develop — project-manage the conversion for you.",
   keywords: [

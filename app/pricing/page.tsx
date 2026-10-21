@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer"
 export const metadata: Metadata = {
   title: "HMO Sourcing Fees & Pricing",
   description:
-    "HMO sourcing fees: Portfolio Builder membership £249/mo; The Deal List from £5,000; Bespoke Sourcing from £8,000; Source & Develop by application. No VAT, no hidden costs.",
+    "HMO sourcing fees: Portfolio Builder £249/mo; The Deal List from £5,000; Bespoke Sourcing from £8,000; Source & Develop by application. No VAT.",
   keywords: [
     "property sourcing fees",
     "property sourcing cost UK",

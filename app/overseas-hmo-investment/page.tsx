@@ -6,7 +6,7 @@ import { Faq } from "@/components/Faq"
 import { SectionDivider } from "@/components/ui/SectionDivider"
 
 export const metadata: Metadata = {
-  title: "UK HMO Investment for Overseas & Expat Investors",
+  title: "Overseas & Expat HMO Investment",
   description:
     "Buying a UK HMO from abroad. We view, verify and coordinate on the ground across London and the South East, and introduce expat-friendly brokers and solicitors.",
   keywords: [

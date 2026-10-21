@@ -8,7 +8,7 @@ import { SectionDivider } from "@/components/ui/SectionDivider"
 export const metadata: Metadata = {
   title: "Managed HMO Conversion, End to End",
   description:
-    "We source the property to your brief, then manage the full HMO conversion — design, planning, build and handover, end to end. London & the South East. By application.",
+    "We source the property to your brief, then manage the full HMO conversion: design, planning, build and handover. London & the South East. By application.",
   keywords: [
     "HMO development management",
     "managed HMO conversion",

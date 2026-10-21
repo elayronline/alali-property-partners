@@ -6,7 +6,7 @@ import { Faq } from "@/components/Faq"
 import { SectionDivider } from "@/components/ui/SectionDivider"
 
 export const metadata: Metadata = {
-  title: "Property Sourcing Agent — South East England",
+  title: "Property Sourcing Agent, South East",
   description:
     "HMO sourcing across the South East — Surrey, Kent, Sussex, Hampshire, Berkshire and beyond. High-yield off-market and direct-to-vendor deals.",
   keywords: [
