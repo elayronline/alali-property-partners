@@ -4,9 +4,9 @@ import { ContactForm } from "@/components/ContactForm"
 import { Footer } from "@/components/Footer"
 
 export const metadata: Metadata = {
-  title: "Tell Us Your Brief — HMO Sourcing Enquiries",
+  title: "Tell Us Your Brief — HMO Sourcing",
   description:
-    "Tell us your brief — specialist HMO sourcing across Greater London & the South East. Know what you want or not sure yet, either works. We'll review your brief and be in touch.",
+    "Tell us your brief for specialist HMO sourcing across Greater London & the South East. Know what you want or not sure yet, either works.",
   keywords: [
     "contact property sourcer UK",
     "property sourcing contact",

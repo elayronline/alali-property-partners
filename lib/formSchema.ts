@@ -1,5 +1,10 @@
 import { z } from "zod"
 
+// The site's Content-Security-Policy forbids eval. Without this, Zod probes
+// `Function("")` to decide whether to JIT-compile parsers, which the browser
+// reports as a CSP violation (it falls back safely, but logs an issue).
+z.config({ jitless: true })
+
 export const roleOptions = [
   "Investor",
   "Property Owner",

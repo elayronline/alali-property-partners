@@ -36,9 +36,11 @@ export function Hero() {
       {/* Content */}
       <div className="relative mx-auto flex min-h-[90dvh] max-w-6xl items-center px-4 sm:px-6">
         <div className="max-w-xl py-32">
+          {/* The h1 is the mobile LCP element: no opacity fade, so it paints
+              with the server HTML instead of waiting for hydration. */}
           <motion.h1
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 12 }}
+            animate={{ y: 0 }}
             transition={{ duration: 0.6 }}
             className="font-display text-[2.4rem] leading-[1.08] text-white sm:text-5xl lg:text-[3.6rem]"
           >
