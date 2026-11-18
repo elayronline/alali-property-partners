@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Instagram, Mail, Phone, MapPin } from "lucide-react"
 import { Logo } from "@/components/ui/Logo"
+import { ALALI_HOMES_URL } from "@/components/SisterCompany"
 
 export function Footer() {
   return (
@@ -23,6 +24,13 @@ export function Footer() {
               Specialist sourcing of high-yield HMO and HMO conversion opportunities across Greater
               London and the South East. We connect investors with verified deals and the regulated
               professionals they need.
+            </p>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/55">
+              Sister company:{" "}
+              <a href={ALALI_HOMES_URL} target="_blank" rel="noopener" className="text-gold/80 underline-offset-4 transition-colors hover:text-gold hover:underline">
+                Alali Homes
+              </a>{" "}
+              — guaranteed rent and full management for landlords.
             </p>
             <div className="mt-8 flex gap-3">
               <a

@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { Faq } from "@/components/Faq"
 import { SectionDivider } from "@/components/ui/SectionDivider"
+import { SisterCompany } from "@/components/SisterCompany"
 
 export const metadata: Metadata = {
   title: "Hands-Off HMO Investment",
@@ -283,6 +284,8 @@ export default function Page() {
               legal advice. Rents, yields and refurbishment figures are indicative and require your
               own independent verification.
             </p>
+
+            <SisterCompany className="mt-10" />
           </div>
         </section>
 

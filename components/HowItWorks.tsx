@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
+import { SisterCompany } from "@/components/SisterCompany"
 
 const steps = [
   {
@@ -130,6 +131,8 @@ export function HowItWorks() {
             Bespoke Sourcing
           </Link>
         </motion.div>
+
+        <SisterCompany className="mt-6" />
       </div>
     </section>
   )
